@@ -1,0 +1,72 @@
+article
+  position: relative
+  a
+    text-decoration: none
+
+.article--singular
+  h1
+    text-align: left
+    font-size: 3rem
+    font-weight: normal
+    padding-bottom: 0.8rem
+  header
+    padding-bottom: 1rem
+    margin-bottom: 1rem
+    display: relative
+    border-bottom: 1px solid $gray-lightest
+    p
+      margin: 0
+    button
+      position: absolute
+      right: 0
+      top: 0
+  .article--date
+    display: none
+  .comments--new
+    border-bottom: 1px solid #ccc
+  .lead
+    font-size: 1rem
+  a
+    text-decoration: none
+
+    text-shadow: 0 0 #333, .08em 0 0 #fff, 0 0, -.08em 0 0 #fff
+
+    /*  gradient background allows us to use css only & re-position it  */
+    background: -webkit-linear-gradient(#999, #999) center 1.09em no-repeat
+    background: linear-gradient(#999, #999) center 1.09em no-repeat
+
+    /*  can precisely control size in relation to the text  */
+    background-size: 100% 1px
+
+    /*  now the underline supports transitions  */
+    -webkit-transition: .2s ease
+    transition: .2s ease
+  p
+    text-align: justify
+  h2
+    font-size: 26px
+
+  &.category-financial-independence
+    h1
+      color: $financial-dark
+    .lead
+      color: $financial-darker
+  &.category-minimalism
+    h1
+      color: $minimalism
+    .lead
+      color: $minimalism-darker
+  &.category-stoicism
+    h1
+      color: $stoicism-darker
+    .lead
+      color: $stoicism-darker
+
+.article--meta
+  border-top: 1px solid $gray-lightest
+  padding: 1rem 0
+  color: $gray-light
+
+.post-categories
+  list-style: none
+  display: inline

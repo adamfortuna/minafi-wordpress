@@ -1,0 +1,93 @@
+.articles--list
+  article
+    margin-bottom: 0.4rem
+    position: relative
+    header
+      padding-bottom: 1rem
+      margin-bottom: 1rem
+      display: relative
+      border-bottom: 1px solid #ccc
+      p
+        margin: 0
+    a
+      display: block
+      border-radius: 4px
+      padding: 0.8rem 1.4rem
+      text-decoration: none
+      color: $gray-light
+      transition: 0.3s
+      h2
+        text-decoration: underline
+        font-size: 2rem
+        text-decoration: none
+        font-weight: normal
+      p
+        margin-bottom: 0
+
+    p
+      text-align: justify
+
+
+
+
+.articles--list
+  article
+    &:hover
+      .article--date
+        opacity: 1
+
+.articles--list
+  article
+    &.category-minimalism
+      h2
+        color: $minimalism
+      a
+        &:hover
+          border-color: $minimalism-dark
+          background-color: $minimalism-lighter
+          h2
+            color: $minimalism-dark
+
+    &.category-financial-independence
+      h2
+        color: $financial
+      a
+        &:hover
+          border-color: $financial-dark
+          background-color: $financial-lighter
+          h2
+            color: $financial-dark
+
+    &.category-stoicism
+      h2
+        color: $stoicism
+      a
+        &:hover
+          border-color: $stoicism-dark
+          background-color: $stoicism-light
+          h2
+            color: $stoicism-dark
+
+
+.article--date
+  opacity: 0
+  padding: 0.2rem
+  transition: 0.3s
+  border-radius: 4px
+  color: $gray-light
+  font-size: 0.8rem
+  position: absolute
+  top: 20px
+  right: -109px
+  text-align: center
+  width: 110px
+  .category-minimalism &
+    background-color: $minimalism-lighter
+  .category-financial-independence &
+    background-color: $financial-lighter
+  .category-stoicism &
+    background-color: $stoicism-lighter
+  .article--date-year
+    display: block
+    font-size: 1rem
+    font-weight: 400
