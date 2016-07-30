@@ -7496,8 +7496,9 @@ article {
 
 .minimalism--text {
   color: #486696; }
-  .minimalism--texta:hover {
-    color: #0e192b; }
+
+a.minimalism--text:hover {
+  color: #0e192b; }
 
 .minimalism-darkbg {
   background-color: #758FB8;
@@ -7508,8 +7509,9 @@ article {
 
 .fi--text {
   color: #258C32; }
-  .fi--texta:hover {
-    color: #103b15; }
+
+a.fi--text:hover {
+  color: #103b15; }
 
 .fi-darkbg {
   background-color: #7DD087;
@@ -7520,8 +7522,9 @@ article {
 
 .stoicism--text {
   color: #704999; }
-  .stoicism--texta:hover {
-    color: #1d0f2d; }
+
+a.stoicism--text:hover {
+  color: #1d0f2d; }
 
 .stoicism-darkbg {
   background-color: #9776BC;
