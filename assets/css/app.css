@@ -7496,7 +7496,7 @@ article {
 
 .minimalism--text {
   color: #486696; }
-  .minimalism--text:hover {
+  .minimalism--texta:hover {
     color: #0e192b; }
 
 .minimalism-darkbg {
@@ -7508,7 +7508,7 @@ article {
 
 .fi--text {
   color: #258C32; }
-  .fi--text:hover {
+  .fi--texta:hover {
     color: #103b15; }
 
 .fi-darkbg {
@@ -7520,7 +7520,7 @@ article {
 
 .stoicism--text {
   color: #704999; }
-  .stoicism--text:hover {
+  .stoicism--texta:hover {
     color: #1d0f2d; }
 
 .stoicism-darkbg {

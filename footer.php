@@ -14,7 +14,10 @@
 	<div class='container'>
 		<div class='row'>
 			<div class="<?php minafi_columns(); ?> footer--content">
-				<a href='/' class='pull-left'>Articles</a>
+				<ul class='list-inline'>
+					<li class='list-inline-item'><a href='/about'>About</a></li>
+					<li class='list-inline-item'><a href='/articles'>Articles</a></li>
+				</ul>
 				<span class='pull-right'>By <a href='http://adamfortuna.com'>Adam Fortuna</span>
 			</div>
 		</div>
