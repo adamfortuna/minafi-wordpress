@@ -7646,16 +7646,18 @@ body {
     left: 31px;
     z-index: 0 !important; }
     .search--form input:focus {
-      outline: none !important; }
+      outline: none !important;
+      border-color: #eee; }
 
 .search--link {
   border-top-left-radius: 0.25rem !important;
   border-bottom-left-radius: 0.25rem !important;
   border-left: 1px solid rgba(0, 0, 0, 0.15) !important;
   z-index: 1 !important;
-  position: relative; }
+  position: relative;
+  background-color: #fff !important; }
   .search--link:hover {
-    background-color: #555;
+    background-color: #555 !important;
     color: #eee; }
   .search--link:focus {
     outline: none; }
