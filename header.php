@@ -43,23 +43,17 @@
 	          </li>
 
 	          <li class="nav-item">
-
-	            <div class='search--wrapper'>
-	              <form class="form-inline">
-	                <div class="form-group">
-	                  <label class="sr-only" for="searchInput">Search</label>
-	                  <div class="input-group">
-	                    <div class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></div>
-	                    <input type="text" class="form-control" id="searchInput" placeholder="Search articles...">
-	                  </div>
-	                </div>
-	                <button type="submit" class="btn btn-primary">Go</button>
-	              </form>
-	            </div>
-
-	            <a class="nav-link search--link" href='#'>
-	              <i class="fa fa-search" aria-hidden="true"></i>
-	            </a>
+							<form role="search" method="get" class="form-inline search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+                <div class="search--form form-group">
+                  <label class="sr-only" for="searchInput">Search</label>
+									<div class="input-group">
+                  	<input type="text" class="form-control" id="searchInput" name="s" placeholder="Search articles...">
+		                <button type="submit" class="input-group-addon search--link">
+											<i class="fa fa-search" aria-hidden="true"></i>
+										</button>
+									</div>
+                </div>
+              </form>
 	          </li>
 	        </ul>
 	      </nav>

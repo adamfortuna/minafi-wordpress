@@ -12,7 +12,7 @@
 .aside-left
   margin-left: -26%
   float: left
-  border-right: 1px solid #eee
+  border-right: 1px solid $gray-lightest
   padding-right: 12px
   p
     text-align: right
@@ -24,3 +24,15 @@
   padding-left: 12px
   p
     text-align: left
+
+
+@media only screen and (max-width: $large-breakpoint)
+  .aside-right, .aside-left
+    display: block
+    width: auto
+    margin: 0.4rem 0
+    border: none
+    border-left: 1px solid $gray-lightest
+    float: none
+    p
+      text-align: left

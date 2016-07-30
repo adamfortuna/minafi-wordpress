@@ -24,8 +24,47 @@
     position: relative
 
 
-.search--wrapper
-  display: none
+.search--link
+  background-color: transparent
+
+.search--link,
+.search--form
+  display: inline-block !important
+.search--form
+  display: inline-block !important
+  overflow: hidden
+  position: relative
+
+  input
+    transition: 1s max-width, 1s left
+    max-width: 0px !important
+    border-color: transparent
+    background-color: #fff
+    left: 31px
+    z-index: 0 !important
+    &:focus
+      outline: none !important
+
+.search--link
+  border-top-left-radius: 0.25rem !important
+  border-bottom-left-radius: 0.25rem !important
+  border-left: 1px solid rgba(0, 0, 0, 0.15) !important
+  z-index: 1 !important
+  position: relative
+  &:hover
+    background-color: $gray-dark
+    color: $gray-lightest
+  &:focus
+    outline: none
+
 .search--searching
-  .search--wrapper
-    display: block
+  .search--form
+    display: inline-block !important
+    input
+      max-width: 200px !important
+      border-color: $gray-lightest
+      left: 0px
+  .search--link
+    border-top-left-radius: 0 !important
+    border-bottom-left-radius: 0 !important
+    border-left: 0 !important

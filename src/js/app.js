@@ -1,11 +1,28 @@
+import $ from '../components/jquery/dist/jquery';
+window.jQuery = window.$ = $;
+
 function toggleSearch(e) {
-  e.preventDefault();
+  const $searchInput = $('#searchInput');
 
-  var $this = $(this);
+  if($searchInput.val().length > 0) {
+    // Do nothing and let the submission continue
+  } else {
+    e.preventDefault();
+    const $this = $(this);
 
-  $this.closest('.nav-item').toggleClass('search--searching');
+    // Not showing form
+    if($('.search--link').hasClass('nav-link')) {
+      $('#searchInput').blur();
+    } else { // Showing form
+      setTimeout(function() {
+        $('#searchInput').focus();
+      }, 1000);
+    }
+
+    $this.closest('.nav-item').toggleClass('search--searching');
+  }
 }
 
-$(function() {
+$(() => {
   $('.search--link').on('click', toggleSearch);
 });
