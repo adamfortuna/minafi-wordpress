@@ -14,7 +14,7 @@
 	<div class='container'>
 		<div class='row'>
 			<div class="<?php minafi_columns(); ?> footer--content">
-				<ul class='list-inline'>
+				<ul class='list-inline pull-left'>
 					<li class='list-inline-item'><a href='/about'>About</a></li>
 					<li class='list-inline-item'><a href='/articles'>Articles</a></li>
 				</ul>
