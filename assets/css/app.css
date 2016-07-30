@@ -7402,6 +7402,10 @@ article {
 .articles--list article:hover .article--date {
   opacity: 1; }
 
+@media only screen and (max-width: 992px) {
+  .article--date {
+    display: none; } }
+
 .articles--list article.category-minimalism h2 {
   color: #758FB8; }
 
@@ -7674,38 +7678,9 @@ body {
   border-bottom-left-radius: 0 !important;
   border-left: 0 !important; }
 
-.wp_rp_wrap {
+.related-posts {
   border-top: 1px solid #eee;
   padding-top: 1rem; }
-  .wp_rp_wrap img {
-    display: none; }
-
-ul.related_post {
-  list-style: none;
-  margin: 0;
-  padding: 0; }
-
-ul.related_post li {
-  display: inline-block; }
-
-ul.related_post li a {
-  display: inline-block;
-  width: 48%;
-  min-height: 70px;
-  text-decoration: none;
-  border-bottom: none;
-  padding: 1rem;
-  background: none;
-  background-color: #fff;
-  border-radius: 4px;
-  border: 1px solid #eee;
-  margin-bottom: 0.8rem;
-  padding-left: 0 20px 1rem 0; }
-  ul.related_post li a:hover {
-    background-color: #cdcdcd; }
-
-ul.related_post li img {
-  display: none; }
 
 .welcome {
   margin: 1rem auto 1rem;
