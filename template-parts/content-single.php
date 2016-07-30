@@ -9,10 +9,12 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('article--singular'); ?> >
-	<header>
-    <h1><?php the_title(); ?></h1>
-    <?php minafi_excerpt(); ?>
-		<?php minafi_date(); ?>
+	<header class="row">
+		<div class="col-xs-12">
+	    <h1><?php the_title(); ?></h1>
+	    <?php minafi_excerpt(); ?>
+			<?php minafi_date(); ?>
+		</div>
   </header>
 
   <section class="article--content">

@@ -7296,9 +7296,9 @@ article {
   padding-bottom: 0.8rem; }
 
 .article--singular header {
+  padding-top: 1rem;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
-  display: relative;
   border-bottom: 1px solid #eee; }
   .article--singular header p {
     margin: 0; }
@@ -7334,17 +7334,26 @@ article {
 .article--singular h2 {
   font-size: 26px; }
 
+.article--singular.category-financial-independence header {
+  background-color: #E5FAE8; }
+
 .article--singular.category-financial-independence h1 {
   color: #4CB058; }
 
 .article--singular.category-financial-independence .lead {
   color: #258C32; }
 
+.article--singular.category-minimalism header {
+  background-color: #E5ECF7; }
+
 .article--singular.category-minimalism h1 {
   color: #758FB8; }
 
 .article--singular.category-minimalism .lead {
   color: #284777; }
+
+.article--singular.category-stoicism header {
+  background-color: #F0EEF9; }
 
 .article--singular.category-stoicism h1 {
   color: #4E287A; }
@@ -7356,6 +7365,8 @@ article {
   border-top: 1px solid #eee;
   padding: 1rem 0;
   color: #999; }
+  .article--meta p {
+    margin: 0; }
 
 .post-categories {
   list-style: none;
@@ -7376,7 +7387,7 @@ article {
     border-radius: 4px;
     padding: 0.8rem 1.4rem;
     text-decoration: none;
-    color: #999;
+    color: #555;
     transition: 0.3s; }
     .articles--list article a h2 {
       text-decoration: underline;
@@ -7504,8 +7515,36 @@ article {
     background-color: #4E287A;
     color: #9776BC; }
 
-.comments {
-  background-color: #eee; }
+.comments--content {
+  padding: 1.6rem 0; }
+
+.comments--current,
+.comment--new {
+  display: none; }
+
+#comments.comment--new-form .comment--new {
+  display: block; }
+
+#comments.comment--new-form .comments--leave-comment-button {
+  display: none; }
+
+#comments.comment--viewing-comments .comments--current {
+  display: block; }
+
+#comments.comment--viewing-comments .comments--view-all {
+  display: none; }
+
+.form-submit {
+  display: none; }
+
+.comment-form-author,
+.comment-form-email,
+.comment-form-url {
+  width: 50%; }
+
+.comments--current,
+.comment--new {
+  padding-top: 1.6rem; }
 
 .dropdown-menu {
   padding: 0;
@@ -7557,8 +7596,7 @@ body {
 .navbar {
   padding-left: 0;
   padding-right: 0;
-  border-bottom: 1px solid #eee;
-  margin-bottom: 1.6rem; }
+  border-bottom: 1px solid #eee; }
   .navbar .navbar-brand {
     color: #555;
     font-size: 2rem;
@@ -7586,8 +7624,8 @@ body {
 
 .welcome {
   margin: 1rem auto 3rem;
-  padding-right: 5rem;
-  background: url(../images/adam-fortuna.png) no-repeat right; }
+  padding-right: 8rem;
+  background: url(../images/adam-fortuna.png) no-repeat 97% 50%; }
 
 img {
   max-width: 100%; }
@@ -7600,5 +7638,5 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: -26%;
   width: 156%; }
 
-.articles--dropdown:hover .dropdown-menu {
-  display: block; }
+.first-content {
+  margin-top: 1rem; }

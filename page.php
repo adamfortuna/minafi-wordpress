@@ -13,7 +13,7 @@
 
 get_header(); ?>
 
-<div class='container'>
+<div class='container first-content'>
 	<div class='row'>
 		<section class="<?php minafi_columns(); ?>">
 			<?php

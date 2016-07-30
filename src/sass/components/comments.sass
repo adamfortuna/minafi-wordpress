@@ -1,2 +1,34 @@
 .comments
-  background-color: $gray-lightest
+.comments--content
+  padding: 1.6rem 0
+
+.comments--current,
+.comment--new
+  display: none
+
+
+#comments
+  &.comment--new-form
+    .comment--new
+      display: block
+    .comments--leave-comment-button
+      display: none
+
+  &.comment--viewing-comments
+    .comments--current
+      display: block
+    .comments--view-all
+      display: none
+
+.form-submit
+ display: none
+
+.comment-form-author,
+.comment-form-email,
+.comment-form-url
+    width: 50%
+
+
+.comments--current,
+.comment--new
+  padding-top: 1.6rem

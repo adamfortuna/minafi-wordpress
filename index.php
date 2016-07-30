@@ -16,13 +16,13 @@
 
 get_header(); ?>
 
-<div class="container">
+<div class="container first-content">
 	<div class='row'>
     <section class="welcome jumbotron <?php minafi_columns(); ?>">
 			<p>Hey hey! I'm Adam Fortuna, and I explore the intersection of
-      <a href='#' class='minimalism--text'>minimalism</a>,
-      <a href='#' class='fi--text'>financial independence</a> and
-      <a href='#' class='stoicism--text'>stoicism</a>.</p>
+      <a href='/articles/category/minimalism' class='minimalism--text'>minimalism</a>,
+      <a href='/articles/category/financial-independence' class='fi--text'>financial independence</a> and
+      <a href='/articles/category/stoicism' class='stoicism--text'>stoicism</a>.</p>
 
 			<p>Read more about <a href="/about">what these topics have in common</a>, or jump into an area that looks interesting to you!</a>
     </section>

@@ -10,9 +10,9 @@ article
     font-weight: normal
     padding-bottom: 0.8rem
   header
+    padding-top: 1rem
     padding-bottom: 1rem
     margin-bottom: 1rem
-    display: relative
     border-bottom: 1px solid $gray-lightest
     p
       margin: 0
@@ -47,16 +47,22 @@ article
     font-size: 26px
 
   &.category-financial-independence
+    header
+      background-color: $financial-lighter
     h1
       color: $financial-dark
     .lead
       color: $financial-darker
   &.category-minimalism
+    header
+      background-color: $minimalism-lighter
     h1
       color: $minimalism
     .lead
       color: $minimalism-darker
   &.category-stoicism
+    header
+      background-color: $stoicism-lighter
     h1
       color: $stoicism-darker
     .lead
@@ -66,6 +72,9 @@ article
   border-top: 1px solid $gray-lightest
   padding: 1rem 0
   color: $gray-light
+  p
+    margin: 0
+
 
 .post-categories
   list-style: none
