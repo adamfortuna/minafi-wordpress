@@ -57,3 +57,8 @@ Image used in screenshot.png: A photo by Austin Schmid (https://unsplash.com/sch
 == Notes ==
 
 Only the default and dark color schemes are accessibility ready.
+
+
+== Google Analytics ==
+
+UA-90326-20

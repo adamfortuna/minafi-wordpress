@@ -7352,13 +7352,13 @@ article {
 .article--singular.category-minimalism .lead {
   color: #284777; }
 
-.article--singular.category-stoicism header {
+.article--singular.category-mindfulness header {
   background-color: #F0EEF9; }
 
-.article--singular.category-stoicism h1 {
+.article--singular.category-mindfulness h1 {
   color: #4E287A; }
 
-.article--singular.category-stoicism .lead {
+.article--singular.category-mindfulness .lead {
   color: #4E287A; }
 
 .article--meta {
@@ -7424,13 +7424,13 @@ article {
   .articles--list article.category-financial-independence a:hover h2 {
     color: #4CB058; }
 
-.articles--list article.category-stoicism h2 {
+.articles--list article.category-mindfulness h2 {
   color: #9776BC; }
 
-.articles--list article.category-stoicism a:hover {
+.articles--list article.category-mindfulness a:hover {
   border-color: #704999;
   background-color: #F0EEF9; }
-  .articles--list article.category-stoicism a:hover h2 {
+  .articles--list article.category-mindfulness a:hover h2 {
     color: #704999; }
 
 .article--date {
@@ -7449,7 +7449,7 @@ article {
     background-color: #E5ECF7; }
   .category-financial-independence .article--date {
     background-color: #E5FAE8; }
-  .category-stoicism .article--date {
+  .category-mindfulness .article--date {
     background-color: #F0EEF9; }
   .article--date .article--date-year {
     display: block;
@@ -7520,16 +7520,16 @@ a.fi--text:hover {
     background-color: #258C32;
     color: #7DD087; }
 
-.stoicism--text {
+.mindfulness--text {
   color: #704999; }
 
-a.stoicism--text:hover {
+a.mindfulness--text:hover {
   color: #1d0f2d; }
 
-.stoicism-darkbg {
+.mindfulness-darkbg {
   background-color: #9776BC;
   color: #4E287A; }
-  .stoicism-darkbg:hover {
+  .mindfulness-darkbg:hover {
     background-color: #4E287A;
     color: #9776BC; }
 
