@@ -91,8 +91,12 @@ function twentysixteen_entry_date() {
 }
 endif;
 
+if ( ! function_exists( 'minafi_title' ) ) :
+function minafi_title() { ?><h2><?php the_title(); ?></h2><?php }
+endif;
 
-if ( ! function_exists( 'twentysixteen_post_thumbnail' ) ) :
+
+if ( ! function_exists( 'minafi_post_thumbnail' ) ) :
 /**
  * Displays an optional post thumbnail.
  *
@@ -103,7 +107,7 @@ if ( ! function_exists( 'twentysixteen_post_thumbnail' ) ) :
  *
  * @since Twenty Sixteen 1.0
  */
-function twentysixteen_post_thumbnail() {
+function minafi_post_thumbnail($size = 'large') {
 	if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
 		return;
 	}
@@ -112,16 +116,24 @@ function twentysixteen_post_thumbnail() {
 	?>
 
 	<div class="post-thumbnail">
-		<?php the_post_thumbnail(); ?>
+		<?php the_post_thumbnail($size); ?>
 	</div><!-- .post-thumbnail -->
 
 	<?php else : ?>
-
-	<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
-		<?php the_post_thumbnail( 'post-thumbnail', array( 'alt' => the_title_attribute( 'echo=0' ) ) ); ?>
-	</a>
-
+		<div class="post-thumbnail thumbnail--small">
+			<?php the_post_thumbnail('thumbnail'); ?>
+		</div>
 	<?php endif; // End is_singular()
+}
+endif;
+
+if ( ! function_exists( 'minafi_post_thumbnail_background' ) ) :
+function minafi_post_thumbnail_background($size = 'large') {
+	if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
+		return;
+	}
+
+	return the_post_thumbnail_url($size);
 }
 endif;
 

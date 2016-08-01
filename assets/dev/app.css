@@ -7289,23 +7289,61 @@ article {
   article a {
     text-decoration: none; }
 
+.article--header {
+  position: relative;
+  height: 560px !important; }
+  .article--header img {
+    height: 560px !important; }
+
+@media only screen and (max-width: 992px) {
+  .article--header {
+    height: 479px !important; }
+    .article--header img {
+      height: 479px !important; } }
+
+@media only screen and (max-width: 768px) {
+  .article--header {
+    height: auto !important;
+    position: relative; }
+    .article--header img {
+      height: 410px !important; }
+  .article-header--content {
+    margin-top: 410px;
+    position: relative !important;
+    bottom: auto !important; } }
+
+@media only screen and (max-width: 544px) {
+  .article--header {
+    height: auto !important;
+    position: relative; }
+    .article--header img {
+      height: 342px !important; }
+  .article-header--content {
+    position: relative !important;
+    bottom: auto !important;
+    margin-top: 342px; } }
+
+.article-header--content {
+  bottom: 0;
+  position: absolute;
+  padding: 1rem; }
+  .article-header--content p {
+    margin: 0; }
+
+.article--content {
+  margin-top: 1.6rem; }
+
+.article-single--wrapper .post-thumbnail {
+  position: absolute; }
+
 .article--singular h1 {
   text-align: left;
   font-size: 3rem;
   font-weight: normal;
   padding-bottom: 0.8rem; }
 
-.article--singular header {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  margin-bottom: 1rem;
-  border-bottom: 1px solid #eee; }
-  .article--singular header p {
-    margin: 0; }
-  .article--singular header button {
-    position: absolute;
-    right: 0;
-    top: 0; }
+.article--singular .attachment-large {
+  margin: 0 auto; }
 
 .article--singular .article--date {
   display: none; }
@@ -7334,7 +7372,7 @@ article {
 .article--singular h2 {
   font-size: 26px; }
 
-.article--singular.category-financial-independence header {
+.article--singular.category-financial-independence .article-header--content {
   background-color: #E5FAE8; }
 
 .article--singular.category-financial-independence h1 {
@@ -7343,7 +7381,7 @@ article {
 .article--singular.category-financial-independence .lead {
   color: #258C32; }
 
-.article--singular.category-minimalism header {
+.article--singular.category-minimalism .article-header--content {
   background-color: #E5ECF7; }
 
 .article--singular.category-minimalism h1 {
@@ -7352,8 +7390,8 @@ article {
 .article--singular.category-minimalism .lead {
   color: #284777; }
 
-.article--singular.category-mindfulness header {
-  background-color: #F0EEF9; }
+.article--singular.category-mindfulness .article-header--content {
+  background-color: rgba(240, 238, 249, 0.85); }
 
 .article--singular.category-mindfulness h1 {
   color: #4E287A; }
@@ -7395,12 +7433,15 @@ article {
       text-decoration: none;
       font-weight: normal; }
     .articles--list article a p {
-      margin-bottom: 0; }
-  .articles--list article p {
-    text-align: justify; }
+      margin-bottom: 0;
+      line-height: 1.4rem; }
 
 .articles--list article:hover .article--date {
   opacity: 1; }
+
+.thumbnail--small {
+  float: right;
+  margin-left: 1rem; }
 
 @media only screen and (max-width: 992px) {
   .article--date {
@@ -7703,3 +7744,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .first-content {
   margin-top: 1rem; }
+
+img {
+  max-width: 100% !important;
+  height: auto !important; }

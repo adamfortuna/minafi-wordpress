@@ -3,23 +3,67 @@ article
   a
     text-decoration: none
 
+
+
+.article--header
+  position: relative
+  height: 560px !important
+
+  img
+    height: 560px !important
+
+// 342 small
+// 410 medium
+// 494 large
+@media only screen and (max-width: $large-breakpoint)
+  .article--header
+    height: 479px !important
+    img
+      height: 479px !important
+@media only screen and (max-width: $medium-breakpoint)
+  .article--header
+    height: auto !important
+    position: relative
+    img
+      height: 410px !important
+  .article-header--content
+    margin-top: 410px
+    position: relative !important
+    bottom: auto !important
+@media only screen and (max-width: $small-breakpoint)
+  .article--header
+    height: auto !important
+    position: relative
+    img
+      height: 342px !important
+  .article-header--content
+    position: relative !important
+    bottom: auto !important
+    margin-top: 342px
+
+
+.article-header--content
+  bottom: 0
+  position: absolute
+  padding: 1rem
+  p
+    margin: 0
+.article--content
+  margin-top: 1.6rem
+
+.article-single--wrapper
+  .post-thumbnail
+    position: absolute
+
+
 .article--singular
   h1
     text-align: left
     font-size: 3rem
     font-weight: normal
     padding-bottom: 0.8rem
-  header
-    padding-top: 1rem
-    padding-bottom: 1rem
-    margin-bottom: 1rem
-    border-bottom: 1px solid $gray-lightest
-    p
-      margin: 0
-    button
-      position: absolute
-      right: 0
-      top: 0
+  .attachment-large
+    margin: 0 auto
   .article--date
     display: none
   .comments--new
@@ -47,22 +91,22 @@ article
     font-size: 26px
 
   &.category-financial-independence
-    header
+    .article-header--content
       background-color: $financial-lighter
     h1
       color: $financial-dark
     .lead
       color: $financial-darker
   &.category-minimalism
-    header
+    .article-header--content
       background-color: $minimalism-lighter
     h1
       color: $minimalism
     .lead
       color: $minimalism-darker
   &.category-mindfulness
-    header
-      background-color: $mindfulness-lighter
+    .article-header--content
+      background-color: $mindfulness-lighter-header
     h1
       color: $mindfulness-darker
     .lead

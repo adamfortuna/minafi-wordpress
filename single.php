@@ -12,11 +12,7 @@ get_header();
 while ( have_posts() ) : the_post();
 ?>
 
-<div class='container'>
-	<section class="<?php minafi_columns() ?>">
-		<?php get_template_part( 'template-parts/content', 'single' ) ?>
-	</section>
-</div>
+<?php get_template_part('template-parts/content', 'single' ) ?>
 
 <?php if ( comments_open() || get_comments_number() ) { ?>
 <div class="comments">
