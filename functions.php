@@ -192,7 +192,9 @@ function twentysixteen_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	wp_enqueue_script( 'twentysixteen-script', get_template_directory_uri() . '/assets/js/app.js');
+	wp_enqueue_script( 'minafi-script', get_template_directory_uri() . '/assets/js/app.js');
+	wp_enqueue_script( 'tether-script', get_template_directory_uri() . '/assets/js/tether.min.js');
+	wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/assets/js/bootstrap.min.js');
 }
 add_action( 'wp_enqueue_scripts', 'twentysixteen_scripts' );
 

@@ -27,11 +27,13 @@
 	  <div class='row'>
 	    <div class="header <?php minafi_columns(); ?>">
 	      <nav class="navbar">
-	        <a class="navbar-brand" href="/">Minafi</a>
+					<div>
+		        <a class="navbar-brand" href="/">Minafi</a>
 
-	        <button class="navbar-toggler hidden-sm-up pull-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
-	          &#9776;
-	        </button>
+		        <button class="navbar-toggler hidden-sm-up pull-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+		          &#9776;
+		        </button>
+					</div>
 
 	        <ul class="nav nav-pills collapse navbar-toggleable-xs pull-right"  id="collapsingNavbar">
 	          <li class="nav-item">
