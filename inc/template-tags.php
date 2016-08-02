@@ -112,7 +112,7 @@ function minafi_post_thumbnail($size = 'large') {
 		return;
 	}
 
-	if ( is_singular() ) :
+	if ( is_singular() && $size != 'thumbnail') :
 	?>
 
 	<div class="post-thumbnail">

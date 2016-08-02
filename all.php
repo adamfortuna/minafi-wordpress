@@ -15,7 +15,7 @@ $debut = 0
       while(have_posts()) : the_post();
         $myposts = get_posts('numberposts=-1&offset=$debut');
         foreach($myposts as $post) :
-          get_template_part( 'template-parts/content-title', get_post_format() );
+          get_template_part('template-parts/content-title', get_post_format());
         endforeach;
       endwhile;
     ?>
