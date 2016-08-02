@@ -4,52 +4,64 @@ article
     text-decoration: none
 
 
-
 .article--header
   position: relative
-  height: 560px !important
 
-  img
+
+
+.article--has-thumbnail
+  .article--header
+    position: relative
     height: 560px !important
+
+    img
+      height: 560px !important
 
 // 342 small
 // 410 medium
 // 494 large
 @media only screen and (max-width: $large-breakpoint)
-  .article--header
-    height: 479px !important
-    img
+  .article--has-thumbnail
+    .article--header
       height: 479px !important
+      img
+        height: 479px !important
 @media only screen and (max-width: $medium-breakpoint)
-  .article--header
-    height: auto !important
-    position: relative
-    img
-      height: 410px !important
-  .article-header--content
-    margin-top: 410px
-    position: relative !important
-    bottom: auto !important
+  .article--has-thumbnail
+    .article--header
+      height: auto !important
+      position: relative
+      img
+        height: 410px !important
+    .article-header--content
+      margin-top: 410px
+      position: relative !important
+      bottom: auto !important
 @media only screen and (max-width: $small-breakpoint)
-  .article--header
-    height: auto !important
-    position: relative
-    img
-      height: 342px !important
-  .article-header--content
-    position: relative !important
-    bottom: auto !important
-    margin-top: 342px
+  .article--has-thumbnail
+    .article--header
+      height: auto !important
+      position: relative
+      img
+        height: 342px !important
+    .article-header--content
+      position: relative !important
+      bottom: auto !important
+      margin-top: 342px
 
-
-.article-header--content
-  bottom: 0
-  position: absolute
-  padding: 1rem
-  p
-    margin: 0
 .article--content
-  margin-top: 1.6rem
+  margin-top: 0.8rem
+.article-header--content
+  padding: 1.8rem
+.article--has-thumbnail
+  .article-header--content
+    bottom: 0
+    position: absolute
+    padding: 1rem
+    p
+      margin: 0
+  .article--content
+    margin-top: 1.6rem
 
 .article-single--wrapper
   .post-thumbnail
