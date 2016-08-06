@@ -7382,7 +7382,7 @@ article {
   font-size: 26px; }
 
 .article--singular.category-financial-independence .article-header--content {
-  background-color: #E5FAE8; }
+  background-color: rgba(229, 250, 232, 0.85); }
 
 .article--singular.category-financial-independence h1 {
   color: #4CB058; }
@@ -7391,7 +7391,7 @@ article {
   color: #258C32; }
 
 .article--singular.category-minimalism .article-header--content {
-  background-color: #E5ECF7; }
+  background-color: rgba(229, 236, 247, 0.85); }
 
 .article--singular.category-minimalism h1 {
   color: #758FB8; }
