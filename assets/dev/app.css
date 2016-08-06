@@ -7298,6 +7298,9 @@ article {
   .article--has-thumbnail .article--header img {
     height: 560px !important; }
 
+.article-header--content {
+  width: 100%; }
+
 @media only screen and (max-width: 992px) {
   .article--has-thumbnail .article--header {
     height: 479px !important; }
