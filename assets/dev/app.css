@@ -7420,8 +7420,10 @@ article {
   display: inline; }
 
 .articles--list article {
-  margin-bottom: 0.4rem;
-  position: relative; }
+  margin-bottom: 1rem;
+  position: relative;
+  border: 1px solid #eee;
+  border-radius: 4px; }
   .articles--list article header {
     padding-bottom: 1rem;
     margin-bottom: 1rem;
