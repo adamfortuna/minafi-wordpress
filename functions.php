@@ -261,12 +261,12 @@ function twentysixteen_hex2rgb( $color ) {
 /**
  * Custom template tags for this theme.
  */
-require get_template_directory() . '/src/php/template-tags.php';
+require get_template_directory() . '/inc/template-tags.php';
 
 /**
  * Customizer additions.
  */
-require get_template_directory() . '/src/php/customizer.php';
+require get_template_directory() . '/inc/customizer.php';
 
 /**
  * Add custom image sizes attribute to enhance responsive image functionality
@@ -342,4 +342,4 @@ add_filter( 'excerpt_more', 'new_excerpt_more' );
 /**
  * Custom template tags for this theme.
  */
-require get_template_directory() . '/src/php/template-tags.php';
+require get_template_directory() . '/inc/template-tags.php';
