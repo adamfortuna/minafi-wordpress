@@ -38,7 +38,7 @@ $comments_number = get_comments_number();
 
 	<?php if ( have_comments() ) : ?>
 		<div class='comments--current row'>
-			<div class='col-xs-12'>
+			<div class='col-12'>
 				<h2>
 					<?php
 						if ( 1 === $comments_number ) {
@@ -83,7 +83,7 @@ $comments_number = get_comments_number();
 	<?php endif; ?>
 
 	<div class='comment--new row'>
-		<div class='col-xs-12'>
+		<div class='col-12'>
 			<?php
 				comment_form( array(
 					'title_reply_before' => '<h2 id="reply-title" class="comment-reply-title">',

@@ -19,44 +19,36 @@ get_header();
 include('partials/hero.php');
 ?>
 
-<div class="container">
-	<section class="<?php minafi_columns(); ?> latest-article">
-    <span class='pull-right lead'>
-			<a href='/feed'><i class="fa fa-rss" aria-hidden="true"></i></a>
-			Latest Articles <i class="fa fa-level-down" aria-hidden="true"></i></span>
-  </section>
-
-
-	<section class='articles--list <?php minafi_columns(); ?>'>
-		<?php if ( have_posts() ) : ?>
+<div class="container wide-container">
+	<div class="row">
+		<section class='articles--list col-lg-8'>
 			<?php
-			// Start the loop.
-			while ( have_posts() ) : the_post();
+				// Show recent 1 post
+				the_post();
+				get_template_part( 'template-parts/content-hero', get_post_format() );
+			?>
+		</section>
 
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
+		<section class="col-lg-4 sidebar">
+			<?php include('partials/about.php'); ?>
+			<?php include('partials/categories.php') ?>
+			<?php include('partials/email.php'); ?>
+		</section>
+	</div>
+
+	<div class="row articles--list articles--group">
+		<?php
+			$args = array(
+				'posts_per_page'   => 6,
+				'offset'           => 1
+			);
+			$myposts = get_posts( $args );
+			foreach($myposts as $post) : setup_postdata( $post );
 				get_template_part( 'template-parts/content-title', get_post_format() );
-
-			// End the loop.
-			endwhile;
-
-			// Previous/next page navigation.
-			the_posts_pagination( array(
-				'prev_text'          => __( 'Previous page', 'twentysixteen' ),
-				'next_text'          => __( 'Next page', 'twentysixteen' ),
-				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>',
-			) );
-
-		// If no content, include the "No posts found" template.
-		else :
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
+			endforeach;
+			wp_reset_postdata();
 		?>
-	</section>
+	</div>
 </div>
 
 <?php get_footer(); ?>

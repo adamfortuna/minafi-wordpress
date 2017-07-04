@@ -19,7 +19,7 @@
 get_header(); ?>
 
 <div class='first-content container'>
-	<section class="<?php minafi_columns(); ?>">
+	<section>
 
 		<?php if ( have_posts() ) : ?>
 			<header class="page-header">

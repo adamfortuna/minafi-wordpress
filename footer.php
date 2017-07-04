@@ -11,7 +11,7 @@
 ?>
 
 <div class='footer'>
-	<div class='container'>
+	<div class='container <?php if(is_singular()) { echo 'container-slim'; } ?>'>
 		<div class='row'>
 			<div class="footer--content col">
 				<p>Looking for where to start? <a href="/start-here">Start here</a>.</p>

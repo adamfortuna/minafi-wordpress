@@ -1,101 +1,47 @@
 .articles--list
-  article
-    margin-bottom: 1rem
-    position: relative
-    border: 1px solid $gray-lightest
-    border-radius: 4px
-    header
-      padding-bottom: 1rem
-      margin-bottom: 1rem
-      display: relative
-      border-bottom: 1px solid #ccc
-      p
-        margin: 0
-    a
-      display: block
-      border-radius: 4px
-      padding: 0.8rem 1.4rem
-      text-decoration: none
-      color: $gray-dark
-      transition: 0.3s
-      h2
-        text-decoration: underline
-        font-size: 2rem
+  border-right: 1px solid $gray-lightest
+
+.article--header-image
+  margin-bottom: 1rem
+  display: block
+  max-height: 233px
+  overflow: hidden
+
+.articles--list
+  .article--header
+    margin-bottom: 2rem
+    h2
+      font-size: 1.8rem
+      margin-bottom: 0.3rem
+      padding-bottom: 0.6rem
+      -webkit-font-smoothing: antialiased
+      -webkit-margin-after: 0px
+      -webkit-margin-before: 0px
+      -webkit-margin-end: 0px
+      -webkit-margin-start: -2.5px
+      letter-spacing: -1px
+      text-rendering: optimizeLegibility
+      a
+        color: rgba(0,0,0,0.8)
         text-decoration: none
-        font-weight: normal
-      p
-        margin-bottom: 0
-        line-height: 1.4rem
-
-
-
-
-.articles--list
-  article
-    &:hover
-      .article--date
-        opacity: 1
-
-.thumbnail--small
-  float: left
-  margin-right: 1rem
-
-@media only screen and (max-width: $large-breakpoint)
-  .article--date
-    display: none
-
-.articles--list
-  article
-    &.category-minimalism
-      h2
-        color: $minimalism
-      a
         &:hover
-          border-color: $minimalism-dark
-          background-color: $minimalism-lighter
-          h2
-            color: $minimalism-dark
+          text-decoration: underline
 
-    &.category-financial-independence
-      h2
-        color: $financial
-      a
-        &:hover
-          border-color: $financial-dark
-          background-color: $financial-lighter
-          h2
-            color: $financial-dark
+.article-subtitle--small
+  font-family: $font-family-sans-serif
+  color: rgba(0,0,0,0.7)
+  margin: 0.6rem 0
+  padding: 0
+  font-weight: 300
+  line-height: 1.6rem
+  font-size: 19px
 
-    &.category-mindfulness
-      h2
-        color: $mindfulness
-      a
-        &:hover
-          border-color: $mindfulness-dark
-          background-color: $mindfulness-light
-          h2
-            color: $mindfulness-dark
+.articles--list-hero
+  margin-bottom: 4rem
 
 
-.article--date
-  opacity: 0
-  padding: 0.2rem
-  transition: 0.3s
-  border-radius: 4px
-  color: $gray-light
-  font-size: 0.8rem
-  position: absolute
-  top: 20px
-  right: -109px
-  text-align: center
-  width: 110px
-  .category-minimalism &
-    background-color: $minimalism-lighter
-  .category-financial-independence &
-    background-color: $financial-lighter
-  .category-mindfulness &
-    background-color: $mindfulness-lighter
-  .article--date-year
-    display: block
-    font-size: 1rem
-    font-weight: 400
+.articles--group
+  margin-top: 3rem
+
+.article--header-categories
+  margin-top: 1rem

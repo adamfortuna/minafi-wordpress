@@ -212,7 +212,7 @@ function minafi_post_thumbnail($size = 'large') {
 
 	<?php else : ?>
 		<div class="post-thumbnail thumbnail--small">
-			<?php the_post_thumbnail('thumbnail'); ?>
+			<?php the_post_thumbnail($size); ?>
 		</div>
 	<?php endif; // End is_singular()
 }

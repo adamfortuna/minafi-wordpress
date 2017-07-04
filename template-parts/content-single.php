@@ -13,13 +13,13 @@
 	<article id="post-<?php the_ID(); ?>" <?php post_class(['article--singular', $thumbnail_class]); ?> >
     <?php do_action('ase_theme_post_inside_top'); ?>
 
-		<header class="container article--header">
+		<header class="container container-slim article--header">
       <?php do_action('ase_theme_post_inside_header_top'); ?>
 
       <?php do_action('ase_theme_post_before_title'); ?>
 		  <h1><?php the_title(); ?></h1>
       <?php do_action('ase_theme_post_after_title'); ?>
-      <p><? the_subtitle(); ?>
+      <p class="article-subtitle"><? the_subtitle(); ?></p>
 
       <div class="article--header-meta">
         <span class="article--header-meta-date">
@@ -31,8 +31,6 @@
         </span>
       </div>
 
-
-			<?php minafi_date(); ?>
       <?php do_action('ase_theme_post_inside_header_bottom'); ?>
 	  </header>
 
@@ -47,11 +45,11 @@
       <?php do_action('ase_theme_post_inside_bottom'); ?>
 	  </section>
 
-		<section class="article--meta container">
+		<section class="article--meta container container-slim">
       <?php echo get_the_category_list() ?>
     </section>
 
-    <section class="article--author container">
+    <section class="article--author container container-slim">
       <div class="row">
         <div class="col-2">
           <img src="<?php echo get_avatar_url(get_the_author_meta('user_email')) ?>" class="rounded pull-right" height="80" width="80" />

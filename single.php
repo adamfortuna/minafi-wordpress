@@ -16,7 +16,7 @@ while ( have_posts() ) : the_post();
 
 <?php if ( comments_open() || get_comments_number() ) { ?>
 <div class="comments">
-	<div class='container'>
+	<div class='container container-slim'>
 		<section class="comments--content <?php minafi_columns() ?>">
 			<?php comments_template(); ?>
 		</section>
