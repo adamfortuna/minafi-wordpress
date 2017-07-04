@@ -8357,14 +8357,6 @@ body {
   color: #999;
   display: block; }
 
-.jumbotron {
-  padding: 1rem 2rem;
-  border: 1px solid #ddd; }
-  .jumbotron a {
-    text-decoration: underline; }
-  .jumbotron p:last-child {
-    margin-bottom: 0; }
-
 .latest-article {
   height: 26px; }
   .latest-article span {
@@ -8455,14 +8447,6 @@ body {
 .related-posts {
   border-top: 1px solid #eee;
   padding-top: 1rem; }
-
-.welcome {
-  margin: 1rem auto 1rem;
-  padding-right: 8rem;
-  background: url(../images/adam-fortuna.png) no-repeat 97% 14%; }
-
-.email-address {
-  width: 300px !important; }
 
 .aesop-entry-content p, .aesop-entry-content h1, .aesop-entry-content h2, .aesop-entry-content h3, .aesop-entry-content h4, .aesop-entry-content h5, .aesop-entry-content h6, .aesop-entry-content ol, .aesop-entry-content ul, .aesop-entry-content table, .aesop-entry-content dl, .aesop-entry-content hr {
   width: 100%;
@@ -10124,6 +10108,30 @@ span.entry-subtitle {
 
 #comments .comments-title span.entry-subtitle {
   display: none; }
+
+.home--hero-wrap {
+  background-color: rgba(0, 0, 0, 0.15);
+  position: relative; }
+
+.home--hero {
+  background: url(../images/gate.jpeg) no-repeat center center;
+  background-size: cover;
+  background-position-y: 63% !important; }
+
+.home--hero-wrap,
+.home--hero {
+  min-height: 350px; }
+
+.home--text {
+  padding-top: 200px;
+  color: #f6f6f6; }
+  .home--text h1 {
+    color: #fefefe; }
+  .home--text a {
+    color: #f6f6f6;
+    text-decoration: underline; }
+    .home--text a:hover {
+      text-decoration: none; }
 
 img {
   max-width: 100%; }
