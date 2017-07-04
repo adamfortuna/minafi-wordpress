@@ -10,13 +10,15 @@
     font-weight: 700
     transition: 0.3s
     &:hover
-      background-color: $gray-lighter
-      color: $gray-lightest
+      background-color: rgba(0,0,0,0.05)
 
   .dropdown
     &.open
       .dropdown-menu
         display: block
+  .dropdown-item
+    letter-spacing: -0.5px
+    padding: 0.2rem 1rem
 
 .navbar-brand--text
   text-decoration: none

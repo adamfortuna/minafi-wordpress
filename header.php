@@ -40,13 +40,13 @@
 	          <li class="nav-item dropdown">
 	            <a class="nav-link dropdown-toggle" href="#" id="navArticlesDropdownLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Articles</a>
 			        <div class="dropdown-menu" role="menu" aria-labelledby="navArticlesDropdownLink">
-			          <a class="dropdown-item" href="/categories/minimalism">Minimalism</a>
-			          <a class="dropdown-item" href="/categories/mindfulness">Mindfulness</a>
-			          <a class="dropdown-item" href="/categories/financial-independence">Financial Independence</a>
-								<a class="dropdown-item" href="/categories/goals">Goals</a>
-								<a class="divider"></a>
+			          <a class="dropdown-item" href="/category/minimalism">Minimalism</a>
+			          <a class="dropdown-item" href="/category/mindfulness">Mindfulness</a>
+			          <a class="dropdown-item" href="/category/financial-independence">Financial Independence</a>
+								<a class="dropdown-item" href="/category/goals">Goals</a>
+								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="/archives">All Articles</a>
-								<a class="dropdown-item" href="/categories/personal">Personal</a>
+								<a class="dropdown-item" href="/category/personal">Personal</a>
 			        </div>
 			      </li>
 

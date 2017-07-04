@@ -38,13 +38,30 @@
 
 
 a
-  &[href$='/category/minimalism/']
+  &[href$='/category/minimalism/'],
+  &[href$='/category/minimalism']
     color: $minimalism
+    &:hover
+      color: $minimalism-dark
 
-  &[href$='/category/mindfulness/']
+  &[href$='/category/mindfulness/'],
+  &[href$='/category/mindfulness']
     color: $mindfulness
+    &:hover
+      color: $mindfulness-dark
 
   &[href$='/category/financial-independence/'],
   &[href$='/category/investing/'],
-  &[href$='/category/finance/']
+  &[href$='/category/finance/'],
+  &[href$='/category/financial-independence'],
+  &[href$='/category/investing'],
+  &[href$='/category/finance']
     color: $financial
+    &:hover
+      color: $financial-dark
+
+  &[href$='/category/goals/'],
+  &[href$='/category/goals']
+    color: $goals
+    &:hover
+      color: $goals-dark

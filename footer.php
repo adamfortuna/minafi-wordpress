@@ -13,12 +13,8 @@
 <div class='footer'>
 	<div class='container'>
 		<div class='row'>
-			<div class="<?php minafi_columns(); ?> footer--content">
-				<ul class='list-inline pull-left'>
-					<li class='list-inline-item'><a href='/about'>About</a></li>
-					<li class='list-inline-item'><a href='/articles'>Articles</a></li>
-				</ul>
-				<span class='pull-right'>By <a href='http://adamfortuna.com'>Adam Fortuna</span>
+			<div class="footer--content col">
+				<p>Looking for where to start? <a href="/start-here">Start here</a>.</p>
 			</div>
 		</div>
 	</div>

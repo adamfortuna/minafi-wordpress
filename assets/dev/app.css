@@ -8139,7 +8139,7 @@ article {
     border-radius: 4px;
     padding: 0.8rem 1.4rem;
     text-decoration: none;
-    color: #555;
+    color: rgba(0, 0, 0, 0.8);
     transition: 0.3s; }
     .articles--list article a h2 {
       text-decoration: underline;
@@ -8266,7 +8266,7 @@ a.mindfulness--text:hover {
       font-weight: 400;
       font-size: 1rem; }
       .post-categories li a:hover {
-        background-color: #555; }
+        background-color: rgba(0, 0, 0, 0.8); }
       .post-categories li a[href~='/category/minimalism/'] {
         background-color: rgba(229, 236, 247, 0.85);
         color: #284777; }
@@ -8283,14 +8283,25 @@ a.mindfulness--text:hover {
         .post-categories li a[href~='/category/financial-independence/']:hover, .post-categories li a[href~='/category/investing/']:hover, .post-categories li a[href~='/category/finance/']:hover {
           background-color: #7DD087; }
 
-a[href$='/category/minimalism/'] {
+a[href$='/category/minimalism/'], a[href$='/category/minimalism'] {
   color: #758FB8; }
+  a[href$='/category/minimalism/']:hover, a[href$='/category/minimalism']:hover {
+    color: #486696; }
 
-a[href$='/category/mindfulness/'] {
+a[href$='/category/mindfulness/'], a[href$='/category/mindfulness'] {
   color: #9776BC; }
+  a[href$='/category/mindfulness/']:hover, a[href$='/category/mindfulness']:hover {
+    color: #704999; }
 
-a[href$='/category/financial-independence/'], a[href$='/category/investing/'], a[href$='/category/finance/'] {
+a[href$='/category/financial-independence/'], a[href$='/category/investing/'], a[href$='/category/finance/'], a[href$='/category/financial-independence'], a[href$='/category/investing'], a[href$='/category/finance'] {
   color: #7DD087; }
+  a[href$='/category/financial-independence/']:hover, a[href$='/category/investing/']:hover, a[href$='/category/finance/']:hover, a[href$='/category/financial-independence']:hover, a[href$='/category/investing']:hover, a[href$='/category/finance']:hover {
+    color: #4CB058; }
+
+a[href$='/category/goals/'], a[href$='/category/goals'] {
+  color: #FD989B; }
+  a[href$='/category/goals/']:hover, a[href$='/category/goals']:hover {
+    color: #fc4d52; }
 
 .comments--content {
   padding: 1.6rem 0; }
@@ -8377,14 +8388,16 @@ body {
   .navbar .nav {
     margin-top: 0.6rem; }
   .navbar .nav-link {
-    color: #555;
+    color: rgba(0, 0, 0, 0.8);
     font-weight: 700;
     transition: 0.3s; }
     .navbar .nav-link:hover {
-      background-color: #999;
-      color: #eee; }
+      background-color: rgba(0, 0, 0, 0.05); }
   .navbar .dropdown.open .dropdown-menu {
     display: block; }
+  .navbar .dropdown-item {
+    letter-spacing: -0.5px;
+    padding: 0.2rem 1rem; }
 
 .navbar-brand--text {
   text-decoration: none;
@@ -8432,7 +8445,7 @@ body {
   background-color: #fff !important;
   cursor: pointer; }
   .search--link:hover {
-    background-color: #555 !important;
+    background-color: rgba(0, 0, 0, 0.8) !important;
     color: #eee; }
   .search--link:focus {
     outline: none; }
@@ -8463,7 +8476,7 @@ body {
 
 .aesop-entry-content p, .aesop-entry-content h1, .aesop-entry-content h2, .aesop-entry-content h3, .aesop-entry-content h4, .aesop-entry-content h5, .aesop-entry-content h6, .aesop-entry-content ol, .aesop-entry-content ul, .aesop-entry-content table, .aesop-entry-content dl {
   width: 100%;
-  max-width: 800px;
+  max-width: 700px;
   margin: 0rem auto 2rem; }
 
 .aesop-entry-content h2, .aesop-entry-content h3 {
