@@ -13,28 +13,35 @@
       color: rgba(0,0,0,0.6)
       font-weight: 400
       font-size: 1rem
+      text-decoration: none
       &:hover
-        background-color: $gray
+        background-color: darken($gray-lightest, 10%)
 
-      &[href~='/category/minimalism/']
-        background-color: rgba(229, 236, 247, 0.85)
-        color: #284777
+      &[href$='/category/minimalism/']
+        background-color: $minimalism-lighter
+        color: $minimalism-darker
         &:hover
-          background-color: #758FB8
+          background-color: darken($minimalism-lighter, 10%)
 
-      &[href~='/category/mindfulness/']
-        background-color: rgba(240,238,249, 0.85)
-        color: #4E287A
+      &[href$='/category/mindfulness/']
+        background-color: $mindfulness-lighter
+        color: $mindfulness-darker
         &:hover
-          background-color: #9776BC
+          background-color: darken($mindfulness-lighter, 10%)
 
-      &[href~='/category/financial-independence/'],
-      &[href~='/category/investing/'],
-      &[href~='/category/finance/']
-        background-color: rgba(229, 250, 232, 0.85)
-        color: #258C32
+      &[href$='/category/goals/']
+        background-color: $goals-lighter
+        color: $goals-dark
         &:hover
-          background-color: #7DD087
+          background-color: darken($goals-lighter, 5%)
+
+      &[href$='/category/financial-independence/'],
+      &[href$='/category/investing/'],
+      &[href$='/category/finance/']
+        background-color: $financial-lighter
+        color: $financial-darker
+        &:hover
+          background-color: darken($financial-lighter, 10%)
 
 
 a

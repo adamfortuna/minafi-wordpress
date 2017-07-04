@@ -8082,45 +8082,29 @@ article {
   .article--content ul li {
     margin-bottom: 0.6rem; }
 
-.article-header--content {
-  padding: 1.8rem; }
-
-.article--has-thumbnail .article-header--content {
-  bottom: 0;
-  position: absolute;
-  padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.25); }
-  .article--has-thumbnail .article-header--content p {
-    margin: 0;
-    font-weight: 500px; }
-
-.article--has-thumbnail .article--content {
-  margin-top: 1.6rem; }
-
-.article--singular .attachment-large {
-  margin: 0 auto; }
-
-.article--singular .article--date {
-  display: none; }
-
-.article--singular .comments--new {
-  border-bottom: 1px solid #ccc; }
-
-.article--singular h2 {
-  font-size: 26px; }
-  .article--singular h2 .article-header--content {
-    background-color: rgba(0, 0, 0, 0.25); }
-  .article--singular h2 h1 {
-    color: #4CB058; }
-  .article--singular h2 .lead {
-    color: #258C32; }
-
 .article--meta {
-  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
   padding: 1rem 0;
   color: #999; }
   .article--meta p {
     margin: 0; }
+
+.article--author {
+  border-bottom: 1px solid #eee;
+  padding: 1.4rem 0; }
+
+.article--author-name {
+  color: rgba(0, 0, 0, 0.8);
+  margin: 0; }
+
+.article--author-description {
+  font-weight: 400;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 0; }
+
+.comments {
+  display: block; }
 
 .articles--list article {
   margin-bottom: 1rem;
@@ -8264,24 +8248,30 @@ a.mindfulness--text:hover {
       border-radius: 4px;
       color: rgba(0, 0, 0, 0.6);
       font-weight: 400;
-      font-size: 1rem; }
+      font-size: 1rem;
+      text-decoration: none; }
       .post-categories li a:hover {
-        background-color: rgba(0, 0, 0, 0.8); }
-      .post-categories li a[href~='/category/minimalism/'] {
-        background-color: rgba(229, 236, 247, 0.85);
+        background-color: #d5d5d5; }
+      .post-categories li a[href$='/category/minimalism/'] {
+        background-color: #E5ECF7;
         color: #284777; }
-        .post-categories li a[href~='/category/minimalism/']:hover {
-          background-color: #758FB8; }
-      .post-categories li a[href~='/category/mindfulness/'] {
-        background-color: rgba(240, 238, 249, 0.85);
+        .post-categories li a[href$='/category/minimalism/']:hover {
+          background-color: #bed0eb; }
+      .post-categories li a[href$='/category/mindfulness/'] {
+        background-color: #F0EEF9;
         color: #4E287A; }
-        .post-categories li a[href~='/category/mindfulness/']:hover {
-          background-color: #9776BC; }
-      .post-categories li a[href~='/category/financial-independence/'], .post-categories li a[href~='/category/investing/'], .post-categories li a[href~='/category/finance/'] {
-        background-color: rgba(229, 250, 232, 0.85);
+        .post-categories li a[href$='/category/mindfulness/']:hover {
+          background-color: #cfc8ec; }
+      .post-categories li a[href$='/category/goals/'] {
+        background-color: #fee3e4;
+        color: #fc4d52; }
+        .post-categories li a[href$='/category/goals/']:hover {
+          background-color: #fecacc; }
+      .post-categories li a[href$='/category/financial-independence/'], .post-categories li a[href$='/category/investing/'], .post-categories li a[href$='/category/finance/'] {
+        background-color: #E5FAE8;
         color: #258C32; }
-        .post-categories li a[href~='/category/financial-independence/']:hover, .post-categories li a[href~='/category/investing/']:hover, .post-categories li a[href~='/category/finance/']:hover {
-          background-color: #7DD087; }
+        .post-categories li a[href$='/category/financial-independence/']:hover, .post-categories li a[href$='/category/investing/']:hover, .post-categories li a[href$='/category/finance/']:hover {
+          background-color: #baf2c2; }
 
 a[href$='/category/minimalism/'], a[href$='/category/minimalism'] {
   color: #758FB8; }
@@ -8474,7 +8464,7 @@ body {
 .email-address {
   width: 300px !important; }
 
-.aesop-entry-content p, .aesop-entry-content h1, .aesop-entry-content h2, .aesop-entry-content h3, .aesop-entry-content h4, .aesop-entry-content h5, .aesop-entry-content h6, .aesop-entry-content ol, .aesop-entry-content ul, .aesop-entry-content table, .aesop-entry-content dl {
+.aesop-entry-content p, .aesop-entry-content h1, .aesop-entry-content h2, .aesop-entry-content h3, .aesop-entry-content h4, .aesop-entry-content h5, .aesop-entry-content h6, .aesop-entry-content ol, .aesop-entry-content ul, .aesop-entry-content table, .aesop-entry-content dl, .aesop-entry-content hr {
   width: 100%;
   max-width: 700px;
   margin: 0rem auto 2rem; }
