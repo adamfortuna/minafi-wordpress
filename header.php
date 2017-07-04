@@ -20,29 +20,34 @@
 	<?php endif; ?>
 	<?php wp_head(); ?>
 </head>
-
+<?php do_action('aesop_theme_body_before'); ?>
 <body <?php body_class(); ?>>
-
+	<?php do_action('ase_theme_body_inside_top'); ?>
 	<div class="container">
-	  <div class='row'>
+	  <div class='row justify-content-center'>
 	    <div class="header <?php minafi_columns(); ?>">
-	      <nav class="navbar">
-					<div>
-		        <a class="navbar-brand" href="/">Minafi</a>
-
-		        <button class="navbar-toggler hidden-sm-up pull-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
-		          &#9776;
-		        </button>
-					</div>
+	      <nav class="navbar navbar-toggleable-md">
+	        <a class="navbar-brand" href="/">
+						<img src="/wp-content/themes/minafi/assets/images/mfi.png" width="42" height="42" alt="Minafi Small Logo">
+					</a>
 
 	        <ul class="nav nav-pills collapse navbar-toggleable-xs pull-right"  id="collapsingNavbar">
 	          <li class="nav-item">
 	            <a class="nav-link" href="/about">About</a>
 	          </li>
 
-	          <li class="nav-item">
-	            <a class="nav-link" href="/articles">Articles</a>
-	          </li>
+	          <li class="nav-item dropdown">
+	            <a class="nav-link dropdown-toggle" href="#" id="navArticlesDropdownLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Articles</a>
+			        <div class="dropdown-menu" role="menu" aria-labelledby="navArticlesDropdownLink">
+			          <a class="dropdown-item" href="/categories/minimalism">Minimalism</a>
+			          <a class="dropdown-item" href="/categories/mindfulness">Mindfulness</a>
+			          <a class="dropdown-item" href="/categories/financial-independence">Financial Independence</a>
+								<a class="dropdown-item" href="/categories/goals">Goals</a>
+								<a class="divider"></a>
+								<a class="dropdown-item" href="/archives">All Articles</a>
+								<a class="dropdown-item" href="/categories/personal">Personal</a>
+			        </div>
+			      </li>
 
 	          <li class="nav-item">
 							<form role="search" method="get" class="form-inline search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
@@ -62,4 +67,3 @@
 	    </div>
 	  </div>
 	</div>
-</div>

@@ -51,7 +51,7 @@ endif;
 
 if(!function_exists('minafi_columns')) :
 function minafi_columns() {
-  printf("offset-xl-2 col-xl-8 offset-lg-1 col-lg-10 col-xs-12");
+  printf("col");
 }
 endif;
 

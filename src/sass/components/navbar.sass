@@ -2,13 +2,6 @@
   padding-left: 0
   padding-right: 0
   border-bottom: 1px solid $gray-lightest
-  .navbar-brand
-    color: $gray-dark
-    font-size: 2rem
-    font-weight: bold
-    transition: 0.3s
-    &:hover
-      color: $brand-primary
 
   .nav
     margin-top: 0.6rem
@@ -17,11 +10,14 @@
     font-weight: 700
     transition: 0.3s
     &:hover
-      background-color: $gray
-      color: $gray-lighter
+      background-color: $gray-lighter
+      color: $gray-lightest
 
-  .articles--dropdown
-    position: relative
+  .dropdown
+    &.open
+      .dropdown-menu
+        display: block
+
 
 
 .search--link
@@ -53,6 +49,7 @@
   z-index: 1 !important
   position: relative
   background-color: #fff !important
+  cursor: pointer
   &:hover
     background-color: $gray-dark !important
     color: $gray-lightest

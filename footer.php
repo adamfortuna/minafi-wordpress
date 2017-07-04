@@ -24,5 +24,7 @@
 	</div>
 </div>
 
+<?php do_action('aesop_theme_body_inside_bottom'); ?>
 </body>
+<?php do_action('aesop_theme_body_after'); ?>
 </html>

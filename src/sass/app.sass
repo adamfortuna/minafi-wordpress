@@ -1,11 +1,11 @@
 @import 'config/variables'
-@import '../components/bootstrap/scss/bootstrap-flex'
+@import '../components/bootstrap/scss/bootstrap'
 @import '../components/font-awesome/scss/font-awesome'
 
 @import 'components/article'
 @import 'components/articles'
-@import 'components/aside'
 @import 'components/colors'
+@import 'components/categories'
 @import 'components/comments'
 @import 'components/dropdown'
 @import 'components/footer'
@@ -14,14 +14,16 @@
 @import 'components/navbar'
 @import 'components/related-posts'
 @import 'components/welcome'
+@import 'components/aesop'
+@import 'components/subtitles'
 
 img
   max-width: 100%
 
 h1, h2, h3, h4, h5, h6
-  font-weight: bold
-  color: #555
-
+  font-weight: 700
+  color: rgba(0,0,0,0.8)
+  font-family: $font-family-sans-serif
 
 // Move over 2columns and allow for 12 columns of width
 .full-width

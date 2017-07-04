@@ -25,7 +25,7 @@ gulp.task('css:minify', function() {
     .pipe(gulp.dest('assets/css'));
 });
 gulp.task('sass:watch', function () {
-  gulp.watch('./src/sass/**/*.sass', ['sass']);
+  gulp.watch('./src/sass/**/*.s[a|c]ss', ['sass']);
   gulp.watch('./assets/dev/**/*.css', ['css:minify']);
 });
 

@@ -1,0 +1,50 @@
+.post-categories
+  list-style: none
+  margin: 0
+  padding: 0
+  li
+    display: inline
+    padding-left: 0
+    padding-right: 0.5rem
+    a
+      background-color: $gray-lightest
+      padding: 6px 10px
+      border-radius: 4px
+      color: rgba(0,0,0,0.6)
+      font-weight: 400
+      font-size: 1rem
+      &:hover
+        background-color: $gray
+
+      &[href~='/category/minimalism/']
+        background-color: rgba(229, 236, 247, 0.85)
+        color: #284777
+        &:hover
+          background-color: #758FB8
+
+      &[href~='/category/mindfulness/']
+        background-color: rgba(240,238,249, 0.85)
+        color: #4E287A
+        &:hover
+          background-color: #9776BC
+
+      &[href~='/category/financial-independence/'],
+      &[href~='/category/investing/'],
+      &[href~='/category/finance/']
+        background-color: rgba(229, 250, 232, 0.85)
+        color: #258C32
+        &:hover
+          background-color: #7DD087
+
+
+a
+  &[href$='/category/minimalism/']
+    color: $minimalism
+
+  &[href$='/category/mindfulness/']
+    color: $mindfulness
+
+  &[href$='/category/financial-independence/'],
+  &[href$='/category/investing/'],
+  &[href$='/category/finance/']
+    color: $financial

@@ -25,7 +25,6 @@
  * @since Twenty Sixteen 1.0
  */
 
-
 if ( ! function_exists( 'twentysixteen_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -162,7 +161,7 @@ function twentysixteen_fonts_url() {
 	$fonts_url = '';
 	$fonts     = array();
 	$subsets   = 'latin,latin-ext';
-	$fonts[] = 'Lato:400,700,900,400italic,700italic';
+	$fonts[] = 'Lato:300,400,700,900|Merriweather:300,300i,400,400i,700';
 	// $fonts[] = 'Open Sans:400,700,900,400italic,700italic';
 
 	if ( $fonts ) {
@@ -176,12 +175,7 @@ function twentysixteen_fonts_url() {
 }
 endif;
 
-/**
- * Enqueues scripts and styles.
- *
- * @since Twenty Sixteen 1.0
- */
-function twentysixteen_scripts() {
+function minafi_scripts() {
 	// Add custom fonts, used in the main stylesheet.
 	wp_enqueue_style( 'twentysixteen-fonts', twentysixteen_fonts_url(), array(), null );
 
@@ -195,8 +189,11 @@ function twentysixteen_scripts() {
 	wp_enqueue_script( 'minafi-script', get_template_directory_uri() . '/assets/js/app.js');
 	wp_enqueue_script( 'tether-script', get_template_directory_uri() . '/assets/js/tether.min.js');
 	wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/assets/js/bootstrap.min.js');
+
+	wp_enqueue_script( 'aesop-story-engine-core', '/wp-content/plugins/aesop-story-engine/public/assets/js/ai-core.min.js?ver=1.9.7.3');
+	wp_enqueue_script( 'aesop-story-engine-ast', '/wp-content/plugins/aesop-story-engine/public/assets/js/ast.min.js?ver=1.1');
 }
-add_action( 'wp_enqueue_scripts', 'twentysixteen_scripts' );
+add_action( 'wp_enqueue_scripts', 'minafi_scripts' );
 
 /**
  * Adds custom classes to the array of body classes.
@@ -343,3 +340,35 @@ add_filter( 'excerpt_more', 'new_excerpt_more' );
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
+require get_template_directory() . '/inc/aesop.php';
+
+// Remove the subtitles
+if ( class_exists( 'Subtitles' ) &&  method_exists( 'Subtitles', 'subtitle_styling' ) ) {
+	remove_action( 'wp_head', array( Subtitles::getInstance(), 'subtitle_styling' ) );
+}
+
+
+
+// Disable emojis
+function disable_wp_emojicons() {
+  // all actions related to emojis
+  remove_action( 'admin_print_styles', 'print_emoji_styles' );
+  remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+  remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+  remove_action( 'wp_print_styles', 'print_emoji_styles' );
+  remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+  remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+  remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
+
+  // filter to remove TinyMCE emojis
+  add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
+}
+add_action( 'init', 'disable_wp_emojicons' );
+
+
+
+function remove_subtitles_support() {
+	remove_post_type_support( 'post', 'subtitles' );
+	remove_post_type_support( 'page', 'subtitles' );
+}
+add_action( 'init', 'remove_subtitles_support' );
