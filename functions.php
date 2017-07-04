@@ -186,12 +186,9 @@ function minafi_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	wp_enqueue_script( 'minafi-script', get_template_directory_uri() . '/assets/js/app.js');
-	wp_enqueue_script( 'tether-script', get_template_directory_uri() . '/assets/js/tether.min.js');
-	wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/assets/js/bootstrap.min.js');
+	wp_enqueue_script( 'minafi-script', get_template_directory_uri() . '/assets/js/app.bundle.js');
 
-	wp_enqueue_script( 'aesop-story-engine-core', '/wp-content/plugins/aesop-story-engine/public/assets/js/ai-core.min.js?ver=1.9.7.3');
-	wp_enqueue_script( 'aesop-story-engine-ast', '/wp-content/plugins/aesop-story-engine/public/assets/js/ast.min.js?ver=1.1');
+	wp_deregister_script('jquery');
 }
 add_action( 'wp_enqueue_scripts', 'minafi_scripts' );
 

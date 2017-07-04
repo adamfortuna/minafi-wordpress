@@ -11,7 +11,8 @@ var babelify = require('babelify'),
     browserify = require('browserify'),
     source = require('vinyl-source-stream'),
     uglify = require('gulp-uglify'),
-    pump = require('pump');
+    pump = require('pump'),
+    concat = require('gulp-concat');
 
 // CSS
 gulp.task('sass', function () {
@@ -42,9 +43,25 @@ gulp.task('js', function () {
       console.log('\nJS Error: ', e.message, '\n');
     }
 });
+
+gulp.task('js:concat', function () {
+  var files = [
+    'assets/dev/app.js',
+    'src/components/popper.js/index.js',
+    'src/components/bootstrap/dist/js/bootstrap.js',
+    '../../plugins/aesop-story-engine/public/assets/js/ai-core.min.js',
+    '../../plugins/aesop-story-engine/public/assets/js/ast.min.js',
+  ];
+
+  return gulp.src(files)
+    .pipe(concat('app.bundle.js'))
+    .pipe(gulp.dest('assets/dev'));
+});
+
+
 gulp.task('js:minify', function(cb) {
   pump([
-    gulp.src('assets/dev/app.js'),
+    gulp.src('assets/dev/app.bundle.js'),
     uglify(),
     gulp.dest('assets/js')
   ], cb);
@@ -56,3 +73,8 @@ gulp.task('js:watch', function () {
 
 gulp.task('default', ['watch', 'sass', 'js']);
 gulp.task('watch', ['sass:watch', 'js:watch']);
+
+
+// <script type='text/javascript' src='http://localhost:8888/wp-content/themes/minafi/assets/js/tether.min.js?ver=4.8'></script>
+// <script type='text/javascript' src='http://localhost:8888/wp-content/plugins/aesop-story-engine/public/assets/js/ai-core.min.js?ver=4.8'></script>
+// <script type='text/javascript' src='http://localhost:8888/wp-content/plugins/aesop-story-engine/public/assets/js/ast.min.js?ver=4.8'></script>
