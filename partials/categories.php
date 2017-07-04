@@ -5,7 +5,7 @@
     <?php echo wp_list_categories(array(
       'orderby'    => 'name',
       'show_count' => true,
-      'include' => array(73,74,75,76),
+      'include' => array(58,59,56,57),
       'title_li' => ''
       ))
     ?>
