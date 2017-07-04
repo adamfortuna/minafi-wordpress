@@ -369,3 +369,10 @@ function remove_subtitles_support() {
 	remove_post_type_support( 'page', 'subtitles' );
 }
 add_action( 'init', 'remove_subtitles_support' );
+
+
+function use_slim_container() {
+	$template = explode(".", basename(get_page_template()))[0];
+	if($template == 'all') { return false; }
+	return is_singular();
+}

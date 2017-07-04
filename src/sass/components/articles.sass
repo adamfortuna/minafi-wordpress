@@ -1,11 +1,23 @@
-.articles--list
-  border-right: 1px solid $gray-lightest
+.home
+  .articles--list
+    border-right: 1px solid $gray-lightest
 
 .article--header-image
   margin-bottom: 1rem
   display: block
-  max-height: 233px
-  overflow: hidden
+  position: relative
+  .articles--group &
+    max-height: 233px
+    overflow: hidden
+.article--header-overlay
+  background-color: rgba(0,0,0,0.0)
+  height: 100%
+  width: 100%
+  position: absolute
+  z-index: 9999
+  transition: background-color 0.3s
+  .article--header-image:hover &
+    background-color: rgba(0,0,0,0.25)
 
 .articles--list
   .article--header

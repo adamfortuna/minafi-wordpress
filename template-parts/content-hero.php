@@ -2,7 +2,16 @@
 
 <article id="post-<?php the_ID(); ?>" class="col-12 articles--list-hero">
   <a href='<?php echo esc_url(get_permalink()); ?>' class="article--header-image">
-    <?php minafi_post_thumbnail('large', true); ?>
+    <div class="post-thumbnail thumbnail--small">
+      <div class="article--header-overlay"></div>
+      <?php
+        if(has_post_thumbnail()) {
+      		the_post_thumbnail('large');
+        } else { ?>
+          <img src="<?php echo get_template_directory_uri() ?>/assets/images/default-large.jpeg" />
+        <?php }
+      ?>
+    </div>
   </a>
 
   <header class="article--header article-header--hero">

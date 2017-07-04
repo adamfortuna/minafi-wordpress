@@ -1,14 +1,17 @@
 <?php $read_time = do_shortcode('[rt_reading_time label="" postfix="min read." postfix_singular="min read."]') ?>
 
-<article id="post-<?php the_ID(); ?>" class="col-4 articles--list-hero">
+<article id="post-<?php the_ID(); ?>" class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
   <a href='<?php echo esc_url(get_permalink()); ?>' class="article--header-image">
-    <?php
-      if(has_post_thumbnail()) {
-        minafi_post_thumbnail('large', true);
-      } else { ?>
-        <img src="<?php echo get_template_directory_uri() ?>/assets/images/default-medium.jpeg" />
-      <?php }
-    ?>
+    <div class="post-thumbnail thumbnail--small">
+      <div class="article--header-overlay"></div>
+      <?php
+        if(has_post_thumbnail()) {
+      		the_post_thumbnail('large');
+        } else { ?>
+          <img src="<?php echo get_template_directory_uri() ?>/assets/images/default-medium.jpeg" />
+        <?php }
+      ?>
+    </div>
   </a>
 
   <header class="article--header article-header--hero">

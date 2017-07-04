@@ -29,7 +29,7 @@ get_header(); ?>
 				?>
 			</header>
 
-			<section class='articles--list first-content'>
+			<section class='articles--list first-content row'>
 				<?php
 				while ( have_posts() ) : the_post();
 					get_template_part( 'template-parts/content', 'title');

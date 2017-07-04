@@ -10,7 +10,7 @@
 get_header(); ?>
 
 <div class='first-content container'>
-	<section class="<?php minafi_columns(); ?>">
+	<section>
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
@@ -18,20 +18,29 @@ get_header(); ?>
 			</header><!-- .page-header -->
 
 			<section class='articles--list first-content'>
+				<div class="row">
 				<?php
 				// Start the loop.
 				while ( have_posts() ) : the_post();
 					get_template_part( 'template-parts/content', 'title' );
 				// End the loop.
 				endwhile;
+				?>
+				</div>
+				<div class="row">
+					<div class="col-12">
+						<?php
+							// Previous/next page navigation.
+							the_posts_pagination( array(
+								'prev_text'          => __( 'Previous page', 'twentysixteen' ),
+								'next_text'          => __( 'Next page', 'twentysixteen' ),
+								'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>'
+							) );
+						?>
+					</div>
+				</div>
 
-				// Previous/next page navigation.
-				the_posts_pagination( array(
-					'prev_text'          => __( 'Previous page', 'twentysixteen' ),
-					'next_text'          => __( 'Next page', 'twentysixteen' ),
-					'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>',
-				) );
-
+			<?php
 			// If no content, include the "No posts found" template.
 			else :
 				get_template_part( 'template-parts/content', 'none' );

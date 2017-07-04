@@ -49,6 +49,14 @@ include('partials/hero.php');
 			wp_reset_postdata();
 		?>
 	</div>
+
+	<div class="row">
+		<div class="col-12">
+			Haven't found something yet?
+			<a href="/archives">See all posts</a>
+		</div>
+	</div>
+
 </div>
 
 <?php get_footer(); ?>
