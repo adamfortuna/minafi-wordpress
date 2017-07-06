@@ -29,7 +29,7 @@
 	      <nav class="navbar navbar-toggleable-md">
 	        <a class="navbar-brand" href="/">
 						<img src="/wp-content/themes/minafi/assets/images/mfi.png" class="d-inline-block align-top" width="42" height="42" alt="Minafi Small Logo">
-						<span class="navbar-brand--text">inifi</span>
+						<span class="navbar-brand--text">inafi</span>
 					</a>
 
 	        <ul class="nav nav-pills collapse navbar-toggleable-xs pull-right"  id="collapsingNavbar">
