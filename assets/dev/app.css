@@ -8415,7 +8415,7 @@ body {
   border-top: 1px solid #eee;
   padding-top: 1rem; }
 
-.aesop-entry-content p, .aesop-entry-content h1, .aesop-entry-content h2, .aesop-entry-content h3, .aesop-entry-content h4, .aesop-entry-content h5, .aesop-entry-content h6, .aesop-entry-content ol, .aesop-entry-content ul, .aesop-entry-content table, .aesop-entry-content dl, .aesop-entry-content hr {
+.aesop-entry-content p, .aesop-entry-content h1, .aesop-entry-content h2, .aesop-entry-content h3, .aesop-entry-content h4, .aesop-entry-content h5, .aesop-entry-content h6, .aesop-entry-content ol, .aesop-entry-content ul, .aesop-entry-content table, .aesop-entry-content dl, .aesop-entry-content hr, .aesop-entry-content figure {
   width: 100%;
   max-width: 700px;
   margin: 0rem auto 2rem;
