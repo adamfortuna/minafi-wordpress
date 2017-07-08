@@ -51,7 +51,7 @@
 
     <section class="article--author container container-slim">
       <div class="row">
-        <div class="col-2">
+        <div class="col-2 ml-2">
           <img src="<?php echo get_avatar_url(get_the_author_meta('user_email')) ?>" class="rounded pull-right" height="80" width="80" />
         </div>
         <div class="col-9">
@@ -66,7 +66,7 @@
 <?php if ( comments_open() || get_comments_number() ) { ?>
 <div class="comments">
 	<div class='container container-slim'>
-		<section class="comments--content <?php minafi_columns() ?>">
+		<section class="comments--content">
 			<?php comments_template(); ?>
 		</section>
 	</div>
