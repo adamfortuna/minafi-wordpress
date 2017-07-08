@@ -63,4 +63,19 @@
 	</article>
 </div>
 
+<?php if ( comments_open() || get_comments_number() ) { ?>
+<div class="comments">
+	<div class='container container-slim'>
+		<section class="comments--content <?php minafi_columns() ?>">
+			<?php comments_template(); ?>
+		</section>
+	</div>
+</div>
+
+<?php } ?>
+
 <?php do_action('ase_theme_post_after'); ?>
+
+<section class='container container-slim'>
+  <?php if ( function_exists( "get_yuzo_related_posts" ) ) { get_yuzo_related_posts(); } ?>
+</section>
