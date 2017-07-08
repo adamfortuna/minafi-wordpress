@@ -27,15 +27,6 @@ $comments_number = get_comments_number();
 ?>
 
 <div id="comments" class="comments-area">
-
-	<div class='row'>
-		<button class='comments--leave-comment-button offset-xs-<?php print($columns_offset); ?> col-xs-<?php print($columns); ?> btn btn-lg btn-outline-primary' onclick='$("#comments").toggleClass("comment--new-form")'>Leave a Comment</button>
-		<?php if ( have_comments() ) : ?>
-			<button class='comments--view-all offset-xs-1 col-xs-4 btn btn-lg btn-outline-primary' onclick='$("#comments").toggleClass("comment--viewing-comments");'>See Comments (<?php print($comments_number); ?>)</button>
-		<?php endif; ?>
-	</div>
-
-
 	<?php if ( have_comments() ) : ?>
 		<div class='comments--current row'>
 			<div class='col-12'>

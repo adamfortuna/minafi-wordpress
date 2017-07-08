@@ -8261,26 +8261,10 @@ a[href$='/category/goals/'], a[href$='/category/goals'] {
     color: #fc4d52; }
 
 .comments {
-  background-color: #eee; }
-
-.comments--content {
-  padding: 1.6rem 0; }
-
-.comments--current,
-.comment--new {
-  display: none; }
-
-#comments.comment--new-form .comment--new {
-  display: block; }
-
-#comments.comment--new-form .comments--leave-comment-button {
-  display: none; }
-
-#comments.comment--viewing-comments .comments--current {
-  display: block; }
-
-#comments.comment--viewing-comments .comments--view-all {
-  display: none; }
+  background-color: #f6f6f6;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 2rem 0; }
 
 .form-submit {
   display: none; }
@@ -8289,10 +8273,6 @@ a[href$='/category/goals/'], a[href$='/category/goals'] {
 .comment-form-email,
 .comment-form-url {
   width: 50%; }
-
-.comments--current,
-.comment--new {
-  padding-top: 1.6rem; }
 
 .dropdown-menu {
   padding: 0;

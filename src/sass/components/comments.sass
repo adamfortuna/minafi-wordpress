@@ -1,26 +1,9 @@
 .comments
-  background-color: #eee
+  background-color: #f6f6f6
+  border-top: 1px solid $gray-lightest
+  border-bottom: 1px solid $gray-lightest
+  padding: 2rem 0
 
-.comments--content
-  padding: 1.6rem 0
-
-.comments--current,
-.comment--new
-  display: none
-
-
-#comments
-  &.comment--new-form
-    .comment--new
-      display: block
-    .comments--leave-comment-button
-      display: none
-
-  &.comment--viewing-comments
-    .comments--current
-      display: block
-    .comments--view-all
-      display: none
 
 .form-submit
  display: none
@@ -29,8 +12,3 @@
 .comment-form-email,
 .comment-form-url
     width: 50%
-
-
-.comments--current,
-.comment--new
-  padding-top: 1.6rem
