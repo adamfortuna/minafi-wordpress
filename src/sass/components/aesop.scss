@@ -1,5 +1,5 @@
 .aesop-entry-content {
-  p, h1, h2, h3, h4, h5, h6, ol, ul,  table, dl, hr, figure {
+  p, h1, h2, h3, h4, h5, h6, ol, ul,  table, dl, hr, figure, .aesop-content {
     width: 100%;
     max-width: 700px;
     margin: 0rem auto 2rem;
@@ -1685,4 +1685,18 @@ html.swipebox {
 body.rtl {
   direction: rtl;
   unicode-bidi: embed;
+}
+
+
+.aesop-quote-component blockquote {
+  line-height: 5rem;
+}
+.aesop-quote-component-cite {
+  display: block;
+  font-size: 70%;
+}
+
+
+.aesop-img-enlarge {
+  display: none;
 }

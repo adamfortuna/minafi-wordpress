@@ -2,7 +2,7 @@
 
 <article id="post-<?php the_ID(); ?>" class="col-12 articles--list-hero">
   <a href='<?php echo esc_url(get_permalink()); ?>' class="article--header-image">
-    <div class="post-thumbnail thumbnail--small">
+    <div class="post-thumbnail">
       <div class="article--header-overlay"></div>
       <?php
         if(has_post_thumbnail()) {

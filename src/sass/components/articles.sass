@@ -39,6 +39,19 @@
         &:hover
           text-decoration: underline
 
+@media only screen and (min-width: 768px)
+  .articles--list
+    .post-thumbnail.thumbnail--small
+      height: 235px
+      overflow: hidden
+      img
+        height: 100% !important
+        width: auto !important
+        max-width: none !important
+        left: 50%
+        position: relative
+        transform: translateX(-50%)
+
 .article-subtitle--small
   font-family: $font-family-sans-serif
   color: rgba(0,0,0,0.7)

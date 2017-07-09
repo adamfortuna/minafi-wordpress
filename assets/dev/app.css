@@ -8144,6 +8144,18 @@ article {
       .articles--list .article--header h2 a:hover {
         text-decoration: underline; }
 
+@media only screen and (min-width: 768px) {
+  .articles--list .post-thumbnail.thumbnail--small {
+    height: 235px;
+    overflow: hidden; }
+    .articles--list .post-thumbnail.thumbnail--small img {
+      height: 100% !important;
+      width: auto !important;
+      max-width: none !important;
+      left: 50%;
+      position: relative;
+      transform: translateX(-50%); } }
+
 .article-subtitle--small {
   font-family: "Lato", sans-serif;
   color: rgba(0, 0, 0, 0.7);
@@ -8278,6 +8290,36 @@ a[href$='/category/goals/'], a[href$='/category/goals'] {
 .comment-form-email,
 .comment-form-url {
   width: 50%; }
+
+.comment-list {
+  margin: 0;
+  padding: 0; }
+  .comment-list > li {
+    list-style: none;
+    border: 1px solid #dddddd;
+    margin-bottom: 1rem; }
+    .comment-list > li .comment-author {
+      float: left; }
+      .comment-list > li .comment-author .says {
+        display: none; }
+    .comment-list > li .comment-metadata {
+      float: right;
+      font-weight: 300; }
+    .comment-list > li .comment-content {
+      clear: both;
+      padding-top: 1rem; }
+    .comment-list > li .comment-body {
+      position: relative;
+      padding: 1rem; }
+      .comment-list > li .comment-body:hover {
+        background-color: #d6d6d6; }
+    .comment-list > li .reply {
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      font-size: 1rem; }
+    .comment-list > li .children > li {
+      list-style: none; }
 
 .dropdown-menu {
   padding: 0;
@@ -8466,7 +8508,7 @@ body {
 .yuzo_related_post .relatedthumb .yuzo-img-wrap {
   margin-bottom: 0px !important; }
 
-.aesop-entry-content p, .aesop-entry-content h1, .aesop-entry-content h2, .aesop-entry-content h3, .aesop-entry-content h4, .aesop-entry-content h5, .aesop-entry-content h6, .aesop-entry-content ol, .aesop-entry-content ul, .aesop-entry-content table, .aesop-entry-content dl, .aesop-entry-content hr, .aesop-entry-content figure {
+.aesop-entry-content p, .aesop-entry-content h1, .aesop-entry-content h2, .aesop-entry-content h3, .aesop-entry-content h4, .aesop-entry-content h5, .aesop-entry-content h6, .aesop-entry-content ol, .aesop-entry-content ul, .aesop-entry-content table, .aesop-entry-content dl, .aesop-entry-content hr, .aesop-entry-content figure, .aesop-entry-content .aesop-content {
   width: 100%;
   max-width: 700px;
   margin: 0rem auto 2rem;
@@ -10121,6 +10163,16 @@ html.swipebox {
 body.rtl {
   direction: rtl;
   unicode-bidi: embed; }
+
+.aesop-quote-component blockquote {
+  line-height: 5rem; }
+
+.aesop-quote-component-cite {
+  display: block;
+  font-size: 70%; }
+
+.aesop-img-enlarge {
+  display: none; }
 
 span.entry-subtitle {
   display: block;

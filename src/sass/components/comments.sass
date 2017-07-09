@@ -12,3 +12,36 @@
 .comment-form-email,
 .comment-form-url
     width: 50%
+
+
+.comment-list
+  margin: 0
+  padding: 0
+  > li
+    list-style: none
+    border: 1px solid #dddddd
+    margin-bottom: 1rem
+    .comment-author
+      float: left
+      .says
+        display: none
+    .comment-metadata
+      float: right
+      font-weight: 300
+    .comment-content
+        clear: both
+        padding-top: 1rem
+    .comment-body
+      position: relative
+      padding: 1rem
+      &:hover
+        background-color: #d6d6d6
+    .reply
+      position: absolute
+      bottom: 1rem
+      right: 1rem
+      font-size: 1rem
+    .children
+      > li
+        list-style: none
+    .comment-reply-link
