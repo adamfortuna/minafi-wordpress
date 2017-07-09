@@ -36,7 +36,12 @@ include('partials/hero.php');
 		</section>
 	</div>
 
+	<div class="row">
+		<h2 class="col-12 articles--recent">Recent Articles</h2>
+	</div>
+
 	<div class="row articles--list articles--group">
+
 		<?php
 			$args = array(
 				'posts_per_page'   => 6,

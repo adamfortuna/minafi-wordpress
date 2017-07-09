@@ -8174,6 +8174,11 @@ article {
 .article--header-categories {
   margin-top: 1rem; }
 
+.articles--recent {
+  border-top: 1px solid #eee;
+  margin-top: 1rem;
+  padding-top: 1rem; }
+
 .minimalism--text {
   color: #486696; }
 
@@ -8508,7 +8513,7 @@ body {
 .yuzo_related_post .relatedthumb .yuzo-img-wrap {
   margin-bottom: 0px !important; }
 
-.aesop-entry-content p, .aesop-entry-content h1, .aesop-entry-content h2, .aesop-entry-content h3, .aesop-entry-content h4, .aesop-entry-content h5, .aesop-entry-content h6, .aesop-entry-content ol, .aesop-entry-content ul, .aesop-entry-content table, .aesop-entry-content dl, .aesop-entry-content hr, .aesop-entry-content figure, .aesop-entry-content .aesop-content {
+.aesop-entry-content p, .aesop-entry-content h1, .aesop-entry-content h2, .aesop-entry-content h3, .aesop-entry-content h4, .aesop-entry-content h5, .aesop-entry-content h6, .aesop-entry-content ol, .aesop-entry-content ul, .aesop-entry-content table, .aesop-entry-content dl, .aesop-entry-content hr, .aesop-entry-content figure {
   width: 100%;
   max-width: 700px;
   margin: 0rem auto 2rem;
