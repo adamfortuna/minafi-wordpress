@@ -5,6 +5,12 @@
     <div class="post-thumbnail thumbnail--small">
       <div class="article--header-overlay"></div>
       <?php
+        $count = get_comments_number();
+        $comments = sprintf(_n( '%s Comment', '%s Comments', $count), $count );
+      ?>
+      <span class="article--comments-count"><?php echo $comments ?></span>
+
+      <?php
         if(has_post_thumbnail()) {
       		the_post_thumbnail('large');
         } else { ?>
