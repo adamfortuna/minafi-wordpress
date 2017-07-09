@@ -10224,6 +10224,10 @@ span.entry-subtitle {
     .home--text a:hover {
       text-decoration: none; }
 
+.article--content .more-link {
+  display: block;
+  margin-top: 1rem; }
+
 .sidebar p {
   line-height: 1.8rem; }
 

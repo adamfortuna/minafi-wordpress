@@ -26,11 +26,16 @@
       <span class="article--header-categories">
         <?php echo get_the_category_list(', '); ?>.
       </span>
+      <?php
+        $count = get_comments_number();
+        $comments = sprintf(_n( '%s Comment.', '%s Comments.', $count), $count );
+      ?>
+      <span><a href="<?php comments_link(); ?>"><?php echo $comments ?></a></span>
     </div>
   </header>
 
 
   <section class="article--content aesop-entry-content">
-    <?php the_content("Continue Reading. ".$read_time); ?>
+    <?php the_content("Continue Reading..."); ?>
   </section>
 </article>
