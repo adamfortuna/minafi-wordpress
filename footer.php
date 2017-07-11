@@ -14,7 +14,11 @@
 	<div class='container <?php if(use_slim_container()) { echo 'container-slim'; } ?>'>
 		<div class='row'>
 			<div class="footer--content col">
-				<p>Looking for where to start? <a href="/start-here">Start here</a>.</p>
+				<ul class="list-inline">
+					<li class="list-inline-item"><a href="/about">Start Here</a></li>
+					<li class="list-inline-item"><a href="/contact">Contact Me</a></li>
+					<li class="list-inline-item pull-right"><a href="/disclosure">Advertiser Disclosure</a></li>
+				</ul>
 			</div>
 		</div>
 	</div>

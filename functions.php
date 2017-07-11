@@ -364,6 +364,11 @@ function disable_wp_emojicons() {
 add_action( 'init', 'disable_wp_emojicons' );
 
 
+function deregister_styles() {
+  wp_deregister_style('contact-form-7');
+  wp_deregister_style('ea-share-count');
+}
+add_action( 'wp_print_styles', 'deregister_styles', 100 );
 
 function remove_subtitles_support() {
 	remove_post_type_support( 'post', 'subtitles' );
@@ -377,3 +382,16 @@ function use_slim_container() {
 	if($template == 'all') { return false; }
 	return is_singular();
 }
+
+
+
+// display featured post thumbnails in WordPress feeds
+function wcs_post_thumbnails_in_feeds( $content ) {
+    global $post;
+    if( has_post_thumbnail( $post->ID ) ) {
+        $content = '<p>' . get_the_post_thumbnail( $post->ID ) . '</p>' . $content;
+    }
+    return $content;
+}
+add_filter( 'the_excerpt_rss', 'wcs_post_thumbnails_in_feeds' );
+add_filter( 'the_content_feed', 'wcs_post_thumbnails_in_feeds' );

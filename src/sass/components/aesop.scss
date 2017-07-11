@@ -1,5 +1,10 @@
 .aesop-entry-content {
-  p, h1, h2, h3, h4, h5, h6, ol, ul,  table, dl, hr, figure {
+  .aesop-content {
+    width: 100%;
+    max-width: 700px;
+    margin: 0rem auto 2rem;
+  }
+  p, h1, h2, h3, h4, h5, h6, ol, ul,  table, dl, hr, figure, section.article--content {
     width: 100%;
     max-width: 700px;
     margin: 0rem auto 2rem;

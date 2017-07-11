@@ -33,6 +33,7 @@ include('partials/hero.php');
 			<?php include('partials/about.php'); ?>
 			<?php include('partials/categories.php') ?>
 			<?php include('partials/email.php'); ?>
+			<?php include('partials/links.php'); ?>
 		</section>
 	</div>
 
