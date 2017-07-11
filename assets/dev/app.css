@@ -9748,7 +9748,8 @@ a[href$='/category/goals/'], a[href$='/category/goals'] {
 .comments {
   padding: 2rem 0; }
   .comments .container {
-    border-bottom: 1px solid #eee; }
+    border-bottom: 1px solid #eee;
+    padding-bottom: 2rem; }
 
 .form-submit {
   display: none; }
