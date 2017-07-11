@@ -1,9 +1,7 @@
 .comments
-  background-color: #f6f6f6
-  border-top: 1px solid $gray-lightest
-  border-bottom: 1px solid $gray-lightest
   padding: 2rem 0
-
+  .container
+    border-bottom: 1px solid $gray-lightest
 
 .form-submit
  display: none
@@ -23,6 +21,8 @@
     margin-bottom: 1rem
     .comment-author
       float: left
+      b
+        font-weight: normal
       .says
         display: none
     .comment-metadata
@@ -31,11 +31,10 @@
     .comment-content
         clear: both
         padding-top: 1rem
+        line-height: 1.8rem
     .comment-body
       position: relative
       padding: 1rem
-      &:hover
-        background-color: #d6d6d6
     .reply
       position: absolute
       bottom: 1rem

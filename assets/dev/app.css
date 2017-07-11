@@ -9746,10 +9746,9 @@ a[href$='/category/goals/'], a[href$='/category/goals'] {
   margin-bottom: 2.4rem; }
 
 .comments {
-  background-color: #f6f6f6;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
   padding: 2rem 0; }
+  .comments .container {
+    border-bottom: 1px solid #eee; }
 
 .form-submit {
   display: none; }
@@ -9768,6 +9767,8 @@ a[href$='/category/goals/'], a[href$='/category/goals'] {
     margin-bottom: 1rem; }
     .comment-list > li .comment-author {
       float: left; }
+      .comment-list > li .comment-author b {
+        font-weight: normal; }
       .comment-list > li .comment-author .says {
         display: none; }
     .comment-list > li .comment-metadata {
@@ -9775,12 +9776,11 @@ a[href$='/category/goals/'], a[href$='/category/goals'] {
       font-weight: 300; }
     .comment-list > li .comment-content {
       clear: both;
-      padding-top: 1rem; }
+      padding-top: 1rem;
+      line-height: 1.8rem; }
     .comment-list > li .comment-body {
       position: relative;
       padding: 1rem; }
-      .comment-list > li .comment-body:hover {
-        background-color: #d6d6d6; }
     .comment-list > li .reply {
       position: absolute;
       bottom: 1rem;
