@@ -23,9 +23,11 @@ include('partials/hero.php');
 	<div class="row">
 		<section class='articles--list col-lg-8'>
 			<?php
-				// Show recent 1 post
-				the_post();
-				get_template_part( 'template-parts/content-hero', get_post_format() );
+				// Show recent 5 posts with
+				$i = 0;
+				while (have_posts() && ($i++ < 5)) : the_post();
+ 					get_template_part( 'template-parts/content-hero', get_post_format() );
+ 				endwhile;
 			?>
 		</section>
 
@@ -45,8 +47,8 @@ include('partials/hero.php');
 
 		<?php
 			$args = array(
-				'posts_per_page'   => 6,
-				'offset'           => 1
+				'posts_per_page'   => 9,
+				'offset'           => 5
 			);
 			$myposts = get_posts( $args );
 			foreach($myposts as $post) : setup_postdata( $post );

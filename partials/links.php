@@ -1,4 +1,4 @@
-<div class="sidebar--group">
+<div class="sidebar--group sidebar--share">
   <h3>Share</h3>
 
   <ul class="list-unstyled">

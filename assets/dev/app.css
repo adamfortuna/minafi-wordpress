@@ -11699,11 +11699,16 @@ span.entry-subtitle {
 
 .sidebar .lead a {
   text-decoration: underline; }
+  .sidebar .lead a:hover {
+    text-decoration: none; }
 
 .sidebar--group {
   margin-bottom: 3rem;
-  background-color: rgba(0, 0, 0, 0.03);
-  padding: 1rem; }
+  padding: 0 1rem 1rem 1rem; }
+  .sidebar--group h3, .sidebar--group h2 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.4rem;
+    margin-bottom: 1rem; }
 
 .sidebar--categories {
   font-size: 1.2rem; }
@@ -11711,6 +11716,8 @@ span.entry-subtitle {
     color: rgba(0, 0, 0, 0.6); }
   .sidebar--categories a {
     color: rgba(0, 0, 0, 0.7); }
+    .sidebar--categories a:hover {
+      text-decoration: none; }
     .sidebar--categories a:before {
       display: inline-block;
       font: normal normal normal 14px/1 FontAwesome;
@@ -11728,6 +11735,9 @@ span.entry-subtitle {
 .sidebar--email label {
   font-size: 1.2rem;
   color: rgba(0, 0, 0, 0.8); }
+
+.sidebar--share a {
+  font-size: 1rem; }
 
 .ea-share-count-wrap {
   margin: 0 auto;

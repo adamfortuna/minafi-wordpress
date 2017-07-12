@@ -6,11 +6,16 @@
   .lead
     a
       text-decoration: underline
+      &:hover
+        text-decoration: none
 
 .sidebar--group
   margin-bottom: 3rem
-  background-color: rgba(0,0,0,0.03)
-  padding: 1rem
+  padding: 0 1rem 1rem 1rem
+  h3, h2
+    border-bottom: 1px solid #ccc
+    padding-bottom: 0.4rem
+    margin-bottom: 1rem
 
 .sidebar--categories
   font-size: 1.2rem
@@ -18,6 +23,8 @@
     color: rgba(0,0,0,0.6)
   a
     color: rgba(0,0,0,0.7)
+    &:hover
+      text-decoration: none
     &:before
       display: inline-block
       font: normal normal normal 14px/1 FontAwesome
@@ -35,3 +42,7 @@
   label
     font-size: 1.2rem
     color: rgba(0,0,0,0.8)
+
+.sidebar--share
+  a
+    font-size: 1rem
