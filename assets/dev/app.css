@@ -9554,6 +9554,10 @@ article {
 .comments {
   display: block; }
 
+.article--email {
+  border-bottom: 1px solid #eee;
+  padding: 1.4rem 0; }
+
 .home .articles--list {
   border-right: 1px solid #eee; }
 
@@ -11739,9 +11743,13 @@ span.entry-subtitle {
 .sidebar--share a {
   font-size: 1rem; }
 
+.subscribe button {
+  cursor: pointer; }
+
 .ea-share-count-wrap {
   margin: 0 auto;
-  width: 700px; }
+  width: 700px;
+  padding: 0 15px; }
 
 img {
   max-width: 100%; }

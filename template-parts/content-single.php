@@ -46,8 +46,17 @@
 	  </section>
 
 		<section class="article--meta container container-slim">
-      <?php echo get_the_category_list() ?>
+      <div class="col-12">
+        <?php echo get_the_category_list() ?>
+      </div>
     </section>
+
+    <section class="article--email container container-slim">
+      <div class="col-12">
+        <?php include(get_template_directory().'/partials/email.php'); ?>
+      </div>
+    </section>
+
 
     <section class="article--author container container-slim">
       <div class="row">

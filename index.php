@@ -34,7 +34,7 @@ include('partials/hero.php');
 		<section class="col-lg-4 sidebar">
 			<?php include('partials/about.php'); ?>
 			<?php include('partials/categories.php') ?>
-			<?php include('partials/email.php'); ?>
+			<?php include('partials/email-sidebar.php'); ?>
 			<?php include('partials/links.php'); ?>
 		</section>
 	</div>
