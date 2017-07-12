@@ -9840,10 +9840,9 @@ body {
     margin-top: 0.6rem; }
   .navbar .nav-link {
     color: rgba(0, 0, 0, 0.8);
-    font-weight: 700;
-    transition: 0.3s; }
+    font-weight: 700; }
     .navbar .nav-link:hover {
-      background-color: rgba(0, 0, 0, 0.05); }
+      text-decoration: underline; }
   .navbar .dropdown.open .dropdown-menu {
     display: block; }
   .navbar .dropdown-item {

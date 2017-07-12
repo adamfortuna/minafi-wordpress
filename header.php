@@ -33,7 +33,7 @@
 						<span class="navbar-brand--text">inafi</span>
 					</a>
 
-	        <ul class="nav nav-pills collapse navbar-toggleable-xs pull-right"  id="collapsingNavbar">
+	        <ul class="nav collapse navbar-toggleable-xs pull-right"  id="collapsingNavbar">
 	          <li class="nav-item">
 	            <a class="nav-link" href="/about">About</a>
 	          </li>
