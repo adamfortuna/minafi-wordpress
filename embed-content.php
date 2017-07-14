@@ -9,6 +9,19 @@
  * @subpackage Theme_Compat
  * @since 4.5.0
  */
+
+function excerpt($limit) {
+  $excerpt = explode(' ', get_the_excerpt(), $limit);
+  if (count($excerpt)>=$limit) {
+    array_pop($excerpt);
+    $excerpt = implode(" ",$excerpt).'...';
+  } else {
+    $excerpt = implode(" ",$excerpt);
+  }
+  $excerpt = preg_replace('`[[^]]*]`','',$excerpt);
+  return $excerpt;
+}
+
 ?>
 	<div <?php post_class( 'wp-embed' ); ?>>
 		<?php
@@ -88,7 +101,7 @@
 			</div>
 		<?php endif; ?>
 
-		<div class="wp-embed-excerpt"><?php the_excerpt_embed(); ?></div>
+		<div class="wp-embed-excerpt"><?php echo excerpt(40); ?></div>
 
 		<?php
 		/**

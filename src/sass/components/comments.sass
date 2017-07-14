@@ -16,31 +16,39 @@
 .comment-list
   margin: 0
   padding: 0
-  > li
+  li
     list-style: none
-    border: 1px solid #dddddd
     margin-bottom: 1rem
     .comment-author
-      float: left
+      .avatar
+        margin-right: 12px
       b
         font-weight: normal
+        position: relative
+        top: -12px
       .says
         display: none
+    .comment-meta
+      position: relative
     .comment-metadata
-      float: right
-      font-weight: 300
+      position: absolute
+      top: 24px
+      left: 65px
+      font-size: 1.1rem
+      a
+        color: rgba(0,0,0,0.6)
+        font-weight: 300
     .comment-content
-        clear: both
-        padding-top: 1rem
-        line-height: 1.8rem
+      clear: both
+      padding-top: 1rem
+      line-height: 1.8rem
     .comment-body
       position: relative
       padding: 1rem
+      border-bottom: 1px solid #dddddd
     .reply
-      position: absolute
-      bottom: 1rem
-      right: 1rem
-      font-size: 1rem
+      a
+        font-size: 1rem
     .children
       > li
         list-style: none
