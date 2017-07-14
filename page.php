@@ -13,7 +13,7 @@
 
 get_header(); ?>
 
-<section class="aesop-entry-content first-content">
+<section class="first-content">
 	<?php
 	// Start the loop.
 	while ( have_posts() ) : the_post();

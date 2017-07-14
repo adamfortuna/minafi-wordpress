@@ -9981,12 +9981,12 @@ body {
 .yuzo_related_post .relatedthumb .yuzo-img-wrap {
   margin-bottom: 0px !important; }
 
-.aesop-entry-content .aesop-content {
+.aesop-entry-content > .aesop-content {
   width: 100%;
   max-width: 700px;
   margin: 0rem auto 2rem; }
 
-.aesop-entry-content p, .aesop-entry-content h1, .aesop-entry-content h2, .aesop-entry-content h3, .aesop-entry-content h4, .aesop-entry-content h5, .aesop-entry-content h6, .aesop-entry-content ol, .aesop-entry-content ul, .aesop-entry-content table, .aesop-entry-content dl, .aesop-entry-content hr, .aesop-entry-content figure, .aesop-entry-content section.article--content {
+.aesop-entry-content p, .aesop-entry-content h1, .aesop-entry-content h2, .aesop-entry-content h3, .aesop-entry-content h4, .aesop-entry-content h5, .aesop-entry-content h6, .aesop-entry-content ol, .aesop-entry-content ul, .aesop-entry-content table, .aesop-entry-content dl, .aesop-entry-content hr, .aesop-entry-content section.article--content, .aesop-entry-content > figure {
   width: 100%;
   max-width: 700px;
   margin: 0rem auto 2rem;
@@ -9998,6 +9998,22 @@ body {
 
 .aesop-entry-content h2, .aesop-entry-content h3 {
   margin-bottom: 0.6rem; }
+
+@media only screen and (max-width: 1080px) {
+  .aesop-image-component .aesop-content {
+    max-width: 700px;
+    margin: 0 auto; }
+  .aesop-image-component .aesop-component-align-left,
+  .aesop-image-component .aesop-component-align-right {
+    max-width: 100% !important;
+    margin-left: 1em !important;
+    margin-right: 1em !important;
+    float: none; } }
+
+.aesop-active .entry-content .aesop-image-component .aesop-component-align-left,
+.aesop-active .entry-content .aesop-image-component .aesop-component-align-right {
+  margin-right: 3em;
+  margin-left: 3em; }
 
 .aesop-component {
   position: relative;
@@ -11449,7 +11465,7 @@ html.swipebox {
 
 .aesop-image-component .aesop-img-enlarge,
 .aesop-image-component .aesop-image-component-caption {
-  color: #222;
+  color: rgba(0, 0, 0, 0.7);
   font-size: 12px;
   font-family: Arial, sans-serif; }
 
@@ -11484,7 +11500,7 @@ html.swipebox {
   margin-top: 0;
   margin-bottom: 0;
   padding: 0;
-  font-size: 4rem;
+  font-size: 3.5rem;
   border-left: none;
   display: table-cell;
   vertical-align: middle;
@@ -11698,6 +11714,9 @@ span.entry-subtitle {
   display: block;
   margin-top: 1rem; }
 
+.articles--list-hero .article--content .aesop-image-component {
+  display: none; }
+
 .sidebar p {
   line-height: 1.8rem; }
 
@@ -11774,3 +11793,10 @@ img {
 
 .screen-reader-text {
   display: none; }
+
+blockquote.wp-embedded-content {
+  display: none; }
+
+iframe.wp-embedded-content {
+  position: relative !important;
+  width: 100%; }
