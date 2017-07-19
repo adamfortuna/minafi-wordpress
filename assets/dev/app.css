@@ -215,7 +215,7 @@ table {
 caption {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  color: #868e96;
+  color: #999;
   text-align: left;
   caption-side: bottom; }
 
@@ -1206,7 +1206,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   display: block;
   margin-bottom: 0.5rem; }
   .form-check.disabled .form-check-label {
-    color: #868e96; }
+    color: #999; }
 
 .form-check-label {
   padding-left: 1.25rem;
@@ -9469,6 +9469,41 @@ p.easc-modal-submit {
 .easc-modal-validation {
   display: none; }
 
+/*
+ *  TangleKit.css
+ *  Tangle 0.1.0
+ *
+ *  Created by Bret Victor on 6/10/11.
+ *  (c) 2011 Bret Victor.  MIT open-source license.
+ *
+ */
+/* cursor */
+.TKCursorDragHorizontal {
+  cursor: pointer;
+  cursor: move;
+  cursor: col-resize; }
+
+/* TKToggle */
+.TKToggle {
+  color: #46f;
+  border-bottom: 1px dashed #46f;
+  cursor: pointer; }
+
+/* TKAdjustableNumber */
+.TKAdjustableNumber {
+  position: relative;
+  color: #46f;
+  border-bottom: 1px dashed #46f; }
+
+.TKAdjustableNumberDown {
+  color: #00c;
+  border-bottom: 1px dashed #00c; }
+
+.TKAdjustableNumberHelp {
+  position: absolute;
+  color: #00f;
+  font: 9px "Helvetica-Neue", "Arial", sans-serif; }
+
 .article-single--wrapper {
   margin-top: 2rem; }
 
@@ -9992,7 +10027,7 @@ body {
   max-width: 700px;
   margin: 0rem auto 2rem; }
 
-.aesop-entry-content p, .aesop-entry-content h1, .aesop-entry-content h2, .aesop-entry-content h3, .aesop-entry-content h4, .aesop-entry-content h5, .aesop-entry-content h6, .aesop-entry-content ol, .aesop-entry-content ul, .aesop-entry-content table, .aesop-entry-content dl, .aesop-entry-content hr, .aesop-entry-content section.article--content, .aesop-entry-content > figure {
+.aesop-entry-content p, .aesop-entry-content h1, .aesop-entry-content h2, .aesop-entry-content h3, .aesop-entry-content h4, .aesop-entry-content h5, .aesop-entry-content h6, .aesop-entry-content ol, .aesop-entry-content ul, .aesop-entry-content table, .aesop-entry-content dl, .aesop-entry-content hr, .aesop-entry-content section.article--content, .aesop-entry-content > figure, .aesop-entry-content .wpcf7 {
   width: 100%;
   max-width: 700px;
   margin: 0rem auto 2rem;

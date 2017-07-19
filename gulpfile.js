@@ -35,7 +35,7 @@ gulp.task('sass:watch', function () {
 gulp.task('js', function () {
     try {
       browserify({entries: 'src/js/app.js', extensions: ['.js']})
-          .transform(babelify, { presets: ['es2015'], compact: true })
+          .transform(babelify, { presets: ['es2015'], compact: false })
           .bundle()
           .pipe(source('app.js'))
           .pipe(gulp.dest('assets/dev'));
@@ -47,10 +47,19 @@ gulp.task('js', function () {
 gulp.task('js:concat', function () {
   var files = [
     'assets/dev/app.js',
+    'src/js/TangleKit/Tangle.js',
+    'src/js/TangleKit/mootools.js',
+    'src/js/TangleKit/sprintf.js',
+    'src/js/TangleKit/BVTouchable.js',
+    'src/js/TangleKit/TangleKit.js',
     'src/components/popper.js/index.js',
-    'src/components/bootstrap/dist/js/bootstrap.js',
-    '../../plugins/aesop-story-engine/public/assets/js/ai-core.min.js',
-    '../../plugins/aesop-story-engine/public/assets/js/ast.min.js',
+    'src/components/bootstrap/dist/js/bootstrap.js'
+    // '../../plugins/aesop-story-engine/public/assets/js/ai-core.js',
+    // '../../plugins/aesop-story-engine/public/assets/js/waypoint.js',
+    // '../../plugins/aesop-story-engine/public/assets/js/parallax.js',
+    // '../../plugins/aesop-story-engine/public/assets/js/scrollreveal.js',
+    // '../../plugins/aesop-story-engine/public/assets/js/methods.js',
+
   ];
 
   return gulp.src(files)
