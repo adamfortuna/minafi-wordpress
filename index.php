@@ -22,6 +22,9 @@ include('partials/hero.php');
 <div class="container wide-container">
 	<div class="row">
 		<section class='articles--list col-lg-8'>
+			<p class="text-right pr-3 mb-0 lead">
+				<a href="/feed"><i class="fa fa-rss" aria-hidden="true"></i></a>
+				Recent Posts <i class="fa fa-level-down" aria-hidden="true"></i></p>
 			<?php
 				// Show recent 5 posts with
 				$i = 0;
