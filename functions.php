@@ -187,7 +187,8 @@ function minafi_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	wp_enqueue_script( 'minafi-script', get_template_directory_uri() . '/assets/js/app.bundle.js');
+	//wp_enqueue_script( 'minafi-script', get_template_directory_uri() . '/assets/js/app.bundle.js');
+  wp_enqueue_script( 'minafi-script', get_template_directory_uri() . '/assets/dev/app.bundle.js', '', '5');
 
 	wp_deregister_script('jquery');
 }

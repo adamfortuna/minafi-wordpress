@@ -1,10 +1,16 @@
 .article-single--wrapper
   margin-top: 2rem
+  a
+    text-decoration: underline
+    &:hover
+      text-decoration: none
 
-article
+.article--singular
   position: relative
   a
     text-decoration: underline
+    &:hover
+      text-decoration: none
 
 .article--poster
   max-width: 1100px
@@ -91,3 +97,8 @@ article
 .article--email
   border-bottom: 1px solid $gray-lightest
   padding: 1.4rem 0
+
+.article--social
+  li
+    a
+      font-weight: 400

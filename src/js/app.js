@@ -1,6 +1,3 @@
-import $ from '../components/jquery/dist/jquery';
-window.jQuery = window.$ = $;
-
 function toggleSearch(e) {
   const $searchInput = $('#searchInput');
 
@@ -23,6 +20,6 @@ function toggleSearch(e) {
   }
 }
 
-$(() => {
+$(function(){
   $('.search--link').on('click', toggleSearch);
 });

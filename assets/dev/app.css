@@ -9471,11 +9471,17 @@ p.easc-modal-submit {
 
 .article-single--wrapper {
   margin-top: 2rem; }
-
-article {
-  position: relative; }
-  article a {
+  .article-single--wrapper a {
     text-decoration: underline; }
+    .article-single--wrapper a:hover {
+      text-decoration: none; }
+
+.article--singular {
+  position: relative; }
+  .article--singular a {
+    text-decoration: underline; }
+    .article--singular a:hover {
+      text-decoration: none; }
 
 .article--poster {
   max-width: 1100px;
@@ -9557,6 +9563,9 @@ article {
 .article--email {
   border-bottom: 1px solid #eee;
   padding: 1.4rem 0; }
+
+.article--social li a {
+  font-weight: 400; }
 
 .home .articles--list {
   border-right: 1px solid #eee; }
@@ -11791,7 +11800,8 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 1rem; }
 
 .container-slim {
-  max-width: 700px; }
+  max-width: 700px;
+  width: 100%; }
 
 img {
   max-width: 100% !important;
