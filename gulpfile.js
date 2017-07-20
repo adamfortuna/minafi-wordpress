@@ -40,8 +40,10 @@ gulp.task('js:concat', function () {
     'src/components/jquery/dist/jquery.js',
     'src/components/popper.js/index.js',
     'src/components/bootstrap/dist/js/bootstrap.js',
-    '../../plugins/aesop-story-engine/public/assets/js/ai-core.js',
+    '../../plugins/aesop-story-engine/public/assets/js/ai-core.min.js',
     '../../plugins/aesop-story-engine/public/assets/js/ast.js',
+    '../../plugins/aesop-story-engine/public/assets/js/scrollreveal.js',
+    '../../plugins/aesop-story-engine/public/assets/js/waypoints.js',
     'src/js/app.js',
   ];
 
