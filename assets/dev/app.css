@@ -11759,15 +11759,6 @@ span.entry-subtitle {
     color: rgba(0, 0, 0, 0.7); }
     .sidebar--categories a:hover {
       text-decoration: none; }
-    .sidebar--categories a:before {
-      display: inline-block;
-      font: normal normal normal 14px/1 FontAwesome;
-      font-size: inherit;
-      text-rendering: auto;
-      -webkit-font-smoothing: antialiased;
-      content: "\f114";
-      padding-right: 0.6rem;
-      color: rgba(0, 0, 0, 0.6); }
 
 .sidebar--email .lead {
   font-size: 1rem;
