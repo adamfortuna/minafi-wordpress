@@ -44,7 +44,7 @@ gulp.task('js:concat', function () {
     '../../plugins/aesop-story-engine/public/assets/js/ast.js',
     '../../plugins/aesop-story-engine/public/assets/js/scrollreveal.js',
     '../../plugins/aesop-story-engine/public/assets/js/waypoints.js',
-    'src/js/app.js',
+    'src/js/app.js'
   ];
 
   return gulp.src(files)
@@ -65,5 +65,5 @@ gulp.task('js:watch', function () {
   gulp.watch('./assets/dev/**/*.js', ['js:minify']);
 });
 
-gulp.task('default', ['watch', 'sass', 'js']);
+gulp.task('default', ['watch', 'sass']);
 gulp.task('watch', ['sass:watch', 'js:watch']);

@@ -1,11 +1,11 @@
 function toggleSearch(e) {
-  const $searchInput = $('#searchInput');
+  var $searchInput = $('#searchInput');
 
   if($searchInput.val().length > 0) {
     // Do nothing and let the submission continue
   } else {
     e.preventDefault();
-    const $this = $(this);
+    var $this = $(this);
 
     // Not showing form
     if($('.search--link').hasClass('nav-link')) {
@@ -19,7 +19,3 @@ function toggleSearch(e) {
     $this.closest('.nav-item').toggleClass('search--searching');
   }
 }
-
-$(function(){
-  $('.search--link').on('click', toggleSearch);
-});
