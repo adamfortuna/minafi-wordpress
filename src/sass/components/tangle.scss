@@ -1,0 +1,78 @@
+/*
+ *  TangleKit.css
+ *  Tangle 0.1.0
+ *
+ *  Created by Bret Victor on 6/10/11.
+ *  (c) 2011 Bret Victor.  MIT open-source license.
+ *
+ */
+
+
+/* cursor */
+
+.TKCursorDragHorizontal {
+	cursor: pointer;
+	cursor: move;
+	cursor: col-resize;
+}
+
+
+/* TKToggle */
+
+.TKToggle {
+	color: $financial-dark;;
+	border-bottom: 1px dashed $financial-dark;;
+	cursor: pointer;
+}
+
+
+/* TKAdjustableNumber */
+
+.TKAdjustableNumber {
+	position:relative;
+	color: $financial-dark;
+	border-bottom: 1px dashed $financial-dark;
+}
+
+.TKAdjustableNumberHover {
+}
+
+.TKAdjustableNumberDown {
+	color: #00c;
+	border-bottom: 1px dashed #00c;
+}
+
+.TKAdjustableNumberHelp {
+	position:absolute;
+	color: #00f;
+	font: 9px "Helvetica-Neue", "Arial", sans-serif;
+}
+
+
+.adjustableSlider {
+  position: absolute;
+  display: none;
+  width: 134px;
+  height: 8px;
+  margin-top: -26px;
+  background-image: url("../images/SliderBackground.png");
+}
+
+.TKNumberFieldInput {
+  border: none;
+  border-bottom: 2px dotted $financial-dark;
+  color: $financial-dark;
+}
+
+.TKNumberFieldInput {
+  width: auto;
+  max-width: 400px;
+  display: inline;
+  z-index: 99;
+}
+
+
+.card--info {
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+}

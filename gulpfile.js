@@ -30,36 +30,21 @@ gulp.task('sass:watch', function () {
   gulp.watch('./assets/dev/**/*.css', ['css:minify']);
 });
 
-
-// JS
-gulp.task('js', function () {
-    try {
-      browserify({entries: 'src/js/app.js', extensions: ['.js']})
-          .transform(babelify, { presets: ['es2015'], compact: false })
-          .bundle()
-          .pipe(source('app.js'))
-          .pipe(gulp.dest('assets/dev'));
-    } catch(e) {
-      console.log('\nJS Error: ', e.message, '\n');
-    }
-});
-
 gulp.task('js:concat', function () {
   var files = [
-    'assets/dev/app.js',
+    'src/components/jquery/dist/jquery.js',
+    'src/components/popper.js/index.js',
+    'src/components/bootstrap/dist/js/bootstrap.js',
     'src/js/TangleKit/Tangle.js',
     'src/js/TangleKit/mootools.js',
     'src/js/TangleKit/sprintf.js',
     'src/js/TangleKit/BVTouchable.js',
     'src/js/TangleKit/TangleKit.js',
-    'src/components/popper.js/index.js',
-    'src/components/bootstrap/dist/js/bootstrap.js'
-    // '../../plugins/aesop-story-engine/public/assets/js/ai-core.js',
-    // '../../plugins/aesop-story-engine/public/assets/js/waypoint.js',
-    // '../../plugins/aesop-story-engine/public/assets/js/parallax.js',
-    // '../../plugins/aesop-story-engine/public/assets/js/scrollreveal.js',
-    // '../../plugins/aesop-story-engine/public/assets/js/methods.js',
-
+    '../../plugins/aesop-story-engine/public/assets/js/ai-core.min.js',
+    '../../plugins/aesop-story-engine/public/assets/js/ast.js',
+    '../../plugins/aesop-story-engine/public/assets/js/scrollreveal.js',
+    '../../plugins/aesop-story-engine/public/assets/js/waypoints.js',
+    'src/js/app.js'
   ];
 
   return gulp.src(files)
@@ -76,11 +61,11 @@ gulp.task('js:minify', function(cb) {
   ], cb);
 });
 gulp.task('js:watch', function () {
-  gulp.watch('./src/js/**/*.js', ['js']);
+  gulp.watch('./src/js/**/*.js', ['js:concat']);
   gulp.watch('./assets/dev/**/*.js', ['js:minify']);
 });
 
-gulp.task('default', ['watch', 'sass', 'js']);
+gulp.task('default', ['watch', 'sass', 'js:concat', 'js:minify']);
 gulp.task('watch', ['sass:watch', 'js:watch']);
 
 

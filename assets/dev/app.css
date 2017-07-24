@@ -9469,41 +9469,6 @@ p.easc-modal-submit {
 .easc-modal-validation {
   display: none; }
 
-/*
- *  TangleKit.css
- *  Tangle 0.1.0
- *
- *  Created by Bret Victor on 6/10/11.
- *  (c) 2011 Bret Victor.  MIT open-source license.
- *
- */
-/* cursor */
-.TKCursorDragHorizontal {
-  cursor: pointer;
-  cursor: move;
-  cursor: col-resize; }
-
-/* TKToggle */
-.TKToggle {
-  color: #46f;
-  border-bottom: 1px dashed #46f;
-  cursor: pointer; }
-
-/* TKAdjustableNumber */
-.TKAdjustableNumber {
-  position: relative;
-  color: #46f;
-  border-bottom: 1px dashed #46f; }
-
-.TKAdjustableNumberDown {
-  color: #00c;
-  border-bottom: 1px dashed #00c; }
-
-.TKAdjustableNumberHelp {
-  position: absolute;
-  color: #00f;
-  font: 9px "Helvetica-Neue", "Arial", sans-serif; }
-
 .article-single--wrapper {
   margin-top: 2rem; }
 
@@ -9559,7 +9524,9 @@ article {
   .article--content h2, .article--content h3 {
     font-weight: 900; }
   .article--content blockquote {
-    font-style: italic; }
+    font-style: italic;
+    font-size: 2rem;
+    line-height: 3rem; }
     .article--content blockquote p {
       border-left: 3px solid rgba(0, 0, 0, 0.8); }
   .article--content ul li {
@@ -10027,7 +9994,7 @@ body {
   max-width: 700px;
   margin: 0rem auto 2rem; }
 
-.aesop-entry-content p, .aesop-entry-content h1, .aesop-entry-content h2, .aesop-entry-content h3, .aesop-entry-content h4, .aesop-entry-content h5, .aesop-entry-content h6, .aesop-entry-content ol, .aesop-entry-content ul, .aesop-entry-content table, .aesop-entry-content dl, .aesop-entry-content hr, .aesop-entry-content section.article--content, .aesop-entry-content > figure, .aesop-entry-content .wpcf7 {
+.aesop-entry-content p, .aesop-entry-content h1, .aesop-entry-content h2, .aesop-entry-content h3, .aesop-entry-content h4, .aesop-entry-content h5, .aesop-entry-content h6, .aesop-entry-content ol, .aesop-entry-content ul, .aesop-entry-content table, .aesop-entry-content dl, .aesop-entry-content hr, .aesop-entry-content blockquote, .aesop-entry-content section.article--content, .aesop-entry-content > figure, .aesop-entry-content .wpcf7 {
   width: 100%;
   max-width: 700px;
   margin: 0rem auto 2rem;
@@ -11813,6 +11780,64 @@ span.entry-subtitle {
   margin: 0 auto;
   width: 700px;
   padding: 0 15px; }
+
+/*
+ *  TangleKit.css
+ *  Tangle 0.1.0
+ *
+ *  Created by Bret Victor on 6/10/11.
+ *  (c) 2011 Bret Victor.  MIT open-source license.
+ *
+ */
+/* cursor */
+.TKCursorDragHorizontal {
+  cursor: pointer;
+  cursor: move;
+  cursor: col-resize; }
+
+/* TKToggle */
+.TKToggle {
+  color: #4CB058;
+  border-bottom: 1px dashed #4CB058;
+  cursor: pointer; }
+
+/* TKAdjustableNumber */
+.TKAdjustableNumber {
+  position: relative;
+  color: #4CB058;
+  border-bottom: 1px dashed #4CB058; }
+
+.TKAdjustableNumberDown {
+  color: #00c;
+  border-bottom: 1px dashed #00c; }
+
+.TKAdjustableNumberHelp {
+  position: absolute;
+  color: #00f;
+  font: 9px "Helvetica-Neue", "Arial", sans-serif; }
+
+.adjustableSlider {
+  position: absolute;
+  display: none;
+  width: 134px;
+  height: 8px;
+  margin-top: -26px;
+  background-image: url("../images/SliderBackground.png"); }
+
+.TKNumberFieldInput {
+  border: none;
+  border-bottom: 2px dotted #4CB058;
+  color: #4CB058; }
+
+.TKNumberFieldInput {
+  width: auto;
+  max-width: 400px;
+  display: inline;
+  z-index: 99; }
+
+.card--info {
+  padding-top: 1rem;
+  margin-bottom: 1rem; }
 
 img {
   max-width: 100%; }
