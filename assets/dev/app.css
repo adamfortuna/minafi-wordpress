@@ -9773,9 +9773,30 @@ a[href$='/category/goals/'], a[href$='/category/goals'] {
   display: none; }
 
 .comment-form-author,
+.comment-form-url {
+  margin-right: 1rem; }
+
+.comment-form-author,
 .comment-form-email,
 .comment-form-url {
-  width: 50%; }
+  width: 48%;
+  float: left; }
+
+@media only screen and (max-width: 700px) {
+  .comment-form-author,
+  .comment-form-email,
+  .comment-form-url {
+    width: 100%;
+    float: none;
+    margin-right: none; } }
+
+.comment-respond .comment-subscription-form {
+  clear: both; }
+
+.comment-respond .btn-outline-primary {
+  clear: both;
+  display: block;
+  cursor: pointer; }
 
 .comment-list {
   margin: 0;
