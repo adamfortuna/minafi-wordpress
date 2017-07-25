@@ -67,8 +67,3 @@ gulp.task('js:watch', function () {
 
 gulp.task('default', ['watch', 'sass', 'js:concat', 'js:minify']);
 gulp.task('watch', ['sass:watch', 'js:watch']);
-
-
-// <script type='text/javascript' src='http://localhost:8888/wp-content/themes/minafi/assets/js/tether.min.js?ver=4.8'></script>
-// <script type='text/javascript' src='http://localhost:8888/wp-content/plugins/aesop-story-engine/public/assets/js/ai-core.min.js?ver=4.8'></script>
-// <script type='text/javascript' src='http://localhost:8888/wp-content/plugins/aesop-story-engine/public/assets/js/ast.min.js?ver=4.8'></script>

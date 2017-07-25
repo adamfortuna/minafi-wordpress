@@ -52,8 +52,21 @@
     </section>
 
     <section class="article--email container container-slim">
-      <div class="col-12">
-        <?php include(get_template_directory().'/partials/email.php'); ?>
+      <div class="row">
+        <div class="col-md-7 col-sm-11 ml-3 mb-3">
+          <?php include(get_template_directory().'/partials/email.php'); ?>
+        </div>
+        <div class="col-md-4 col-sm-11 ml-3">
+          <h3>Keep In Touch</h3>
+          <ul class="list-unstyled article--social">
+            <li>
+              <i class="fa fa-twitter"></i> <a href="https://twitter.com/minafiblog" target="_blank">@minafiblog</a>
+            </li>
+            <li>
+              <i class="fa fa-facebook"></i> <a href="https://facebook.com/minafiblog" target="_blank">minafiblog</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
 

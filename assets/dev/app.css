@@ -9471,11 +9471,17 @@ p.easc-modal-submit {
 
 .article-single--wrapper {
   margin-top: 2rem; }
-
-article {
-  position: relative; }
-  article a {
+  .article-single--wrapper a {
     text-decoration: underline; }
+    .article-single--wrapper a:hover {
+      text-decoration: none; }
+
+.article--singular {
+  position: relative; }
+  .article--singular a {
+    text-decoration: underline; }
+    .article--singular a:hover {
+      text-decoration: none; }
 
 .article--poster {
   max-width: 1100px;
@@ -9560,6 +9566,9 @@ article {
   border-bottom: 1px solid #eee;
   padding: 1.4rem 0; }
 
+.article--social li a {
+  font-weight: 400; }
+
 .home .articles--list {
   border-right: 1px solid #eee; }
 
@@ -9599,6 +9608,11 @@ article {
       text-decoration: none; }
       .articles--list .article--header h2 a:hover {
         text-decoration: underline; }
+
+.articles--list a {
+  text-decoration: underline; }
+  .articles--list a:hover {
+    text-decoration: none; }
 
 @media only screen and (min-width: 768px) {
   .articles--list .post-thumbnail.thumbnail--small {
@@ -9737,9 +9751,9 @@ a[href$='/category/mindfulness/'], a[href$='/category/mindfulness'] {
     color: #704999; }
 
 a[href$='/category/financial-independence/'], a[href$='/category/investing/'], a[href$='/category/finance/'], a[href$='/category/financial-independence'], a[href$='/category/investing'], a[href$='/category/finance'] {
-  color: #7DD087; }
+  color: #4CB058; }
   a[href$='/category/financial-independence/']:hover, a[href$='/category/investing/']:hover, a[href$='/category/finance/']:hover, a[href$='/category/financial-independence']:hover, a[href$='/category/investing']:hover, a[href$='/category/finance']:hover {
-    color: #4CB058; }
+    color: #258C32; }
 
 a[href$='/category/goals/'], a[href$='/category/goals'] {
   color: #FD989B; }
@@ -9761,9 +9775,30 @@ a[href$='/category/goals/'], a[href$='/category/goals'] {
   display: none; }
 
 .comment-form-author,
+.comment-form-url {
+  margin-right: 1rem; }
+
+.comment-form-author,
 .comment-form-email,
 .comment-form-url {
-  width: 50%; }
+  width: 48%;
+  float: left; }
+
+@media only screen and (max-width: 700px) {
+  .comment-form-author,
+  .comment-form-email,
+  .comment-form-url {
+    width: 100%;
+    float: none;
+    margin-right: none; } }
+
+.comment-respond .comment-subscription-form {
+  clear: both; }
+
+.comment-respond .btn-outline-primary {
+  clear: both;
+  display: block;
+  cursor: pointer; }
 
 .comment-list {
   margin: 0;
@@ -11719,8 +11754,9 @@ span.entry-subtitle {
   bottom: 1rem; }
 
 .article--content .more-link {
+  text-align: right;
   display: block;
-  margin-top: 1rem; }
+  font-size: 1.2rem; }
 
 .articles--list-hero .article--content .aesop-image-component {
   display: none; }
@@ -11752,15 +11788,6 @@ span.entry-subtitle {
     color: rgba(0, 0, 0, 0.7); }
     .sidebar--categories a:hover {
       text-decoration: none; }
-    .sidebar--categories a:before {
-      display: inline-block;
-      font: normal normal normal 14px/1 FontAwesome;
-      font-size: inherit;
-      text-rendering: auto;
-      -webkit-font-smoothing: antialiased;
-      content: "\f114";
-      padding-right: 0.6rem;
-      color: rgba(0, 0, 0, 0.6); }
 
 .sidebar--email .lead {
   font-size: 1rem;
@@ -11851,7 +11878,12 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 1rem; }
 
 .container-slim {
-  max-width: 700px; }
+  max-width: 700px;
+  width: 100%; }
+
+.container-wide {
+  max-width: 900px !important;
+  width: 900px !important; }
 
 img {
   max-width: 100% !important;
@@ -11866,3 +11898,9 @@ blockquote.wp-embedded-content {
 iframe.wp-embedded-content {
   position: relative !important;
   width: 100%; }
+
+.fa-facebook, .fa-facebook-square {
+  color: #3b5998; }
+
+.fa-twitter, .fa-twitter-square {
+  color: #00aced; }
