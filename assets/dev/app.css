@@ -9749,9 +9749,9 @@ a[href$='/category/mindfulness/'], a[href$='/category/mindfulness'] {
     color: #704999; }
 
 a[href$='/category/financial-independence/'], a[href$='/category/investing/'], a[href$='/category/finance/'], a[href$='/category/financial-independence'], a[href$='/category/investing'], a[href$='/category/finance'] {
-  color: #7DD087; }
+  color: #4CB058; }
   a[href$='/category/financial-independence/']:hover, a[href$='/category/investing/']:hover, a[href$='/category/finance/']:hover, a[href$='/category/financial-independence']:hover, a[href$='/category/investing']:hover, a[href$='/category/finance']:hover {
-    color: #4CB058; }
+    color: #258C32; }
 
 a[href$='/category/goals/'], a[href$='/category/goals'] {
   color: #FD989B; }
