@@ -15,5 +15,5 @@
 		<input type="search" class="form-control search-field" placeholder="<?php echo esc_attr_x( 'Search &hellip;', 'placeholder', 'twentysixteen' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
 	</div>
 
-	<button type="submit" class="btn btn-outline-primary search-submit"><span class="screen-reader-text"><?php echo _x( 'Search', 'submit button', 'twentysixteen' ); ?></span></button>
+	<button type="submit" class="btn btn-outline-primary search-submit"><?php echo _x( 'Search', 'submit button', 'twentysixteen' ); ?></button>
 </form>
