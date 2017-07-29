@@ -34,12 +34,16 @@
   right: -10px
   position: relative
   transition: opacity 0.5s, right 0.5s, letter-spacing 0.2s
+
 .navbar-brand:hover
   .navbar-brand--text
     opacity: 1
     right: 0
     letter-spacing: 3px
 
+@media only screen and (max-width: 700px)
+  .navbar-brand--text
+    display: none
 
 .search--link
   background-color: transparent
