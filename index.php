@@ -21,7 +21,7 @@ include('partials/hero.php');
 
 <div class="container wide-container">
 	<div class="row">
-		<section class='articles--list col-lg-8'>
+		<section class='articles--list articles--hero col-lg-8'>
 			<p class="text-right pr-3 mb-0 lead">
 				<a href="/feed"><i class="fa fa-rss" aria-hidden="true"></i></a>
 				Recent Posts <i class="fa fa-level-down" aria-hidden="true"></i></p>
@@ -39,7 +39,7 @@ include('partials/hero.php');
 			<?php include('partials/categories.php') ?>
 			<?php include('partials/social.php') ?>
 			<?php include('partials/email-sidebar.php'); ?>
-			<?php include('partials/links.php'); ?>
+			<?php include('partials/archives.php'); ?>
 		</section>
 	</div>
 

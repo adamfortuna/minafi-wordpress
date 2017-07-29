@@ -46,7 +46,7 @@ get_header(); ?>
 				?>
 				<header class="page-header first-content">
 					<h1 class="page-title">No Results Found</h1>
-					<p class="lead">I haven't mentioned "<?php echo $s ?>" before. Think I should write about it? If so <a href="/about">let me know</a>.</p>
+					<p class="lead">I haven't mentioned "<?php echo $s ?>" before. Think I should write about it? If so <a href="/contact">let me know</a>.</p>
 				</header>
 
 			<?php

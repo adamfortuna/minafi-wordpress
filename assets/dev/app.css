@@ -9567,7 +9567,7 @@ p.easc-modal-submit {
 .article--social li a {
   font-weight: 400; }
 
-.home .articles--list {
+.articles--list.articles--hero {
   border-right: 1px solid #eee; }
 
 .article--header-image {
@@ -9869,7 +9869,11 @@ body {
   padding-top: 1rem;
   color: #999;
   display: block;
-  font-weight: 300; }
+  font-size: 1rem; }
+  .footer--content a {
+    text-decoration: underline; }
+    .footer--content a:hover {
+      text-decoration: none; }
 
 .latest-article {
   height: 26px; }
@@ -11778,13 +11782,14 @@ span.entry-subtitle {
     padding-bottom: 0.4rem;
     margin-bottom: 1rem; }
 
-.sidebar--categories {
+.sidebar--categories, .sidebar--archives {
   font-size: 1.2rem; }
-  .sidebar--categories li {
+  .sidebar--categories li, .sidebar--archives li {
     color: rgba(0, 0, 0, 0.6); }
-  .sidebar--categories a {
-    color: rgba(0, 0, 0, 0.7); }
-    .sidebar--categories a:hover {
+  .sidebar--categories a, .sidebar--archives a {
+    color: rgba(0, 0, 0, 0.7);
+    text-decoration: underline; }
+    .sidebar--categories a:hover, .sidebar--archives a:hover {
       text-decoration: none; }
 
 .sidebar--email .lead {
