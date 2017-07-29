@@ -32,11 +32,8 @@
 </div>
 
 <?php do_action('aesop_theme_body_inside_bottom'); ?>
+<?php minafi_js_script() ?>
+<script>$(function(){ $('.search--link').on('click', toggleSearch); });</script>
 </body>
 <?php do_action('aesop_theme_body_after'); ?>
-<script>
-	$(function(){
-	  $('.search--link').on('click', toggleSearch);
-	});
-</script>
 </html>

@@ -187,7 +187,7 @@ function minafi_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	wp_enqueue_script( 'minafi-script', get_template_directory_uri() . '/assets/js/app.bundle.js', '', null);
+	// wp_enqueue_script( 'minafi-script', get_template_directory_uri() . '/assets/js/app.bundle.js', '', null);
   // wp_enqueue_script( 'minafi-script', get_template_directory_uri() . '/assets/dev/app.bundle.js', '', '5');
 
 	wp_deregister_script('jquery');
@@ -396,3 +396,15 @@ function wcs_post_thumbnails_in_feeds( $content ) {
 }
 add_filter( 'the_excerpt_rss', 'wcs_post_thumbnails_in_feeds' );
 add_filter( 'the_content_feed', 'wcs_post_thumbnails_in_feeds' );
+
+
+$GLOBALS['$already_added_js'] = false;
+
+function minafi_js_script() {
+  if(!$GLOBALS['$already_added_js']) {
+    echo "<script type='text/javascript' src='/wp-content/themes/minafi/assets/js/app.bundle.js'></script>";
+  }
+  $GLOBALS['$already_added_js'] = true;
+}
+
+add_action('ase_theme_post_inside_header_bottom', 'minafi_js_script');

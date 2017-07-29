@@ -44,7 +44,7 @@ gulp.task('js:concat', function () {
     '../../plugins/aesop-story-engine/public/assets/js/ast.js',
     '../../plugins/aesop-story-engine/public/assets/js/scrollreveal.js',
     '../../plugins/aesop-story-engine/public/assets/js/waypoints.js',
-    'src/js/app.js'
+    'src/js/app.js',
   ];
 
   return gulp.src(files)
