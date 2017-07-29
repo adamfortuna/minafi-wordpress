@@ -11763,6 +11763,9 @@ span.entry-subtitle {
 .articles--list-hero .article--content .aesop-image-component {
   display: none; }
 
+.recent-posts {
+  font-size: 1rem; }
+
 .sidebar p {
   line-height: 1.8rem; }
 
@@ -11778,7 +11781,7 @@ span.entry-subtitle {
   margin-bottom: 2rem;
   padding: 0 1rem 1rem 1rem; }
   .sidebar--group h3, .sidebar--group h2 {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #ddd;
     padding-bottom: 0.4rem;
     margin-bottom: 1rem; }
 
