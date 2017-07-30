@@ -9635,9 +9635,6 @@ p.easc-modal-submit {
   line-height: 1.6rem;
   font-size: 19px; }
 
-.articles--list-hero {
-  margin-bottom: 4rem; }
-
 .articles--group {
   margin-top: 3rem; }
 
@@ -11772,8 +11769,12 @@ span.entry-subtitle {
   display: block;
   font-size: 1.2rem; }
 
-.articles--list-hero .article--content .aesop-image-component {
-  display: none; }
+.articles--list-hero {
+  margin-bottom: 4rem;
+  padding-left: 0;
+  padding-right: 0; }
+  .articles--list-hero .article--content .aesop-image-component {
+    display: none; }
 
 .recent-posts {
   font-size: 1rem; }
