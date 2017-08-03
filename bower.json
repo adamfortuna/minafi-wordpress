@@ -17,6 +17,7 @@
   "dependencies": {
     "font-awesome": "^4.6.3",
     "bootstrap": "git@github.com:twbs/bootstrap.git#v4-dev",
-    "popper.js": "https://unpkg.com/popper.js"
+    "popper.js": "https://unpkg.com/popper.js",
+    "js-cookie": "^2.1.4"
   }
 }
