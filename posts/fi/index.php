@@ -1,0 +1,281 @@
+<?php
+  $theme_path = get_template_directory_uri();
+?>
+<script src="<?php echo $theme_path; ?>/posts/fi/js/d3.js"></script>
+<script src="<?php echo $theme_path; ?>/posts/fi/js/fi.js"></script>
+<script src="<?php echo $theme_path; ?>/posts/fi/js/sr.js"></script>
+
+<div id="fi--wrapper">
+<p>Early retirement is an aluring concept. The dream of leaving the workforce and following your dreams without the time constraints of a 9 to 5 sounds so empowering. After reading this post, you're going to know what you'll need to do to make it happen.</p>
+
+<p>The most common question when it comes to retirement is an important one:</p>
+
+<blockquote>How much money do I need to retire?</blockquote>
+
+<p>This is going to be the core question we answer in this question, exploring it in a number of different ways. My goal is that after reading this post, you feel empowered with additional information that you can act on immediately to impact your life. Here are the core topics we'll be digging into.</p>
+
+<ul>
+	<li>Part 1: Where am I now?</li>
+	<li>Part 2: How is this enough?</li>
+	<li>Part 3: How can I retire sooner?</li>
+	<li>Part 4: What can I learn from others?</li>
+</ul>
+
+<p>
+
+<h2>Part 1: Where am I now?</h2>
+
+<p>The first step is understanding where you are now. Depending on your current financial health, this can range from a breath a relief to sobering realization. Please, bear with it. I guarantee that knowing your financial health is better than not knowing.</p>
+
+<h3>This Article Is Interactive!</h3>
+<p>This is an experiment. Whenever you see <span data-var="exampleClick" class="TKToggle TKSwitch">
+		<span>green dotted unlined text</span>
+		<span>yes! just like that!</span>
+	</span>, that indicates this is a place that needs your input! Just hover over it and it'll tell you what to do. <b>The content of this post will change based on your input</b>. Consider it an old-school choose your own adventure blog post like you read as a kid. Give this one a shot.</p>
+
+<div class="card container container-slim card--info">
+	<h3>Savings Rate Calculator</h3>
+	<p class="lead">Try changing the underlined values and see what happens!</p>
+	<p>
+		My yearly after-tax income is $<span data-var="yearlyIncome" data-format="currency" class="TKNumberField" data-min="0" data-max="10000000"></span> and I save $<span data-var="yearlySavings" data-format="currency" class="TKNumberField" data-min="0" data-max="10000000"></span> total for retirement -- including 401k and all other means. Using these figures, my savings rate (SR) will be about <span data-var="savingsRate" data-format="percent" class="tangle--dynamic"></span>.
+	</p>
+	<p>This is calculated with the following formula:</p>
+	<p class="text-center">
+	  (<span  class="tangle--dynamic" data-var="yearlySavings" data-format="currency"></span> / <span class="tangle--dynamic"data-var="yearlyIncome" data-format="currency"></span>) * 100% = <span class="tangle--dynamic"data-var="savingsRate" data-format="percent"></span> Savings Rate
+	</p>
+	<p class="lead fi--info">
+		<i>Adam Says:</i> Nothing filled out here will be sent to any server - it's just for you. These values <span data-var="storeCookies" class="TKToggle TKSwitch">
+				<span>will NOT be stored in a cookie</span>
+				<span>will be stored in a cookie</span>
+			</span> in your browser, so if you revist this page, you
+			<span data-var="storeCookies" class="TKToggle TKSwitch">
+				<span>will NOT</span>
+				<span>will</span>
+			</span>
+			see the same results. If you want you can <a href="#" class="fi--reset">reset all values to defaults</a> at any time.
+	</p>
+</div>
+
+<p>When working towards retirement, <b>your savings rate is one of the most important numbers</b>. You don't need <i>me</i> to tell you that the more you save, the faster you'll be able to retire, but <b>how much faster</b>? See where your <span class="tangle--dynamic" data-var="savingsRate" data-format="percent"></span> SR falls on the following chart:</p>
+
+<div class="card container container-wide graph--sr--container mb-3">
+	<div class="graph graph--sr"></div>
+	<p class="lead fi--info">
+		<i>Adam Says:</i> Assumptions abound! This assumes: $0 current savings, you save what you don't spend, <span data-var="marketGrowth" class="TKAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic">/yr investment growth</span>, <span data-var="wr" class="TKAdjustableNumber" data-step="0.001" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic"> WR</span>, and that you'll spend <span data-var="retirementSpendingPercent" data-format="percent" class="TKAdjustableNumber tooltippable" data-step="0.01" data-min="0" data-max="100" data-min="0" data-max="10000000" data-toggle="tooltip" data-placement="top" title="If you're not sure, stick to 80% here."></span> of your current spending when you retire. If you don't know what these terms mean, don't worry -- we'll go over what these variables mean.
+	</p>
+</div>
+
+<p>For your savings rate, <span class="tangle--dynamic" data-var="savingsRate" data-format="percent"></span>, you can see on the chart that you would need <span class="tangle--dynamic" data-var="yearsUntilFiOnlySR" data-format="years"></span> to earn enough to retire.</p>
+
+<p>What floors me about this chart is a 10% SR, often sighted as a "good" savings rate, will take <b>41 years</b> to save up enough to retire - and that's only if your income is the same! If your income and spending goes up, it'll take even longer. If you double that SR to 20% though, you can retire in 38 years. That's 25% time working for 10% of your salary. The takeaway here is clear.</p>
+
+<blockquote class="fi--info">Save 10% of your income is terrible advice!</blockquote>
+
+<p>Let's look into ways to reduce this number. These estimates are making a <b>LOT</b> of assumptions. We can refine this a little, but for that I'm going to need your help -- in the form of answering a few more questions.</p>
+
+<div class="card container container-slim card--info">
+	<h3>Let's Talk More About You</h3>
+	<p class="lead"></p>
+  <p>
+    I'm <span data-var="age" class="TKAdjustableNumber" data-min="8" data-max="100"> years old</span>
+		and have a total combined savings of
+		$<span data-var="networth" data-format="currency" class="tooltippable TKNumberField" data-min="0" data-max="10000000" data-toggle="tooltip" data-placement="top" title="For simplicity sake, we'll just look at your savings - 401k, Roth IRA, brokerage and any other currency assets."></span>.
+		Right now, I'm
+		<span data-var="phase" class="TKToggle TKSwitch">
+			<span>retired</span>
+			<span>saving money for retirement</span>
+		</span>.
+	</p>
+
+  <p>
+    Each year I spend about $<span data-var="yearlySpending" data-format="currency" class="TKNumberField" data-min="0" data-max="10000000"></span>, but when I retire I'll likely spend
+
+		<span data-var="retirementSpendingPercent" data-format="percent" class="TKAdjustableNumber tooltippable" data-step="0.01" data-min="0" data-max="100" data-min="0" data-max="10000000" data-toggle="tooltip" data-placement="top" title="If you're not sure, stick to 80% here."></span> of that (equal to about <span data-var="retirementYearlySpending" data-format="currency" class="tangle--dynamic"></span>/yr).
+  </p>
+
+	<hr style="width: 96%;">
+
+	<h4>Minafi's Take On Your Finances</h4>
+	<p>
+		Given your
+		<span data-var="savingsRate" data-format="percent" class="tangle--dynamic"> SR</span>
+		and a networth
+		<span data-var="networth" data-format="currency" class="tangle--dynamic"></span>,
+		if you continue to invest
+		<span class="tangle--dynamic" data-format="currency" data-var="yearlySavings">/yr</span>, then you're on track to be financially independent in
+		<span class="tangle--dynamic" data-var="yearsUntilFi" data-format="years"></span>
+		-- at age
+		<span class="tangle--dynamic" data-var="fiAge" data-format="years"></span>.
+	</p>
+	<p>
+	 At age
+	 	<span class="tangle--dynamic" data-var="fiAge" data-format="years"></span>, you would have
+		<span data-var="fiStash" data-format="currency" class="tangle--dynamic"></span>
+		in retirement savings and can start withdrawing
+		<span data-var="retirementYearlySpending" data-format="currency" class="tangle--dynamic"></span>/yr.
+	</p>
+
+
+	<div class="BlockSwitch" data-var="fiPhase">
+		<div class="alert alert-success" role="alert">
+			<strong>Well done!</strong> You successfully made it to FI! While much of the remainder of this post may be review for you, I think you might get a kick out of some of the links and articles.
+		</div>
+		<div class="alert alert-info" role="alert">
+		  <strong>Keep going!</strong> You have less than 10 years of working ahead of you at your current pace. There are a bunch of way you can speed this up that we'll look into in this post.
+		</div>
+		<div class="alert alert-warning" role="alert">
+		  <strong>You're Getting There</strong> You have less than 20 years of working ahead of you at your current pace. Small changes can still make a huge dent in this number.
+		</div>
+		<div class="alert alert-danger" role="alert">
+		  <strong>Time to Make a Change</strong> You have more than 20 years of working ahead of you at your current pace. If you want to reach financial independence sooner, you're going to need to make some major changes.
+		</div>
+	</div>
+
+	<p class="lead fi--info">
+		<i>Adam Says:</i> For these numbers I'm assuming <span data-var="marketGrowth" class="TKAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic">/yr investment growth</span> and a <span data-var="wr" class="TKAdjustableNumber" data-step="0.001" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic"> withdrawal rate</span>. If you're not sure what these numbers mean, don't worry! I'll explain them later on in this post.
+	</p>
+</div>
+
+<p>This is where things start to get fun! There's now enough information to know a rough estimate of when you'd be <b>financially independent</b>.
+
+<h2>Financial Independence vs Retirement</h2>
+
+<p>Financial Independence (FI) is different from retirement. Think of financial independence as the amount of money you'd need in order to never work again. Retirement (RE), on the other hand, is the act of not working.</p>
+
+<p><b>It's possible for people to be FI but continue working</b> -- you see it all the time. From CEOs of companies, to quiet employees who have saved huge amounts to bloggers talking about retirement (well, some -- not me). There are also people who are retired, but who may need to return to work someday down the line when their savings runs out, or if social security fails somewhere down the line.</p>
+
+<p>To be FIRE (financially independent + retired) is an aim with <b>the goal of minimizing stress from external sources</b>. It does rely on stock markets to perform in a similar pattern to the last 100+ years, but aside from that, it's not based around too many assumptions.</p>
+
+<h3>Enter Withdrawal Rate (WR)</h3>
+
+<p>Up until this point, we've been a little rosy in our withdrawal rate (WR). The withdrawal rate is the percent of your savings you withdraw each year. This can be calculated as follows:</p>
+
+<div class="card container container-slim card--info">
+	<p class="text-center">
+		(Retirement Spending/yr / Retirement Savings) * 100% = WR
+		<br/>
+		(<span data-var="retirementYearlySpending" data-format="currency" class="tangle--dynamic"></span> / <span class="tangle--dynamic" data-var="fiStash" data-format="currency"></span>) * 100% = <span data-var="wr" data-format="percentDecimal" class="TKAdjustableNumber tooltippable tangle--dynamic" data-step="0.001" data-max="1" data-min="0" data-toggle="tooltip" data-placement="top" title="3% is considered very stable. 4% is starting to get risky. Above 4% is not advised."></span>
+	</p>
+
+	<p>
+		In other words, at a <span data-var="wr" data-format="percentDecimal" class="tangle--dynamic tangle--dynamic"> WR</span> , you'll need to save up <span data-var="fiStash" data-format="currency" class="tangle--dynamic"></span> before you stop working completely. At your current pace, this will take <span class="tangle--dynamic" data-var="yearsUntilFi" data-format="years" class="tangle--dynamic"></span> - allowing you retire at age <span data-var="fiAge" data-format="years" class="tangle--dynamic"></span>.
+	</p>
+
+	<p class="lead fi--info">Adam Says: Try a WR of 3% to be more conservative, or stick to an SR of 4% for a bit more risk. According to the <a href="https://www.bogleheads.org/wiki/Trinity_study_update" target="_blank">Trinity Study</a>, 3% will have a success rate of up to 98%, while a 4% WR had only a rate of 87%.</p>
+</div>
+
+<h2 class="pt-3">Part 2: How is this enough?</h2>
+
+<p>When I first saw these numbers and did the math on it, I immediately did something like this:</p>
+
+<blockquote>
+	If I retire with
+	<span data-var="fiStash" data-format="currency" class="tangle--dynamic tangle--dynamic"></span>
+	and spend
+	<span data-var="retirementYearlySpending" data-format="currency" class="tangle--dynamic tangle--dynamic">/yr</span>
+	when I retire, doesn't that mean my cash will run out in
+	<span data-var="fiStash" data-format="currency" class="tangle--dynamic tangle--dynamic"></span>/<span data-var="retirementYearlySpending" data-format="currency" class="tangle--dynamic tangle--dynamic"></span> =
+  <span data-var="yearsOfFiNoInvestment" data-format="years" class="tangle--dynamic tangle--dynamic"></span>?
+</blockquote>
+
+<p>That's a very good question! If you put your money into a savings account, then this is exactly how long your investment would last. Even worse, each of those <span data-var="yearsOfFiNoInvestment" data-format="years" class="tangle--dynamic tangle--dynamic"></span>, your spending power would be slightly less due to inflation, which is generally around 3%.</p>
+
+<h3>Enter Market Investing</h3>
+
+<p>The missing piece here is that you can invest that money in the stock market -- both while you're growing it and when you're drawing down from it.</p>
+
+<p>Stock markets in the US have returned on average 7% a year since their beginning. This is an important number! If you're withdrawing at most 4% of this, and 3% of it is going to inflation, then your net worth will go down ever so slightly over time.</p>
+
+<p>Learning how to invest and earn this 7% will sound intimidating at first. It will take experience, but more than that it'll take being brave and putting money into the stock market. Using a simple <a href="https://minafi.com/simple-three-fund-portfolio-vanguard/">3-fund portfolio</a> is a great place to start. </p>
+
+<h3>Total Amount With Investments</h3>
+
+<p>
+	If you put your money into savings and spent it that way, the total amount you'd spend would be <span data-var="fiStash" data-format="currency" class="tangle--dynamic"></span>. However, if you invested this and it grew at a pace of
+	<span data-var="marketGrowth" class="TKAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic">/yr</span>,
+	and withdrew an inflation adjusted
+	<span data-var="retirementYearlySpending" data-format="currency" class="tangle--dynamic tangle--dynamic">/yr</span>,
+	then this amount would provide you with
+	<span data-var="fiTotalSpending" data-format="currency" class="tangle--dynamic"></span> before your 100th birthday.
+</p>
+
+<p>
+	That
+	<span data-var="fiTotalSpending" data-format="currency" class="tangle--dynamic"></span>
+	wouldn't be all at once, but in the form of
+	<span data-var="retirementYearlySpending" data-format="currency" class="tangle--dynamic">/yr</span>.
+	This is the true power of compound interest!
+	Imagine how many more years you'd need to work to save this amount without investing. Actually, no need to imagine -- it's <span data-var="investmentYearsDifference" data-format="years" class="tangle--dynamic"></span>! If you learn how to invest, you can retire <span data-var="investmentYearsDifference" data-format="years" class="tangle--dynamic"></span> years earlier -- which is usually the different of retiring or not retiring.
+</p>
+
+<p class="text-center"><img src="<?php echo $theme_path; ?>/posts/fi/images/mind_blown.gif"></p>
+
+<p>When I first did the math on compound interest I was floored. If you can't imagine 1 year out, it's hard to image <span data-var="yearsUntilFi" data-format="years" class="tangle--dynamic"></span> out.
+
+<h2 class="pt-3">Part 3: How can I retire sooner?</h2>
+
+<p>Now that you have a baseline of <span class="tangle--dynamic" data-var="yearsUntilFi" data-format="years" class="tangle--dynamic"></span> until you've saved up enough at your current pace, let's see what small steps you can take to lower that number!</p>
+
+<p>You can probably see where this is going, but there are 2 ways you can affect this number:</p>
+
+<ul>
+	<li>Making more money</li>
+	<li>Spending less money</li>
+</ul>
+
+<p>The savings rate calculation we looked at is based entirely on these two numbers (spending/earnings). By keeping your salary exactly the same and saving more money you can hugely impact this number. Let's try it out and see.</p>
+
+<div class="card container container-slim card--info">
+	<h2>What If: You Reduce Spending & Save It?</h2>
+	<p>
+		If you reduce your spending by
+		<span data-var="spendingReductionPercent" data-format="percentDecimal" data-step="0.01" data-max="1" data-min="0" class="tangle--dynamic TKAdjustableNumber"></span>
+		(saving
+		<span data-var="impliedSpendingReductionYearlySavings" data-format="currency" class="tangle--dynamic "></span>
+		a year more), then you could retire
+		<span data-var="spendingReductionYearsEarlier" data-format="years" class="tangle--dynamic"> earlier</span>
+		once you have saved
+		<span data-var="spendingReductionStash" data-format="currency" class="tangle--dynamic"></span>.
+	</p>
+
+	<p>
+		By reducing your yearly spending by <span data-var="spendingReductionPercent" data-format="percentDecimal" class="tangle--dynamic"></span>, you'll need
+		<span data-var="spendingReductionStashDifference" data-format="currency" class="tangle--dynamic"></span>
+		less to retire. Upon retiring, you'd be spending <span data-var="impliedSpendingReductionYearlySpending" data-format="currency" class="tangle--dynamic"></span> a year.
+	</p>
+
+	<p class="lead fi--info">
+		Adam Says: What do you think? Is reducing your spending by
+		<span data-var="spendingReductionStashDifference" data-format="currency" class="tangle--dynamic"></span>
+		worth
+		<span data-var="spendingReductionYearsEarlier" data-format="years" class="tangle--dynamic"></span>?
+	</p>
+</div>
+
+<p>The less you need, the easier it is.</p>
+
+<div class="card container container-slim card--info">
+	<h2>What If: You Earn Money In Retirement?</h2>
+
+	<p>
+		You're on track to spend
+		<span data-var="retirementYearlySpending" data-format="currency" class="tangle--dynamic">/yr</span>
+		during retirement. What if you still spent this exact same amount, but
+		<span data-var="eirIncomePercent" data-format="percent" data-step="0.01" data-max="1" data-min="0" class="tangle--dynamic TKAdjustableNumber"></span>
+		of it comes from income in retirement? This would be finding a way to marketGrowth
+		<span data-var="eirIncomeAfterRetirement" data-format="currency" class="tangle--dynamic">/yr</span> in side income.
+	</p>
+
+	<p>
+		In that case, you can retire in
+		<span data-var="eirTimeUntilFi" data-format="years" class="tangle--dynamic"></span>,
+		which would be
+		<span data-var="eirTimeSooner" data-format="years" class="tangle--dynamic"></span> earlier!
+	</p>
+
+	<p class="lead fi--info">
+		<i>Adam says:</i> What can you start doing today to add another income stream? It would reduce your time until retirement, but also add stability for later on.
+	</p>
+</div>
+
+</div>

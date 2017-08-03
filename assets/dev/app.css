@@ -11875,6 +11875,122 @@ span.entry-subtitle {
   padding-top: 1rem;
   margin-bottom: 1rem; }
 
+.widget--form {
+  padding: 1rem; }
+
+.widget-result {
+  /*background-color: #B2E8B9;*/ }
+
+.post-widget input {
+  min-width: 120px; }
+
+.post-widget label {
+  font-size: 1.2rem;
+  /*color: #258C32;*/ }
+
+.post-widget--large {
+  width: 1050px;
+  margin: 0 auto; }
+
+.financial--dark {
+  /*background-color: #258C32;*/ }
+
+.financial--dark label, .financial--dark p {
+  /*color: #E5FAE8;*/ }
+
+.tangle--dynamic {
+  color: #258C32; }
+
+.TKSwitch .alert {
+  display: none; }
+
+.card--info .fi--info {
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  margin-bottom: 1rem; }
+
+.card--info .fi--info:before {
+  /*content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  z-index: -1;
+  transform: rotate(30deg);
+  background: url('adam-fortuna.png') no-repeat left;
+  background-size: 64px;*/
+  content: '';
+  /* instead of content you could use a bgimage here */
+  background: url("../images/adam-fortuna.png") no-repeat left;
+  background-size: 64px;
+  float: left;
+  -moz-transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  height: 64px;
+  width: 64px;
+  margin-right: 1rem;
+  transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+  -webkit-transform: rotate(-10deg); }
+
+.card--info .fi--info:hover:before {
+  transform: rotate(5deg);
+  -moz-transform: rotate(5deg);
+  -webkit-transform: rotate(5deg); }
+
+.graph {
+  position: relative; }
+
+.graph .axis path,
+.graph .axis line {
+  fill: none;
+  stroke: #aaa;
+  shape-rendering: crispEdges;
+  stroke-width: 1px; }
+
+.graph .line {
+  fill: none;
+  stroke: #4CB058;
+  stroke-width: 3px; }
+
+.graph .axis--label {
+  text-anchor: end;
+  font-size: 14px;
+  font-family: sans serif; }
+
+.graph .user--sr, .graph .focus circle {
+  fill: #fff;
+  stroke: #4CB058;
+  stroke-width: 3px; }
+
+.graph .hover-line {
+  stroke: #aaa;
+  stroke-width: 2px;
+  stroke-dasharray: 3,3; }
+
+.graph .overlay {
+  fill: none;
+  pointer-events: all; }
+
+.graph .focus text {
+  font: 16px sans-serif; }
+
+.tooltip.tooltip--sr {
+  opacity: 0;
+  position: absolute;
+  text-align: center;
+  width: 90px;
+  height: 25px;
+  padding: 8px;
+  font: 12px sans-serif;
+  background: #E5FAE8;
+  border: 1px solid #B2E8B9;
+  border-radius: 8px;
+  pointer-events: none; }
+
 a {
   text-decoration: underline; }
   a:hover {
