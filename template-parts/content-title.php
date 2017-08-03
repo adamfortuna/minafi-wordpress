@@ -12,7 +12,7 @@
 
       <?php
         if(has_post_thumbnail()) {
-      		the_post_thumbnail('large');
+      		the_post_thumbnail('medium');
         } else { ?>
           <img src="<?php echo get_template_directory_uri() ?>/assets/images/default-medium.jpeg" />
         <?php }
@@ -22,7 +22,7 @@
 
   <header class="article--header article-header--hero">
     <h2><a href='<?php echo esc_url(get_permalink()); ?>'><?php the_title(); ?></a></h2>
-    <p class="article-subtitle--small"><? the_subtitle(); ?>
+    <p class="article-subtitle--small"><? echo get_the_excerpt(); ?></p>
 
     <div class="article--header-meta">
       <span class="article--header-meta-date">

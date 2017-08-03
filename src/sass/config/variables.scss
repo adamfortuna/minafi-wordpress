@@ -1,0 +1,69 @@
+// Personal Colors
+$minimalism-darker: #284777;
+$minimalism-dark: #486696;
+$minimalism: #758FB8;
+$minimalism-light: #AEC0DD;
+$minimalism-lighter: #E5ECF7;
+$minimalism-lighter-header: rgba(229, 236, 247, 0.85);
+
+$financial-darker: #258C32;
+$financial-dark: #4CB058;
+$financial: #7DD087;
+$financial-light: #B2E8B9;
+$financial-lighter: #E5FAE8;
+$financial-lighter-header: rgba(229, 250, 232, 0.85);
+
+$mindfulness-darkest: darken(#4E287A, 10%);
+$mindfulness-darker: #4E287A;
+$mindfulness-dark: #704999;
+$mindfulness: #9776BC;
+$mindfulness-light: #F0EEF9;
+$mindfulness-lighter: #F0EEF9;
+$mindfulness-lighter-header: rgba(240,238,249, 0.85);
+
+$goals: #FD989B;
+$goals-lighter: lighten($goals, 15%);
+$goals-dark: darken(#FD989B, 15%);
+
+// Bootstrap
+$body-bg: #fff;
+$font-family-sans-serif: 'Lato', sans-serif;
+$font-family-serif: 'Merriweather', serif;
+$line-height: 1.8;
+
+$font-size-base: 1.375rem;
+$font-size-lg:   1.6rem;
+$font-size-sm:   1.1rem;
+
+$line-height-base: 1.6;
+$line-height-lg: 1.8;
+$line-height-sm: 1.5;
+
+$gray-dark: rgba(0,0,0,0.8);
+$gray: $gray-dark;
+$gray-light: #999;
+$gray-lighter: $gray-light;
+$gray-lightest: #eee;
+
+$blue: $minimalism-dark;
+$indigo: $minimalism-light;
+$purple: $mindfulness-dark;
+$green: $financial-dark;
+$cyan: $minimalism-lighter-header;
+$gray-600: $gray-dark;
+$pink: $goals;
+$yellow: #ffc107;
+$red: #dc3545;
+
+$primary-color: darken($minimalism,10%);
+
+$theme-colors: (
+  primary: $primary-color,
+  secondary: $gray-600,
+  success: $green,
+  info: $cyan,
+  warning: $yellow,
+  danger: $red,
+  light: $gray-light,
+  dark: $gray-dark
+)

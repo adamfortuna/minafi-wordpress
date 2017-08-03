@@ -43,7 +43,13 @@ get_header(); ?>
 			<?php
 			// If no content, include the "No posts found" template.
 			else :
-				get_template_part( 'template-parts/content', 'none' );
+				?>
+				<header class="page-header first-content">
+					<h1 class="page-title">No Results Found</h1>
+					<p class="lead">I haven't mentioned "<?php echo $s ?>" before. Think I should write about it? If so <a href="/contact">let me know</a>.</p>
+				</header>
+
+			<?php
 
 			endif;
 			?>
