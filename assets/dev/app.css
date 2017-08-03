@@ -9527,6 +9527,14 @@ p.easc-modal-submit {
   font-size: 22px;
   line-height: 31px;
   font-weight: 500; }
+  .article--content a {
+    color: rgba(0, 0, 0, 0.8);
+    box-shadow: inset 0 -2px 0 #7DD087;
+    -webkit-box-shadow: inset 0 -2px 0 #7DD087;
+    text-decoration: none; }
+    .article--content a:hover {
+      text-decoration: none;
+      background-color: rgba(229, 250, 232, 0.85); }
   .article--content h2, .article--content h3 {
     font-weight: 900; }
   .article--content blockquote {
@@ -9608,11 +9616,6 @@ p.easc-modal-submit {
       text-decoration: none; }
       .articles--list .article--header h2 a:hover {
         text-decoration: underline; }
-
-.articles--list a {
-  text-decoration: underline; }
-  .articles--list a:hover {
-    text-decoration: none; }
 
 @media only screen and (min-width: 768px) {
   .articles--list .post-thumbnail.thumbnail--small {
@@ -11765,9 +11768,12 @@ span.entry-subtitle {
   bottom: 1rem; }
 
 .article--content .more-link {
-  text-align: right;
   display: block;
-  font-size: 1.2rem; }
+  font-size: 1.2rem;
+  width: 180px;
+  text-align: center;
+  float: right;
+  margin-bottom: 2rem; }
 
 .articles--list-hero {
   margin-bottom: 4rem;
