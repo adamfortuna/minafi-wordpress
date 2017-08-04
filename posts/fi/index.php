@@ -5,7 +5,6 @@
 <script src="<?php echo $theme_path; ?>/posts/fi/js/fi.js"></script>
 <script src="<?php echo $theme_path; ?>/posts/fi/js/sr.js"></script>
 
-<div id="fi--wrapper">
 <p>Early retirement is an aluring concept. The dream of leaving the workforce and following your dreams without the time constraints of a 9 to 5 sounds so empowering. After reading this post, you're going to know what you'll need to do to make it happen.</p>
 
 <p>The most common question when it comes to retirement is an important one:</p>
@@ -14,15 +13,19 @@
 
 <p>This is going to be the core question we answer in this question, exploring it in a number of different ways. My goal is that after reading this post, you feel empowered with additional information that you can act on immediately to impact your life. Here are the core topics we'll be digging into.</p>
 
-<ul>
-	<li>Part 1: Where am I now?</li>
-	<li>Part 2: How is this enough?</li>
-	<li>Part 3: How can I retire sooner?</li>
-	<li>Part 4: What can I learn from others?</li>
+<ul class="list-unstyled">
+	<li><a href="#part-1">Part 1: Where am I now?</a></li>
+  <li><a href="#part-2">Part 2: How much do I need?</a></li>
+	<li><a href="#part-3">Part 3: How is that enough?</a></li>
+	<li><a href="#part-4">Part 4: How can I retire sooner?</a></li>
+	<li><a href="#part-5">Part 5: Where can I learn more?</a></li>
+  <li><a href="#part-6">Part 6: Who is this for?</a></li>
+  <li><a href="#part-7">Part 7: ?</a></li>
 </ul>
 
 <p>
 
+<a name="part-1"></a>
 <h2>Part 1: Where am I now?</h2>
 
 <p>The first step is understanding where you are now. Depending on your current financial health, this can range from a breath a relief to sobering realization. Please, bear with it. I guarantee that knowing your financial health is better than not knowing.</p>
@@ -73,6 +76,12 @@
 
 <p>Let's look into ways to reduce this number. These estimates are making a <b>LOT</b> of assumptions. We can refine this a little, but for that I'm going to need your help -- in the form of answering a few more questions.</p>
 
+
+<a name="part-2"></a>
+<h2>Part 2: How much do I need?</h2>
+
+<p>In order to understand how much you need, we'l need to learn a little more about you.</p>
+
 <div class="card container container-slim card--info">
 	<h3>Let's Talk More About You</h3>
 	<p class="lead"></p>
@@ -118,16 +127,16 @@
 
 	<div class="BlockSwitch" data-var="fiPhase">
 		<div class="alert alert-success" role="alert">
-			<strong>Well done!</strong> You successfully made it to FI! While much of the remainder of this post may be review for you, I think you might get a kick out of some of the links and articles.
+			<strong>Well done!</strong> You successfully made it to FI! Why not try setting a stretch goal? Turn down the stock market rate of <span data-var="marketGrowth" class="TKAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic">/yr</span> or turn the withdrawal rate down even further below <span data-var="wr" class="TKAdjustableNumber" data-step="0.001" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic"></span>.
 		</div>
 		<div class="alert alert-info" role="alert">
-		  <strong>Keep going!</strong> You have less than 10 years of working ahead of you at your current pace. There are a bunch of way you can speed this up that we'll look into in this post.
+		  <strong>Keep going!</strong> You have less than 5 years of working ahead of you at your current pace. There are a bunch of way you can speed this up that we'll look into in this post.
 		</div>
 		<div class="alert alert-warning" role="alert">
-		  <strong>You're Getting There</strong> You have less than 20 years of working ahead of you at your current pace. Small changes can still make a huge dent in this number.
+		  <strong>You're Getting There</strong> You have less than 15 years of working ahead of you at your current pace. Small changes can still make a huge dent in this number.
 		</div>
 		<div class="alert alert-danger" role="alert">
-		  <strong>Time to Make a Change</strong> You have more than 20 years of working ahead of you at your current pace. If you want to reach financial independence sooner, you're going to need to make some major changes.
+		  <strong>Time to Make a Change?</strong> You have more than 10 years of working ahead of you at your current pace. If you want to reach financial independence sooner, you're going to need to make some major changes.
 		</div>
 	</div>
 
@@ -164,7 +173,8 @@
 	<p class="lead fi--info">Adam Says: Try a WR of 3% to be more conservative, or stick to an SR of 4% for a bit more risk. According to the <a href="https://www.bogleheads.org/wiki/Trinity_study_update" target="_blank">Trinity Study</a>, 3% will have a success rate of up to 98%, while a 4% WR had only a rate of 87%.</p>
 </div>
 
-<h2 class="pt-3">Part 2: How is this enough?</h2>
+<a name="part-3"></a>
+<h2 class="pt-3">Part 3: How is this enough?</h2>
 
 <p>When I first saw these numbers and did the math on it, I immediately did something like this:</p>
 
@@ -193,9 +203,9 @@
 <p>
 	If you put your money into savings and spent it that way, the total amount you'd spend would be <span data-var="fiStash" data-format="currency" class="tangle--dynamic"></span>. However, if you invested this and it grew at a pace of
 	<span data-var="marketGrowth" class="TKAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic">/yr</span>,
-	and withdrew an inflation adjusted
+	and you withdrew an inflation adjusted
 	<span data-var="retirementYearlySpending" data-format="currency" class="tangle--dynamic tangle--dynamic">/yr</span>,
-	then this amount would provide you with
+	then this amount could provide you with
 	<span data-var="fiTotalSpending" data-format="currency" class="tangle--dynamic"></span> before your 100th birthday.
 </p>
 
@@ -212,16 +222,16 @@
 
 <p>When I first did the math on compound interest I was floored. If you can't imagine 1 year out, it's hard to image <span data-var="yearsUntilFi" data-format="years" class="tangle--dynamic"></span> out.
 
-<h2 class="pt-3">Part 3: How can I retire sooner?</h2>
+<a name="part-4"></a>
+<h2 class="pt-4">Part 4: How can I retire sooner?</h2>
 
 <p>Now that you have a baseline of <span class="tangle--dynamic" data-var="yearsUntilFi" data-format="years" class="tangle--dynamic"></span> until you've saved up enough at your current pace, let's see what small steps you can take to lower that number!</p>
 
 <p>You can probably see where this is going, but there are 2 ways you can affect this number:</p>
 
-<ul>
-	<li>Making more money</li>
-	<li>Spending less money</li>
-</ul>
+<blockquote class="text-center">
+	Make more money.<br/>Spend less money.
+</blockquote>
 
 <p>The savings rate calculation we looked at is based entirely on these two numbers (spending/earnings). By keeping your salary exactly the same and saving more money you can hugely impact this number. Let's try it out and see.</p>
 
@@ -252,7 +262,7 @@
 	</p>
 </div>
 
-<p>The less you need, the easier it is.</p>
+<p>The less you need, the less you'll need to save. If you reduce your spending to $0/yr, you'd need $0 after all. Taking steps to reduce your lifestyle can payoff by reducing the time you'll be required to work to maintain it.</p>
 
 <div class="card container container-slim card--info">
 	<h2>What If: You Earn Money In Retirement?</h2>
@@ -267,9 +277,7 @@
 	</p>
 
 	<p>
-		In that case, you can retire in
-		<span data-var="eirTimeUntilFi" data-format="years" class="tangle--dynamic"></span>,
-		which would be
+		In that case, you can retire
 		<span data-var="eirTimeSooner" data-format="years" class="tangle--dynamic"></span> earlier!
 	</p>
 
@@ -278,4 +286,128 @@
 	</p>
 </div>
 
+<p>Finding a small way to supplement your income can reduce the amount you'll need to save.</p>
+
+<div class="card container container-slim card--info">
+	<h2>What If: Your Income Grows but your Expenses Don't?</h2>
+
+	<p>
+		What if each year of your working career your income grows, but rather than spending it you save it? By <a href="https://minafi.com/avoiding-the-lifestyle-inflation-trap/">avoiding lifestyle inflation</a>, you can benefit from increased earnings without your yearly spending increasing.
+  </p>
+
+  <p>
+    If your earnings increase by
+    <span data-var="payIncreasePercent" data-format="percent" data-step="0.01" data-max="1" data-min="0" class="tangle--dynamic TKAdjustableNumber">/yr</span>,
+    and you save all of it, then you could retire
+		<span data-var="payIncreaseSooner" data-format="years" class="tangle--dynamic"></span> earlier!
+	</p>
+
+	<p class="lead fi--info">
+		<i>Adam says:</i> Growing your income without increasing expenses is more difficult than it sounds. I'd recommend keeping track of your savings over time so you know you're sticking to it.
+	</p>
 </div>
+
+<p><b>Lowering expenses</b>, <b>earning money in retirement</b> and <b>earning more while avoiding lifestyle inflation</b> are three very clear ways to reduce the time until you are financially independent. What if you do all 3 of these?</p>
+
+
+<div class="card container container-slim card--info">
+	<h2>What If: You reduce spending, earn income during retirement and earn more while working?</h2>
+
+  <p>
+    You reduce spending by <span data-var="spendingReductionPercent" data-format="percentDecimal" data-step="0.01" data-max="1" data-min="0" class="tangle--dynamic TKAdjustableNumber"></span>,
+    while replacing
+    <span data-var="eirIncomePercent" data-format="percent" data-step="0.01" data-max="1" data-min="0" class="tangle--dynamic TKAdjustableNumber"></span>
+    of your income during retirement (<span data-var="impliedSpendingReductionYearlySavings" data-format="currency" class="tangle--dynamic"></span>)
+    while also having your yearly income increase by
+    <span data-var="payIncreasePercent" data-format="percent" data-step="0.01" data-max="1" data-min="0" class="tangle--dynamic TKAdjustableNumber">/yr</span>
+    and saving it.
+  </ul>
+
+	<p>
+    This would result in you reacing FI in
+    <span data-var="allSoonerYears" data-format="years" class="tangle--dynamic"></span>, which would be
+    <span data-var="allSoonerYearsEarly" data-format="years" class="tangle--dynamic"></span> earlier!
+  </p>
+
+	<p class="lead fi--info">
+		<i>Adam says:</i> Growing your income without increasing expenses is more difficult than it sounds. I'd recommend keeping track of your savings over time so you know you're sticking to it.
+	</p>
+</div>
+
+
+<a name="part-4"></a>
+<h2 class="pt-3">Part 4: Where can I learn more?</h2>
+
+<p>There are a few amazing books on the topic of financial independence and early retirement that go into these topics with much more eloquence than and depth than I could ever explore. If you're curious to learn more, these are all amazing resources.</p>
+
+<h3>Books</h3>
+<p>Here are some of the top sources in different mediums to learn about financial independence</p>
+
+<div class="container">
+  <div class="row ">
+    <div class="col-md-4 card">
+      <img src="https://minafi.com/wp-content/uploads/2017/08/your-monet.jpeg" class="card-img-top" />
+      <div class="card-block">
+        <h4 class="card-title"><a href="https://minafi.com/recommends/your-money-or-your-life/" target="_blank">Your Money or Your Life</a></h4>
+        <p class="card-text"><i>Your Money</i> is an amazing exploration into developing a relationship with money that goes deeping than just buying things. This book is the origin for many articles and concepts that you'll read about in the FI world, told beautifully.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4 card">
+      <img src="https://minafi.com/wp-content/uploads/2016/08/bogleheads.jpg" class="card-img-top"/>
+      <div class="card-block">
+        <h4 class="card-title"><a href="https://minafi.com/recommends/the-bogleheads-guide-to-investing/" target="blank">The Bogleheads' Guide to Investing</a></h4>
+        <p class="card-text">This is the book that personally got me into investing and thinking about this subject. By introducing things like the 4% for withdrawal rate, understanding investing, diversification, fees, fund types, account types and more, this book served as my education on investing.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4 card">
+      <img src="https://minafi.com/wp-content/uploads/2017/08/millionaire.jpg" class="card-img-top"/>
+      <div class="card-block">
+        <h4 class="card-title"><a href="https://minafi.com/recommends/millionaire-next-door/" target="blank">The Millionaire Next Door</a></h4>
+        <p class="card-text">The term "millionaire" has a connotation of lavish spending and abundance in popular culture. This book looks at a different side of that - working millionaires who worked hard to create a life they wanted.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h3>Articles</h3>
+<p>There are hundreds (thousands?) of blogs on personal finance out there. Thoughout the years reading a small selection of these, here's some of the most inspirational and informative posts I've run into.</p>
+
+<div class="container">
+  <div class="row ">
+    <div class="col-md-6 card">
+      <h4><a href="http://www.mrmoneymustache.com/2012/01/13/the-shockingly-simple-math-behind-early-retirement/" target="_blank">The Shockingly Simple Math Behind Early Retirement</a></h4>
+      <p>I first read about the savings rate idea described at the beginning of this post from this article by Mr. Money Mustache.</p>
+    </div>
+
+    <div class="col-md-6 card">
+      <h4><a href="http://www.mrmoneymustache.com/2012/01/13/the-shockingly-simple-math-behind-early-retirement/" target="_blank">The Shockingly Simple Math Behind Early Retirement</a></h4>
+      <p>I first read about the savings rate idea described at the beginning of this post from this article by Mr. Money Mustache.</p>
+    </div>
+  </div>
+</div>
+
+
+<a name="part-5"></a>
+<h2 class="pt-3">Part 5: Who is this for?</h2>
+<p>
+  Who it's for is people who want to make a change to their relationship with money and develop a plan for rest of their lives.
+</p>
+<p>
+  If there's one takeaway you get from this post, it's that <b>the concept of financial independence isn't solely for those who are extremely weathly or for those who are nearing social security</b>.
+</p>
+<p>
+  It's a path that starts with understanding and minimizing your expenses -- a valuable undertaking regardless of your long-term goal. Beyond that, understanding how much you need to save to live the like you want and making a plan for it.
+</p>
+<p>
+  There is no predetermined group that financial independence is for. It could work well for people in extreme debt who want to get out and work towards a different future -- or for people in their career looking for what comes next.
+</p>
+
+<h3>Faces to Ideas</h3>
+
+<h4>Adam</h4>
+<p class="lead">Your host here at <a href="/">Minafi</a>! Programmer, Product Manager and advocate for learning how to code.</p>
+
+<p><b>What was your life status when you learned about FI?</b></p>
+<p>When I was 23, my

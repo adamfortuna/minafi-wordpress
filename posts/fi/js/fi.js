@@ -122,6 +122,9 @@ $(function() {
 
         this.monthlyIncome = 0;
         this.retirementMonthlyIncome = 0;
+
+        // What If: Your Income Grows but your Expenses Don't?
+        this.payIncreasePercent = 0.02;
       }
     },
     update: function () {
@@ -145,7 +148,7 @@ $(function() {
       this.yearsUntilFi = this.calcTimeUntilFi(this.yearlySavings, this.fiStash, this.networth, this.marketGrowth)
 
 
-      this.fiPhase = 0;
+      this.fiPhase = this.calcFiPhase();
       this.fiAge = this.age + this.yearsUntilFi;
 
       // Reducing Spending
@@ -178,6 +181,8 @@ $(function() {
         // this.swrDollars = this.savings * this.gloablSWR;
 
         // this.retirementSavingsNeeded = this.retirementYearlySpending * this.gloablSWR;
+      this.earningsIncrease();
+      this.allReductionsSooner();
 
       if(this.savingsRate > 0) {
         setTimeout(function() {
@@ -197,10 +202,20 @@ $(function() {
     // eir
     earnInRetirement: function() {
       this.eirIncomeAfterRetirement = this.eirIncomePercent * this.retirementYearlySpending;
-      var earnInRetirementStashNeeded = this.calcStash(this.retirementYearlySpending - this.eirIncomeAfterRetirement);
+      this.earnInRetirementStashNeeded = this.calcStash(this.retirementYearlySpending - this.eirIncomeAfterRetirement);
 
-      this.eirTimeUntilFi = this.calcTimeUntilFi(this.yearlySavings, earnInRetirementStashNeeded, this.networth, this.marketGrowth)
+      this.eirTimeUntilFi = this.calcTimeUntilFi(this.yearlySavings, this.earnInRetirementStashNeeded, this.networth, this.marketGrowth)
       this.eirTimeSooner = this.yearsUntilFi - this.eirTimeUntilFi;
+    },
+
+    earningsIncrease: function() {
+      this.payIncreaseTimeUntilFi = this.calcTimeUntilFi(this.yearlySavings, this.fiStash, this.networth, this.marketGrowth+this.payIncreasePercent);
+      this.payIncreaseSooner = this.yearsUntilFi - this.payIncreaseTimeUntilFi;
+    },
+
+    allReductionsSooner: function() {
+      this.allSoonerYears = this.calcTimeUntilFi(this.impliedSpendingReductionYearlySavingsTotal, this.earnInRetirementStashNeeded, this.networth, this.marketGrowth+this.payIncreasePercent);
+      this.allSoonerYearsEarly = this.yearsUntilFi - this.allSoonerYears;
     },
 
 
@@ -235,6 +250,18 @@ $(function() {
       }
 
       return spending;
+    },
+
+    calcFiPhase: function() {
+      if(this.yearsUntilFi == 0) {
+        return 0;
+      } else if(this.yearsUntilFi < 5) {
+        return 1;
+      } else if(this.yearsUntilFi < 15) {
+        return 2;
+      } else {
+        return 3;
+      }
     },
 
 
@@ -278,7 +305,8 @@ $(function() {
         'spendingReductionStashDifference',
         'yearsOfFiNoInvestment',
         'fiTotalSpending',
-        'investmentYearsDifference'
+        'investmentYearsDifference',
+        'payIncreasePercent'
       ];
     },
     loadCookies: function() {
