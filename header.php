@@ -18,6 +18,7 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php endif; ?>
 	<?php wp_head(); ?>
+	<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap_index.xml" />
 </head>
 <?php do_action('aesop_theme_body_before'); ?>
 <body <?php body_class(); ?>>

@@ -216,6 +216,7 @@ $(function() {
     allReductionsSooner: function() {
       this.allSoonerYears = this.calcTimeUntilFi(this.impliedSpendingReductionYearlySavingsTotal, this.earnInRetirementStashNeeded, this.networth, this.marketGrowth+this.payIncreasePercent);
       this.allSoonerYearsEarly = this.yearsUntilFi - this.allSoonerYears;
+      this.allSoonerPercent = this.allSoonerYearsEarly / this.yearsUntilFi;
     },
 
 

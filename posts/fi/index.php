@@ -319,7 +319,7 @@
     <span data-var="eirIncomePercent" data-format="percent" data-step="0.01" data-max="1" data-min="0" class="tangle--dynamic TKAdjustableNumber"></span>
     of your income during retirement (<span data-var="impliedSpendingReductionYearlySavings" data-format="currency" class="tangle--dynamic"></span>)
     while also having your yearly income increase by
-    <span data-var="payIncreasePercent" data-format="percent" data-step="0.01" data-max="1" data-min="0" class="tangle--dynamic TKAdjustableNumber">/yr</span>
+    <span data-var="payIncreasePercent" data-format="percent" data-step="0.01" data-max="1" data-min="0" class="tangle--dynamic TKAdjustableNumber">/yr</span> while you're working
     and saving it.
   </ul>
 
@@ -330,7 +330,7 @@
   </p>
 
 	<p class="lead fi--info">
-		<i>Adam says:</i> Growing your income without increasing expenses is more difficult than it sounds. I'd recommend keeping track of your savings over time so you know you're sticking to it.
+		<i>Adam says:</i> It's crazy to think that these 3 things could result in a <span data-var="allSoonerPercent" data-format="percent" class="tangle--dynamic"></span> reduction in your working years.
 	</p>
 </div>
 
