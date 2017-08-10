@@ -137,3 +137,26 @@
   border-radius: 8px;
   pointer-events: none;
 }
+
+
+.fi--profile {
+  .profile-toggle--read-less {
+    display: inline-block;
+  }
+  .profile-toggle--read-more {
+    display: none;
+  }
+
+  .profile-toggle--more {
+    display: none;
+  }
+
+  &.fi--profile-collapsed {
+    .profile-toggle--read-less {
+      display: none;
+    }
+    .profile-toggle--read-more {
+      display: inline-block;
+    }
+  }
+}

@@ -145,7 +145,7 @@ $(function() {
       if(this.missingRetirementIncome < 0) {
         this.missingRetirementIncome = 0;
       }
-      this.yearsUntilFi = this.calcTimeUntilFi(this.yearlySavings, this.fiStash, this.networth, this.marketGrowth)
+      this.yearsUntilFi = this.calcTimeUntilFi(this.yearlySavings, this.fiStash, this.networth, this.marketGrowth) || 0;
 
 
       this.fiPhase = this.calcFiPhase();
@@ -349,4 +349,25 @@ $(function() {
   });
 
   $('.tooltippable').tooltip();
+
+
+
+  if (!window.sr) {
+    window.sr = ScrollReveal();
+  }
+
+  sr.reveal('#fi-profile--adam', {
+    origin:'left', distance: '0px', duration: 1000
+  });
+
+  jQuery('#fi-profile--adam').css("visibility","visible");
+
+  $('.profile-toggle').on('click', function(e) {
+    e.preventDefault();
+
+    $(this).closest('.fi--profile')
+           .toggleClass('fi--profile-collapsed')
+           .find('.profile-toggle--more')
+           .slideToggle();
+  })
 });

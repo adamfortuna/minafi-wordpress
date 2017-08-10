@@ -9,7 +9,7 @@
 
 <p>There's a lot to the idea of retirement. You might love your job and would't think about leaving it. Maybe you feel you never want to retire because we you'd just "be bored", or maybe you plan to work until you can't anymore. <b>For this post, I'm going to ask one request of you:</b></p>
 
-<blockquote>My Request: Don't associate financial independence with retirement.</blockquote>
+<blockquote>My Request: Don't assume financial independence means retirement.</blockquote>
 
 <p>Instead, for this post, think of financial independence (abbreviated FI) as the point where if for any reason you stopped working, you'd be set for the rest of your life.</p>
 
@@ -81,7 +81,6 @@
 <blockquote class="fi--info">Save 10% of your income is terrible advice!</blockquote>
 
 <p>Let's look into ways to reduce this number. These estimates are making a <b>LOT</b> of assumptions. We can refine this a little, but for that I'm going to need your help -- in the form of answering a few more questions.</p>
-
 
 <a name="part-2"></a>
 <h2>Part 2: How much do I need?</h2>
@@ -410,10 +409,46 @@
   There is no predetermined group that financial independence is for. It could work well for people in extreme debt who want to get out and work towards a different future -- or for people in their career looking for what comes next.
 </p>
 
-<h3>Faces to Ideas</h3>
 
-<h4>Adam</h4>
-<p class="lead">Your host here at <a href="/">Minafi</a>! Programmer, Product Manager and advocate for learning how to code.</p>
 
-<p><b>What was your life status when you learned about FI?</b></p>
-<p>When I was 23, my
+<p class="lead card p-2">
+  Throughout this post, you'll see profiles of people in various stages of pursuing financial independence. These are a great way to see how others found FI and decided to pursue it - and how.
+</p>
+<div style="background-color: #f6f6f6;" class="py-3 my-3 fi--profile fi--profile-collapsed">
+  <div id="fi-profile--adam" class="aesop-component aesop-image-component " style="visibility:hidden;">
+		<div class="aesop-content">
+			<figure class="aesop-image-component-image aesop-component-align-right aesop-image-component-caption-left" style="margin-right:12%; width:500px;">
+        <a class="aesop-lightbox" href="https://minafi.com/wp-content/uploads/2017/07/megacon_small.jpg" title="Megacon 2016 in Orlando, FL.">
+					<img src="https://minafi.com/wp-content/uploads/2017/07/megacon_small.jpg" alt="Adam at the Ghibli Museum in Tokyo.">
+				</a>
+  			<figcaption class="aesop-image-component-caption">
+  				Adam at Megacon 2016 in Orlando, FL.
+  			</figcaption>
+		  </figure>
+		</div>
+	</div>
+
+  <h3>Adam from <a href="/">Minafi</a></h3>
+  <p class="lead">35, <mark class="tooltippable" data-toggle="tooltip" title="Currently working and saving money.">accumulation phase</mark>, Orlando, FL, $1,050,000 in savings. FI by 40.</p>
+  <p><small>That's me! You'll see my head popup now and again for advice throughout this post. By day I'm a Product Manager and web developer and by night I love to share my knowledge about finance in the hope of inspiring and helping others.</small></p>
+
+  <h4>How did you learn about FI?</h4>
+  <p>Reading The Bogleheads Guide to Investing set me on my journey. It made it clear how little I needed to retire if I was investing it in the stock market.</p>
+
+  <h4>What was your financial status when you began?</h4>
+
+
+  <div class="profile-toggle--more">
+    <p>some answer here</p>
+
+    <h4>Another question</h4>
+    <p>Reading The Bogleheads Guide to Investing set me on my journey. It made it clear how little I needed to retire if I was investing it in the stock market.</p>
+  </div>
+
+  <p>
+    <a href="#" class="profile-toggle">
+      <span class="profile-toggle--read-more">Read more about Adam</span>
+      <span class="profile-toggle--read-less">Hide more about Adam</span>
+    </a>
+  </p>
+</div>

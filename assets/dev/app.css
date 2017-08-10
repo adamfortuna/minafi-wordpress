@@ -12002,6 +12002,21 @@ span.entry-subtitle {
   border-radius: 8px;
   pointer-events: none; }
 
+.fi--profile .profile-toggle--read-less {
+  display: inline-block; }
+
+.fi--profile .profile-toggle--read-more {
+  display: none; }
+
+.fi--profile .profile-toggle--more {
+  display: none; }
+
+.fi--profile.fi--profile-collapsed .profile-toggle--read-less {
+  display: none; }
+
+.fi--profile.fi--profile-collapsed .profile-toggle--read-more {
+  display: inline-block; }
+
 a {
   text-decoration: underline; }
   a:hover {
