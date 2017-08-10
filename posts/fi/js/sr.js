@@ -1,8 +1,8 @@
-function calcYears(sr) {
+function calcYears(sr, marketRate, wr) {
   var savings = 100*sr,
       spending = 100 - savings,
-      stashNeeded = spending * 25,
-      growth = 0.07;
+      stashNeeded = spending * (1/wr),
+      growth = marketRate;
 
   var fv = savings + (stashNeeded * growth);
   var pv = savings;
@@ -48,12 +48,7 @@ var svg,
     width: 900
   },
   savingsRates = d3.range(1, 101, 1),
-  years = savingsRates.map(function(d) {
-    return {
-      rate: d,
-      years: calcYears(d/100)
-    };
-  }),
+  years,
   bisectSr = d3.bisector(function(d) { return d.rate; }).left,
   initial, tooltip;
 
@@ -61,63 +56,19 @@ function createGraph() {
   // Define the div for the tooltip
   initial = d3.select(".graph--sr--container").append("div")
     .attr("class", "tooltip tooltip--sr")
-    .style("opacity", 0),
-  tooltip = d3.select(".graph--sr--container").append("div")
-      .attr("class", "tooltip tooltip--sr")
-      .style("opacity", 0);
-  var maxYears = d3.max(years, function(y) { return y.years; });
-  yScale = d3.scaleLinear()
-      .domain([maxYears, 0])
-      .range([0, options.height - margin.bottom - margin.top]);
-  xScale = d3.scaleLinear()
-      .domain([1,100])
-      .range([0, options.width - margin.left - margin.right]);
-  var  xAxis = d3.axisBottom().scale(xScale),
-    yAxis = d3.axisLeft().scale(yScale).ticks(10); //.orient("left");
-
-
-  var line = d3.line()
-    .x(function(year) {
-      return xScale(year.rate);
-    })
-    .y(function(year) {
-      return yScale(year.years);
-    });
+    .style("opacity", 1);
 
   svg = d3.select(".graph--sr").append("svg")
       .attr("width", options.width)
       .attr("height", options.height);
 
   var g = svg.append("g")
+      .attr("class", "graph--sr--line-group")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-  svg.append("g")
-    .attr("class", "x axis")
-    .attr("transform", "translate("+margin.left+"," + (options.height-margin.top-10) + ")")
-    .call(xAxis)
-    .append("text")
-      .attr("class", "axis--label")
-      .attr("y", -18)
-      .attr("x", 150)
-      .attr("dy", ".71em")
-      .text("Savings Rate");
-
-  svg.append("g")
-    .attr("class", "y axis")
-    .attr("transform", "translate("+margin.left+","+margin.top+")")
-    .call(yAxis)
-    .append("text")
-      .attr("class", "axis--label")
-      .attr("transform", "rotate(-90)")
-      .attr("y", 6)
-      .attr("x", options.height*-1+175)
-      .attr("dy", ".71em")
-      .text("Years of Saving");
-
-  g.append("path")
-    .datum(years)
-    .attr("class", "line")
-    .attr("d", line);
+  path = svg.select(".graph--sr--line-group")
+    .append("path")
+    .attr("class", "line");
 
   var focus = g.append("g")
         .attr("class", "focus")
@@ -135,6 +86,13 @@ function createGraph() {
 
   focus.append("circle")
       .attr("r", 7.5);
+
+  focus.append("rect")
+        .attr("class", "tooltip--svg")
+        .attr("transform", "translate(12, -10)")
+        .attr("width", 120)
+        .attr("height", 20);
+
 
   focus.append("text")
       .attr("x", 15)
@@ -164,36 +122,99 @@ function createGraph() {
       focus.select(".y-hover-line").attr("x2",xScale(year.rate)*-1 );
     });
 
+    xAxisEl = svg.append("g")
+                 .attr("class", "x axis")
+                 .attr("transform", "translate("+margin.left+"," + (options.height-margin.top-10) + ")");
+    xAxisEl.append("text")
+           .attr("class", "axis--label")
+           .attr("y", -18)
+           .attr("x", 150)
+           .attr("dy", ".71em")
+           .text("Savings Rate");
+
+    yAxisEl = svg.append("g")
+                 .attr("class", "y axis")
+                 .attr("transform", "translate("+margin.left+","+margin.top+")");
+    yAxisEl.append("text")
+           .attr("class", "axis--label")
+           .attr("transform", "rotate(-90)")
+           .attr("y", 6)
+           .attr("x", options.height*-1+175)
+           .attr("dy", ".71em")
+           .text("Years of Saving");
 }
 
-var highlightG, highlightCircle
-function highlightSr(rate) {
+var highlightG, highlightCircle, marketRate, wr, rate, xAxisEl, yAxisEl, path;
+
+function highlightSr(nRate, nMarketRate, nWr) {
+  //if((nRate == rate) && (nRate == rate) && (nRate == rate)) { return true; }
+  rate = nRate;
+  marketRate = nMarketRate;
+  wr = nWr;
+
+  years = savingsRates.map(function(d) {
+    return {
+      rate: d,
+      years: calcYears(d/100, marketRate, wr)
+    };
+  });
+
+  var maxYears = d3.max(years, function(y) { return y.years; });
+  yScale = d3.scaleLinear()
+      .domain([maxYears, 0])
+      .range([0, options.height - margin.bottom - margin.top]);
+  xScale = d3.scaleLinear()
+      .domain([1,100])
+      .range([0, options.width - margin.left - margin.right]);
+  var xAxis = d3.axisBottom().scale(xScale),
+    yAxis = d3.axisLeft().scale(yScale).ticks(6); //.orient("left");
+
+
+  var line = d3.line()
+    .x(function(year) {
+      return xScale(year.rate);
+    })
+    .y(function(year) {
+      return yScale(year.years);
+    });
+
+
+    xAxisEl.call(xAxis);
+    yAxisEl.call(yAxis);
+
+    path.datum(years)
+      .attr("d", line);
+
+
+  // Featured year
   var year = years.find(function(year) {
-    return parseInt(year.rate) == parseInt(rate);
+    return parseInt(year.rate) == parseInt(rate*100);
   });
   var x = xScale(year.rate),
       y = yScale(year.years);
 
-
   highlightG = highlightG || svg.append("g")
-    .attr("width", options.width-margin.left-margin.right)
-    .attr("height", options.height-margin.top-margin.bottom)
+    .attr("transform", "translate("+margin.left+","+margin.top+")")
+    // .attr("width", options.width-margin.left-margin.right)
+    // .attr("height", options.height-margin.top-margin.bottom)
     .attr("class", "active--sr")
 
   highlightCircle = highlightCircle || highlightG.append("circle")
       .attr("class", "user--sr")
       .attr("r", 8)
 
-  highlightCircle.attr("cy", y-3).attr("cx", x);
+  highlightCircle.transition()
+    .duration(1000)
+      .attr("cy", y)
+      .attr("cx", x);
 
   var message = messageForYear(year, "html");
 
+  initial.html(message);
   initial.transition()
-     .duration(100)
-     .style("opacity", .9);
-  initial.html(message)
-      .style("left", x + (margin.left/2) + "px")
-      .style("top", y+"px");
+     .duration(1000)
+       .style("left", x + (margin.left/2) + "px")
+       .style("top", (y-50)+"px");
 }
 
 $(function() {

@@ -186,7 +186,7 @@ $(function() {
 
       if(this.savingsRate > 0) {
         setTimeout(function() {
-          highlightSr(this.savingsRate*100);
+          highlightSr(this.savingsRate, this.marketGrowth, this.wr);
         }.bind(this), 50);
       }
 

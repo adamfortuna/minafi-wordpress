@@ -5,13 +5,15 @@
 <script src="<?php echo $theme_path; ?>/posts/fi/js/fi.js"></script>
 <script src="<?php echo $theme_path; ?>/posts/fi/js/sr.js"></script>
 
-<p>Early retirement is an aluring concept. The dream of leaving the workforce and following your dreams without the time constraints of a 9 to 5 sounds so empowering. After reading this post, you're going to know what you'll need to do to make it happen.</p>
+<p>Let's talk about financial independence and early retirement! Theses phrases alone have a lot of weight associated with them, and you might have immediate gut responses to just hearing these terms.</p>
 
-<p>The most common question when it comes to retirement is an important one:</p>
+<p>There's a lot to the idea of retirement. You might love your job and would't think about leaving it. Maybe you feel you never want to retire because we you'd just "be bored", or maybe you plan to work until you can't anymore. <b>For this post, I'm going to ask one request of you:</b></p>
 
-<blockquote>How much money do I need to retire?</blockquote>
+<blockquote>My Request: Don't associate financial independence with retirement.</blockquote>
 
-<p>This is going to be the core question we answer in this question, exploring it in a number of different ways. My goal is that after reading this post, you feel empowered with additional information that you can act on immediately to impact your life. Here are the core topics we'll be digging into.</p>
+<p>Instead, for this post, think of financial independence (abbreviated FI) as the point where if for any reason you stopped working, you'd be set for the rest of your life.</p>
+
+<p>After making your way through and filling in your numbers, you're going to know what you'll need to do to make it happen.</p>
 
 <ul class="list-unstyled">
 	<li><a href="#part-1">Part 1: Where am I now?</a></li>
@@ -23,10 +25,14 @@
   <li><a href="#part-7">Part 7: ?</a></li>
 </ul>
 
-<p>
-
 <a name="part-1"></a>
 <h2>Part 1: Where am I now?</h2>
+
+<p>The most common question when it comes to retirement is an important one:</p>
+
+<blockquote>How much money do I need to retire?</blockquote>
+
+<p>This is going to be the core question we answer in this question, exploring it in a number of different ways. My goal is that after reading this post, you feel empowered with additional information that you can act on immediately to impact your life. Here are the core topics we'll be digging into.</p>
 
 <p>The first step is understanding where you are now. Depending on your current financial health, this can range from a breath a relief to sobering realization. Please, bear with it. I guarantee that knowing your financial health is better than not knowing.</p>
 
@@ -64,13 +70,13 @@
 <div class="card container container-wide graph--sr--container mb-3">
 	<div class="graph graph--sr"></div>
 	<p class="lead fi--info">
-		<i>Adam Says:</i> Assumptions abound! This assumes: $0 current savings, you save what you don't spend, <span data-var="marketGrowth" class="TKAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic">/yr investment growth</span>, <span data-var="wr" class="TKAdjustableNumber" data-step="0.001" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic"> WR</span>, and that you'll spend <span data-var="retirementSpendingPercent" data-format="percent" class="TKAdjustableNumber tooltippable" data-step="0.01" data-min="0" data-max="100" data-min="0" data-max="10000000" data-toggle="tooltip" data-placement="top" title="If you're not sure, stick to 80% here."></span> of your current spending when you retire. If you don't know what these terms mean, don't worry -- we'll go over what these variables mean.
+		<i>Adam Says:</i> Assumptions abound! This assumes: $0 current savings, you save what you don't spend, <span data-var="marketGrowth" class="TKAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0.001" data-format="percentDecimal" class="tangle--dynamic">/yr investment growth</span>, <span data-var="wr" class="TKAdjustableNumber" data-step="0.001" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic"> WR</span>, and that you'll spend <span data-var="retirementSpendingPercent" data-format="percent" class="TKAdjustableNumber tooltippable" data-step="0.01" data-min="0" data-max="100" data-min="0" data-max="10000000" data-toggle="tooltip" data-placement="top" title="If you're not sure, stick to 80% here."></span> of your current spending when you retire. If you don't know what these terms mean, don't worry -- we'll go over what these variables mean.
 	</p>
 </div>
 
-<p>For your savings rate, <span class="tangle--dynamic" data-var="savingsRate" data-format="percent"></span>, you can see on the chart that you would need <span class="tangle--dynamic" data-var="yearsUntilFiOnlySR" data-format="years"></span> to earn enough to retire.</p>
+<p>For your savings rate, <span class="tangle--dynamic" data-var="savingsRate" data-format="percent"></span>, you can see on the chart that you would need <span class="tangle--dynamic" data-var="yearsUntilFiOnlySR" data-format="years"></span> to earn enough to be financially independent.</p>
 
-<p>What floors me about this chart is a 10% SR, often sighted as a "good" savings rate, will take <b>41 years</b> to save up enough to retire - and that's only if your income is the same! If your income and spending goes up, it'll take even longer. If you double that SR to 20% though, you can retire in 38 years. That's 25% time working for 10% of your salary. The takeaway here is clear.</p>
+<p>What floors me about this chart is a 10% SR, often sighted as a "good" savings rate, will take <b>41 years</b> to save up enough to retire (4% WR / 7% Market Return) - and that's only if your spending is the same then! If your income and spending goes up, it'll take even longer. If you double that SR to 20% though, you can retire in 38 years. That's 25% time working for 10% of your salary. The takeaway here is clear.</p>
 
 <blockquote class="fi--info">Save 10% of your income is terrible advice!</blockquote>
 
