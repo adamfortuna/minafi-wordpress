@@ -56,7 +56,9 @@ $comments_number = get_comments_number();
 
 				<ol class="comment-list">
 					<?php wp_list_comments(array(
-    				'avatar_size' => 48
+    				'avatar_size' => 48,
+						'style'       => 'ol',
+						'short_ping'  => true
 					)); ?>
 				</ol><!-- .comment-list -->
 

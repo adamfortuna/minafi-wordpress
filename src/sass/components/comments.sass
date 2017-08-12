@@ -26,12 +26,22 @@
     margin-right: none
 
 .comment-respond
+  margin: 1rem 0
   .comment-subscription-form
     clear: both
   .btn-outline-primary
     clear: both
     display: block
     cursor: pointer
+  a
+    color: $gray-dark
+    box-shadow: inset 0 -2px 0 $financial
+    -webkit-box-shadow: inset 0 -2px 0 $financial
+    text-decoration: none
+    font-size: 1.375rem
+    &:hover
+      text-decoration: none
+      background-color: $financial-lighter-header
 
 
 
@@ -67,6 +77,8 @@
         text-decoration: none
         color: rgba(0,0,0,0.7)
         font-size: 1rem
+        &:hover
+          text-decoration: underline
       // time
       //   -webkit-box-shadow: none
       	// box-shadow: none
@@ -87,7 +99,17 @@
       border-bottom: 1px solid #dddddd
     .reply
       a
+        display: block
         font-size: 1rem
+        float: right
+        margin-top: -1rem
+        color: $gray-dark
+        box-shadow: inset 0 -2px 0 $financial
+        -webkit-box-shadow: inset 0 -2px 0 $financial
+        text-decoration: none
+        &:hover
+          text-decoration: none
+          background-color: $financial-lighter-header
     .children
       > li
         list-style: none

@@ -19,3 +19,6 @@ function toggleSearch(e) {
     $this.closest('.nav-item').toggleClass('search--searching');
   }
 }
+
+
+$(function(){ $('.search--link').on('click', toggleSearch); });

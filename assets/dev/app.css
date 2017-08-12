@@ -9763,7 +9763,7 @@ a[href$='/category/goals/'], a[href$='/category/goals'] {
 .taxonomy-description {
   font-weight: 300;
   line-height: 1.8rem;
-  margin-bottom: 2.4rem; }
+  margin-bottom: 1.4rem; }
 
 .comments {
   padding: 2rem 0; }
@@ -9792,13 +9792,23 @@ a[href$='/category/goals/'], a[href$='/category/goals'] {
     float: none;
     margin-right: none; } }
 
-.comment-respond .comment-subscription-form {
-  clear: both; }
-
-.comment-respond .btn-outline-primary {
-  clear: both;
-  display: block;
-  cursor: pointer; }
+.comment-respond {
+  margin: 1rem 0; }
+  .comment-respond .comment-subscription-form {
+    clear: both; }
+  .comment-respond .btn-outline-primary {
+    clear: both;
+    display: block;
+    cursor: pointer; }
+  .comment-respond a {
+    color: rgba(0, 0, 0, 0.8);
+    box-shadow: inset 0 -2px 0 #7DD087;
+    -webkit-box-shadow: inset 0 -2px 0 #7DD087;
+    text-decoration: none;
+    font-size: 1.375rem; }
+    .comment-respond a:hover {
+      text-decoration: none;
+      background-color: rgba(229, 250, 232, 0.85); }
 
 .comment-list {
   margin: 0;
@@ -9831,6 +9841,8 @@ a[href$='/category/goals/'], a[href$='/category/goals'] {
         text-decoration: none;
         color: rgba(0, 0, 0, 0.7);
         font-size: 1rem; }
+        .comment-list li .comment-meta a:hover {
+          text-decoration: underline; }
     .comment-list li .comment-metadata {
       position: absolute;
       top: 24px;
@@ -9845,7 +9857,17 @@ a[href$='/category/goals/'], a[href$='/category/goals'] {
       padding: 1rem;
       border-bottom: 1px solid #dddddd; }
     .comment-list li .reply a {
-      font-size: 1rem; }
+      display: block;
+      font-size: 1rem;
+      float: right;
+      margin-top: -1rem;
+      color: rgba(0, 0, 0, 0.8);
+      box-shadow: inset 0 -2px 0 #7DD087;
+      -webkit-box-shadow: inset 0 -2px 0 #7DD087;
+      text-decoration: none; }
+      .comment-list li .reply a:hover {
+        text-decoration: none;
+        background-color: rgba(229, 250, 232, 0.85); }
     .comment-list li .children > li {
       list-style: none; }
   .comment-list .comment-awaiting-moderation {

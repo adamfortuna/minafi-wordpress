@@ -41,11 +41,12 @@ gulp.task('js:concat', function () {
     'src/js/TangleKit/sprintf.js',
     'src/js/TangleKit/BVTouchable.js',
     'src/js/TangleKit/TangleKit.js',
+    'src/js/vendor/comment-reply.js',
+    'src/js/app.js',
     '../../plugins/aesop-story-engine/public/assets/js/ai-core.min.js',
     '../../plugins/aesop-story-engine/public/assets/js/ast.js',
     '../../plugins/aesop-story-engine/public/assets/js/scrollreveal.js',
-    '../../plugins/aesop-story-engine/public/assets/js/waypoints.js',
-    'src/js/app.js',
+    '../../plugins/aesop-story-engine/public/assets/js/waypoints.js'
   ];
 
   return gulp.src(files)

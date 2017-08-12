@@ -8,7 +8,7 @@ get_header();
   <div class="row">
     <div class="col-12">
       <h2 class="page-title">All Articles</h2>
-      <p class="taxonomy-description">Here's all <?php $count_posts = wp_count_posts(); echo $count_posts->publish; ?> articles written on Minafi, sorted from most recent to oldest.</p>
+      <p class="taxonomy-description">Here are all <?php $count_posts = wp_count_posts(); echo $count_posts->publish; ?> articles written on Minafi, sorted from most recent to oldest.</p>
       <p class="taxonomy-description">
         If you're looking to read about something in particular, I'd recommend checking out the category pages on
         <a href="/category/minimalism/">minimalism</a>,
