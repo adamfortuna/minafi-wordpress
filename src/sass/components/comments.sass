@@ -44,22 +44,39 @@
     .comment-author
       .avatar
         margin-right: 12px
+        border: 1px solid transparent
+        border-radius: 4px
       b
         font-weight: normal
         position: relative
         top: -12px
+        a
+          color: $gray-dark
+          box-shadow: inset 0 -2px 0 $financial
+          -webkit-box-shadow: inset 0 -2px 0 $financial
+          text-decoration: none
+          font-size: 1.375rem
+          &:hover
+            text-decoration: none
+            background-color: $financial-lighter-header
       .says
         display: none
     .comment-meta
       position: relative
+      a
+        text-decoration: none
+        color: rgba(0,0,0,0.7)
+        font-size: 1rem
+      // time
+      //   -webkit-box-shadow: none
+      	// box-shadow: none
+      //   text-decoration: none
+
     .comment-metadata
       position: absolute
       top: 24px
       left: 65px
       font-size: 1.1rem
-      a
-        color: rgba(0,0,0,0.6)
-        font-weight: 300
     .comment-content
       clear: both
       padding-top: 1rem
@@ -75,3 +92,7 @@
       > li
         list-style: none
     .comment-reply-link
+
+  .comment-awaiting-moderation
+    color: $financial
+    font-weight: 700

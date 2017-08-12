@@ -9807,23 +9807,35 @@ a[href$='/category/goals/'], a[href$='/category/goals'] {
     list-style: none;
     margin-bottom: 1rem; }
     .comment-list li .comment-author .avatar {
-      margin-right: 12px; }
+      margin-right: 12px;
+      border: 1px solid transparent;
+      border-radius: 4px; }
     .comment-list li .comment-author b {
       font-weight: normal;
       position: relative;
       top: -12px; }
+      .comment-list li .comment-author b a {
+        color: rgba(0, 0, 0, 0.8);
+        box-shadow: inset 0 -2px 0 #7DD087;
+        -webkit-box-shadow: inset 0 -2px 0 #7DD087;
+        text-decoration: none;
+        font-size: 1.375rem; }
+        .comment-list li .comment-author b a:hover {
+          text-decoration: none;
+          background-color: rgba(229, 250, 232, 0.85); }
     .comment-list li .comment-author .says {
       display: none; }
     .comment-list li .comment-meta {
       position: relative; }
+      .comment-list li .comment-meta a {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.7);
+        font-size: 1rem; }
     .comment-list li .comment-metadata {
       position: absolute;
       top: 24px;
       left: 65px;
       font-size: 1.1rem; }
-      .comment-list li .comment-metadata a {
-        color: rgba(0, 0, 0, 0.6);
-        font-weight: 300; }
     .comment-list li .comment-content {
       clear: both;
       padding-top: 1rem;
@@ -9836,6 +9848,9 @@ a[href$='/category/goals/'], a[href$='/category/goals'] {
       font-size: 1rem; }
     .comment-list li .children > li {
       list-style: none; }
+  .comment-list .comment-awaiting-moderation {
+    color: #7DD087;
+    font-weight: 700; }
 
 .dropdown-menu {
   padding: 0;
