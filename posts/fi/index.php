@@ -461,6 +461,15 @@
 </div>
 
 
+<h4>Communities</h4>
+<p>There are a number of thriving communities focused on financial independence and early retirement. I can't include them all, but here are a few that I've participated in and enjoyed.</p>
+
+<a href="https://www.reddit.com/r/financialindependence/" target="_blank">/r/FinancialIndependence on Reddit</a>
+<p>This is a place for people who are or want to become Financially Independent (FI), which means not having to work for money.</p>
+
+
+
+
 
 
 
