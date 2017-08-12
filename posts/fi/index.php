@@ -5,9 +5,9 @@
 <script src="<?php echo $theme_path; ?>/posts/fi/js/fi.js"></script>
 <script src="<?php echo $theme_path; ?>/posts/fi/js/sr.js"></script>
 
-<p>Let's talk about financial independence and early retirement! These phrases alone have a lot of weight associated with them, and you might have an immediate gut responses to just hearing these terms.</p>
+<p>Let's talk about financial independence and early retirement! These phrases alone have a lot of weight associated with them, and you might have an immediate gut response to just hearing these terms.</p>
 
-<p>You might love your job and wouldn't think about leaving it. Maybe you hate your job and can't wait to leave it. Maybe you're looking for change. Maybe you feel you never want to retire because we you'd just "be bored", Or maybe you plan to work until you can't anymore. <b>For this post, I'm going to ask one request of you:</b></p>
+<p>You might love your job and wouldn't think about leaving it. Maybe you hate your job and can't wait to leave it. Maybe you're looking for a change. Maybe you feel you never want to retire because you'd just "be bored", Or maybe you plan to work until you can't anymore. <b>For this post, I'm going to ask one request of you:</b></p>
 
 <blockquote class="text-center">My Request for you:<br/> Don't assume financial independence means retirement.</blockquote>
 
@@ -38,7 +38,7 @@
 
 <p>This is going to be the core question we answer in this article, exploring it in a number of different ways. My goal is that after reading this post, you know exactly how much you'd need to retire in your current state, but also give some advice on small tweaks to your lifestyle that could hugely impact this number.</p>
 
-<p>The first step is understanding your current financial footing and where your current path would take you. Depending on your current financial health, this can range from a breath a relief to sobering realization. <b>Please</b>, bear with it. I guarantee that knowing your financial health is better than not knowing.</p>
+<p>The first step is understanding your current financial footing and where your current path would take you. Depending on your current financial health, this can range from a breath a relief to a sobering realization. <b>Please</b>, bear with it. I guarantee that knowing your financial health is better than not knowing.</p>
 
 <h3>This Article Is Interactive!</h3>
 <p>
@@ -66,7 +66,7 @@
 		<i>Adam Says:</i> Nothing filled out here will be sent to any server - it's just for you. These values <span data-var="storeCookies" class="TKToggle TKSwitch">
 				<span>will NOT be stored in a cookie</span>
 				<span>will be stored in a cookie</span>
-			</span> in your browser, so if you revist this page, you
+			</span> in your browser, so if you revisit this page, you
 			<span data-var="storeCookies" class="TKToggle TKSwitch">
 				<span>will NOT</span>
 				<span>will</span>
@@ -80,7 +80,7 @@
 <div class="card container container-wide graph--sr--container mb-3 card--info">
 	<div class="graph graph--sr"></div>
 	<p class="lead fi--info">
-		<i>Adam Says:</i> Assumptions abound! This assumes: $0 current savings, you save what you don't spend, <span data-var="marketGrowth" class="TKAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0.001" data-format="percentDecimal" class="tangle--dynamic">/yr investment growth</span>, <span data-var="wr" class="TKAdjustableNumber" data-step="0.001" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic"> WR</span>, and that your spending will be the same when you retire. If you don't know what these terms mean, don't worry -- we'll get to them.
+		<i>Adam Says:</i> Assumptions abound! This assumes $0 current savings, you save what you don't spend, <span data-var="marketGrowth" class="TKAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0.001" data-format="percentDecimal" class="tangle--dynamic">/yr investment growth</span>, <span data-var="wr" class="TKAdjustableNumber" data-step="0.001" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic"> WR</span>, and that your spending will be the same when you retire. If you don't know what these terms mean, don't worry -- we'll get to them.
 	</p>
 </div>
 
@@ -103,7 +103,7 @@
 </blockquote>
 
 <h2>Part 2: How much should I save?</h2>
-<p>What floors me about the above chart is that a 10% SR, often sighted as a "good" savings rate, will take <b>41 years</b> to save up enough to retire (at a 4% WR / 7% Market Return) - and that's only if your spending stays the same! If your income and spending goes up, it'll take even longer.</p>
+<p>What floors me about the above chart is that a 10% SR, often sighted as a "good" savings rate, will take <b>41 years</b> to save up enough to retire (at a 4% WR / 7% Market Return) - and that's only if your spending stays the same! If your income and spending go up, it'll take even longer.</p>
 
 <p>If you double that savings rate to 20% though, you can retire in 38 years. That's 25% time working for 10% of your salary.</p>
 
@@ -111,10 +111,10 @@
   <p>If you want to retire before you're 65, the common wisdom "save 10% of your income" is terrible advice!</p>
 </blockquote>
 
-<p>If you're hoping to be financially independent before collecting social security, you'll need to save more. Let's look into ways to reduce this number. These estimates are making a <b>LOT</b> of assumptions. We can refine this a little, but for that I'm going to need your help -- in the form of answering a few more questions.</p>
+<p>If you're hoping to be financially independent before collecting social security, you'll need to save more. Let's look into ways to reduce this number. These estimates are making a <b>LOT</b> of assumptions. We can refine this a little, but for that, I'm going to need your help -- in the form of answering a few more questions.</p>
 
 <p>
-  You could be reading this and think there's no way you could save any money. I know when I was growing up, at times my mom was scrapping to make ends meet, and saving was the last thing on her mind. For those reading in that situation, I empathize with, but struggle to find the best advice. You know your situation better than I ever could, as well as what you could do to make it better.
+  You could be reading this and think there's no way you could save any money. I know when I was growing up, at times my mom was scrapping to make ends meet, and saving was the last thing on her mind. For those reading in that situation, I empathize with but struggle to find the best advice. You know your situation better than I ever could, as well as what you could do to make it better.
 </p>
 
 <div class="container text-center pb-3 mb-3">
@@ -123,12 +123,12 @@
 
 <h3>Saving Money is a Hike</h3>
 
-<p>You're starting with a time period of <span class="tangle--dynamic" data-var="yearsUntilFiOnlySR" data-format="years"></span> based on just your savings rate. Saving this much isn't a sprint, or even a marathon but a hike. Depriving yourself for a few months, only to be exhausted, or spend more the following months, isn't going to have a positive impact. Pace and progress are the key.</p>
+<p>You're starting with a time period of <span class="tangle--dynamic" data-var="yearsUntilFiOnlySR" data-format="years"></span> based on just your savings rate. Saving this much isn't a sprint, or even a marathon but a hike. Depriving yourself for a few months, only to be exhausted, or spend more the following months, isn't going to have a positive impact. Pace and progress are the keys.</p>
 
 <p>I've personally tried maxing out my savings some months - spending the least amount I possibly could to get that SR formula looking better. The problem was that the next month I'd reward myself for doing so and things would balance out.</p>
 
 <blockquote>
-  <p>Favor lifestyle changes that help you save over changes that feel like deprevation.</p>
+  <p>Favor lifestyle changes that help you save over changes that feel like deprivation.</p>
 </blockquote>
 
 <p>Instead, make changes that make your life better, and that you look forward to week after week and year after year. If you're spending money on something that brings that kind of joy into your life, to me that's well worth it.</p>
@@ -166,7 +166,7 @@
 	<p>
 		Given your
 		<span data-var="savingsRate" data-format="percent" class="tangle--dynamic"> SR</span>
-		and a networth
+		and a net worth
 		<span data-var="networth" data-format="currency" class="tangle--dynamic"></span>,
 		if you continue to invest
 		<span class="tangle--dynamic" data-format="currency" data-var="yearlySavings">/yr</span>, then you're on track to be financially independent in
@@ -199,7 +199,7 @@
 	</div>
 
 	<p class="lead fi--info">
-		<i>Adam Says:</i> For these numbers I'm assuming <span data-var="marketGrowth" class="TKAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic">/yr investment growth</span> and a <span data-var="wr" class="TKAdjustableNumber" data-step="0.001" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic"> withdrawal rate</span>. If you're not sure what these numbers mean, don't worry! I'll explain them later on in this post.
+		<i>Adam Says:</i> For these numbers, I'm assuming <span data-var="marketGrowth" class="TKAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic">/yr investment growth</span> and a <span data-var="wr" class="TKAdjustableNumber" data-step="0.001" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic"> withdrawal rate</span>. If you're not sure what these numbers mean, don't worry! I'll explain them later on in this post.
 	</p>
 </div>
 
@@ -208,9 +208,9 @@
 
 <p>Financial Independence (FI) is different from retirement. Think of financial independence as the amount of money you'd need in order to never work again. Retirement (RE), on the other hand, is the act of not working.</p>
 
-<p><b>It's possible for people to be FI but continue working</b> -- you see it all the time. From CEOs of companies, to quiet employees who have saved huge amounts to bloggers talking about retirement (well, some -- not me). There are also people who are retired, but who may need to return to work someday down the line when their savings runs out, or if social security fails somewhere down the line.</p>
+<p><b>It's possible for people to be FI but continue working</b> -- you see it all the time. From CEOs of companies to quiet employees who have saved huge amounts to bloggers talking about retirement (well, some -- not me). There are also people who are retired, but who may need to return to work someday down the line when their savings run out, or if social security fails somewhere down the line.</p>
 
-<p>To be FIRE (financially independent + retired) is an aim with <b>the goal of minimizing stress from external sources</b>. It does rely on stock markets to perform in a similar pattern to the last 100+ years, but aside from that, it's not based around too many assumptions.</p>
+<p>To be FIRE (financially independent + retired) is an aim with <b>the goal of minimizing stress from external sources</b>. It does rely on stock markets to perform in a similar pattern to the last 100+ years, but aside from that, it's not based on too many assumptions.</p>
 
 <a name="part-4"></a>
 <div class="container text-center pb-3 mb-3">
@@ -249,7 +249,7 @@
 
 <p>Withdrawal rate is one the most talked about (and heavily debated) topics when it comes to early retirement. I'm only going to introduce the topic in this article, but if you want to read more here's a great post on <a href="https://earlyretirementdude.com/4-rule-come-anyway-hint-wasnt-trinity-study/" target="_blank">Where'd the 4% Rule Come From Anyway?</a></p>
 
-<p>My personal withdrawal rate I use for calculations is 3%. I'm in no rush to retire right now, and I'd prefer to rest easy and be overwhelming confident -- or at least as much is possible.</p>
+<p>My personal withdrawal rate I use for calculations is 3%. I'm in no rush to retire right now, and I'd prefer to rest easy and be overwhelming confident -- or at least as much as possible.</p>
 
 
 <a name="part-5"></a>
@@ -274,7 +274,7 @@
 
 <h3>Factoring In Inflation</h3>
 
-<p>Even worse, each of those <span data-var="yearsOfFiNoInvestment" data-format="years" class="tangle--dynamic tangle--dynamic"></span>, your spending power would be slightly less due to inflation, which is generally around 3%. Inflation is something we have no control over individually, but is something we can plan for.</p>
+<p>Even worse, each of those <span data-var="yearsOfFiNoInvestment" data-format="years" class="tangle--dynamic tangle--dynamic"></span>, your spending power would be slightly less due to inflation, which is generally around 3%. Inflation is something we have no control over individually but is something we can plan for.</p>
 
 <p>Inflation means that each year, what you can buy with your money is going down by some small amount. If you've seen prices rise since you were a kid, that's potentially a result of inflation.</p>
 
@@ -293,7 +293,7 @@
 
 <p>The missing piece here is that you can <a href="https://minafi.com/investment-literacy/" target="_blank">invest that money in the stock market</a> -- both while you're growing it and when you're drawing down from it.</p>
 
-<p>Stock markets in the US have returned on average 7% a year since their beginning. This is an important number! If you're withdrawing at most 4% of this, and 3% of it is going to inflation, then your net worth will go down ever so slightly over time. This is why 4% is often sighted as a the maximum WR.</p>
+<p>Stock markets in the US have returned on average 7% a year since their beginning. This is an important number! If you're withdrawing at most 4% of this, and 3% of it is going to inflation, then your net worth will go down ever so slightly over time. This is why 4% is often sighted as a maximum WR.</p>
 
 <p>Learning how to invest and earn ~7% will sound intimidating at first. It will take trial and error, but more than that it'll take being brave and putting money into the stock market. Using a simple <a href="https://minafi.com/simple-three-fund-portfolio-vanguard/" target="_blank">3-fund portfolio</a> is a great place to start learning how to invest.</p>
 
@@ -310,7 +310,7 @@
 <p>
 	That
 	<span data-var="fiTotalSpending" data-format="currency" class="tangle--dynamic"></span>
-	wouldn't be all at once, but in the form of
+	wouldn't be all at once but in the form of
 	<span data-var="retirementYearlySpending" data-format="currency" class="tangle--dynamic">/yr</span>.
 	This is the true power of compound interest!
 	Imagine how many more years you'd need to work to save this amount without investing. Actually, no need to imagine -- it's <span data-var="investmentYearsDifference" data-format="years" class="tangle--dynamic"></span>! If you learn how to invest, you can retire <span data-var="investmentYearsDifference" data-format="years" class="tangle--dynamic"></span> years earlier.
@@ -368,7 +368,7 @@
 
 <p>The less you need, the less you'll need to save. If you reduce your spending to $0/yr, you'd need $0 to retire. That's likely unrealistic, but the less you spend, the less you need.</p>
 
-<p>Taking steps to reduce your lifestyle can payoff by reducing the time you'll be required to work to maintain it. Be careful not to go overboard though. Build a life you want, then save for it.</p>
+<p>Taking steps to reduce your lifestyle can pay off by reducing the time you'll be required to work to maintain it. Be careful not to go overboard though. Build a life you want, then save for it.</p>
 
 
 <div class="card container container-slim card--info">
@@ -421,7 +421,7 @@
 	<h2>What If: You do all 3? Reduce spending, earn income &amp; save raises?</h2>
 
   <p>
-    You reduce spending by <span data-var="spendingReductionPercent" data-format="percentDecimal" data-step="0.01" data-max="1" data-min="0" class="tangle--dynamic TKAdjustableNumber"></span>,
+    You reduce spending by <span data-var="spendingReductionPercent" data-format="percentDecimal" data-step="0.01" data-max="1" data-min="0" class="tangle--dynamic TKAdjustableNumber"></span>
     while replacing
     <span data-var="eirIncomePercent" data-format="percent" data-step="0.01" data-max="1" data-min="0" class="tangle--dynamic TKAdjustableNumber"></span>
     of your income during retirement (<span data-var="impliedSpendingReductionYearlySavings" data-format="currency" class="tangle--dynamic"></span>)
@@ -451,7 +451,7 @@
 </div>
 <h2 class="pt-3">Part 7: Who is actually doing this?</h2>
 
-<p>You might be surprised by who is pursuing FI. It ranges from people in debt, to multi-millionaires who are FI aleady. There is likely someone who is in a similar situation to you out there.</p>
+<p>You might be surprised by who is pursuing FI. It ranges from people in debt to multi-millionaires who are FI already. There is likely someone who is in a similar situation to you out there.</p>
 
 <p>I was lucky enough to chat with a number of people who are in various states of financial independence and get their takes on the subject.</p>
 
@@ -523,7 +523,7 @@
 </div>
 
 <h4 class="card-title"><a href="https://minafi.com/recommends/your-money-or-your-life/" target="_blank">Your Money or Your Life</a></h4>
-<p class="card-text"><i>Your Money</i> is an amazing exploration into developing a relationship with money that goes deeping than just buying things. This book is the origin for many articles and concepts that you'll read about in the FI world, told beautifully.</p>
+<p class="card-text"><i>Your Money</i> is an amazing exploration into developing a relationship with money that goes deeper than just buying things. This book is the origin of many articles and concepts that you'll read about in the FI world, told beautifully.</p>
 <p class="card-text">As great as <i>Your Money</i> is, it borders on self-help as opposed to finance - which actually helps its topics connect deeper for me.</p>
 
 
@@ -562,7 +562,7 @@
 <p>This is a place for people who are or want to become Financially Independent (FI), which means not having to work for money.</p>
 
 <h4><a href="https://www.bogleheads.org/forum/index.php" target="_blank">Bogleheads.org Forum</a></h4>
-<p>This was the first forum I discovered when investing. I asked extremely basic questions and people were helpful and welcoming. If you're learning how to invest, and want to do it the smart way, this forum, the associated wiki, is a amazing source of knowledge.</p>
+<p>This was the first forum I discovered when investing. I asked extremely basic questions and people were helpful and welcoming. If you're learning how to invest, and want to do it the smart way, this forum, the associated wiki, is an amazing source of knowledge.</p>
 
 <h4><a href="https://forum.mrmoneymustache.com/" target="_blank">Mr. Money Mustache Community</a></h4>
 <p>While Bogleheads leans towards investing, the MMM community ranges from "do it yourself" to "real estate investing" to "taxes" and "entrepreneurship".</p>
@@ -577,7 +577,7 @@
 <a name="part-9"></a>
 <h2 class="pt-3">Part 9: What Next?</h2>
 <p>
-  If there's one takeaway you get from this post, it's that <b>the concept of financial independence isn't solely for those who are extremely weathly or for those who are nearing social security</b>.
+  If there's one takeaway you get from this post, it's that <b>the concept of financial independence isn't solely for those who are extremely weathy or for those who are nearing social security</b>.
 </p>
 <p>
   It's a path that starts with understanding and minimizing your expenses -- a valuable undertaking regardless of your long-term goal. Beyond that, it's about understanding how much you need to save to live the life you want and making a plan for it.
