@@ -32,6 +32,10 @@ $(function() {
 
     var result = "";
 
+    if(years === 0) {
+      return "0 years";
+    }
+
     // damn you language
     if(years > 0) {
       result = years + " year";
@@ -125,6 +129,8 @@ $(function() {
 
         // What If: Your Income Grows but your Expenses Don't?
         this.payIncreasePercent = 0.02;
+
+        this.inflationRate = 0.03;
       }
     },
     update: function () {
@@ -183,6 +189,9 @@ $(function() {
         // this.retirementSavingsNeeded = this.retirementYearlySpending * this.gloablSWR;
       this.earningsIncrease();
       this.allReductionsSooner();
+
+      // Inflation
+      this.neededMarketRate = this.inflationRate + this.wr;
 
       if(this.savingsRate > 0) {
         setTimeout(function() {
