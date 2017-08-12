@@ -27,7 +27,7 @@ get_header();
       <?php do_action('ase_theme_post_before_title'); ?>
 		  <h1><?php the_title(); ?></h1>
       <?php do_action('ase_theme_post_after_title'); ?>
-      <p class="article-subtitle"><? echo get_the_excerpt(); ?></p>
+      <p class="article-subtitle">This article is an experiment — a cross between a choose your own adventure book and a calculator while also being a guide to help you understand the numbers behind early retirement and financial independence.</p>
 
       <div class="article--header-meta">
         <span class="article--header-meta-date">
