@@ -1,3 +1,6 @@
+function debounce(a,b,c){var d;return function(){var e=this,f=arguments;clearTimeout(d),d=setTimeout(function(){d=null,c||a.apply(e,f)},b),c&&!d&&a.apply(e,f)}}
+
+
 var putThousandsSeparators = function(value, sep) {
   if (sep == null) {
     sep = ',';
@@ -26,15 +29,14 @@ $(function() {
   };
 
   Tangle.formats.years = function(value) {
+    if(value === 0) {
+      return "0 years";
+    }
+
     var years = Math.floor(value),
         months = value - years;
     var monthsNumber = Math.floor((months*100) / ((1/12)*100));
-
     var result = "";
-
-    if(years === 0) {
-      return "0 years";
-    }
 
     // damn you language
     if(years > 0) {
@@ -77,60 +79,32 @@ $(function() {
     }
   };
 
+  var defaults = {
+    exampleClick: false,
+    storeCookies: true,
+    yearlyIncome: 50000,
+    yearlySavings: 10000,
+    phase: 1,
+    age: 30,
+    networth: 5000,
+    yearlySpending: 40000,
+    retirementSpendingPercent: 0.8,
+    marketGrowth: 0.07,
+    wr: 0.04,
+    spendingReductionPercent: 0.10,
+    eirIncomePercent: 0.10,
+    monthlyIncome: 0,
+    retirementMonthlyIncome: 0,
+    payIncreasePercent: 0.02,
+    inflationRate: 0.03
+  };
+
   var tangle = new Tangle(element, {
     initialize: function () {
-      this.clearCookies();
-      if(Cookies.get('storeCookies') && false) {
+      if(this.cookie()['storeCookies']) {
         this.loadCookies();
       } else {
-        this.saveableValues = this.allSaveableValues();
-        // Intro
-        this.exampleClick = false;
-        this.storeCookies = false;
-
-        // Savings Rate Calculator
-        this.yearlyIncome = 50000;
-        this.yearlySavings = 10000;
-        this.phase = 1;
-        // calculated:
-        //   savingsRate
-        //   yearsUntilFiOnlySR
-        //   yearsUntilFi
-
-        // Let's Talk More About You
-        this.age = 30;
-        this.networth = 5000;
-        this.yearlySpending = 40000;
-        this.retirementSpendingPercent = 0.8;
-        // calculated:
-        //   retirementYearlySpending
-        //   yearsUntilFiWithNetworth
-        // 	 fiPhase
-        //     0 - Already fi
-        //     1 - <10 years
-        //     2 - <20 years
-        //     3 - 20+ years
-        //   fiAge
-        //   fiStash
-
-        this.marketGrowth = 0.07;
-
-        // Withdrawal Rate
-        this.wr = 0.04;
-
-        // Reducing Spending
-        this.spendingReductionPercent = 0.10;
-
-        // You Earn Money In Retirement?
-        this.eirIncomePercent = 0.10;
-
-        this.monthlyIncome = 0;
-        this.retirementMonthlyIncome = 0;
-
-        // What If: Your Income Grows but your Expenses Don't?
-        this.payIncreasePercent = 0.02;
-
-        this.inflationRate = 0.03;
+        this.reset();
       }
     },
     update: function () {
@@ -200,12 +174,12 @@ $(function() {
       }
 
       //
+
       if(this.storeCookies) {
         this.saveCookies();
       } else {
         this.clearCookies();
       }
-
     },
 
     // eir
@@ -293,47 +267,47 @@ $(function() {
         'eirIncomePercent',
         'monthlyIncome',
         'retirementMonthlyIncome',
-        'eirIncomeAfterRetirement',
-        'eirTimeUntilFi',
-        'eirTimeSooner',
-        'savingsRate',
-        'impliedYearlySpending',
-        'impliedRetirementStashNeeded',
-        'yearsUntilFiOnlySR',
-        'retirementYearlySpending',
-        'fiStash',
-        'missingRetirementIncome',
-        'yearsUntilFi',
-        'fiPhase',
-        'fiAge',
-        'impliedSpendingReductionYearlySavings',
-        'impliedSpendingReductionYearlySavingsTotal',
-        'impliedSpendingReductionYearlySpending',
-        'spendingReductionStash',
-        'spendingReductionYearsUntilFi',
-        'spendingReductionYearsEarlier',
-        'spendingReductionStashDifference',
-        'yearsOfFiNoInvestment',
-        'fiTotalSpending',
-        'investmentYearsDifference',
-        'payIncreasePercent'
+        'payIncreasePercent',
+        'inflationRate'
       ];
     },
-    loadCookies: function() {
+    state: function() {
+      var s = {};
       this.allSaveableValues().forEach(function(v) {
-        this[v] = Cookies.get(v);
+        s[v] = this[v];
       }.bind(this));
+      return s;
+    },
+    reset: function() {
+      this.allSaveableValues().forEach(function(v) {
+        this[v] = defaults[v];
+      }.bind(this));
+      return true;
+    },
+    cookie: function() {
+      try {
+        var stateJson = Cookies.get("fi-post");
+        return JSON.parse(stateJson);
+      } catch(e) {
+        return {};
+      }
+    },
+    loadCookies: function() {
+      try {
+        var cookieState = this.cookie();
+        for(var property in cookieState) {
+          this[property] = cookieState[property];
+        }
+      } catch(e) {
+        this.reset();
+      }
     },
     saveCookies: function() {
-      this.allSaveableValues().forEach(function(v) {
-        console.log("saving cookie", v, this[v]);
-        Cookies.set(v, this[v]);
-      }.bind(this));
+      var cookie = JSON.stringify(this.state());
+      Cookies.set("fi-post", cookie);
     },
     clearCookies: function() {
-      this.allSaveableValues().forEach(function(v) {
-        Cookies.remove(v);
-      });
+      Cookies.remove("fi-post");
     }
   });
 
@@ -354,7 +328,7 @@ $(function() {
 
   $('.fi--reset').on('click', function(e) {
     e.preventDefault();
-    // TODO: Reset
+    tangle.setValues(defaults);
   });
 
   $('.tooltippable').tooltip();
@@ -368,8 +342,9 @@ $(function() {
   sr.reveal('#fi-profile--adam', {
     origin:'left', distance: '0px', duration: 1000
   });
-
   jQuery('#fi-profile--adam').css("visibility","visible");
+
+
 
   $('.profile-toggle').on('click', function(e) {
     e.preventDefault();
