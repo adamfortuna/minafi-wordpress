@@ -47,7 +47,7 @@ var svg,
     height: 400,
     width: 900
   },
-  savingsRates = d3.range(1, 101, 1),
+  savingsRates = d3.range(1, 100, 1),
   years,
   bisectSr = d3.bisector(function(d) { return d.rate; }).left,
   initial, tooltip;

@@ -40,6 +40,7 @@
   font-size: 1.2rem;
   line-height: 1.4rem;
   margin-bottom: 1rem;
+  max-width: 100%;
 }
 
 .card--info .fi--info:before {
@@ -140,6 +141,12 @@
 
 
 .fi--profile {
+  h4 {
+    margin-bottom: 8px;
+  }
+  p {
+    font-size: 1.2rem;
+  }
   .profile-toggle--read-less {
     display: inline-block;
   }

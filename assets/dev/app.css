@@ -11915,7 +11915,8 @@ span.entry-subtitle {
   padding-top: 1rem;
   font-size: 1.2rem;
   line-height: 1.4rem;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  max-width: 100%; }
 
 .card--info .fi--info:before {
   /*content: "";
@@ -12001,6 +12002,12 @@ span.entry-subtitle {
   border: 1px solid #B2E8B9;
   border-radius: 8px;
   pointer-events: none; }
+
+.fi--profile h4 {
+  margin-bottom: 8px; }
+
+.fi--profile p {
+  font-size: 1.2rem; }
 
 .fi--profile .profile-toggle--read-less {
   display: inline-block; }

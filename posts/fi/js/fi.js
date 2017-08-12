@@ -85,7 +85,7 @@ $(function() {
         this.storeCookies = false;
 
         // Savings Rate Calculator
-        this.yearlyIncome = 55000;
+        this.yearlyIncome = 50000;
         this.yearlySavings = 10000;
         this.phase = 1;
         // calculated:
@@ -95,9 +95,9 @@ $(function() {
 
         // Let's Talk More About You
         this.age = 30;
-        this.networth = 100000;
-        this.yearlySpending = 45000;
-        this.retirementSpendingPercent = 8/9;
+        this.networth = 5000;
+        this.yearlySpending = 40000;
+        this.retirementSpendingPercent = 0.8;
         // calculated:
         //   retirementYearlySpending
         //   yearsUntilFiWithNetworth
@@ -368,6 +368,6 @@ $(function() {
     $(this).closest('.fi--profile')
            .toggleClass('fi--profile-collapsed')
            .find('.profile-toggle--more')
-           .slideToggle();
+           .fadeToggle();
   })
 });

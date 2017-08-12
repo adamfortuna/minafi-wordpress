@@ -21,8 +21,6 @@
 	<li><a href="#part-3">Part 3: How is that enough?</a></li>
 	<li><a href="#part-4">Part 4: How can I retire sooner?</a></li>
 	<li><a href="#part-5">Part 5: Where can I learn more?</a></li>
-  <li><a href="#part-6">Part 6: Who is this for?</a></li>
-  <li><a href="#part-7">Part 7: ?</a></li>
 </ul>
 
 <a name="part-1"></a>
@@ -67,10 +65,10 @@
 
 <p>When working towards retirement, <b>your savings rate is one of the most important numbers</b>. You don't need <i>me</i> to tell you that the more you save, the faster you'll be able to retire, but <b>how much faster</b>? See where your <span class="tangle--dynamic" data-var="savingsRate" data-format="percent"></span> SR falls on the following chart:</p>
 
-<div class="card container container-wide graph--sr--container mb-3">
+<div class="card container container-wide graph--sr--container mb-3 card--info">
 	<div class="graph graph--sr"></div>
 	<p class="lead fi--info">
-		<i>Adam Says:</i> Assumptions abound! This assumes: $0 current savings, you save what you don't spend, <span data-var="marketGrowth" class="TKAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0.001" data-format="percentDecimal" class="tangle--dynamic">/yr investment growth</span>, <span data-var="wr" class="TKAdjustableNumber" data-step="0.001" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic"> WR</span>, and that you'll spend <span data-var="retirementSpendingPercent" data-format="percent" class="TKAdjustableNumber tooltippable" data-step="0.01" data-min="0" data-max="100" data-min="0" data-max="10000000" data-toggle="tooltip" data-placement="top" title="If you're not sure, stick to 80% here."></span> of your current spending when you retire. If you don't know what these terms mean, don't worry -- we'll go over what these variables mean.
+		<i>Adam Says:</i> Assumptions abound! This assumes: $0 current savings, you save what you don't spend, <span data-var="marketGrowth" class="TKAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0.001" data-format="percentDecimal" class="tangle--dynamic">/yr investment growth</span>, <span data-var="wr" class="TKAdjustableNumber" data-step="0.001" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic"> WR</span>, and that your spending will be the same when you retire. If you don't know what these terms mean, don't worry -- we'll get to them.
 	</p>
 </div>
 
@@ -80,7 +78,7 @@
 
 <blockquote class="fi--info">Save 10% of your income is terrible advice!</blockquote>
 
-<p>Let's look into ways to reduce this number. These estimates are making a <b>LOT</b> of assumptions. We can refine this a little, but for that I'm going to need your help -- in the form of answering a few more questions.</p>
+<p>If you're hoping to be financially independent before collecting social security, you'll need to save more. Let's look into ways to reduce this number. These estimates are making a <b>LOT</b> of assumptions. We can refine this a little, but for that I'm going to need your help -- in the form of answering a few more questions.</p>
 
 <a name="part-2"></a>
 <h2>Part 2: How much do I need?</h2>
@@ -181,7 +179,7 @@
 <a name="part-3"></a>
 <h2 class="pt-3">Part 3: How is this enough?</h2>
 
-<p>When I first saw these numbers and did the math on it, I immediately did something like this:</p>
+<p>When I first saw these numbers and did the math on it, I immediately asked the following question:</p>
 
 <blockquote>
 	If I retire with
@@ -193,7 +191,16 @@
   <span data-var="yearsOfFiNoInvestment" data-format="years" class="tangle--dynamic tangle--dynamic"></span>?
 </blockquote>
 
-<p>That's a very good question! If you put your money into a savings account, then this is exactly how long your investment would last. Even worse, each of those <span data-var="yearsOfFiNoInvestment" data-format="years" class="tangle--dynamic tangle--dynamic"></span>, your spending power would be slightly less due to inflation, which is generally around 3%.</p>
+<p>That's a very good question! If you put your money into a savings account, then this is exactly how long your investment would last.</p>
+
+<h3>Factoring In Inflation</h3>
+
+<p>Even worse, each of those <span data-var="yearsOfFiNoInvestment" data-format="years" class="tangle--dynamic tangle--dynamic"></span>, your spending power would be slightly less due to inflation, which is generally around 3%. Inflation is something we have no control over individually, but is something we can plan for.</p>
+
+<p>Inflation means that each year, what you can buy with your money is going down by some small amount. If you've seen prices rise since you were a kid, that's potentially a result of inflation.</p>
+
+<p>Because of this, we need to increase our total funds by <b>3%</b> due to inflation plus our <span data-var="wr" data-format="percentDecimal" class="tangle--dynamic tangle--dynamic"> WR</span> each year to be in a good spot. Let's talk about what we can do to make this amount each year using passive means.</p>
+
 
 <h3>Enter Market Investing</h3>
 
@@ -277,7 +284,7 @@
 		<span data-var="retirementYearlySpending" data-format="currency" class="tangle--dynamic">/yr</span>
 		during retirement. What if you still spent this exact same amount, but
 		<span data-var="eirIncomePercent" data-format="percent" data-step="0.01" data-max="1" data-min="0" class="tangle--dynamic TKAdjustableNumber"></span>
-		of it comes from income in retirement? This would be finding a way to marketGrowth
+		of it comes from income in retirement? This would be finding a way to make
 		<span data-var="eirIncomeAfterRetirement" data-format="currency" class="tangle--dynamic">/yr</span> in side income.
 	</p>
 
@@ -297,7 +304,7 @@
 	<h2>What If: Your Income Grows but your Expenses Don't?</h2>
 
 	<p>
-		What if each year of your working career your income grows, but rather than spending it you save it? By <a href="https://minafi.com/avoiding-the-lifestyle-inflation-trap/">avoiding lifestyle inflation</a>, you can benefit from increased earnings without your yearly spending increasing.
+		What if each year of your working career your income grows, but rather than spending it you save it? By <a href="https://minafi.com/avoiding-the-lifestyle-inflation-trap/" target="_blank">avoiding lifestyle inflation</a>, you can benefit from increased earnings without your yearly spending increasing.
   </p>
 
   <p>
@@ -316,7 +323,7 @@
 
 
 <div class="card container container-slim card--info">
-	<h2>What If: You reduce spending, earn income during retirement and earn more while working?</h2>
+	<h2>What If: You do all 3? Reduce spending, earn income &amp; save raises?</h2>
 
   <p>
     You reduce spending by <span data-var="spendingReductionPercent" data-format="percentDecimal" data-step="0.01" data-max="1" data-min="0" class="tangle--dynamic TKAdjustableNumber"></span>,
@@ -340,58 +347,121 @@
 </div>
 
 
-<a name="part-4"></a>
-<h2 class="pt-3">Part 4: Where can I learn more?</h2>
+<a name="part-5"></a>
+<h2 class="pt-3">Part 5: Where can I learn more?</h2>
 
 <p>There are a few amazing books on the topic of financial independence and early retirement that go into these topics with much more eloquence than and depth than I could ever explore. If you're curious to learn more, these are all amazing resources.</p>
 
-<h3>Books</h3>
-<p>Here are some of the top sources in different mediums to learn about financial independence</p>
 
-<div class="container">
-  <div class="row ">
-    <div class="col-md-4 card">
-      <img src="https://minafi.com/wp-content/uploads/2017/08/your-monet.jpeg" class="card-img-top" />
-      <div class="card-block">
-        <h4 class="card-title"><a href="https://minafi.com/recommends/your-money-or-your-life/" target="_blank">Your Money or Your Life</a></h4>
-        <p class="card-text"><i>Your Money</i> is an amazing exploration into developing a relationship with money that goes deeping than just buying things. This book is the origin for many articles and concepts that you'll read about in the FI world, told beautifully.</p>
-      </div>
-    </div>
+<div style="background-color: rgba(229, 236, 247, 0.85);" class="py-3 my-3 fi--profile fi--profile-collapsed">
+  <h3>Books</h3>
+  <p>Here are some of the top sources in different mediums to learn about financial independence</p>
 
-    <div class="col-md-4 card">
-      <img src="https://minafi.com/wp-content/uploads/2016/08/bogleheads.jpg" class="card-img-top"/>
-      <div class="card-block">
-        <h4 class="card-title"><a href="https://minafi.com/recommends/the-bogleheads-guide-to-investing/" target="blank">The Bogleheads' Guide to Investing</a></h4>
-        <p class="card-text">This is the book that personally got me into investing and thinking about this subject. By introducing things like the 4% for withdrawal rate, understanding investing, diversification, fees, fund types, account types and more, this book served as my education on investing.</p>
-      </div>
-    </div>
+  <div id="fi-profile--adam" class="aesop-component aesop-image-component " style="visibility:hidden;">
+		<div class="aesop-content">
+			<figure class="aesop-image-component-image aesop-component-align-right aesop-image-component-caption-left" style="margin-right:25%; width:250px;">
+        <a class="aesop-lightbox" href="https://minafi.com/wp-content/uploads/2017/08/your-monet.jpeg" title="Megacon 2016 in Orlando, FL.">
+					<img src="https://minafi.com/wp-content/uploads/2017/08/your-monet.jpeg" alt="Adam at the Ghibli Museum in Tokyo.">
+				</a>
+		  </figure>
+		</div>
+	</div>
 
-    <div class="col-md-4 card">
-      <img src="https://minafi.com/wp-content/uploads/2017/08/millionaire.jpg" class="card-img-top"/>
-      <div class="card-block">
-        <h4 class="card-title"><a href="https://minafi.com/recommends/millionaire-next-door/" target="blank">The Millionaire Next Door</a></h4>
-        <p class="card-text">The term "millionaire" has a connotation of lavish spending and abundance in popular culture. This book looks at a different side of that - working millionaires who worked hard to create a life they wanted.</p>
-      </div>
+  <h4 class="card-title"><a href="https://minafi.com/recommends/your-money-or-your-life/" target="_blank">Your Money or Your Life</a></h4>
+  <p class="card-text"><i>Your Money</i> is an amazing exploration into developing a relationship with money that goes deeping than just buying things. This book is the origin for many articles and concepts that you'll read about in the FI world, told beautifully.</p>
+  <p class="card-text">As great as <i>Your Money</i> is, it borders on self-help as opposed to finance - which actually helps its topics connect deeper for me.</p>
+
+
+  <div id="fi-profile--adam" class="aesop-component aesop-image-component " style="visibility:hidden;">
+		<div class="aesop-content">
+			<figure class="aesop-image-component-image aesop-component-align-left aesop-image-component-caption-left" style="margin-left:16%; width:250px;">
+        <a class="aesop-lightbox" href="https://minafi.com/wp-content/uploads/2016/08/bogleheads.jpg" title="Megacon 2016 in Orlando, FL.">
+					<img src="https://minafi.com/wp-content/uploads/2016/08/bogleheads.jpg" alt="Adam at the Ghibli Museum in Tokyo.">
+				</a>
+		  </figure>
+		</div>
+	</div>
+  <h4 class="card-title"><a href="https://minafi.com/recommends/the-bogleheads-guide-to-investing/" target="blank">The Bogleheads' Guide to Investing</a></h4>
+  <p class="card-text">This is the book that personally got me into investing and thinking about this subject. By introducing things like the 4% for withdrawal rate, understanding investing, diversification, fees, fund types, account types and more, this book served as my education on investing.</p>
+  <p class="card-text"><i>The Bogleheads Guide</i> consistently ranks as one of the 3 most influential books I have ever read in my life - serving as an introduction and education all in one.</p>
+
+
+  <div id="fi-profile--adam" class="aesop-component aesop-image-component " style="visibility:hidden;">
+    <div class="aesop-content">
+      <figure class="aesop-image-component-image aesop-component-align-right aesop-image-component-caption-left" style="margin-right:25%; width:250px;">
+        <a class="aesop-lightbox" href="https://minafi.com/wp-content/uploads/2017/08/millionaire.jpg" title="Megacon 2016 in Orlando, FL.">
+          <img src="https://minafi.com/wp-content/uploads/2017/08/millionaire.jpg" alt="Adam at the Ghibli Museum in Tokyo.">
+        </a>
+      </figure>
     </div>
   </div>
+  <h4 class="card-title"><a href="https://minafi.com/recommends/millionaire-next-door/" target="blank">The Millionaire Next Door</a></h4>
+  <p class="card-text">The term "millionaire" has a connotation of lavish spending and abundance in popular culture. This book looks at a different side of that - working millionaires who worked hard to create a life they wanted.</p>
+  <p class="card-text">In order to achieve FI, most people will need to earn more than a million dollars. This book put that number into perspective for me, bringing it down to earth.</p>
 </div>
+
 
 <h3>Articles</h3>
 <p>There are hundreds (thousands?) of blogs on personal finance out there. Thoughout the years reading a small selection of these, here's some of the most inspirational and informative posts I've run into.</p>
 
-<div class="container">
-  <div class="row ">
-    <div class="col-md-6 card">
-      <h4><a href="http://www.mrmoneymustache.com/2012/01/13/the-shockingly-simple-math-behind-early-retirement/" target="_blank">The Shockingly Simple Math Behind Early Retirement</a></h4>
-      <p>I first read about the savings rate idea described at the beginning of this post from this article by Mr. Money Mustache.</p>
-    </div>
+<h4><a href="http://www.mrmoneymustache.com/2012/01/13/the-shockingly-simple-math-behind-early-retirement/" target="_blank">The Shockingly Simple Math Behind Early Retirement</a></h4>
+<p>I first read about the savings rate idea described at the beginning of this post from this article by Mr. Money Mustache.</p>
 
-    <div class="col-md-6 card">
-      <h4><a href="http://www.mrmoneymustache.com/2012/01/13/the-shockingly-simple-math-behind-early-retirement/" target="_blank">The Shockingly Simple Math Behind Early Retirement</a></h4>
-      <p>I first read about the savings rate idea described at the beginning of this post from this article by Mr. Money Mustache.</p>
-    </div>
+<h4><a href="http://www.mrmoneymustache.com/2012/01/13/the-shockingly-simple-math-behind-early-retirement/" target="_blank">The Shockingly Simple Math Behind Early Retirement</a></h4>
+<p>I first read about the savings rate idea described at the beginning of this post from this article by Mr. Money Mustache.</p>
+
+<h3>People</h3>
+
+<p>
+  You might be surprised by who is pursuing FI. It ranges from people in debt, to multi-millionaires who are FI aleady. There's likely someone who is in a similar situation to you out there.
+</p>
+
+<a name="profile-adam"></a>
+<div style="background-color: rgba(229, 236, 247, 0.85);" class="py-3 my-3 fi--profile fi--profile-collapsed">
+  <div id="fi-profile--adam" class="aesop-component aesop-image-component " style="visibility:hidden;">
+		<div class="aesop-content">
+			<figure class="aesop-image-component-image aesop-component-align-right aesop-image-component-caption-left" style="margin-right:12%; width:500px;">
+        <a class="aesop-lightbox" href="https://minafi.com/wp-content/uploads/2017/07/megacon_small.jpg" title="Megacon 2016 in Orlando, FL.">
+					<img src="https://minafi.com/wp-content/uploads/2017/07/megacon_small.jpg" alt="Adam at the Ghibli Museum in Tokyo.">
+				</a>
+  			<figcaption class="aesop-image-component-caption">
+  				Adam at Megacon 2016 in Orlando, FL.
+  			</figcaption>
+		  </figure>
+		</div>
+	</div>
+
+  <h3>Adam from <a href="/">Minafi</a></h3>
+  <p class="lead">35, <mark class="tooltippable" data-toggle="tooltip" title="Currently working and saving money.">accumulation phase</mark>, Orlando, FL, $1,050,000 in savings. Spending $55k/yr. FI by 40.</p>
+  <p>That's me! You'll see my head popup now and again for advice throughout this post. By day I'm a Product Manager and web developer and by night I love to share my knowledge about finance in the hope of inspiring and helping others.</p>
+
+  <div class="profile-toggle--more">
+    <h4>How did you learn about FI?</h4>
+    <p>Reading <a href="https://minafi.com/recommends/the-bogleheads-guide-to-investing/" target="blank">The Bogleheads Guide to Investing</a> set me on my journey. It made it clear how little I needed to retire if I was investing it in the stock market.</p>
+
+    <h4>What was your financial status when you began?</h4>
+    <p>2 months after I graduated college (age 23), my mom passed away and left me her house and $100,000. A few years later I was 28, had experienced investing during the recession and bought my first home. After selling her house, I had $150,000 in investments and -$100,000 in home equity when I started while making about $52,000 a year.</p>
+
+    <h4>What has been the most impactful change since then you've made?</h4>
+    <p>Learning about long term investing, while controlling lifestyle inflation. The combination of these two makes up a good 90% of FI for me.</p>
+
+    <h4>What, if anything, do you wish you could have done differently?</h4>
+    <p>Does buying Bitcoin count? But really, buying a house is huge commitment. I understook it without enough thought. The extra yearly expenses (1-2% of the home price every year), the additional time for maintenance and improvements, yard work, cleaning - it's a lot to handle.</p>
+
+    <h4>What advice do you have for others going down the path of FI?</h4>
+    <p>Save up $3,000 and invest it in a Vanguard IRA or Roth IRA. Use that account to learn the basics of investing - how to buy and sell, what investments to pick and how that works. Starting small and adding more as your confidence in investing grows is a great first step.</p>
   </div>
+
+  <p>
+    <a href="#" class="profile-toggle">
+      <span class="profile-toggle--read-more">Read more about Adam <i class="fa fa-angle-double-down" aria-hidden="true"></i></span>
+      <span class="profile-toggle--read-less">Collapse <i class="fa fa-angle-double-up" aria-hidden="true"></i></span>
+    </a>
+  </p>
 </div>
+
+
+
 
 
 <a name="part-5"></a>
@@ -408,47 +478,3 @@
 <p>
   There is no predetermined group that financial independence is for. It could work well for people in extreme debt who want to get out and work towards a different future -- or for people in their career looking for what comes next.
 </p>
-
-
-
-<p class="lead card p-2">
-  Throughout this post, you'll see profiles of people in various stages of pursuing financial independence. These are a great way to see how others found FI and decided to pursue it - and how.
-</p>
-<div style="background-color: #f6f6f6;" class="py-3 my-3 fi--profile fi--profile-collapsed">
-  <div id="fi-profile--adam" class="aesop-component aesop-image-component " style="visibility:hidden;">
-		<div class="aesop-content">
-			<figure class="aesop-image-component-image aesop-component-align-right aesop-image-component-caption-left" style="margin-right:12%; width:500px;">
-        <a class="aesop-lightbox" href="https://minafi.com/wp-content/uploads/2017/07/megacon_small.jpg" title="Megacon 2016 in Orlando, FL.">
-					<img src="https://minafi.com/wp-content/uploads/2017/07/megacon_small.jpg" alt="Adam at the Ghibli Museum in Tokyo.">
-				</a>
-  			<figcaption class="aesop-image-component-caption">
-  				Adam at Megacon 2016 in Orlando, FL.
-  			</figcaption>
-		  </figure>
-		</div>
-	</div>
-
-  <h3>Adam from <a href="/">Minafi</a></h3>
-  <p class="lead">35, <mark class="tooltippable" data-toggle="tooltip" title="Currently working and saving money.">accumulation phase</mark>, Orlando, FL, $1,050,000 in savings. FI by 40.</p>
-  <p><small>That's me! You'll see my head popup now and again for advice throughout this post. By day I'm a Product Manager and web developer and by night I love to share my knowledge about finance in the hope of inspiring and helping others.</small></p>
-
-  <h4>How did you learn about FI?</h4>
-  <p>Reading The Bogleheads Guide to Investing set me on my journey. It made it clear how little I needed to retire if I was investing it in the stock market.</p>
-
-  <h4>What was your financial status when you began?</h4>
-
-
-  <div class="profile-toggle--more">
-    <p>some answer here</p>
-
-    <h4>Another question</h4>
-    <p>Reading The Bogleheads Guide to Investing set me on my journey. It made it clear how little I needed to retire if I was investing it in the stock market.</p>
-  </div>
-
-  <p>
-    <a href="#" class="profile-toggle">
-      <span class="profile-toggle--read-more">Read more about Adam</span>
-      <span class="profile-toggle--read-less">Hide more about Adam</span>
-    </a>
-  </p>
-</div>
