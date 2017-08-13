@@ -1,7 +1,7 @@
 <form action="//minafi.us16.list-manage.com/subscribe/post?u=d2476f8b6bf5aa45f4014a563&amp;id=d5d7523566" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate subscribe" target="_blank" novalidate>
 
   <h3>Never Miss a Story</h3>
-	<p class="lead">Sign up to get an email when a new Minafi story is published.</p>
+	<p><small>Sign up to get an email when a new Minafi story is published.</small></p>
 
 	<div class="form-group">
 		<input type="email" placeholder="Email" value="" name="EMAIL" class="required email form-control form-control-sm" id="mce-EMAIL">
