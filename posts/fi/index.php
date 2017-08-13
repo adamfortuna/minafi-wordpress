@@ -229,7 +229,7 @@
 
 <a name="part-4"></a>
 <div class="container text-center pb-3 mb-3">
-  <img src="https://minafi.com/wp-content/uploads/2016/09/fi.jpg" alt="financial independence">
+  <img src="https://minafi.com/wp-content/uploads/2017/08/manik-rathee-57410.jpg" alt="financial independence">
 </div>
 <h2>Part 4: How much could I spend then?</h2>
 
@@ -601,13 +601,12 @@
   There is no predetermined group that financial independence is for. It could work well for people in extreme debt who want to get out and work towards a different future -- or for people in their career looking for what comes next.
 </p>
 
-<p>Here's your homework!</p>
-
 <ul>
   <li>Track your spending for a month. Learn where every cent is going.</li>
   <li>Find a community of people to learn from. This could one of the above places, a blog you enjoy, a podcast you jive with - anything that keeps your learning.</li>
   <li>Read more about <a href="/category/minimalism/" target="_blank">minimalism</a>, <a href="/category/mindfulness/" target="_blank">mindfulness</a> or <a href="/category/financial-independence/" target="_blank">financial independence</a> here on Minafi.</li>
   <li>Start learning the basics of investing. I recommend starting with a <a href="/simple-three-fund-portfolio-vanguard/" target="_blank">Simple Three-Fund Portfolio at Vanguard</a> or in your 401k. Understand what you're investing in there.</li>
+  <li>Stick with investing for a year, putting in more money as you feel comforable, and continuing your education.</li>
   <li>Make a plan for when you'd want to be FI, and work backwards to understand what changes you'd need to make in your life to get there.</li>
 </ul>
 

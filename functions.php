@@ -406,3 +406,42 @@ function minafi_js_script() {
 }
 
 add_action('ase_theme_post_inside_header_bottom', 'minafi_js_script');
+
+
+if ( ! function_exists( 'minafi_related_posts' ) ) {
+  function minafi_related_posts() {
+    $orig_post = $post;
+    global $post;
+    $categories = wp_get_post_categories($post->ID);
+
+    if ($categories) {
+      $category_ids = array();
+      foreach($categories as $individual_category) {
+        $category_ids[] = $individual_category;
+      }
+
+      $args=array(
+          'category__in' => $category_ids,
+          'post__not_in' => array($post->ID),
+          'posts_per_page'=>4, // Number of related posts to display.
+          'caller_get_posts'=>1
+      );
+
+    $my_query = new wp_query( $args );
+
+    ?>
+    <div class="row articles--list articles--group">
+    <?php
+      while( $my_query->have_posts() ) {
+        $my_query->the_post();
+        get_template_part( 'template-parts/content-related', get_post_format() );
+      }
+    }
+    ?>
+    </div>
+    <?php
+
+    $post = $orig_post;
+    wp_reset_query();
+  }
+}

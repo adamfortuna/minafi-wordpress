@@ -99,5 +99,6 @@
 <?php do_action('ase_theme_post_after'); ?>
 
 <section class='container container-slim'>
-  <?php if ( function_exists( "get_yuzo_related_posts" ) ) { get_yuzo_related_posts(); } ?>
+  <h2>Related Posts</h2>
+  <?php if ( function_exists( "minafi_related_posts" ) ) { minafi_related_posts(); } ?>
 </section>
