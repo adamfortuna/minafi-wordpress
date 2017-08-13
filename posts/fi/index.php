@@ -9,7 +9,9 @@
 
 <p>You might love your job and wouldn't think about leaving it. Maybe you hate your job and can't wait to leave it. Maybe you're looking for a change. Maybe you feel you never want to retire because you'd just "be bored", Or maybe you plan to work until you can't anymore. <b>For this post, I'm going to ask one request of you:</b></p>
 
-<blockquote class="text-center">My Request for you:<br/> Don't assume financial independence means retirement.</blockquote>
+<blockquote class="text-center">
+  <p>My request for you:<br/> Don't assume financial independence means retirement.</p>
+</blockquote>
 
 <p>Instead, for this post, think of financial independence (abbreviated FI) as the point where if for any reason you stopped working, you'd be set for the rest of your life. What you choose to do with your life at that point is up to you!</p>
 
@@ -34,7 +36,9 @@
 
 <p>The most common question when it comes to financial independence and early retirement is the big one:</p>
 
-<blockquote>How much money do I need to retire?</blockquote>
+<blockquote class="text-center">
+  <p>How much money do I need to retire?</p>
+</blockquote>
 
 <p>This is going to be the core question we answer in this article, exploring it in a number of different ways. My goal is that after reading this post, you know exactly how much you'd need to retire in your current state, but also give some advice on small tweaks to your lifestyle that could hugely impact this number.</p>
 
@@ -49,14 +53,14 @@
 	</span>, that indicates this is a place that needs your input! Just hover over it and it'll tell you what to do. <b>The content of this post will change based on your input</b>. Consider it an old-school choose your own adventure blog post like you read as a kid. Give the one in this paragraph a shot.
 </p>
 
-<p>Next, Let's dive into <b>your numbers</b>! Starting with some basics.</p>
+<p>Next, let's dive into <b>your numbers</b> starting with some basics.</p>
 
 <div class="card container container-slim card--info">
 	<h3>Savings Rate Calculator</h3>
 	<p class="lead">Try changing the underlined values and see what happens!</p>
 	<p>
 		My yearly after-tax income is
-    $<span data-var="yearlyIncome" data-format="currency" class="TKNumberField tooltippable" data-min="0" data-max="10000000" data-toggle="tooltip" title="Only include income from working. Don't include dividends here."></span> and I save $<span data-var="yearlySavings" data-format="currency" class="TKNumberField" data-min="0" data-max="10000000"></span> total for retirement -- including 401k and all other means. Using these figures, my savings rate (SR) will be about <span data-var="savingsRate" data-format="percent" class="tangle--dynamic"></span>.
+    $<span data-var="yearlyIncome" data-format="currency" class="TKNumberField tooltippable" data-min="0" data-max="10000000" data-toggle="tooltip" title="Only include income from working. Don't include dividends here."></span> and I save $<span data-var="yearlySavings" data-format="currency" class="TKNumberField" data-min="0" data-max="10000000"></span> total for retirement – including 401k and all other means. Using these figures, my savings rate (SR) will be about <span data-var="savingsRate" data-format="percent" class="tangle--dynamic"></span>.
 	</p>
 	<p>This is calculated with the following formula:</p>
 	<p class="text-center">
@@ -75,7 +79,7 @@
 	</p>
 </div>
 
-<p>When working towards FI and Retirement, <b>your savings rate is one of the most important numbers</b>. The more you save each year, the faster you'll be able to retire - that's obvious -- but <b>how much faster</b>? See where your <span class="tangle--dynamic" data-var="savingsRate" data-format="percent"></span> SR falls on the following chart:</p>
+<p>When working towards FI and Retirement, <b>your savings rate is one of the most important numbers</b>. The more you save each year, the faster you'll be able to retire – that's obvious – but <b>how much faster</b>? See where your <span class="tangle--dynamic" data-var="savingsRate" data-format="percent"></span> SR falls on the following chart:</p>
 
 <div class="card container container-wide graph--sr--container mb-3 card--info">
 	<div class="graph graph--sr"></div>
@@ -99,11 +103,11 @@
 
 <a name="part-2"></a>
 <blockquote>
-  The art is not in making money, but in keeping it.
+  <p>The art is not in making money, but in keeping it.</p>
 </blockquote>
 
 <h2>Part 2: How much should I save?</h2>
-<p>What floors me about the above chart is that a 10% SR, often sighted as a "good" savings rate, will take <b>41 years</b> to save up enough to retire (at a 4% WR / 7% Market Return) - and that's only if your spending stays the same! If your income and spending go up, it'll take even longer.</p>
+<p>What floors me about the above chart is that a 10% SR, is often sighted as a "good" savings rate. In practice, it will take you <b>41 years</b> to save up enough to retire, and that's only if your spending stays the same! If your income and spending go up, it'll take even longer.</p>
 
 <p>If you double that savings rate to 20% though, you can retire in 38 years. That's 25% time working for 10% of your salary.</p>
 
@@ -111,7 +115,7 @@
   <p>If you want to retire before you're 65, the common wisdom "save 10% of your income" is terrible advice!</p>
 </blockquote>
 
-<p>If you're hoping to be financially independent before collecting social security, you'll need to save more. Let's look into ways to reduce this number. These estimates are making a <b>LOT</b> of assumptions. We can refine this a little, but for that, I'm going to need your help -- in the form of answering a few more questions.</p>
+<p>If you're hoping to be financially independent before collecting social security, you'll need to save more. Let's look into ways to reduce this number. These estimates are making a <b>LOT</b> of assumptions. We can refine this a little, but for that, I'm going to need your help – in the form of answering a few more questions.</p>
 
 <p>
   You could be reading this and think there's no way you could save any money. I know when I was growing up, at times my mom was scrapping to make ends meet, and saving was the last thing on her mind. For those reading in that situation, I empathize with but struggle to find the best advice. You know your situation better than I ever could, as well as what you could do to make it better.
@@ -125,7 +129,7 @@
 
 <p>You're starting with a time period of <span class="tangle--dynamic" data-var="yearsUntilFiOnlySR" data-format="years"></span> based on just your savings rate. Saving this much isn't a sprint, or even a marathon but a hike. Depriving yourself for a few months, only to be exhausted, or spend more the following months, isn't going to have a positive impact. Pace and progress are the keys.</p>
 
-<p>I've personally tried maxing out my savings some months - spending the least amount I possibly could to get that SR formula looking better. The problem was that the next month I'd reward myself for doing so and things would balance out.</p>
+<p>I've personally tried maxing out my savings some months – spending the least amount I possibly could to get that SR formula looking better. The problem was that the next month I'd reward myself for doing so and things would balance out.</p>
 
 <blockquote>
   <p>Favor lifestyle changes that help you save over changes that feel like deprivation.</p>
@@ -171,7 +175,7 @@
 		if you continue to invest
 		<span class="tangle--dynamic" data-format="currency" data-var="yearlySavings">/yr</span>, then you're on track to be financially independent in
 		<span class="tangle--dynamic" data-var="yearsUntilFi" data-format="years"></span>
-		-- at age
+		– at age
 		<span class="tangle--dynamic" data-var="fiAge" data-format="years"></span>.
 	</p>
 	<p>
@@ -203,12 +207,23 @@
 	</p>
 </div>
 
-<p>This is where things start to get fun! There's now enough information to know a rough estimate of when you'd be <b>financially independent</b> -- in <span class="tangle--dynamic" data-var="yearsUntilFi" data-format="years"> years</span> at age <span class="tangle--dynamic" data-var="fiAge" data-format="years"></span>. Let's dive into how we got to this number.
+<p>This is where things start to get fun! There's now enough information to know a rough estimate of when you'd be <b>financially independent</b> – in <span class="tangle--dynamic" data-var="yearsUntilFi" data-format="years"></span> at age <span class="tangle--dynamic" data-var="fiAge" data-format="years"></span>. Let's dive into how we got to this number.
 </p>
 
 <p>Financial Independence (FI) is different from retirement. Think of financial independence as the amount of money you'd need in order to never work again. Retirement (RE), on the other hand, is the act of not working.</p>
 
-<p><b>It's possible for people to be FI but continue working</b> -- you see it all the time. From CEOs of companies to quiet employees who have saved huge amounts to bloggers talking about retirement (well, some -- not me). There are also people who are retired, but who may need to return to work someday down the line when their savings run out, or if social security fails somewhere down the line.</p>
+<div class="card container container-wide mb-3">
+  <div class="row mt-3">
+    <p class="col-md-10 h2 text-center fi-share--message">I'm on track to be financially independent in <span class="tangle--dynamic" data-var="yearsUntilFi" data-format="years"></span> at age <span class="tangle--dynamic" data-var="fiAge" data-format="yearsOnly"></span>! Find your FI date at Minafi.</p>
+    <p class="col-md-2 h1 fi--share">
+      <span class="h6 text-center">Share On</span><br/>
+      <a href="#" title="Share on Facebook" class="fi-share-fb" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+      <a href="#" class="fi-share-twitter" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+    </p>
+  </div>
+</div>
+
+<p><b>It's possible for people to be FI but continue working</b> – you see it all the time. From CEOs of companies to quiet employees who have saved huge amounts to bloggers talking about retirement (well, some – not me). There are also people who are retired, but who may need to return to work someday down the line when their savings run out, or if social security fails somewhere down the line.</p>
 
 <p>To be FIRE (financially independent + retired) is an aim with <b>the goal of minimizing stress from external sources</b>. It does rely on stock markets to perform in a similar pattern to the last 100+ years, but aside from that, it's not based on too many assumptions.</p>
 
@@ -249,7 +264,7 @@
 
 <p>Withdrawal rate is one the most talked about (and heavily debated) topics when it comes to early retirement. I'm only going to introduce the topic in this article, but if you want to read more here's a great post on <a href="https://earlyretirementdude.com/4-rule-come-anyway-hint-wasnt-trinity-study/" target="_blank">Where'd the 4% Rule Come From Anyway?</a></p>
 
-<p>My personal withdrawal rate I use for calculations is 3%. I'm in no rush to retire right now, and I'd prefer to rest easy and be overwhelming confident -- or at least as much as possible.</p>
+<p>My personal withdrawal rate I use for calculations is 3%. I'm in no rush to retire right now, and I'd prefer to rest easy and be overwhelmingly confident -- or at least as much as possible.</p>
 
 
 <a name="part-5"></a>
@@ -595,4 +610,15 @@
   <li>Start learning the basics of investing. I recommend starting with a <a href="/simple-three-fund-portfolio-vanguard/" target="_blank">Simple Three-Fund Portfolio at Vanguard</a>.</li>
 </ul>
 
-<p class="lead">If you enjoyed this article, or have any thoughts on it, please <a href="/contact" target="_blank">let me know</a>. I would love to hear from you!</p>
+<p class="lead">If you enjoyed this article, or have any thoughts on it, please share it and <a href="/contact" target="_blank">let me know</a> what you think. I would love to hear from you!</p>
+
+<div class="card container container-wide mb-3">
+  <div class="row mt-3">
+    <p class="col-md-10 h2 text-center fi-share--message">I read an Interactive Guide to Financial Independence and Early Retirement on Minafi and no know when I'll be FI!</p>
+    <p class="col-md-2 h1 fi--share">
+      <span class="h6 text-center">Share On</span><br/>
+      <a href="#" title="Share on Facebook" class="fi-share-fb" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+      <a href="#" class="fi-share-twitter" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+    </p>
+  </div>
+</div>

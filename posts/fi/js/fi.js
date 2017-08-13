@@ -28,6 +28,20 @@ $(function() {
     return "$" + putThousandsSeparators(value);
   };
 
+
+  Tangle.formats.yearsOnly = function(value) {
+    if(value === 0) {
+      return "0 years";
+    }
+
+    var years = Math.floor(value);
+    var result = "";
+    result = years + " year";
+    if(years !== 1) { result = result + "s"; }
+
+    return result;
+  }
+
   Tangle.formats.years = function(value) {
     if(value === 0) {
       return "0 years";
@@ -353,5 +367,16 @@ $(function() {
            .toggleClass('fi--profile-collapsed')
            .find('.profile-toggle--more')
            .fadeToggle();
+  });
+
+  $('.fi-share-twitter').on('click', function() {
+    var message = $(this).closest('.card').find('.fi-share--message').text();
+    $(this).attr('href', "https://twitter.com/share?url=https://minafi.com/fi&text="+message)
+  });
+
+  $('.fi-share-fb').on('click', function() {
+    var message = $(this).closest('.card').find('.fi-share--message').text();
+    var url = "https://www.facebook.com/sharer/sharer.php?u=https://minafi.com/fi/&display=popup&ref=plugin&src=share_button&quote="+message;
+    $(this).attr('href', url);
   })
 });

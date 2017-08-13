@@ -56,7 +56,7 @@
   background-size: 64px;*/
 
   content:'';        /* instead of content you could use a bgimage here */
-  background: url('../images/adam-fortuna.png') no-repeat left;
+  background: url('../images/face.png') no-repeat left;
   background-size: 64px;
   float:left;
   -moz-transition:0.5s all;
@@ -164,6 +164,39 @@
     }
     .profile-toggle--read-more {
       display: inline-block;
+    }
+  }
+}
+
+
+.articles--list #post-4404 {
+  display: none;
+}
+
+
+.icon--adam {
+  position: relative;
+}
+.icon--adam:before {
+  content:'';
+  background: url('../images/face.png') no-repeat left;
+  background-size: 64px;
+  height: 64px;
+  width: 64px;
+  margin-right: 1rem;
+  top: 50%;
+  left: -64px;
+  position: absolute;
+  transform: translateY(-50%);
+}
+
+
+.fi--share {
+  a {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    &:hover {
+      background-color: transparent;
     }
   }
 }

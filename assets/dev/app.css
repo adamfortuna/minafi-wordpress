@@ -11918,6 +11918,12 @@ span.entry-subtitle {
   padding-top: 1rem;
   margin-bottom: 1rem; }
 
+span.alert {
+  padding: 0rem 0.75rem;
+  margin-bottom: 0rem;
+  border: 1px solid transparent;
+  border-radius: .25rem; }
+
 .widget--form {
   padding: 1rem; }
 
@@ -11968,7 +11974,7 @@ span.entry-subtitle {
   background-size: 64px;*/
   content: '';
   /* instead of content you could use a bgimage here */
-  background: url("../images/adam-fortuna.png") no-repeat left;
+  background: url("../images/face.png") no-repeat left;
   background-size: 64px;
   float: left;
   -moz-transition: 0.5s all;
@@ -12061,6 +12067,30 @@ span.entry-subtitle {
 .fi--profile.fi--profile-collapsed .profile-toggle--read-more {
   display: inline-block; }
 
+.articles--list #post-4404 {
+  display: none; }
+
+.icon--adam {
+  position: relative; }
+
+.icon--adam:before {
+  content: '';
+  background: url("../images/face.png") no-repeat left;
+  background-size: 64px;
+  height: 64px;
+  width: 64px;
+  margin-right: 1rem;
+  top: 50%;
+  left: -64px;
+  position: absolute;
+  transform: translateY(-50%); }
+
+.fi--share a {
+  box-shadow: none;
+  -webkit-box-shadow: none; }
+  .fi--share a:hover {
+    background-color: transparent; }
+
 a {
   text-decoration: underline; }
   a:hover {
@@ -12101,6 +12131,10 @@ iframe.wp-embedded-content {
 
 .fa-facebook, .fa-facebook-square {
   color: #3b5998; }
+  .fa-facebook:hover, .fa-facebook-square:hover {
+    color: #2d4373; }
 
 .fa-twitter, .fa-twitter-square {
   color: #00aced; }
+  .fa-twitter:hover, .fa-twitter-square:hover {
+    color: #0087ba; }
