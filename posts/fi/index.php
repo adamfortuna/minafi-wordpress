@@ -60,7 +60,7 @@
 	<p class="lead">Try changing the underlined values and see what happens!</p>
 	<p>
 		My yearly after-tax income is
-    $<span data-var="yearlyIncome" data-format="currency" class="TKNumberField tooltippable" data-min="0" data-max="10000000" data-toggle="tooltip" title="Only include income from working. Don't include dividends here."></span> and I save $<span data-var="yearlySavings" data-format="currency" class="TKNumberField" data-min="0" data-max="10000000"></span> total for retirement – including 401k and all other means. Using these figures, my savings rate (SR) will be about <span data-var="savingsRate" data-format="percent" class="tangle--dynamic"></span>.
+    $<span data-var="yearlyIncome" data-format="currency" class="TKNumberField tooltippable" data-min="0" data-max="10000000" data-toggle="tooltip" title="Use take home pay + 401k contribution, and subtract taxes. This is the total amount that you have to play with after taxes."></span> and I save $<span data-var="yearlySavings" data-format="currency" class="tooltippable TKNumberField" data-min="0" data-max="10000000" data-toggle="tooltip" title="Include 401k + IRA + Roth + checking + brokerage savings."></span> total for retirement – including 401k and all other means. Using these figures, my savings rate (SR) will be about <span data-var="savingsRate" data-format="percent" class="tangle--dynamic"></span>.
 	</p>
 	<p>This is calculated with the following formula:</p>
 	<p class="text-center">
@@ -499,7 +499,7 @@
     <p>2 months after I graduated college (age 23), my mom passed away and left me her house and $100,000. A few years later I was 28, had experienced investing during the recession and bought my first home. After selling her house, I had $150,000 in investments and -$100,000 in home equity when I started while making about $52,000 a year.</p>
 
     <h4>What has been the most impactful change you've made towards FI?</h4>
-    <p>Learning and executing on a long term investing strategy. When I look at my total savings, more than 1/3 of it is from investment gains alone. This, coupled with controlling lifestyle inflation.</p>
+    <p>Learning and executing on a long term investing strategy. When I look at my total investments today, more than 1/3 of it is from investment gains alone in the past 7 years. This, coupled with controlling lifestyle inflation.</p>
 
     <h4>What, if anything, do you wish you could have done differently?</h4>
     <p>Does buying Bitcoin count? For me, I underestimated the financial impact of buying a house. I did this prior to learning about FI, and I undertook it without enough thought and planning. The extra yearly expenses (1-2% of the home price every year), the additional time for maintenance and improvements, yard work, cleaning - it's a lot to handle. In retrospect, I would've just continued renting.</p>
@@ -607,14 +607,13 @@
   <li>Track your spending for a month. Learn where every cent is going.</li>
   <li>Find a community of people to learn from. This could one of the above places, a blog you enjoy, a podcast you jive with - anything that keeps your learning.</li>
   <li>Read more about <a href="/category/minimalism/" target="_blank">minimalism</a>, <a href="/category/mindfulness/" target="_blank">mindfulness</a> or <a href="/category/financial-independence/" target="_blank">financial independence</a> here on Minafi.</li>
-  <li>Start learning the basics of investing. I recommend starting with a <a href="/simple-three-fund-portfolio-vanguard/" target="_blank">Simple Three-Fund Portfolio at Vanguard</a>.</li>
+  <li>Start learning the basics of investing. I recommend starting with a <a href="/simple-three-fund-portfolio-vanguard/" target="_blank">Simple Three-Fund Portfolio at Vanguard</a> or in your 401k. Understand what you're investing in there.</li>
+  <li>Make a plan for when you'd want to be FI, and work backwards to understand what changes you'd need to make in your life to get there.</li>
 </ul>
-
-<p class="lead">If you enjoyed this article, or have any thoughts on it, please share it and <a href="/contact" target="_blank">let me know</a> what you think. I would love to hear from you!</p>
 
 <div class="card container container-wide mb-3">
   <div class="row mt-3">
-    <p class="col-md-10 h2 text-center fi-share--message">I read an Interactive Guide to Financial Independence and Early Retirement on Minafi and no know when I'll be FI!</p>
+    <p class="col-md-10 h2 text-center fi-share--message">I read an Interactive Guide to Financial Independence and Early Retirement on Minafi and now know when I'll be FI!</p>
     <p class="col-md-2 h1 fi--share">
       <span class="h6 text-center">Share On</span><br/>
       <a href="#" title="Share on Facebook" class="fi-share-fb" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
@@ -622,3 +621,5 @@
     </p>
   </div>
 </div>
+
+<p class="lead">If you enjoyed this article, or have any thoughts on it, please share it and <a href="/contact" target="_blank">let me know</a> what you think. I would love to hear from you!</p>
