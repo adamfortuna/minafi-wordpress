@@ -50,7 +50,7 @@
   <span data-var="exampleClick" class="TKToggle TKSwitch">
 		<span>green dotted unlined text</span>
 		<span>yes! just like that!</span>
-	</span>, that indicates this is a place that needs your input! Just hover over it and it'll tell you what to do. <b>The content of this post will change based on your input</b>. Consider it an old-school choose your own adventure blog post like you read as a kid. Give the one in this paragraph a shot.
+	</span>, that indicates this is a place that needs your input! Just hover over it and it'll tell you what to do. <b>The content of this post will change based on your input</b>. Consider it an old-school choose your own adventure blog post like you read as a kid. Give the one in this paragraph a shot. Also consider these <i>estimates</i> rather than hard numbers.
 </p>
 
 <p>Next, let's dive into <b>your numbers</b> starting with some basics.</p>
@@ -192,13 +192,13 @@
 			<strong>Well done!</strong> You successfully made it to FI! Why not try setting a stretch goal? Turn down the stock market rate of <span data-var="marketGrowth" class="TKAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic">/yr</span> or turn the withdrawal rate down even further below <span data-var="wr" class="TKAdjustableNumber" data-step="0.001" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic"></span>.
 		</div>
 		<div class="alert alert-info" role="alert">
-		  <strong>Keep going!</strong> You have less than 5 years of working ahead of you at your current pace. There are a bunch of way you can speed this up that we'll look into in this post.
+		  <strong>Keep going!</strong> You have less than 10 years of working ahead of you at your current pace. There are a bunch of way you can speed this up that we'll look into in this post.
 		</div>
 		<div class="alert alert-warning" role="alert">
-		  <strong>You're Getting There</strong> You have less than 15 years of working ahead of you at your current pace. Small changes can still make a huge dent in this number.
+		  <strong>You're Getting There</strong> You have less than 20 years of working ahead of you at your current pace. Small changes can still make a huge dent in this number.
 		</div>
 		<div class="alert alert-danger" role="alert">
-		  <strong>Time to Make a Change?</strong> You have more than 15 years of working ahead of you at your current pace. If you want to reach financial independence sooner, you're going to need to make some major changes.
+		  <strong>Time to Make a Change?</strong> You have more than 20 years of working ahead of you at your current pace. If you want to reach financial independence sooner, you're going to need to make some major changes.
 		</div>
 	</div>
 
@@ -308,13 +308,13 @@
 
 <p>The missing piece here is that you can <a href="https://minafi.com/investment-literacy/" target="_blank">invest that money in the stock market</a> -- both while you're growing it and when you're drawing down from it.</p>
 
-<p>Stock markets in the US have returned on average 7% a year since their beginning. This is an important number! If you're withdrawing at most 4% of this, and 3% of it is going to inflation, then your net worth will go down ever so slightly over time. This is why 4% is often sighted as a maximum WR.</p>
+<p>Stock markets in the US have returned on average 7% a year since their beginning. This is an important number! If you're withdrawing at most 4% of this, and 3% of it is going to inflation, then your net worth will last forever. Unfortunately, the stock market has ups and down, so we can't make predictions quite that bold, but we can use it as a baseline. This is why 4% is often sighted as the maximum WR to use in calculations.</p>
 
 <p>Learning how to invest and earn ~7% will sound intimidating at first. It will take trial and error, but more than that it'll take being brave and putting money into the stock market. Using a simple <a href="https://minafi.com/simple-three-fund-portfolio-vanguard/" target="_blank">3-fund portfolio</a> is a great place to start learning how to invest.</p>
 
 <h3>Your Numbers with Market Investing</h3>
 <p>
-	If you put your money into savings and spent it that way, the total amount you'd spend would be <span data-var="fiStash" data-format="currency" class="tangle--dynamic"></span>. However, if you invested this and it grew at a pace of
+	If you put your money into savings and withdrew some of it each year, the total amount you'd spend would be <span data-var="fiStash" data-format="currency" class="tangle--dynamic"></span>. However, if you <i>invested</i> this and it grew at a pace of
 	<span data-var="marketGrowth" class="TKAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic">/yr</span>,
 	and you withdrew an inflation adjusted
 	<span data-var="retirementYearlySpending" data-format="currency" class="tangle--dynamic tangle--dynamic">/yr</span>,
@@ -385,7 +385,6 @@
 
 <p>Taking steps to reduce your lifestyle can pay off by reducing the time you'll be required to work to maintain it. Be careful not to go overboard though. Build a life you want, then save for it.</p>
 
-
 <div class="card container container-slim card--info">
 	<h2>What If: You Earn Money In Retirement?</h2>
 
@@ -408,8 +407,17 @@
 	</p>
 </div>
 
-<p>Finding a small way to supplement your income can reduce the amount you'll need to save.</p>
+<p>Finding a small way to supplement your income can reduce the amount you'll need to save. The concept of a <a href="http://www.sidehustlenation.com/" target="_blank">side hustle</a> has grown a bunch in the last years, with people opting to find ways to control their financial destiny. I like Side Hustle Nations description of a side hustle:</p>
 
+<blockquote>
+  <p>A side hustle is something you do to earn money outside a traditional job.</p>
+</blockquote>
+
+<p>If you're like me, and haven't made money outside the boundaries of a W-2 for your career, this might just seem like more work and not FIRE. The distiction to me is in having a side hustle that you love doing. One that you look forward to waking up to work on.</p>
+
+<p>At that point, this additional revenue stream can become another challenge in your life, or another form of self expression.</p>
+
+<!--
 <div class="card container container-slim card--info">
 	<h2>What If: Your Income Grows but your Expenses Don't?</h2>
 
@@ -429,34 +437,42 @@
 	</p>
 </div>
 
-<p><b>Lowering expenses</b>, <b>earning money in retirement</b> and <b>earning more while avoiding lifestyle inflation</b> are three very clear ways to reduce the time until you are financially independent.</p>
+<p>For many careers, getting a "cost of living" increase comes with the job. If you can keep your cost of the living the same and bank this increase, it starts to add up fast.</p>
+
+-->
+
+<p><b>Lowering expenses</b> and <b>earning money in retirement</b> are three very clear ways to reduce the time until you are financially independent.</p>
 
 
 <div class="card container container-slim card--info">
-	<h2>What If: You do all 3? Reduce spending, earn income &amp; save raises?</h2>
+	<h2>What If: Reduce spending &amp; earn income?</h2>
 
   <p>
     You reduce spending by <span data-var="spendingReductionPercent" data-format="percentDecimal" data-step="0.01" data-max="1" data-min="0" class="tangle--dynamic TKAdjustableNumber"></span>
     while replacing
     <span data-var="eirIncomePercent" data-format="percent" data-step="0.01" data-max="1" data-min="0" class="tangle--dynamic TKAdjustableNumber"></span>
     of your income during retirement (<span data-var="impliedSpendingReductionYearlySavings" data-format="currency" class="tangle--dynamic"></span>)
+    <!--
     while also having your yearly income increase by
     <span data-var="payIncreasePercent" data-format="percent" data-step="0.01" data-max="1" data-min="0" class="tangle--dynamic TKAdjustableNumber">/yr</span> while you're working
-    and saving it.
+    and saving it-->.
   </ul>
 
 	<p>
     This would result in you reaching FI in
-    <span data-var="allSoonerYears" data-format="years" class="tangle--dynamic"></span>, which would be
-    <span data-var="allSoonerYearsEarly" data-format="years" class="tangle--dynamic"></span> earlier than your timeline of <span data-var="yearsUntilFi" data-format="years" class="tangle--dynamic"></span>.
+    <span data-var="allSoonerYears" data-format="years" class="tangle--dynamic"></span>.
+    That would be earlier than your timeline of
+    <span data-var="yearsUntilFi" data-format="years" class="tangle--dynamic"></span>
+    by
+    <span data-var="allSoonerYearsEarly" data-format="years" class="tangle--dynamic"></span>.
   </p>
 
 	<p class="lead fi--info">
-		<i>Adam says:</i> It's crazy to think that these 3 things could result in a <span data-var="allSoonerPercent" data-format="percent" class="tangle--dynamic"></span> reduction in your working years.
+		<i>Adam says:</i> It's crazy to think that these 2 things could result in a <span data-var="allSoonerPercent" data-format="percent" class="tangle--dynamic"></span> reduction in your working years.
 	</p>
 </div>
 
-<p>Making more money and spending less is the key to achieving financial independence sooner.</p>
+<p>Making more money and spending less while investing is the key to achieving financial independence sooner.</p>
 
 
 

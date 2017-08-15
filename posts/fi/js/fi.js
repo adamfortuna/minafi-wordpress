@@ -148,17 +148,10 @@ $(function() {
       // Reducing Spending
       this.impliedSpendingReductionYearlySavings = this.yearlySpending * this.spendingReductionPercent;
       this.impliedSpendingReductionYearlySavingsTotal = this.impliedSpendingReductionYearlySavings + this.yearlySavings;
-
-
-      this.impliedSpendingReductionYearlySpending = this.yearlySpending - this.impliedSpendingReductionYearlySavings;
-
-//
-      this.spendingReductionStash = this.calcStash(this.retirementYearlySpending - (this.retirementYearlySpending * this.spendingReductionPercent));
-
-      this.spendingReductionYearsUntilFi = this.calcTimeUntilFi(this.yearlySavings, this.spendingReductionStash, this.networth, this.marketGrowth)
+      this.spendingReductionStash = this.calcStash(this.retirementYearlySpending - this.impliedSpendingReductionYearlySavings);
+      this.spendingReductionYearsUntilFi = this.calcTimeUntilFi(this.impliedSpendingReductionYearlySavingsTotal, this.spendingReductionStash, this.networth, this.marketGrowth)
 
       this.spendingReductionYearsEarlier = this.yearsUntilFi - this.spendingReductionYearsUntilFi;
-
       this.spendingReductionStashDifference = this.fiStash - this.spendingReductionStash;
 
 
@@ -205,13 +198,15 @@ $(function() {
       this.eirTimeSooner = this.yearsUntilFi - this.eirTimeUntilFi;
     },
 
+    // Earnings increase ~2% a year and you save it
     earningsIncrease: function() {
       this.payIncreaseTimeUntilFi = this.calcTimeUntilFi(this.yearlySavings, this.fiStash, this.networth, this.marketGrowth+this.payIncreasePercent);
       this.payIncreaseSooner = this.yearsUntilFi - this.payIncreaseTimeUntilFi;
     },
 
     allReductionsSooner: function() {
-      this.allSoonerYears = this.calcTimeUntilFi(this.impliedSpendingReductionYearlySavingsTotal, this.earnInRetirementStashNeeded, this.networth, this.marketGrowth+this.payIncreasePercent);
+      var combinedStashNeeded = this.calcStash(this.retirementYearlySpending - this.eirIncomeAfterRetirement - this.impliedSpendingReductionYearlySavings);
+      this.allSoonerYears = this.calcTimeUntilFi(this.impliedSpendingReductionYearlySavingsTotal, combinedStashNeeded, this.networth, this.marketGrowth);
       this.allSoonerYearsEarly = this.yearsUntilFi - this.allSoonerYears;
       this.allSoonerPercent = this.allSoonerYearsEarly / this.yearsUntilFi;
     },
@@ -253,9 +248,9 @@ $(function() {
     calcFiPhase: function() {
       if(this.yearsUntilFi == 0) {
         return 0;
-      } else if(this.yearsUntilFi < 5) {
+      } else if(this.yearsUntilFi < 10) {
         return 1;
-      } else if(this.yearsUntilFi < 15) {
+      } else if(this.yearsUntilFi < 20) {
         return 2;
       } else {
         return 3;
