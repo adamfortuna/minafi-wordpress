@@ -27,9 +27,16 @@
 	  <div class='row justify-content-center'>
 	    <div class="header <?php minafi_columns(); ?>">
 	      <nav class="navbar navbar-toggleable-md">
-	        <a class="navbar-brand" href="/">
-						<img src="/wp-content/themes/minafi/assets/images/mfi.png" class="d-inline-block align-top" width="42" height="42" alt="Minafi Small Logo">
+	        <a class="navbar-brand" itemprop="publisher url" href="/" itemscope itemtype="http://schema.org/Organization">
+						<span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+							<img src="/mfi-white-bg.png" class="d-inline-block align-top" width="42" height="42" alt="Minafi Logo" />
+							<meta itemprop="url" content="https://minafi.com/mfi-white-bg.png" />
+							<meta itemprop="width" content="230" />
+							<meta itemprop="height" content="230" />
+						</span>
 						<span class="navbar-brand--text">inafi</span>
+						<meta itemprop="name" content="Minafi" />
+						<meta itemprop="url" content="https://minafi.com" />
 					</a>
 
 	        <ul class="nav collapse navbar-toggleable-xs pull-right"  id="collapsingNavbar">

@@ -200,13 +200,19 @@ function minafi_post_thumbnail($size = 'large') {
 	if ( is_singular() && $size != 'thumbnail') :
 	?>
 
-	<div class="post-thumbnail">
+	<div class="post-thumbnail" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
 		<?php the_post_thumbnail($size); ?>
+    <meta itemprop="url" content="<?php echo get_the_post_thumbnail_url() ?>">
+    <meta itemprop="width" content="1200">
+    <meta itemprop="height" content="800">
 	</div><!-- .post-thumbnail -->
 
 	<?php else : ?>
-		<div class="post-thumbnail thumbnail--small">
+		<div class="post-thumbnail thumbnail--small" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
 			<?php the_post_thumbnail($size); ?>
+      <meta itemprop="url" content="<?php echo get_the_post_thumbnail_url() ?>">
+      <meta itemprop="width" content="1200">
+      <meta itemprop="height" content="800">
 		</div>
 	<?php endif; // End is_singular()
 }
