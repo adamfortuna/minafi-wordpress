@@ -103,7 +103,7 @@
     <section class="article--author container container-slim" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <div class="row">
         <div class="col-2 ml-2">
-          <img src="<?php echo get_avatar_url(get_the_author_meta('user_email')) ?>" class="rounded pull-right" height="80" width="80" />
+          <img itemprop="image" src="<?php echo get_avatar_url(get_the_author_meta('user_email')) ?>" class="rounded pull-right" height="80" width="80" />
         </div>
         <div class="col-9">
           <p class="article--author-name" itemprop="name" rel="author"><?php echo get_the_author_meta('display_name') ?></p>
