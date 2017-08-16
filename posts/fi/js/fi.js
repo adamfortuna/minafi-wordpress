@@ -28,6 +28,10 @@ $(function() {
     return "$" + putThousandsSeparators(value);
   };
 
+  Tangle.formats.integer = function(value) {
+    return parseInt(value);
+  };
+
 
   Tangle.formats.yearsOnly = function(value) {
     if(value === 0) {
@@ -173,6 +177,8 @@ $(function() {
 
       // Inflation
       this.neededMarketRate = this.inflationRate + this.wr;
+      this.retirementYearlySpendingWithInflation = this.calcCompoundInterest(this.inflationRate, this.retirementYearlySpending, this.yearsUntilFi);
+      this.retirementYear = this.yearsUntilFi + (new Date()).getFullYear();
 
       if(this.savingsRate > 0) {
         setTimeout(function() {
@@ -243,6 +249,11 @@ $(function() {
       }
 
       return spending;
+    },
+
+    calcCompoundInterest: function(rate, amount, years) {
+      var finance = new Finance();
+      return finance.FV(rate*100, amount, years);
     },
 
     calcFiPhase: function() {

@@ -4,6 +4,7 @@
 <script src="<?php echo $theme_path; ?>/posts/fi/js/d3.js"></script>
 <script src="<?php echo $theme_path; ?>/posts/fi/js/fi.js"></script>
 <script src="<?php echo $theme_path; ?>/posts/fi/js/sr.js"></script>
+<script src="<?php echo $theme_path; ?>/posts/fi/js/finance.js"></script>
 
 <p>Let's talk about financial independence and early retirement! These phrases alone have a lot of weight associated with them, and you might have an immediate gut response to just hearing these terms.</p>
 
@@ -161,7 +162,7 @@
   <p>
     Each year I spend about $<span data-var="yearlySpending" data-format="currency" class="TKNumberField" data-min="0" data-max="10000000"></span>, but when I retire I'll likely spend
 
-		<span data-var="retirementSpendingPercent" data-format="percent" class="TKAdjustableNumber tooltippable" data-step="0.01" data-min="0" data-max="100" data-min="0" data-max="10000000" data-toggle="tooltip" data-placement="top" title="If you're not sure, stick to 80% here."></span> of that (equal to about <span data-var="retirementYearlySpending" data-format="currency" class="tangle--dynamic"></span>/yr).
+		<span data-var="retirementSpendingPercent" data-format="percent" class="TKAdjustableNumber tooltippable" data-step="0.01" data-min="0" data-max="100" data-min="0" data-max="10000000" data-toggle="tooltip" data-placement="top" title="If you're not sure, stick to 80% here."></span> of that (equal to about <span data-var="retirementYear" data-format="currency" class="tangle--dynamic"></span>/yr).
   </p>
 
 	<hr style="width: 96%;">
@@ -289,10 +290,12 @@
 
 <h3>Factoring In Inflation</h3>
 
-<p>Even worse, each of those <span data-var="yearsOfFiNoInvestment" data-format="years" class="tangle--dynamic tangle--dynamic"></span>, your spending power would be slightly less due to inflation, which is generally around 3%. Inflation is something we have no control over individually but is something we can plan for.</p>
+<p>There is some bad news here unfortunately. Each of those <span data-var="yearsOfFiNoInvestment" data-format="years" class="tangle--dynamic tangle--dynamic"></span>, your spending power would be slightly less due to inflation, which is generally around 3%. Inflation is something we have no control over individually but is something we can plan for.</p>
 
 <p>Inflation means that each year, what you can buy with your money is going down by some small amount. If you've seen prices rise since you were a kid, that's potentially a result of inflation.</p>
 
+<p>In <span data-var="yearsOfFiNoInvestment" data-format="years" class="tangle--dynamic tangle--dynamic"></span>, in order to spend <span data-var="retirementYearlySpending" data-format="currency" class="tangle--dynamic tangle--dynamic"></span> in todays dollars, you would need <span data-var="retirementYearlySpendingWithInflation" data-format="currency" class="tangle--dynamic"></span> in the year
+<span data-var="retirementYear" data-format="integer" class="tangle--dynamic"></span>.
 <p>
   Because of this, we need to increase our total funds by
   <span data-var="inflationRate" class="TKAdjustableNumber tangle--dynamic" data-step="0.001" data-max="0.20" data-min="-0.10" data-format="percentDecimal" data-toggle="tooltip" data-placement="top" title="You'll want to keep this around 2-3%."></span>
@@ -300,7 +303,15 @@
   <span data-var="wr" data-format="percentDecimal" class="TKAdjustableNumber tooltippable tangle--dynamic" data-step="0.001" data-max="1" data-min="0"> WR</span>,
   this means that your savings need to increase by
   <span data-var="neededMarketRate" data-format="percentDecimal" class="tangle--dynamic tangle--dynamic">/yr</span>
-  in order for you to draw from it long-term.
+  in order for you to draw from it long-term!
+</p>
+
+<p>
+  So why are we using <span data-var="retirementYearlySpending" data-format="currency" class="tangle--dynamic tangle--dynamic"></span> for these numbers rather than <span data-var="retirementYearlySpendingWithInflation" data-format="currency" class="tangle--dynamic tangle--dynamic"></span>? The reason is that inflation doesn't mean all of your expenses will rise by this much every year, but that the Consumer Price Index and Prodict Price Indexes indicate that this shift in prices.
+</p>
+
+<p>
+  <i>Your</i> net expenses may even go down! I would recommend setting your <span data-var="retirementSpendingPercent" data-format="percent" class="TKAdjustableNumber tooltippable tangle--dynamic" data-step="0.01" data-max="2" data-min="0"></span> percent of spending to be higher if you are farther out than 10 years to FI to buffer for potential increases due to inflation.
 </p>
 
 
