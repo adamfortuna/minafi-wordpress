@@ -21,4 +21,10 @@ function toggleSearch(e) {
 }
 
 
-$(function(){ $('.search--link').on('click', toggleSearch); });
+$(function(){
+  $('.search--link').on('click', toggleSearch);
+
+  $('.email--signup').on('focus', function() {
+    $('.email--toggle').slideDown();
+  })
+});
