@@ -24,8 +24,7 @@
       <div class="article--header-meta">
         <span class="article--header-meta-date">
           <time datetime="<?php echo get_the_date( DATE_W3C ) ?>" itemprop="datePublished"><?php the_time( get_option('date_format') ); ?></time>.
-
-          <time class="hidden" datetime="<?php echo the_modified_date( DATE_W3C ) ?>" itemprop="dateModified"><?php the_modified_date( get_option('date_format') ); ?></time>.
+          <time class="hidden" datetime="<?php echo the_modified_date( DATE_W3C ) ?>" itemprop="dateModified"><?php the_modified_date( get_option('date_format') ); ?></time>
         </span>
         <?php echo do_shortcode('[rt_reading_time label="" postfix="min read." postfix_singular="min read."]') ?>
         <span class="article--header-categories">
