@@ -28,34 +28,44 @@
 
 /* TKAdjustableNumber */
 
-.TKAdjustableNumber {
+.TKAdjustableNumber, .FIAdjustableNumber {
 	position:relative;
 	color: $financial-dark;
 	border-bottom: 1px dashed $financial-dark;
+	cursor: col-resize;
 }
 
 .TKAdjustableNumberHover {
 }
 
-.TKAdjustableNumberDown {
+.TKAdjustableNumberDown, .FIAdjustableNumberDown {
 	color: #00c;
 	border-bottom: 1px dashed #00c;
 }
 
-.TKAdjustableNumberHelp {
+.TKAdjustableNumberHelp, .FIAdjustableNumberHelp {
 	position:absolute;
-	color: #00f;
-	font: 9px "Helvetica-Neue", "Arial", sans-serif;
+	color: $financial-dark;
+	font: 10px "Helvetica-Neue", "Arial", sans-serif;
 }
 
-
-.adjustableSlider {
+.FIAdjustableNumberSlider {
   position: absolute;
   display: none;
   width: 134px;
   height: 8px;
   margin-top: -26px;
   background-image: url("../images/SliderBackground.png");
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.FIAdjustableNumberSliderFill {
+	position: absolute;
+	width: 134px;
+	height: 8px;
+	background-image: url('../images/SliderFill.png');
 }
 
 .TKNumberFieldInput {

@@ -1,3 +1,113 @@
+Tangle.classes.FIAdjustableNumber = {
+
+  initialize: function (element, options, tangle, variable) {
+    this.element = element;
+    this.tangle = tangle;
+    this.variable = variable;
+
+    this.min = (options.min !== undefined) ? parseFloat(options.min) : 0;
+    this.max = (options.max !== undefined) ? parseFloat(options.max) : 1e100;
+    this.step = (options.step !== undefined) ? parseFloat(options.step) : 1;
+
+    this.initializeHover();
+    this.initializeDrag();
+    this.initializeSlider();
+    this.initializeSliderFill();
+  },
+
+
+  // hover
+
+  initializeHover: function () {
+    this.isHovering = false;
+    this.element.addEvent("mouseenter", (function () {
+      this.isHovering = true;
+      this.updateRolloverEffects();
+    }).bind(this));
+    this.element.addEvent("mouseleave", (function () {
+      this.isHovering = false;
+      this.updateRolloverEffects();
+    }).bind(this));
+  },
+
+  updateRolloverEffects: function () {
+    this.updateStyle();
+    this.updateCursor();
+    this.updateSlider();
+  },
+
+  isActive: function () {
+    return this.isDragging || (this.isHovering && !this.isAnyAdjustableNumberDragging);
+  },
+
+  updateStyle: function () {
+    if (this.isDragging) { this.element.addClass("FIAdjustableNumberDown"); }
+    else { this.element.removeClass("FIAdjustableNumberDown"); }
+
+    if (!this.isDragging && this.isActive()) { this.element.addClass("FIAdjustableNumberHover"); }
+    else { this.element.removeClass("FIAdjustableNumberHover"); }
+  },
+
+  updateCursor: function () {
+    var body = document.getElement("body");
+    if (this.isActive()) { body.addClass("FICursorDragHorizontal"); }
+    else { body.removeClass("FICursorDragHorizontal"); }
+  },
+
+  // Slider
+  initializeSlider: function() {
+    this.slider = (new Element("div", { "class": "FIAdjustableNumberSlider" })).inject(this.element, "top");
+    this.slider.setStyle("display", "none");
+  },
+  initializeSliderFill: function() {
+    this.sliderFill = (new Element("div", { "class": "FIAdjustableNumberSliderFill" })).inject(this.slider);
+  },
+
+  updateSlider: function() {
+    var display = (this.isActive()) ? "block" : "none";
+		this.slider.setStyle("display", display);
+
+    var value = this.tangle.getValue(this.variable) - this.min;
+    var diff = this.max - this.min;
+    var percent = (value/diff);
+    this.sliderFill.setStyle("width", (134 * percent).round());
+	},
+
+
+  // drag
+
+  initializeDrag: function () {
+    this.isDragging = false;
+    new BVTouchable(this.element, this);
+  },
+
+  touchDidGoDown: function (touches) {
+    this.valueAtMouseDown = this.tangle.getValue(this.variable);
+    this.isDragging = true;
+    this.isAnyAdjustableNumberDragging = true;
+    this.updateRolloverEffects();
+    this.updateStyle();
+  },
+
+  touchDidMove: function (touches) {
+    var value = this.valueAtMouseDown + touches.translation.x / 5 * this.step;
+    value = ((value / this.step).round() * this.step).limit(this.min, this.max);
+    this.tangle.setValue(this.variable, value);
+    this.updateSlider();
+  },
+
+  touchDidGoUp: function (touches) {
+    this.isDragging = false;
+    this.isAnyAdjustableNumberDragging = false;
+    this.updateRolloverEffects();
+    this.updateStyle();
+    this.slider.setStyle("display", touches.wasTap ? "block" : "none");
+  }
+};
+
+
+
+
 function debounce(a,b,c){var d;return function(){var e=this,f=arguments;clearTimeout(d),d=setTimeout(function(){d=null,c||a.apply(e,f)},b),c&&!d&&a.apply(e,f)}}
 
 

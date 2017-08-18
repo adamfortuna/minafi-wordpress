@@ -10,7 +10,7 @@
  */
 ?><!DOCTYPE html>
 <html lang='en'>
-<head>
+<head itemscope itemtype="http://schema.org/WebSite">
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">

@@ -85,7 +85,7 @@
 <div class="card container container-wide graph--sr--container mb-3 card--info">
 	<div class="graph graph--sr"></div>
 	<p class="lead fi--info">
-		<i>Adam Says:</i> Assumptions abound! This assumes $0 current savings, you save what you don't spend, <span data-var="marketGrowth" class="TKAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0.001" data-format="percentDecimal" class="tangle--dynamic">/yr investment growth</span>, <span data-var="wr" class="TKAdjustableNumber" data-step="0.001" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic"> WR</span>, and that your spending will be the same when you retire. If you don't know what these terms mean, don't worry -- we'll get to them.
+		<i>Adam Says:</i> Assumptions abound! This assumes $0 current savings, you save what you don't spend, <span data-var="marketGrowth" class="FIAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0.001" data-format="percentDecimal" class="tangle--dynamic">/yr investment growth</span>, <span data-var="wr" class="FIAdjustableNumber" data-step="0.001" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic"> WR</span>, and that your spending will be the same when you retire. If you don't know what these terms mean, don't worry -- we'll get to them.
 	</p>
 </div>
 
@@ -149,7 +149,7 @@
 	<h3>Let's Talk More About You</h3>
 	<p class="lead"></p>
   <p>
-    I'm <span data-var="age" class="TKAdjustableNumber" data-min="8" data-max="100"> years old</span>
+    I'm <span data-var="age" class="FIAdjustableNumber" data-min="8" data-max="100"> years old</span>
 		and have a total combined savings of
 		$<span data-var="networth" data-format="currency" class="tooltippable TKNumberField" data-min="0" data-max="10000000" data-toggle="tooltip" data-placement="top" title="For simplicity sake, we'll just look at your savings - 401k, Roth IRA, brokerage and any other currency assets."></span>.
 		Right now, I'm
@@ -162,7 +162,7 @@
   <p>
     Each year I spend about $<span data-var="yearlySpending" data-format="currency" class="TKNumberField" data-min="0" data-max="10000000"></span>, but when I retire I'll likely spend
 
-		<span data-var="retirementSpendingPercent" data-format="percent" class="TKAdjustableNumber tooltippable" data-step="0.01" data-min="0" data-max="100" data-min="0" data-max="10000000" data-toggle="tooltip" data-placement="top" title="If you're not sure, stick to 80% here."></span> of that (equal to about <span data-var="retirementYear" data-format="currency" class="tangle--dynamic"></span>/yr).
+		<span data-var="retirementSpendingPercent" data-format="percent" class="FIAdjustableNumber tooltippable" data-step="0.01" data-min="0" data-max="100" data-min="0" data-max="10000000" data-toggle="tooltip" data-placement="top" title="If you're not sure, stick to 80% here."></span> of that (equal to about <span data-var="retirementYear" data-format="currency" class="tangle--dynamic"></span>/yr).
   </p>
 
 	<hr style="width: 96%;">
@@ -190,7 +190,7 @@
 
 	<div class="BlockSwitch" data-var="fiPhase">
 		<div class="alert alert-success" role="alert">
-			<strong>Well done!</strong> You successfully made it to FI! Why not try setting a stretch goal? Turn down the stock market rate of <span data-var="marketGrowth" class="TKAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic">/yr</span> or turn the withdrawal rate down even further below <span data-var="wr" class="TKAdjustableNumber" data-step="0.001" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic"></span>.
+			<strong>Well done!</strong> You successfully made it to FI! Why not try setting a stretch goal? Turn down the stock market rate of <span data-var="marketGrowth" class="FIAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic">/yr</span> or turn the withdrawal rate down even further below <span data-var="wr" class="FIAdjustableNumber" data-step="0.001" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic"></span>.
 		</div>
 		<div class="alert alert-info" role="alert">
 		  <strong>Keep going!</strong> You have less than 10 years of working ahead of you at your current pace. There are a bunch of way you can speed this up that we'll look into in this post.
@@ -204,7 +204,7 @@
 	</div>
 
 	<p class="lead fi--info">
-		<i>Adam Says:</i> For these numbers, I'm assuming <span data-var="marketGrowth" class="TKAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic">/yr investment growth</span> and a <span data-var="wr" class="TKAdjustableNumber" data-step="0.001" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic"> withdrawal rate</span>. If you're not sure what these numbers mean, don't worry! I'll explain them later on in this post.
+		<i>Adam Says:</i> For these numbers, I'm assuming <span data-var="marketGrowth" class="FIAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic">/yr investment growth</span> and a <span data-var="wr" class="FIAdjustableNumber" data-step="0.001" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic"> withdrawal rate</span>. If you're not sure what these numbers mean, don't worry! I'll explain them later on in this post.
 	</p>
 </div>
 
@@ -240,7 +240,7 @@
   <h3>Withdrawal Rate Calculator</h3>
   <p>
     This assumes that you'll spend
-    <span data-var="retirementSpendingPercent" data-format="percent" class="TKAdjustableNumber tooltippable" data-step="0.01" data-min="0" data-max="100" data-min="0" data-max="10000000" data-toggle="tooltip" data-placement="top" title="If you're not sure, stick to 80% here."></span>
+    <span data-var="retirementSpendingPercent" data-format="percent" class="FIAdjustableNumber tooltippable" data-step="0.01" data-min="0" data-max="100" data-min="0" data-max="10000000" data-toggle="tooltip" data-placement="top" title="If you're not sure, stick to 80% here."></span>
     of your current spending of about
     $<span data-var="yearlySpending" data-format="currency" class="TKNumberField" data-min="0" data-max="10000000">/yr</span>
     in retirement, which would be
@@ -250,7 +250,7 @@
 	<p class="text-center">
 		(Yearly Retirement Spending / Retirement Savings) * 100% = WR
 		<br/>
-		(<span data-var="retirementYearlySpending" data-format="currency" class="tangle--dynamic"></span> / <span class="tangle--dynamic" data-var="fiStash" data-format="currency"></span>) * 100% = <span data-var="wr" data-format="percentDecimal" class="TKAdjustableNumber tooltippable tangle--dynamic" data-step="0.001" data-max="1" data-min="0" data-toggle="tooltip" data-placement="top" title="3% is considered very stable. 4% is starting to get risky. Above 4% is not advised."></span>
+		(<span data-var="retirementYearlySpending" data-format="currency" class="tangle--dynamic"></span> / <span class="tangle--dynamic" data-var="fiStash" data-format="currency"></span>) * 100% = <span data-var="wr" data-format="percentDecimal" class="FIAdjustableNumber tooltippable tangle--dynamic" data-step="0.001" data-max="1" data-min="0" data-toggle="tooltip" data-placement="top" title="3% is considered very stable. 4% is starting to get risky. Above 4% is not advised."></span>
 	</p>
 
 	<p>
@@ -259,7 +259,7 @@
 
 	<p class="lead fi--info">Adam Says:
     This assumes the same
-    <span data-var="marketGrowth" class="TKAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic">/yr investment growth</span> as before.
+    <span data-var="marketGrowth" class="FIAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic">/yr investment growth</span> as before.
     According to the <a href="https://www.bogleheads.org/wiki/Trinity_study_update" target="_blank">Trinity Study</a>, 3% WR will work 98% of the time, while 4% WR will work out 87% over 30 years.
 </div>
 
@@ -298,9 +298,9 @@
 <span data-var="retirementYear" data-format="integer" class="tangle--dynamic"></span>.
 <p>
   Because of this, we need to increase our total funds by
-  <span data-var="inflationRate" class="TKAdjustableNumber tangle--dynamic" data-step="0.001" data-max="0.20" data-min="-0.10" data-format="percentDecimal" data-toggle="tooltip" data-placement="top" title="You'll want to keep this around 2-3%."></span>
+  <span data-var="inflationRate" class="FIAdjustableNumber tangle--dynamic" data-step="0.001" data-max="0.20" data-min="-0.10" data-format="percentDecimal" data-toggle="tooltip" data-placement="top" title="You'll want to keep this around 2-3%."></span>
   each year just to have the same buying power as today. If you add in your
-  <span data-var="wr" data-format="percentDecimal" class="TKAdjustableNumber tooltippable tangle--dynamic" data-step="0.001" data-max="1" data-min="0"> WR</span>,
+  <span data-var="wr" data-format="percentDecimal" class="FIAdjustableNumber tooltippable tangle--dynamic" data-step="0.001" data-max="1" data-min="0"> WR</span>,
   this means that your savings need to increase by
   <span data-var="neededMarketRate" data-format="percentDecimal" class="tangle--dynamic tangle--dynamic">/yr</span>
   in order for you to draw from it long-term!
@@ -311,7 +311,7 @@
 </p>
 
 <p>
-  <i>Your</i> net expenses may even go down! I would recommend setting your <span data-var="retirementSpendingPercent" data-format="percent" class="TKAdjustableNumber tooltippable tangle--dynamic" data-step="0.01" data-max="2" data-min="0"></span> percent of spending to be higher if you are farther out than 10 years to FI to buffer for potential increases due to inflation.
+  <i>Your</i> net expenses may even go down! I would recommend setting your <span data-var="retirementSpendingPercent" data-format="percent" class="FIAdjustableNumber tooltippable tangle--dynamic" data-step="0.01" data-max="2" data-min="0"></span> percent of spending to be higher if you are farther out than 10 years to FI to buffer for potential increases due to inflation.
 </p>
 
 
@@ -326,7 +326,7 @@
 <h3>Your Numbers with Market Investing</h3>
 <p>
 	If you put your money into savings and withdrew some of it each year, the total amount you'd spend would be <span data-var="fiStash" data-format="currency" class="tangle--dynamic"></span>. However, if you <i>invested</i> this and it grew at a pace of
-	<span data-var="marketGrowth" class="TKAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic">/yr</span>,
+	<span data-var="marketGrowth" class="FIAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic">/yr</span>,
 	and you withdrew an inflation adjusted
 	<span data-var="retirementYearlySpending" data-format="currency" class="tangle--dynamic tangle--dynamic">/yr</span>,
 	then this amount could provide you with
@@ -369,7 +369,7 @@
 	<h2>What If: You Reduce Spending & Save It?</h2>
 	<p>
 		If you reduce your spending by
-		<span data-var="spendingReductionPercent" data-format="percentDecimal" data-step="0.01" data-max="1" data-min="0" class="tangle--dynamic TKAdjustableNumber"></span>
+		<span data-var="spendingReductionPercent" data-format="percentDecimal" data-step="0.01" data-max="1" data-min="0" class="tangle--dynamic FIAdjustableNumber"></span>
 		(saving
 		<span data-var="impliedSpendingReductionYearlySavings" data-format="currency" class="tangle--dynamic "></span>
 		a year more), then you could retire
@@ -403,7 +403,7 @@
 		You're on track to spend
 		<span data-var="retirementYearlySpending" data-format="currency" class="tangle--dynamic">/yr</span>
 		during retirement. What if you still spent this exact same amount, but
-		<span data-var="eirIncomePercent" data-format="percent" data-step="0.01" data-max="1" data-min="0" class="tangle--dynamic TKAdjustableNumber"></span>
+		<span data-var="eirIncomePercent" data-format="percent" data-step="0.01" data-max="1" data-min="0" class="tangle--dynamic FIAdjustableNumber"></span>
 		of it comes from income in retirement? This would be finding a way to make
 		<span data-var="eirIncomeAfterRetirement" data-format="currency" class="tangle--dynamic">/yr</span> in side income.
 	</p>
@@ -459,9 +459,9 @@
 	<h2>What If: Reduce spending &amp; earn income?</h2>
 
   <p>
-    You reduce spending by <span data-var="spendingReductionPercent" data-format="percentDecimal" data-step="0.01" data-max="1" data-min="0" class="tangle--dynamic TKAdjustableNumber"></span>
+    You reduce spending by <span data-var="spendingReductionPercent" data-format="percentDecimal" data-step="0.01" data-max="1" data-min="0" class="tangle--dynamic FIAdjustableNumber"></span>
     while replacing
-    <span data-var="eirIncomePercent" data-format="percent" data-step="0.01" data-max="1" data-min="0" class="tangle--dynamic TKAdjustableNumber"></span>
+    <span data-var="eirIncomePercent" data-format="percent" data-step="0.01" data-max="1" data-min="0" class="tangle--dynamic FIAdjustableNumber"></span>
     of your income during retirement (<span data-var="impliedSpendingReductionYearlySavings" data-format="currency" class="tangle--dynamic"></span>)
     <!--
     while also having your yearly income increase by
@@ -497,52 +497,9 @@
 
 <p>I was lucky enough to chat with a number of people who are in various states of financial independence and get their takes on the subject.</p>
 
-<a name="profile-adam"></a>
-<div style="background-color: rgba(229, 236, 247, 0.85);" class="py-3 my-3 fi--profile fi--profile-collapsed">
-  <div id="fi-profile--adam" class="aesop-component aesop-image-component " style="visibility:hidden;">
-		<div class="aesop-content">
-			<figure class="aesop-image-component-image aesop-component-align-right aesop-image-component-caption-left" style="margin-right:12%; width:500px;">
-        <a class="aesop-lightbox" href="https://minafi.com/wp-content/uploads/2017/08/adam-japan-1024x682.jpg" title="Adam outside Niko in Japan">
-					<img src="https://minafi.com/wp-content/uploads/2017/08/adam-japan-1024x682.jpg" alt="Adam outside Niko in Japan">
-				</a>
-  			<figcaption class="aesop-image-component-caption">
-  				Adam outside Niko Japan during our honeymoon.
-  			</figcaption>
-		  </figure>
-		</div>
-	</div>
 
-  <h3>Adam from <a href="/" target="_blank">Minafi</a></h3>
-  <p class="lead">35m, married, working and saving money in Orlando, FL. $1,050,000 in savings. Spending $55k/yr now and in retirement. FI by 40 in a major city. RE date TBD.</p>
-  <p>
-    That's me! I'm a web developer, board gamer and cocktail lover who is exploring personal finance and related fields. I've worked for years teaching people how to code at <a href="https://www.codeschool.com" target="_blank">Code School</a>, and want to educate others on FI while learning more myself. You can read more of <a href="/about" target="_blank">my story</a> if you'd like the full details.
-  </p>
-
-  <div class="profile-toggle--more">
-    <h4>How did you learn about FI?</h4>
-    <p>Reading <a href="https://minafi.com/recommends/the-bogleheads-guide-to-investing/" target="blank">The Bogleheads Guide to Investing</a> set me on my journey. It made it clear how little I needed to retire if I was investing it in the stock market.</p>
-
-    <h4>What was your financial status when you began?</h4>
-    <p>2 months after I graduated college (age 23), my mom passed away and left me her house and $100,000. A few years later I was 28, had experienced investing during the recession and bought my first home. After selling her house, I had $150,000 in investments and -$100,000 in home equity when I started while making about $52,000 a year.</p>
-
-    <h4>What has been the most impactful change you've made towards FI?</h4>
-    <p>Learning and executing on a long term investing strategy. When I look at my total investments today, more than 1/3 of it is from investment gains alone in the past 7 years. This, coupled with controlling lifestyle inflation.</p>
-
-    <h4>What, if anything, do you wish you could have done differently?</h4>
-    <p>Does buying Bitcoin count? For me, I underestimated the financial impact of buying a house. I did this prior to learning about FI, and I undertook it without enough thought and planning. The extra yearly expenses (1-2% of the home price every year), the additional time for maintenance and improvements, yard work, cleaning - it's a lot to handle. In retrospect, I would've just continued renting.</p>
-
-    <h4>What advice do you have for others going down the path of FI?</h4>
-    <p>Save up $3,000 and invest it in your 401k, a Vanguard IRA or a Vanguard Roth IRA. Use that account to learn the basics of investing - how to buy and sell, what investments to pick and how that works. Starting small in an account where you don't have to worry about taxes helped me gain confidence before jumping in completely.</p>
-    <p>Following that, keeping your spending in check year after year and not letting it grow out of proportion with your happiness.</p>
-  </div>
-
-  <p>
-    <a href="#" class="profile-toggle">
-      <span class="profile-toggle--read-more">Read more about Adam <i class="fa fa-angle-double-down" aria-hidden="true"></i></span>
-      <span class="profile-toggle--read-less">Collapse <i class="fa fa-angle-double-up" aria-hidden="true"></i></span>
-    </a>
-  </p>
-</div>
+<?php include('profiles/adam.php'); ?>
+<?php include('profiles/gwen.php'); ?>
 
 
 <a name="part-8"></a>
