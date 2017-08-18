@@ -156,6 +156,7 @@
 		<span data-var="phase" class="TKToggle TKSwitch">
 			<span>retired</span>
 			<span>saving money for retirement</span>
+      <span>paying off debt</span>
 		</span>.
 	</p>
 
@@ -606,3 +607,16 @@
 </div>
 
 <p class="lead">If you enjoyed this article, or have any thoughts on it, please share it and <a href="/contact" target="_blank">let me know</a> what you think. I would love to hear from you!</p>
+
+
+<h3>Credits</h3>
+<p>Special thanks to the following people for helping out on this!</p>
+<ul class="list-unstyled">
+  <li class="list-unstyled-item"><b>My Wife</b> for reading over various drafts and ideas.</li>
+  <li class="list-unstyled-item"><b>Bret Victor</b> for <a href="http://worrydream.com/Tangle/" target="_blank">Tangle</a>, the JS library for data binding.</li>
+  <li class="list-unstyled-item"><b>Mike Bostock</b> for <a href="https://d3js.org/" target="_blank">D3.js</a>. I want to make more chances to use it.</li>
+  <li class="list-unstyled-item"><b>John Bogle</b> and <a href="https://www.bogleheads.org/wiki/The_Bogleheads%C2%AE" target="_blank">The Bogleheads</a> who gave me a great foundational education in investing.</li>
+  <li class="list-unstyled-item"><b>Mr. Money Mustache</b> for turning me on to the idea of FI.</li>
+  <li class="list-unstyled-item"><b>All of the bloggers</b> who agreed to an interview.</li>
+  <li class="list-unstyled-item">Everyone who's shared this post to help spread the word of FI!</li>
+</ul>
