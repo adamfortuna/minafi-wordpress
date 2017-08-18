@@ -2,9 +2,10 @@
   $theme_path = get_template_directory_uri();
 ?>
 <script src="<?php echo $theme_path; ?>/posts/fi/js/d3.js"></script>
+<script src="<?php echo $theme_path; ?>/posts/fi/js/finance.js"></script>
+<script src="<?php echo $theme_path; ?>/assets/js/tangle.bundle.js"></script>
 <script src="<?php echo $theme_path; ?>/posts/fi/js/fi.js"></script>
 <script src="<?php echo $theme_path; ?>/posts/fi/js/sr.js"></script>
-<script src="<?php echo $theme_path; ?>/posts/fi/js/finance.js"></script>
 
 <p>Let's talk about financial independence and early retirement! These phrases alone have a lot of weight associated with them, and you might have an immediate gut response to just hearing these terms.</p>
 
@@ -104,7 +105,7 @@
 
 <a name="part-2"></a>
 <blockquote>
-  <p>The art is not in making money, but in keeping it.</p>
+  The art is not in making money, but in keeping it.
 </blockquote>
 
 <h2>Part 2: How much should I save?</h2>
@@ -163,7 +164,7 @@
   <p>
     Each year I spend about $<span data-var="yearlySpending" data-format="currency" class="TKNumberField" data-min="0" data-max="10000000"></span>, but when I retire I'll likely spend
 
-		<span data-var="retirementSpendingPercent" data-format="percent" class="FIAdjustableNumber tooltippable" data-step="0.01" data-min="0" data-max="100" data-min="0" data-max="10000000" data-toggle="tooltip" data-placement="top" title="If you're not sure, stick to 80% here."></span> of that (equal to about <span data-var="retirementYear" data-format="currency" class="tangle--dynamic"></span>/yr).
+		<span data-var="retirementSpendingPercent" data-format="percent" class="FIAdjustableNumber tooltippable" data-step="0.01" data-min="0" data-max="3" data-toggle="tooltip" data-placement="bottom" title="If you're not sure, stick to 80% here."></span> of that (equal to about <span data-var="retirementYear" data-format="currency" class="tangle--dynamic"></span>/yr).
   </p>
 
 	<hr style="width: 96%;">
@@ -241,7 +242,7 @@
   <h3>Withdrawal Rate Calculator</h3>
   <p>
     This assumes that you'll spend
-    <span data-var="retirementSpendingPercent" data-format="percent" class="FIAdjustableNumber tooltippable" data-step="0.01" data-min="0" data-max="100" data-min="0" data-max="10000000" data-toggle="tooltip" data-placement="top" title="If you're not sure, stick to 80% here."></span>
+    <span data-var="retirementSpendingPercent" data-format="percent" class="FIAdjustableNumber tooltippable" data-step="0.01" data-min="0" data-max="2" data-toggle="tooltip" title="If you're not sure, stick to 80% here."></span>
     of your current spending of about
     $<span data-var="yearlySpending" data-format="currency" class="TKNumberField" data-min="0" data-max="10000000">/yr</span>
     in retirement, which would be
@@ -251,7 +252,7 @@
 	<p class="text-center">
 		(Yearly Retirement Spending / Retirement Savings) * 100% = WR
 		<br/>
-		(<span data-var="retirementYearlySpending" data-format="currency" class="tangle--dynamic"></span> / <span class="tangle--dynamic" data-var="fiStash" data-format="currency"></span>) * 100% = <span data-var="wr" data-format="percentDecimal" class="FIAdjustableNumber tooltippable tangle--dynamic" data-step="0.001" data-max="1" data-min="0" data-toggle="tooltip" data-placement="top" title="3% is considered very stable. 4% is starting to get risky. Above 4% is not advised."></span>
+		(<span data-var="retirementYearlySpending" data-format="currency" class="tangle--dynamic"></span> / <span class="tangle--dynamic" data-var="fiStash" data-format="currency"></span>) * 100% = <span data-var="wr" data-format="percentDecimal" class="FIAdjustableNumber tooltippable tangle--dynamic" data-step="0.001" data-max="0.08" data-min="0" data-toggle="tooltip" data-placement="bottom" title="3% is considered very stable. 4% is starting to get risky. Above 4% is not advised."></span>
 	</p>
 
 	<p>

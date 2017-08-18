@@ -35,12 +35,6 @@ gulp.task('js:concat', function () {
     'src/components/jquery/dist/jquery.js',
     'src/components/popper.js/index.js',
     'src/components/bootstrap/dist/js/bootstrap.js',
-    'src/components/js-cookie/src/js.cookie.js',
-    'src/js/TangleKit/Tangle.js',
-    'src/js/TangleKit/mootools.js',
-    'src/js/TangleKit/sprintf.js',
-    'src/js/TangleKit/BVTouchable.js',
-    'src/js/TangleKit/TangleKit.js',
     'src/js/vendor/comment-reply.js',
     'src/js/app.js',
     '../../plugins/aesop-story-engine/public/assets/js/ai-core.min.js',
@@ -54,6 +48,28 @@ gulp.task('js:concat', function () {
     .pipe(gulp.dest('assets/dev'));
 });
 
+gulp.task('js:concat:tangle', function () {
+  var files = [
+    'src/components/js-cookie/src/js.cookie.js',
+    'src/js/TangleKit/Tangle.js',
+    'src/js/TangleKit/mootools.js',
+    'src/js/TangleKit/sprintf.js',
+    'src/js/TangleKit/BVTouchable.js',
+    'src/js/TangleKit/TangleKit.js'
+  ];
+
+  return gulp.src(files)
+    .pipe(concat('tangle.bundle.js'))
+    .pipe(gulp.dest('assets/dev'));
+});
+
+gulp.task('js:minify:tangle', function(cb) {
+  pump([
+    gulp.src('assets/dev/tangle.bundle.js'),
+    uglify(),
+    gulp.dest('assets/js')
+  ], cb);
+});
 
 gulp.task('js:minify', function(cb) {
   pump([
@@ -62,6 +78,7 @@ gulp.task('js:minify', function(cb) {
     gulp.dest('assets/js')
   ], cb);
 });
+
 gulp.task('js:watch', function () {
   gulp.watch('./src/js/**/*.js', ['js:concat']);
   gulp.watch('./assets/dev/**/*.js', ['js:minify']);
@@ -69,3 +86,4 @@ gulp.task('js:watch', function () {
 
 gulp.task('default', ['watch', 'sass', 'js:concat', 'js:minify']);
 gulp.task('watch', ['sass:watch', 'js:watch']);
+gulp.task('tangle', ['js:concat:tangle', 'js:minify:tangle']);
