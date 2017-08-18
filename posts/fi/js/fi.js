@@ -469,10 +469,17 @@ $(function() {
     window.sr = ScrollReveal();
   }
 
-  sr.reveal('#fi-profile--adam', {
-    origin:'left', distance: '0px', duration: 1000
-  });
-  jQuery('#fi-profile--adam').css("visibility","visible");
+  var revealOptions = {
+    origin: 'left', distance: '0px', duration: 1000
+  };
+
+  ['adam', 'gwen', 'erdude'].forEach(function(profile) {
+    sr.reveal('#fi-profile--'+profile, revealOptions);
+    jQuery('#fi-profile--'+profile).css("visibility", "visible");
+  })
+
+
+
 
 
 

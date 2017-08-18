@@ -1,5 +1,5 @@
 <a name="profile-adam"></a>
-<div style="background-color: rgba(229, 236, 247, 0.85);" class="py-3 mt-3 fi--profile fi--profile-collapsed">
+<div style="background-color: rgba(229, 236, 247, 0.85);" class="py-3 mt-3 fi--profile fi--profile-collapsed clearfix">
   <div id="fi-profile--adam" class="aesop-component aesop-image-component " style="visibility:hidden;">
 		<div class="aesop-content">
 			<figure class="aesop-image-component-image aesop-component-align-right aesop-image-component-caption-left" style="margin-right:12%; width:500px;">

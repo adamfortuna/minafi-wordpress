@@ -501,6 +501,7 @@
 
 <?php include('profiles/adam.php'); ?>
 <?php include('profiles/gwen.php'); ?>
+<?php include('profiles/erdude.php'); ?>
 
 
 <a name="part-8"></a>

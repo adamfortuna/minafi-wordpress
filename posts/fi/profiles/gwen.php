@@ -1,6 +1,6 @@
 <a name="profile-gwen"></a>
-<div style="background-color: #FFE9D6; min-height:446px;" class="py-3 fi--profile fi--profile-collapsed">
-  <div id="fi-profile--adam" class="aesop-component aesop-image-component " style="visibility:hidden;">
+<div style="background-color: #FFE9D6; min-height:446px;" class="py-3 fi--profile fi--profile-collapsed clearfix">
+  <div id="fi-profile--gwen" class="aesop-component aesop-image-component " style="visibility:hidden;">
 		<div class="aesop-content">
 			<figure class="aesop-image-component-image aesop-component-align-right aesop-image-component-caption-left" style="margin-right:12%; width:500px;">
         <a class="aesop-lightbox" href="https://minafi.com/wp-content/uploads/2017/08/Profile-Gwen-1024x766.jpg" title="Gwen somewhere awesome.">
