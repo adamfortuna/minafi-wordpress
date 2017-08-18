@@ -262,11 +262,16 @@ $(function() {
       // Reducing Spending
       this.impliedSpendingReductionYearlySavings = this.yearlySpending * this.spendingReductionPercent;
       this.impliedSpendingReductionYearlySavingsTotal = this.impliedSpendingReductionYearlySavings + this.yearlySavings;
-      this.spendingReductionStash = this.calcStash(this.retirementYearlySpending - this.impliedSpendingReductionYearlySavings);
-      this.spendingReductionYearsUntilFi = this.calcTimeUntilFi(this.impliedSpendingReductionYearlySavingsTotal, this.spendingReductionStash, this.networth, this.marketGrowth)
+      this.impliedSpendingReductionYearlySpending = this.retirementYearlySpending - this.impliedSpendingReductionYearlySavings;
+      this.spendingReductionStash = this.calcStash(this.impliedSpendingReductionYearlySpending);
+      this.spendingReductionYearsUntilFi = this.calcTimeUntilFi(this.impliedSpendingReductionYearlySavingsTotal, this.spendingReductionStash, this.networth, this.marketGrowth);
+
+
+
 
       this.spendingReductionYearsEarlier = this.yearsUntilFi - this.spendingReductionYearsUntilFi;
       this.spendingReductionStashDifference = this.fiStash - this.spendingReductionStash;
+
 
 
       // Part 2: How is this enough?

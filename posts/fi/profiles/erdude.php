@@ -1,4 +1,4 @@
-<a name="profile-erdude"></a>
+<a name="profile-erdude"></a><a name="erdude"></a>
 <div style="background-color: #f4f1f4; min-height:446px;" class="py-3 fi--profile fi--profile-collapsed clearfix">
   <div id="fi-profile--erdude" class="aesop-component aesop-image-component " style="visibility:hidden;">
 		<div class="aesop-content">
@@ -14,7 +14,7 @@
 	</div>
 
   <h3>Early Retirement Dude from <a href="https://earlyretirementdude.com" target="_blank">earlyretirementdude.com</a></h3>
-  <p class="lead">48m, married, retired and saving money in the Southeastern US. $2.3m in savings. Spending $55k/yr. FI & RE at 36 in a ruralish area.</p>
+  <p class="lead">48m, married and retired in the Southeastern US. $2.3m in savings. Spending $55k/yr. FI & RE at 36 in a ruralish area.</p>
   <p>
     I'm a Deadhead-type GenX'er. Love running and bicycle touring. Averse to the toxicity of consumer culture and the modern workplace. Trying to wake people up to the idea that financial independence/early retirement A) exists, B) can be an antidote to that toxicity, and C) is actually achievable.
   </p>
