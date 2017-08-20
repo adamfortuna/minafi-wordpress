@@ -25,6 +25,26 @@
 	cursor: pointer;
 }
 
+.MultiToggle {
+	position: relative;
+	display: inline-block;
+	&:before {
+		content: "click";
+    display: none;
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+	}
+
+	&:hover {
+		&:before {
+			display: block;
+		}
+	}
+}
+
 
 /* TKAdjustableNumber */
 
@@ -33,9 +53,6 @@
 	color: $financial-dark;
 	border-bottom: 1px dashed $financial-dark;
 	cursor: col-resize;
-}
-
-.TKAdjustableNumberHover {
 }
 
 .TKAdjustableNumberDown, .FIAdjustableNumberDown {
@@ -68,6 +85,26 @@
 	background-image: url('../images/SliderFill.png');
 }
 
+.TKNumberField {
+	position: relative;
+	display: inline-block;
+	&:before {
+		content: "change";
+    display: none;
+    position: absolute;
+		color: $financial-dark;
+    top: -23px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+	}
+
+	&:hover {
+		&:before {
+			display: block;
+		}
+	}
+}
 .TKNumberFieldInput {
   border: none;
   border-bottom: 2px dotted $financial-dark;

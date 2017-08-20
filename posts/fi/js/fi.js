@@ -2,7 +2,7 @@ $(function() {
   var element = document.getElementById("fi--wrapper");
 
   var defaults = {
-    exampleClick: false,
+    exampleClick: 0,
     storeCookies: true,
     yearlyIncome: 50000,
     yearlySavings: 10000,

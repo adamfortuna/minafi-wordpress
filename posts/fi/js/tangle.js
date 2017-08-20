@@ -34,9 +34,7 @@ Tangle.classes.FIAdjustableNumber = {
     this.initializeSliderFill();
   },
 
-
   // hover
-
   initializeHover: function () {
     this.isHovering = false;
     this.element.addEvent("mouseenter", (function () {
@@ -188,12 +186,44 @@ Tangle.formats.percentDecimal = function (value) {
 
 Tangle.classes.MultiToggle = {
   initialize: function (element, options, tangle, variable) {
+    // this.element = element;
+
     element.addEvent("click", function (event) {
       var nextVal = tangle.getValue(variable) + 1;
       if(nextVal >= this.children.length) { nextVal = 0; }
       tangle.setValue(variable, nextVal);
     });
+
+    // initiali hover
+    // this.initializeHover();
+    // this.initializeHelp();
   }
+  // ,
+  //
+  // initializeHover: function () {
+  //   this.isHovering = false;
+  //   this.element.addEvent("mouseenter", (function () {
+  //     this.isHovering = true;
+  //     this.updateHelp();
+  //   }).bind(this));
+  //   this.element.addEvent("mouseleave", (function () {
+  //     this.isHovering = false;
+  //     this.updateHelp();
+  //   }).bind(this));
+  // },
+  //
+  // initializeHelp: function () {
+  //   this.helpElement = (new Element("div", { "class": "TKAdjustableNumberHelp" })).inject(this.element, "top");
+  //   this.helpElement.setStyle("display", "none");
+  //   this.helpElement.set("text", "click");
+  // },
+  // updateHelp: function () {
+  //   var size = this.element.getSize();
+  //   var top = -size.y + 20;
+  //   var left = Math.round(0.5 * (size.x - 20));
+  //   var display = (this.isHovering) ? "block" : "none";
+  //   this.helpElement.setStyles({ left:left, top:top, display:display });
+  // }
 };
 
 Tangle.classes.BlockSwitch = {

@@ -1,7 +1,14 @@
 <?php
   $theme_path = get_template_directory_uri();
+  $whitelist = array(
+    '127.0.0.1',
+    '::1'
+);
+
 ?>
 <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+
+<? if(false && in_array($_SERVER['REMOTE_ADDR'], $whitelist)) { ?>
 <script src="<?php echo $theme_path; ?>/posts/fi/js/firebase.js"></script>
 <script src="<?php echo $theme_path; ?>/posts/fi/js/d3.js"></script>
 <script src="<?php echo $theme_path; ?>/posts/fi/js/finance.js"></script>
@@ -10,6 +17,9 @@
 <script src="<?php echo $theme_path; ?>/posts/fi/js/fi.js"></script>
 <script src="<?php echo $theme_path; ?>/posts/fi/js/dom.js"></script>
 <script src="<?php echo $theme_path; ?>/posts/fi/js/sr.js"></script>
+<? } else { ?>
+<script src="<?php echo $theme_path; ?>/assets/dev/fi.bundle.js"></script>
+<?php } ?>
 
 <p>Let's talk about financial independence and early retirement! These phrases alone have a lot of weight associated with them, and you might have an immediate gut response to just hearing these terms.</p>
 
@@ -53,7 +63,7 @@
 <h3>This Article Is Interactive!</h3>
 <p>
   This whole article is a bit of an experiment. Whenever you see
-  <span data-var="exampleClick" class="TKToggle TKSwitch">
+  <span data-var="exampleClick" class="MultiToggle TKSwitch">
 		<span>green dotted unlined text</span>
 		<span>yes! just like that!</span>
 	</span>, that indicates this is a place that needs your input! Just hover over it and it'll tell you what to do. <b>The content of this post will change based on your input</b>. Consider it an old-school choose your own adventure blog post like you read as a kid. Give the one in this paragraph a shot. Also consider these <i>estimates</i> rather than hard numbers.
@@ -66,7 +76,11 @@
 	<p class="lead">Try changing the underlined values and see what happens!</p>
 	<p>
 		My yearly after-tax income is
-    $<span data-var="yearlyIncome" data-format="currency" class="TKNumberField tooltippable" data-min="0" data-max="10000000" data-toggle="tooltip" title="Use take home pay + 401k contribution, and subtract taxes. This is the total amount that you have to play with after taxes."></span> and I save $<span data-var="yearlySavings" data-format="currency" class="tooltippable TKNumberField" data-min="0" data-max="10000000" data-toggle="tooltip" title="Include 401k + IRA + Roth + checking + brokerage savings."></span> total for retirement – including 401k and all other means. Using these figures, my savings rate (SR) will be about <span data-var="savingsRate" data-format="percent" class="tangle--dynamic"></span>.
+    $<span data-var="yearlyIncome" data-format="currency" class="TKNumberField tooltippable" data-min="0" data-max="10000000" data-toggle="tooltip" title="Use take home pay + 401k contribution, and subtract taxes. This is the total amount that you have to play with after taxes."></span>
+    and I save
+    $<span data-var="yearlySavings" data-format="currency" class="tooltippable TKNumberField" data-min="0" data-max="10000000" data-toggle="tooltip" data-placement="below" title="Include 401k + IRA + Roth + checking + brokerage savings."></span>
+    total for retirement – including 401k and all other means. Using these figures, my savings rate (SR) will be about
+    <span data-var="savingsRate" data-format="percent" class="tangle--dynamic"></span>.
 	</p>
 	<p>This is calculated with the following formula:</p>
 	<p class="text-center">
@@ -158,7 +172,7 @@
       <span>other</span>
       <span>undisclosed</span>
 		</span>
-		and have a total combined savings of
+		and have a total combined savings of about
 		$<span data-var="networth" data-format="currency" class="tooltippable TKNumberField" data-min="0" data-max="10000000" data-toggle="tooltip" data-placement="top" title="For simplicity sake, we'll just look at your savings - 401k, Roth IRA, brokerage and any other currency assets."></span>.
 		Right now, I'm
 		<span data-var="phase" class="MultiToggle TKSwitch">
@@ -171,7 +185,7 @@
   <p>
     Each year I spend about $<span data-var="yearlySpending" data-format="currency" class="TKNumberField" data-min="0" data-max="10000000"></span>, but when I retire I'll likely spend
 
-		<span data-var="retirementSpendingPercent" data-format="percent" class="FIAdjustableNumber tooltippable" data-step="0.01" data-min="0" data-max="3" data-toggle="tooltip" data-placement="bottom" title="If you're not sure, stick to 80% here."></span> of that (equal to about <span data-var="retirementYear" data-format="currency" class="tangle--dynamic"></span>/yr).
+		<span data-var="retirementSpendingPercent" data-format="percent" class="FIAdjustableNumber tooltippable" data-step="0.01" data-min="0" data-max="3" data-toggle="tooltip" data-placement="bottom" title="If you're not sure, stick to 80% here."></span> of that (equal to about <span data-var="retirementYearlySpending" data-format="currency" class="tangle--dynamic"></span>/yr).
   </p>
 
 	<hr style="width: 96%;">

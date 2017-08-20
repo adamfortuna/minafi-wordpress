@@ -48,24 +48,31 @@ gulp.task('js:concat', function () {
     .pipe(gulp.dest('assets/dev'));
 });
 
-gulp.task('js:concat:tangle', function () {
+gulp.task('js:fi:concat', function () {
   var files = [
+    'posts/fi/js/firebase.js',
+    'posts/fi/js/d3.js',
+    'posts/fi/js/finance.js',
     'src/components/js-cookie/src/js.cookie.js',
     'src/js/TangleKit/Tangle.js',
     'src/js/TangleKit/mootools.js',
     'src/js/TangleKit/sprintf.js',
     'src/js/TangleKit/BVTouchable.js',
-    'src/js/TangleKit/TangleKit.js'
+    'src/js/TangleKit/TangleKit.js',
+    'posts/fi/js/tangle.js',
+    'posts/fi/js/fi.js',
+    'posts/fi/js/dom.js',
+    'posts/fi/js/sr.js'
   ];
 
   return gulp.src(files)
-    .pipe(concat('tangle.bundle.js'))
+    .pipe(concat('fi.bundle.js'))
     .pipe(gulp.dest('assets/dev'));
 });
 
-gulp.task('js:minify:tangle', function(cb) {
+gulp.task('js:fi:minify', function(cb) {
   pump([
-    gulp.src('assets/dev/tangle.bundle.js'),
+    gulp.src('assets/dev/fi.bundle.js'),
     uglify(),
     gulp.dest('assets/js')
   ], cb);
@@ -81,9 +88,10 @@ gulp.task('js:minify', function(cb) {
 
 gulp.task('js:watch', function () {
   gulp.watch('./src/js/**/*.js', ['js:concat']);
-  gulp.watch('./assets/dev/**/*.js', ['js:minify']);
+  gulp.watch('./assets/dev/app.bundle.js', ['js:minify']);
+  gulp.watch('./posts/fi/**/*.js', ['js:fi:concat']);
+  gulp.watch('./assets/dev/fi.bundle.js', ['js:fi:minify']);
 });
 
 gulp.task('default', ['watch', 'sass', 'js:concat', 'js:minify']);
 gulp.task('watch', ['sass:watch', 'js:watch']);
-gulp.task('tangle', ['js:concat:tangle', 'js:minify:tangle']);

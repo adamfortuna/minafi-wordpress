@@ -11880,6 +11880,20 @@ span.entry-subtitle {
   border-bottom: 1px dashed #4CB058;
   cursor: pointer; }
 
+.MultiToggle {
+  position: relative;
+  display: inline-block; }
+  .MultiToggle:before {
+    content: "click";
+    display: none;
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px; }
+  .MultiToggle:hover:before {
+    display: block; }
+
 /* TKAdjustableNumber */
 .TKAdjustableNumber, .FIAdjustableNumber {
   position: relative;
@@ -11912,6 +11926,21 @@ span.entry-subtitle {
   width: 134px;
   height: 8px;
   background-image: url("../images/SliderFill.png"); }
+
+.TKNumberField {
+  position: relative;
+  display: inline-block; }
+  .TKNumberField:before {
+    content: "change";
+    display: none;
+    position: absolute;
+    color: #4CB058;
+    top: -23px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px; }
+  .TKNumberField:hover:before {
+    display: block; }
 
 .TKNumberFieldInput {
   border: none;
