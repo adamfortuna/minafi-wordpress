@@ -12087,7 +12087,8 @@ span.alert {
 
 .graph--fi--wr-line {
   stroke: #6ec178;
-  stroke-width: 2px; }
+  stroke-width: 2px;
+  stroke-dasharray: 5; }
 
 .fi--profile h4 {
   margin-bottom: 8px; }

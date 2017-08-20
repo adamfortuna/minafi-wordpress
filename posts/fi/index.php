@@ -252,7 +252,7 @@
 	</p>
 </div>
 
-<p>The horizontal line in this graph is how much you'd need to be financially independent given your current numbers. The other line is your net worth at each age. The point where these lines intersect is your FI Age -- the age in which you'd have enough to be financially independent.</p>
+<p>The dashed horizontal line in this graph is how much you'd need to be financially independent given your current numbers. The other line is your net worth at each age. The point where these lines intersect is your FI Age -- the age in which you'd have enough to be financially independent.</p>
 
 <p>Financial Independence (FI) is different from retirement. Think of financial independence as the amount of money you'd need in order to never work again. Retirement (RE), on the other hand, is the act of not working.</p>
 
