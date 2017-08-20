@@ -14,7 +14,7 @@
 	</div>
 
   <h3>Gwen from <a href="http://www.fierymillennials.com/" target="_blank">Fiery Millennials</a></h3>
-  <p class="lead">26f, single, working and saving money in the Midwest. $170,000 in savings. Spending $40k/yr now, $25k in retirement. FI by 28 in a ruralish area. RE by 30.</p>
+  <p class="lead">26f, working and saving money in the Midwest. $170,000 in savings. Spending $40k/yr now, $25k in retirement. FI by 28 in a ruralish area. RE by 30.</p>
   <p>
     Hey, I'm Gwen! I'm a 26 year old IT professional on my way to early retirement. I enjoy playing sports, cuddling my cat, reading and working on my real estate properties.
 

@@ -82,9 +82,8 @@
 
           <ul class="list-unstyled article--social">
             <li>
-              <a href="https://twitter.com/minafiblog" target="_blank">
-                <i class="fa fa-twitter-square" aria-hidden="true"></i> @minafiblog
-              </a>
+              <i class="fa fa-twitter-square" aria-hidden="true"></i>
+              <a href="https://twitter.com/minafiblog" target="_blank">@minafiblog</a>
             </li>
             <li>
               <a class="twitter-follow-button"

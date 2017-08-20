@@ -1,3 +1,30 @@
+// Setup firebase
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyDEDUX3syxvKeDeGkutaOC815fnoC5QBV8",
+  authDomain: "minafi-fi.firebaseapp.com",
+  databaseURL: "https://minafi-fi.firebaseio.com",
+  projectId: "minafi-fi",
+  storageBucket: "",
+  messagingSenderId: "217431444061"
+};
+firebase.initializeApp(config);
+window.user = null;
+
+firebase.auth().signInAnonymously().catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  console.log("Error signing in... ", errorCode, errorMessage);
+});
+
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    window.user = user;
+  }
+});
+
+
 Tangle.classes.FIAdjustableNumber = {
 
   initialize: function (element, options, tangle, variable) {
@@ -199,6 +226,14 @@ $(function() {
     return "" + (100 * value).round(1) + "%";
   };
 
+  Tangle.classes.MultiToggle = {
+    initialize: function (element, options, tangle, variable) {
+      element.addEvent("click", function (event) {
+        tangle.setValue(variable, tangle.getValue(variable));
+      });
+    }
+  };
+
   Tangle.classes.BlockSwitch = {
     update: function (element, value) {
       element.getChildren().each( function (child, index) {
@@ -214,6 +249,7 @@ $(function() {
     yearlySavings: 10000,
     phase: 1,
     age: 30,
+    gender: 0,
     networth: 5000,
     yearlySpending: 40000,
     retirementSpendingPercent: 0.8,
@@ -298,15 +334,17 @@ $(function() {
       if(this.savingsRate > 0) {
         setTimeout(function() {
           highlightSr(this.savingsRate, this.marketGrowth, this.wr);
+          if(this.storeCookies) {
+            this.updateFirebase();
+          }
         }.bind(this), 50);
       }
-
-      //
-
       if(this.storeCookies) {
         this.saveCookies();
+        this.updateFirebase();
       } else {
         this.clearCookies();
+        this.deleteFirebase();
       }
     },
 
@@ -403,7 +441,8 @@ $(function() {
         'monthlyIncome',
         'retirementMonthlyIncome',
         'payIncreasePercent',
-        'inflationRate'
+        'inflationRate',
+        'gender'
       ];
     },
     state: function() {
@@ -411,6 +450,15 @@ $(function() {
       this.allSaveableValues().forEach(function(v) {
         s[v] = this[v];
       }.bind(this));
+      s['createdAt'] = s['createdAt'] || new Date();
+      s['updatedAt'] = new Date();
+
+      // Move over default properties
+      // This is for when new properties are added
+      for(var key in defaults) {
+        s[key] = s[key] || defaults[key];
+      }
+
       return s;
     },
     reset: function() {
@@ -438,11 +486,87 @@ $(function() {
       }
     },
     saveCookies: function() {
-      var cookie = JSON.stringify(this.state());
+        var cookie = JSON.stringify(this.state());
       Cookies.set("fi-post", cookie);
     },
     clearCookies: function() {
       Cookies.remove("fi-post");
+    },
+
+    env: function() {
+      return (window.location.origin.indexOf("minafi") !== -1) ? "production" : "development";
+    },
+    calculatedValues: function() {
+      return [
+        'savingsRate',
+        'impliedYearlySpending',
+        'impliedRetirementStashNeeded',
+        'yearsUntilFiOnlySR',
+        'retirementYearlySpending',
+        'fiStash',
+        'missingRetirementIncome',
+        'yearsUntilFi',
+        'fiPhase',
+        'fiAge',
+        'impliedSpendingReductionYearlySavings',
+        'impliedSpendingReductionYearlySavingsTotal',
+        'impliedSpendingReductionYearlySpending',
+        'spendingReductionStash',
+        'spendingReductionYearsUntilFi',
+        'spendingReductionYearsEarlier',
+        'spendingReductionStashDifference',
+        'yearsOfFiNoInvestment',
+        'fiTotalSpending',
+        'investmentYearsDifference',
+        'neededMarketRate',
+        'retirementYearlySpendingWithInflation',
+        'retirementYear',
+        'eirIncomeAfterRetirement',
+        'earnInRetirementStashNeeded',
+        'eirTimeUntilFi',
+        'eirTimeSooner',
+        'payIncreaseTimeUntilFi',
+        'payIncreaseSooner',
+        'allSoonerYears',
+        'allSoonerYearsEarly',
+        'allSoonerPercent'
+      ];
+    },
+    resultState: function() {
+      var s = this.state();
+      this.calculatedValues().forEach(function(key) {
+        if(typeof(this[key]) !== undefined) {
+          s[key] = this[key];
+        }
+      }.bind(this));
+      return s;
+    },
+    // Number of values they changed
+    changedValues: function(result) {
+      var changedItems = []
+      this.allSaveableValues().forEach(function(key) {
+        if((key !== "uid") && (this[key] != defaults[key])) {
+          changedItems.push(key);
+        }
+      }.bind(this));
+
+      return changedItems;
+    },
+    updateFirebase: function() {
+      if(!window.user) { return false; }
+
+      if(!this.database) {
+        this.database = firebase.database();
+      }
+      var result = this.resultState(),
+          changedItems = this.changedValues(result);
+      if(changedItems.length >= 2) {
+        this.database.ref("fipost/"+this.env()+'/'+window.user.uid)
+                .set(result);
+      }
+    },
+    deleteFirebase: function() {
+      this.database.ref("fipost/"+this.env()+'/'+window.user.uid).remove();
     }
   });
 
@@ -478,14 +602,10 @@ $(function() {
     origin: 'left', distance: '0px', duration: 1000
   };
 
-  ['adam', 'gwen', 'erdude'].forEach(function(profile) {
+  ['adam', 'gwen', 'erdude', 'darrow'].forEach(function(profile) {
     sr.reveal('#fi-profile--'+profile, revealOptions);
     jQuery('#fi-profile--'+profile).css("visibility", "visible");
   })
-
-
-
-
 
 
   $('.profile-toggle').on('click', function(e) {
@@ -506,5 +626,5 @@ $(function() {
     var message = $(this).closest('.card').find('.fi-share--message').text();
     var url = "https://www.facebook.com/sharer/sharer.php?u=https://minafi.com/fi/&display=popup&ref=plugin&src=share_button&quote="+message;
     $(this).attr('href', url);
-  })
+  });
 });

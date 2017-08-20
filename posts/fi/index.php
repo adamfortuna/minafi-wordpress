@@ -1,6 +1,7 @@
 <?php
   $theme_path = get_template_directory_uri();
 ?>
+<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
 <script src="<?php echo $theme_path; ?>/posts/fi/js/d3.js"></script>
 <script src="<?php echo $theme_path; ?>/posts/fi/js/finance.js"></script>
 <script src="<?php echo $theme_path; ?>/assets/js/tangle.bundle.js"></script>
@@ -66,13 +67,13 @@
 	</p>
 	<p>This is calculated with the following formula:</p>
 	<p class="text-center">
-	  (<span  class="tangle--dynamic" data-var="yearlySavings" data-format="currency"></span> / <span class="tangle--dynamic"data-var="yearlyIncome" data-format="currency"></span>) * 100% = <span class="tangle--dynamic"data-var="savingsRate" data-format="percent"></span> Savings Rate
+	  (<span  class="tangle--dynamic" data-var="yearlySavings" data-format="currency"></span> / <span class="tangle--dynamic" data-var="yearlyIncome" data-format="currency"></span>) * 100% = <span class="tangle--dynamic" data-var="savingsRate" data-format="percent"></span> Savings Rate
 	</p>
 	<p class="lead fi--info">
-		<i>Adam Says:</i> Nothing filled out here will be sent to any server - it's just for you. These values <span data-var="storeCookies" class="TKToggle TKSwitch">
-				<span>will NOT be stored in a cookie</span>
-				<span>will be stored in a cookie</span>
-			</span> in your browser, so if you revisit this page, you
+		<i>Adam Says:</i> These values <span data-var="storeCookies" class="TKToggle TKSwitch tooltippable" title="All stats are anonymous - no IP or personally identiable information.">
+				<span>will NOT be stored in a cookie in your browser and NOT be anonymously aggregated</span>
+				<span>will be stored in a cookie in your browser and be anonymously aggregated</span>
+			</span>. If you revisit this page, you
 			<span data-var="storeCookies" class="TKToggle TKSwitch">
 				<span>will NOT</span>
 				<span>will</span>
@@ -150,11 +151,18 @@
 	<h3>Let's Talk More About You</h3>
 	<p class="lead"></p>
   <p>
-    I'm <span data-var="age" class="FIAdjustableNumber" data-min="8" data-max="100"> years old</span>
+    I'm a <span data-var="age" class="FIAdjustableNumber" data-min="8" data-max="100"> years old</span>
+    <span data-var="gender" class="MultiToggle TKSwitch">
+			<span>man</span>
+			<span>woman</span>
+      <span class="tooltippable" data-placement="top" title="Including non-binary, gender fluid, and genderqueer">trans*</span>
+      <span>other</span>
+      <span>undisclosed</span>
+		</span>
 		and have a total combined savings of
 		$<span data-var="networth" data-format="currency" class="tooltippable TKNumberField" data-min="0" data-max="10000000" data-toggle="tooltip" data-placement="top" title="For simplicity sake, we'll just look at your savings - 401k, Roth IRA, brokerage and any other currency assets."></span>.
 		Right now, I'm
-		<span data-var="phase" class="TKToggle TKSwitch">
+		<span data-var="phase" class="MultiToggle TKSwitch">
 			<span>retired</span>
 			<span>saving money for retirement</span>
       <span>paying off debt</span>
@@ -226,7 +234,7 @@
   </div>
 </div>
 
-<p><b>It's possible for people to be FI but continue working</b> – you see it all the time. From CEOs of companies to quiet employees who have saved huge amounts to bloggers talking about retirement (well, some – not me). There are also people who are retired, but who may need to return to work someday down the line when their savings run out, or if social security fails somewhere down the line.</p>
+<p><b>It's possible for people to be FI but continue working</b> – you see it all the time. From CEOs of companies to quiet employees who have saved huge amounts to bloggers talking about retirement (well, some – not me). There are also people who are retired, but who may need to return to work someday down the line when their savings run out, or if social security fails.</p>
 
 <p>To be FIRE (financially independent + retired) is an aim with <b>the goal of minimizing stress from external sources</b>. It does rely on stock markets to perform in a similar pattern to the last 100+ years, but aside from that, it's not based on too many assumptions.</p>
 
@@ -242,7 +250,7 @@
   <h3>Withdrawal Rate Calculator</h3>
   <p>
     This assumes that you'll spend
-    <span data-var="retirementSpendingPercent" data-format="percent" class="FIAdjustableNumber tooltippable" data-step="0.01" data-min="0" data-max="2" data-toggle="tooltip" title="If you're not sure, stick to 80% here."></span>
+    <span data-var="retirementSpendingPercent" data-format="percent" class="FIAdjustableNumber tooltippable" data-step="0.01" data-min="0" data-max="2" data-toggle="tooltip" data-placement="bottom" title="If you're not sure, stick to 80% here."></span>
     of your current spending of about
     $<span data-var="yearlySpending" data-format="currency" class="TKNumberField" data-min="0" data-max="10000000">/yr</span>
     in retirement, which would be
@@ -503,7 +511,21 @@
 <?php include('profiles/adam.php'); ?>
 <?php include('profiles/gwen.php'); ?>
 <?php include('profiles/erdude.php'); ?>
+<?php include('profiles/darrow.php'); ?>
 
+<h3 class="mt-3 pt-3">Common Similarities In This Group</h3>
+
+<p>When reading over everyones answers to these questions, a few themes start to stand out real quick.</p>
+
+<h4>They avoided lifestyle inflation</h4>
+<p>Nearly everyone mentioned <a href="https://minafi.com/avoiding-the-lifestyle-inflation-trap/" target="_blank">avoiding lifestyle inflation</a> as an essential component. If your expenses increase with your income, you'll never save more. All of the numbers in this post assume that your expenses do <i>not</i> go up. If you spend more each year, you'll need more money to retire, and it'll take you more time to accumulate it.</p>
+
+
+<h4>They didnt start with everything</h4>
+<p>No one I talked to got lucky with the lottery, an inheritance, a business acquisition or a lucky Bitcoin investment that accounted for a sudden retirement. There are some out there who hit the jackpot, but for most people it's going to take hard work and time.</p>
+
+<h4>They spent on areas that matter to them</h4>
+<p>Going overboard on saving can make you miserable. Focus on spending money on things that will what bring joy into your life and makes you and those around you happy. This may seem at odds with lifestyle inflation, but it's important to strike a balance between these two.</p>
 
 <a name="part-8"></a>
 <h2 class="pt-3">Part 8: Where can I learn more?</h2>
@@ -568,10 +590,6 @@
 
 <h4><a href="https://forum.mrmoneymustache.com/" target="_blank">Mr. Money Mustache Community</a></h4>
 <p>While Bogleheads leans towards investing, the MMM community ranges from "do it yourself" to "real estate investing" to "taxes" and "entrepreneurship".</p>
-
-
-
-
 
 
 
