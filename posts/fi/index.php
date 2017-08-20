@@ -230,6 +230,7 @@
 </p>
 
 <div class="card container container-wide graph--fi-date--container mb-3 card--info">
+  <h3>Retirement Age Calculator</h3>
 	<div class="graph graph--fi-date"></div>
 	<p class="lead fi--info">
 		<i>Adam Says:</i> This assumes you're
@@ -242,14 +243,16 @@
     and save
     $<span data-var="yearlySavings" data-format="currency" class="tooltippable TKNumberField" data-min="0" data-max="10000000" data-toggle="tooltip" title="Include 401k + IRA + Roth + checking + brokerage savings.">/yr</span>.
 
-    The markets will return <span data-var="marketGrowth" class="FIAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0.001" data-format="percentDecimal" class="tangle--dynamic">/yr investment growth</span> you'll use a
-    <span data-var="wr" class="FIAdjustableNumber" data-step="0.001" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic"> WR</span> and you're hoping to retire when you're <span data-var="goalReAge" class="FIAdjustableNumber" data-min="8" data-max="100"> years old</span>.
+    <span data-var="marketGrowth" class="FIAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0.001" data-format="percentDecimal" class="tangle--dynamic">/yr investment growth</span> and you'll use a
+    <span data-var="wr" class="FIAdjustableNumber" data-step="0.001" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic"> WR</span>.
+
+    Retire at <span data-var="goalReAge" class="FIAdjustableNumber" data-min="8" data-max="100"> years old</span>, spending <span data-var="retirementYearlySpending" data-format="currency" class="tangle--dynamic"></span>/yr, about
+
+    <span data-var="retirementSpendingPercent" data-format="percent" class="FIAdjustableNumber tooltippable" data-step="0.01" data-min="0" data-max="3" data-toggle="tooltip" data-placement="bottom" title="If you're not sure, stick to 80% here."></span> of current spending.
 	</p>
 </div>
 
-<p>The horizontal line is how much you'd need to be financially independent given your current numbers. The
-
-
+<p>The horizontal line in this graph is how much you'd need to be financially independent given your current numbers. The other line is your net worth at each age. The point where these lines intersect is your FI Age -- the age in which you'd have enough to be financially independent.</p>
 
 <p>Financial Independence (FI) is different from retirement. Think of financial independence as the amount of money you'd need in order to never work again. Retirement (RE), on the other hand, is the act of not working.</p>
 
