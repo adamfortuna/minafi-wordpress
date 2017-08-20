@@ -2,10 +2,13 @@
   $theme_path = get_template_directory_uri();
 ?>
 <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+<script src="<?php echo $theme_path; ?>/posts/fi/js/firebase.js"></script>
 <script src="<?php echo $theme_path; ?>/posts/fi/js/d3.js"></script>
 <script src="<?php echo $theme_path; ?>/posts/fi/js/finance.js"></script>
 <script src="<?php echo $theme_path; ?>/assets/js/tangle.bundle.js"></script>
+<script src="<?php echo $theme_path; ?>/posts/fi/js/tangle.js"></script>
 <script src="<?php echo $theme_path; ?>/posts/fi/js/fi.js"></script>
+<script src="<?php echo $theme_path; ?>/posts/fi/js/dom.js"></script>
 <script src="<?php echo $theme_path; ?>/posts/fi/js/sr.js"></script>
 
 <p>Let's talk about financial independence and early retirement! These phrases alone have a lot of weight associated with them, and you might have an immediate gut response to just hearing these terms.</p>
@@ -105,10 +108,6 @@
 
 
 <a name="part-2"></a>
-<blockquote>
-  The art is not in making money, but in keeping it.
-</blockquote>
-
 <h2>Part 2: How much should I save?</h2>
 <p>What floors me about the above chart is that a 10% SR, is often sighted as a "good" savings rate. In practice, it will take you <b>41 years</b> to save up enough to retire, and that's only if your spending stays the same! If your income and spending go up, it'll take even longer.</p>
 
@@ -404,6 +403,10 @@
 
 <p>The less you need, the less you'll need to save. If you reduce your spending to $0/yr, you'd need $0 to retire. That's likely unrealistic, but the less you spend, the less you need.</p>
 
+<blockquote>
+  The art is not in making money, but in keeping it.
+</blockquote>
+
 <p>Taking steps to reduce your lifestyle can pay off by reducing the time you'll be required to work to maintain it. Be careful not to go overboard though. Build a life you want, then save for it.</p>
 
 <div class="card container container-slim card--info">
@@ -519,7 +522,6 @@
 
 <h4>They avoided lifestyle inflation</h4>
 <p>Nearly everyone mentioned <a href="https://minafi.com/avoiding-the-lifestyle-inflation-trap/" target="_blank">avoiding lifestyle inflation</a> as an essential component. If your expenses increase with your income, you'll never save more. All of the numbers in this post assume that your expenses do <i>not</i> go up. If you spend more each year, you'll need more money to retire, and it'll take you more time to accumulate it.</p>
-
 
 <h4>They didnt start with everything</h4>
 <p>No one I talked to got lucky with the lottery, an inheritance, a business acquisition or a lucky Bitcoin investment that accounted for a sudden retirement. There are some out there who hit the jackpot, but for most people it's going to take hard work and time.</p>
