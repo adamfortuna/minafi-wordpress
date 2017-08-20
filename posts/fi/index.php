@@ -8,17 +8,10 @@
 ?>
 <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
 
-<? if(false && in_array($_SERVER['REMOTE_ADDR'], $whitelist)) { ?>
-<script src="<?php echo $theme_path; ?>/posts/fi/js/firebase.js"></script>
-<script src="<?php echo $theme_path; ?>/posts/fi/js/d3.js"></script>
-<script src="<?php echo $theme_path; ?>/posts/fi/js/finance.js"></script>
-<script src="<?php echo $theme_path; ?>/assets/js/tangle.bundle.js"></script>
-<script src="<?php echo $theme_path; ?>/posts/fi/js/tangle.js"></script>
-<script src="<?php echo $theme_path; ?>/posts/fi/js/fi.js"></script>
-<script src="<?php echo $theme_path; ?>/posts/fi/js/dom.js"></script>
-<script src="<?php echo $theme_path; ?>/posts/fi/js/sr.js"></script>
-<? } else { ?>
+<? if(in_array($_SERVER['REMOTE_ADDR'], $whitelist)) { ?>
 <script src="<?php echo $theme_path; ?>/assets/dev/fi.bundle.js"></script>
+<? } else { ?>
+<script src="<?php echo $theme_path; ?>/assets/js/fi.bundle.js"></script>
 <?php } ?>
 
 <p>Let's talk about financial independence and early retirement! These phrases alone have a lot of weight associated with them, and you might have an immediate gut response to just hearing these terms.</p>
@@ -63,7 +56,7 @@
 <h3>This Article Is Interactive!</h3>
 <p>
   This whole article is a bit of an experiment. Whenever you see
-  <span data-var="exampleClick" class="MultiToggle TKSwitch">
+  <span data-var="exampleClick" class="MultiToggle TKSwitch with--tip">
 		<span>green dotted unlined text</span>
 		<span>yes! just like that!</span>
 	</span>, that indicates this is a place that needs your input! Just hover over it and it'll tell you what to do. <b>The content of this post will change based on your input</b>. Consider it an old-school choose your own adventure blog post like you read as a kid. Give the one in this paragraph a shot. Also consider these <i>estimates</i> rather than hard numbers.
@@ -76,9 +69,9 @@
 	<p class="lead">Try changing the underlined values and see what happens!</p>
 	<p>
 		My yearly after-tax income is
-    $<span data-var="yearlyIncome" data-format="currency" class="TKNumberField tooltippable" data-min="0" data-max="10000000" data-toggle="tooltip" title="Use take home pay + 401k contribution, and subtract taxes. This is the total amount that you have to play with after taxes."></span>
+    $<span data-var="yearlyIncome" data-format="currency" class="TKNumberField tooltippable with--tip" data-min="0" data-max="10000000" data-toggle="tooltip" title="Use take home pay + 401k contribution, and subtract taxes. This is the total amount that you have to play with after taxes."></span>
     and I save
-    $<span data-var="yearlySavings" data-format="currency" class="tooltippable TKNumberField" data-min="0" data-max="10000000" data-toggle="tooltip" data-placement="below" title="Include 401k + IRA + Roth + checking + brokerage savings."></span>
+    $<span data-var="yearlySavings" data-format="currency" class="tooltippable TKNumberField" data-min="0" data-max="10000000" data-toggle="tooltip" title="Include 401k + IRA + Roth + checking + brokerage savings."></span>
     total for retirement – including 401k and all other means. Using these figures, my savings rate (SR) will be about
     <span data-var="savingsRate" data-format="percent" class="tangle--dynamic"></span>.
 	</p>

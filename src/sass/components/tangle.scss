@@ -28,19 +28,21 @@
 .MultiToggle {
 	position: relative;
 	display: inline-block;
-	&:before {
-		content: "click";
-    display: none;
-    position: absolute;
-    top: -16px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 12px;
-	}
-
-	&:hover {
+	&.with--tip {
 		&:before {
-			display: block;
+			content: "click";
+	    display: none;
+	    position: absolute;
+	    top: -16px;
+	    left: 50%;
+	    transform: translateX(-50%);
+	    font-size: 12px;
+		}
+
+		&:hover {
+			&:before {
+				display: block;
+			}
 		}
 	}
 }
@@ -88,20 +90,22 @@
 .TKNumberField {
 	position: relative;
 	display: inline-block;
-	&:before {
-		content: "change";
-    display: none;
-    position: absolute;
-		color: $financial-dark;
-    top: -23px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 12px;
-	}
-
-	&:hover {
+	&.with--tip {
 		&:before {
-			display: block;
+			content: "change";
+	    display: none;
+	    position: absolute;
+			color: $financial-dark;
+	    top: -23px;
+	    left: 50%;
+	    transform: translateX(-50%);
+	    font-size: 12px;
+		}
+
+		&:hover {
+			&:before {
+				display: block;
+			}
 		}
 	}
 }

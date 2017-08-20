@@ -11883,7 +11883,7 @@ span.entry-subtitle {
 .MultiToggle {
   position: relative;
   display: inline-block; }
-  .MultiToggle:before {
+  .MultiToggle.with--tip:before {
     content: "click";
     display: none;
     position: absolute;
@@ -11891,7 +11891,7 @@ span.entry-subtitle {
     left: 50%;
     transform: translateX(-50%);
     font-size: 12px; }
-  .MultiToggle:hover:before {
+  .MultiToggle.with--tip:hover:before {
     display: block; }
 
 /* TKAdjustableNumber */
@@ -11930,7 +11930,7 @@ span.entry-subtitle {
 .TKNumberField {
   position: relative;
   display: inline-block; }
-  .TKNumberField:before {
+  .TKNumberField.with--tip:before {
     content: "change";
     display: none;
     position: absolute;
@@ -11939,7 +11939,7 @@ span.entry-subtitle {
     left: 50%;
     transform: translateX(-50%);
     font-size: 12px; }
-  .TKNumberField:hover:before {
+  .TKNumberField.with--tip:hover:before {
     display: block; }
 
 .TKNumberFieldInput {
