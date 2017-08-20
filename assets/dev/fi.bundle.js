@@ -2292,14 +2292,15 @@ $(function() {
     },
 
     calcFiPhase: function() {
-      if(this.yearsUntilFi == 0) {
+      var calcYearsUntilFi = this.goalReAge - this.age,
+          diff = this.yearsUntilFi - calcYearsUntilFi;
+
+      if(diff <= -1) {
         return 0;
-      } else if(this.yearsUntilFi < 10) {
+      } else if(diff > -1 && diff < 1) {
         return 1;
-      } else if(this.yearsUntilFi < 20) {
+      } else if(diff >= 1) {
         return 2;
-      } else {
-        return 3;
       }
     },
 
@@ -2670,7 +2671,7 @@ function highlightSr(nRate, nMarketRate, nWr) {
   initial.transition()
      .duration(1000)
        .style("left", x + (margin.left/2) + "px")
-       .style("top", (y-50)+"px");
+       .style("top", (y+10)+"px");
 }
 
 $(function() {

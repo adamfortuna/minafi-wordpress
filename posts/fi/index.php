@@ -68,7 +68,7 @@
 	<h3>Savings Rate Calculator</h3>
 	<p class="lead">Try changing the underlined values and see what happens!</p>
 	<p>
-		My yearly after-tax income is
+		My yearly after-tax income (w/401k included) is
     $<span data-var="yearlyIncome" data-format="currency" class="TKNumberField tooltippable with--tip" data-min="0" data-max="10000000" data-toggle="tooltip" title="Use take home pay + 401k contribution, and subtract taxes. This is the total amount that you have to play with after taxes."></span>
     and I save
     $<span data-var="yearlySavings" data-format="currency" class="tooltippable TKNumberField" data-min="0" data-max="10000000" data-toggle="tooltip" title="Include 401k + IRA + Roth + checking + brokerage savings."></span>
@@ -95,6 +95,7 @@
 <p>When working towards FI and Retirement, <b>your savings rate is one of the most important numbers</b>. The more you save each year, the faster you'll be able to retire – that's obvious – but <b>how much faster</b>? See where your <span class="tangle--dynamic" data-var="savingsRate" data-format="percent"></span> SR falls on the following chart:</p>
 
 <div class="card container container-wide graph--sr--container mb-3 card--info">
+  <h3>Years to FI/retirement by Savings Rate Calculator</h3>
 	<div class="graph graph--sr"></div>
 	<p class="lead fi--info">
 		<i>Adam Says:</i> Assumptions abound! This assumes $0 current savings, you save what you don't spend, <span data-var="marketGrowth" class="FIAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0.001" data-format="percentDecimal" class="tangle--dynamic">/yr investment growth</span>, <span data-var="wr" class="FIAdjustableNumber" data-step="0.001" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic"> WR</span>, and that your spending will be the same when you retire. If you don't know what these terms mean, don't worry -- we'll get to them.
@@ -118,17 +119,13 @@
 <h2>Part 2: How much should I save?</h2>
 <p>What floors me about the above chart is that a 10% SR, is often sighted as a "good" savings rate. In practice, it will take you <b>41 years</b> to save up enough to retire, and that's only if your spending stays the same! If your income and spending go up, it'll take even longer.</p>
 
-<p>If you double that savings rate to 20% though, you can retire in 38 years. That's 25% time working for 10% of your salary.</p>
+<p>If you double that savings rate to 20% though, you can retire in 30 years. That's 27% less time working for 10% of your salary.</p>
 
 <blockquote>
   <p>If you want to retire before you're 65, the common wisdom "save 10% of your income" is terrible advice!</p>
 </blockquote>
 
-<p>If you're hoping to be financially independent before collecting social security, you'll need to save more. Let's look into ways to reduce this number. These estimates are making a <b>LOT</b> of assumptions. We can refine this a little, but for that, I'm going to need your help – in the form of answering a few more questions.</p>
-
-<p>
-  You could be reading this and think there's no way you could save any money. I know when I was growing up, at times my mom was scrapping to make ends meet, and saving was the last thing on her mind. For those reading in that situation, I empathize with but struggle to find the best advice. You know your situation better than I ever could, as well as what you could do to make it better.
-</p>
+<p>If you're hoping to be financially independent before collecting social security, you'll need to save more than 10%. Let's look into ways to reduce this number. These estimates are making a <b>LOT</b> of assumptions. We can refine this a little, but for that, I'm going to need your help – in the form of answering a few more questions.</p>
 
 <div class="container text-center pb-3 mb-3">
   <img src="https://minafi.com/wp-content/uploads/2017/08/callistus-ndemo-157554.jpg" alt="hiking">
@@ -147,6 +144,10 @@
 <p>Instead, make changes that make your life better, and that you look forward to week after week and year after year. If you're spending money on something that brings that kind of joy into your life, to me that's well worth it.</p>
 
 <p>Find a way to enjoy saving the same way you'd enjoy a hike. Make it effortless, make it relaxing, make it feel right.</p>
+
+<p>
+  You could be reading this and think there's no way I could save up <span class="tangle--dynamic" data-var="impliedRetirementStashNeeded" data-format="currency"></span>. I know when I was growing up, at times my mom was scrapping to make ends meet, and saving was the last thing on her mind. For those reading in that situation, I empathize with you, but struggle to find the best advice. You know your situation better than I ever could, as well as what you could do to make it better.
+</p>
 
 <a name="part-3"></a>
 <h2>Part 3: How much do I need?</h2>
@@ -208,16 +209,29 @@
 
 	<div class="BlockSwitch" data-var="fiPhase">
 		<div class="alert alert-success" role="alert">
-			<strong>Well done!</strong> You successfully made it to FI! Why not try setting a stretch goal? Turn down the stock market rate of <span data-var="marketGrowth" class="FIAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic">/yr</span> or turn the withdrawal rate down even further below <span data-var="wr" class="FIAdjustableNumber" data-step="0.001" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic"></span>.
+			<h3>Ahead of Schedule</h3>
+      <p>You're way on track to be FI by your goal retirement date. Why not try setting a stretch goal for this post? Turn down the stock market rate of <span data-var="marketGrowth" class="FIAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic">/yr</span> or turn the withdrawal rate down even further below <span data-var="wr" class="FIAdjustableNumber" data-step="0.001" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic"></span>.</p>
 		</div>
 		<div class="alert alert-info" role="alert">
-		  <strong>Keep going!</strong> You have less than 10 years of working ahead of you at your current pace. There are a bunch of way you can speed this up that we'll look into in this post.
+		  <h3>Close but Calculated</h3>
+      <p>
+        Your FI and RE dates are within a year of each other - which means you're right on track! I calculate you'll be FI at age
+        <span class="tangle--dynamic" data-var="fiAge" data-format="years"></span>
+        so if you retire at age
+        <span class="tangle--dynamic" data-var="goalReAge" data-format="years"></span>
+        you should be good shape.
+      </p>
 		</div>
 		<div class="alert alert-warning" role="alert">
-		  <strong>You're Getting There</strong> You have less than 20 years of working ahead of you at your current pace. Small changes can still make a huge dent in this number.
-		</div>
-		<div class="alert alert-danger" role="alert">
-		  <strong>Time to Make a Change?</strong> You have more than 20 years of working ahead of you at your current pace. If you want to reach financial independence sooner, you're going to need to make some major changes.
+		  <h3>Are You Retiring Too Soon?</h3>
+      <p>
+        You want to retire at age
+        <span class="tangle--dynamic" data-var="goalReAge" data-format="years"></span>
+        but you're currently on track to be FI at age
+        <span class="tangle--dynamic" data-var="fiAge" data-format="years"></span>.
+
+        If you're expecting some additional funds or growth outside of what we've asked about, you might be in a good position. If not, I'd encourage you to check out why there is a difference between these two.
+      </p>
 		</div>
 	</div>
 

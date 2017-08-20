@@ -214,7 +214,7 @@ function highlightSr(nRate, nMarketRate, nWr) {
   initial.transition()
      .duration(1000)
        .style("left", x + (margin.left/2) + "px")
-       .style("top", (y-50)+"px");
+       .style("top", (y+10)+"px");
 }
 
 $(function() {
