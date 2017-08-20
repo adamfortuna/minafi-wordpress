@@ -12085,6 +12085,10 @@ span.alert {
   border-radius: 2px;
   pointer-events: none; }
 
+.graph--fi--wr-line {
+  stroke: #6ec178;
+  stroke-width: 2px; }
+
 .fi--profile h4 {
   margin-bottom: 8px; }
 

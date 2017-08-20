@@ -181,6 +181,8 @@
 		<span data-var="retirementSpendingPercent" data-format="percent" class="FIAdjustableNumber tooltippable" data-step="0.01" data-min="0" data-max="3" data-toggle="tooltip" data-placement="bottom" title="If you're not sure, stick to 80% here."></span> of that (equal to about <span data-var="retirementYearlySpending" data-format="currency" class="tangle--dynamic"></span>/yr).
   </p>
 
+  <p>I'm hoping to retire when I'm <span data-var="goalReAge" class="FIAdjustableNumber" data-min="8" data-max="100"> years old</span>.
+
 	<hr style="width: 96%;">
 
 	<h4>Minafi's Take On Your Finances</h4>
@@ -226,6 +228,28 @@
 
 <p>This is where things start to get fun! There's now enough information to know a rough estimate of when you'd be <b>financially independent</b> – in <span class="tangle--dynamic" data-var="yearsUntilFi" data-format="years"></span> at age <span class="tangle--dynamic" data-var="fiAge" data-format="years"></span>. Let's dive into how we got to this number.
 </p>
+
+<div class="card container container-wide graph--fi-date--container mb-3 card--info">
+	<div class="graph graph--fi-date"></div>
+	<p class="lead fi--info">
+		<i>Adam Says:</i> This assumes you're
+    <span data-var="age" class="FIAdjustableNumber" data-min="8" data-max="100"> years old</span>
+    with
+    $<span data-var="networth" data-format="currency" class="TKNumberField" data-min="0" data-max="10000000"></span> in savings.
+
+    You spend
+    $<span data-var="yearlySpending" data-format="currency" class="TKNumberField" data-min="0" data-max="10000000">/yr</span>
+    and save
+    $<span data-var="yearlySavings" data-format="currency" class="tooltippable TKNumberField" data-min="0" data-max="10000000" data-toggle="tooltip" title="Include 401k + IRA + Roth + checking + brokerage savings.">/yr</span>.
+
+    The markets will return <span data-var="marketGrowth" class="FIAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0.001" data-format="percentDecimal" class="tangle--dynamic">/yr investment growth</span> you'll use a
+    <span data-var="wr" class="FIAdjustableNumber" data-step="0.001" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic"> WR</span> and you're hoping to retire when you're <span data-var="goalReAge" class="FIAdjustableNumber" data-min="8" data-max="100"> years old</span>.
+	</p>
+</div>
+
+<p>The horizontal line is how much you'd need to be financially independent given your current numbers. The
+
+
 
 <p>Financial Independence (FI) is different from retirement. Think of financial independence as the amount of money you'd need in order to never work again. Retirement (RE), on the other hand, is the act of not working.</p>
 

@@ -56,4 +56,9 @@ $(function() {
     var url = "https://www.facebook.com/sharer/sharer.php?u=https://minafi.com/fi/&display=popup&ref=plugin&src=share_button&quote="+message;
     $(this).attr('href', url);
   });
+
+
+  // Create the fi age Graph
+  window.fiGraph = new FiGraph('.graph--fi-date');
+  window.fiGraph.setup();
 });

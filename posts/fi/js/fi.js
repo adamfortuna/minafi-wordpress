@@ -19,7 +19,8 @@ $(function() {
     monthlyIncome: 0,
     retirementMonthlyIncome: 0,
     payIncreasePercent: 0.02,
-    inflationRate: 0.03
+    inflationRate: 0.03,
+    goalReAge: 50
   };
 
   var tangle = new Tangle(element, {
@@ -93,9 +94,7 @@ $(function() {
       if(this.savingsRate > 0) {
         setTimeout(function() {
           highlightSr(this.savingsRate, this.marketGrowth, this.wr);
-          if(this.storeCookies) {
-            this.updateFirebase();
-          }
+          window.fiGraph.update(this.resultState());
         }.bind(this), 50);
       }
       if(this.storeCookies) {
@@ -201,7 +200,8 @@ $(function() {
         'retirementMonthlyIncome',
         'payIncreasePercent',
         'inflationRate',
-        'gender'
+        'gender',
+        'goalReAge'
       ];
     },
     state: function() {

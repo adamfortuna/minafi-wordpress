@@ -61,8 +61,9 @@ gulp.task('js:fi:concat', function () {
     'src/js/TangleKit/TangleKit.js',
     'posts/fi/js/tangle.js',
     'posts/fi/js/fi.js',
-    'posts/fi/js/dom.js',
-    'posts/fi/js/sr.js'
+    'posts/fi/js/graph-sr.js',
+    'posts/fi/js/graph-fi-date.js',
+    'posts/fi/js/dom.js'
   ];
 
   return gulp.src(files)
