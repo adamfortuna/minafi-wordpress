@@ -582,6 +582,12 @@
 
 <p>There are a few amazing books on the topic of financial independence and early retirement that go into these topics with much more eloquence than and depth than I could ever explore. If you're curious to learn more, these are all amazing resources.</p>
 
+<h3>Minafi Email List</h3>
+<p>Here at Minafi, I write about the intersection of minimalism, mindfulness and financial independence here at Minafi. I also try to release a new interactive article every few months. Sign up to be notified about all posts, or just the next interactive one.</p>
+
+<div class="card container container-slim p-3 my-3">
+<?php include(get_template_directory().'/partials/email.php'); ?>
+</div>
 
 <h3>Books</h3>
 <p>Here are some of the top sources in different mediums to learn about financial independence</p>
@@ -642,7 +648,6 @@
 <p>While Bogleheads leans towards investing, the MMM community ranges from "do it yourself" to "real estate investing" to "taxes" and "entrepreneurship".</p>
 
 <h3>Calculators</h3>
-
 <p>
   The graphs in this post are only a starting point for understanding your financial future. The best tool I've found for digging deeper into these numbers and incorporating many more variables is
   <a href="https://track.flexlinkspro.com/a.ashx?foid=1106765.137967093&foc=1&fot=1001&fos=1" rel="nofollow" target="_blank" class="tooltippable" title="This is an affiliate link, but it is a service I use.">Personal Capital<sup>*</sup></a><img src="https://track.flexlinkspro.com/i.ashx?foid=1106765.137967093&fot=1001&foc=1&fos=1" border="0" width="0" height="0" style="opacity: 0;"/>. They have a Retirement Planner tool that I've been using for years to understand my own finances. Check them out if you're hoping to dig deeper into graphs.

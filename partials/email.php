@@ -17,9 +17,10 @@
       <ul class="list-unstyled">
         <li class="float-left"><input type="checkbox" value="1" name="group[269][1]" id="mce-group[269]-269-0" checked="checked"> <label for="mce-group[269]-269-0">Minimalism</label></li>
         <li class="float-left pl-3"><input type="checkbox" value="2" name="group[269][2]" id="mce-group[269]-269-1" checked="checked"> <label for="mce-group[269]-269-1">Mindfulness</label></li>
-        <li class="float-left"><input type="checkbox" value="4" name="group[269][4]" id="mce-group[269]-269-2" checked="checked"> <label for="mce-group[269]-269-2">Financial Independence</label></li>
+        <li class="float-left pl-3"><input type="checkbox" value="4" name="group[269][4]" id="mce-group[269]-269-2" checked="checked"> <label for="mce-group[269]-269-2">Financial Independence</label></li>
         <li class="float-left pl-3"><input type="checkbox" value="8" name="group[269][8]" id="mce-group[269]-269-3" checked="checked"> <label for="mce-group[269]-269-3">Goals</label></li>
-        <li class="float-left"><input type="checkbox" value="16" name="group[269][16]" id="mce-group[269]-269-4" checked="checked"> <label for="mce-group[269]-269-4">Personal Stories</label></li>
+        <li class="float-left pl-3"><input type="checkbox" value="16" name="group[269][16]" id="mce-group[269]-269-4" checked="checked"> <label for="mce-group[269]-269-4">Personal Stories</label></li>
+        <li class="float-left pl-3"><input type="checkbox" value="32" name="group[269][32]" id="mce-group[269]-269-5" checked="checked"> <label for="mce-group[269]-269-5">Interactive Posts</label></li>
       </ul>
     </div>
   </div>
