@@ -40,7 +40,7 @@ var svg,
   margin = {
     top: 20,
     left: 50,
-    right: 120,
+    right: 40,
     bottom: 30
   },
   options = {
@@ -51,6 +51,11 @@ var svg,
   years,
   bisectSr = d3.bisector(function(d) { return d.rate; }).left,
   initial, tooltip;
+
+if(options.width > window.getWidth()) {
+  options.width = window.getWidth();
+  margin.left = 40;
+}
 
 function createGraph() {
   // Define the div for the tooltip
@@ -113,11 +118,23 @@ function createGraph() {
       var x0 = xScale.invert(d3.mouse(this)[0]),
           i = bisectSr(years, x0, 1),
           d0 = years[i - 1],
-          d1 = years[i],
-          year = x0 - d0.year > d1.year - x0 ? d1 : d0;
+          d1 = years[i];
+      if(!d0 || !d1) { return true; }
+      var year = x0 - d0.year > d1.year - x0 ? d1 : d0;
 
       focus.attr("transform", "translate(" + xScale(year.rate) + "," + yScale(year.years) + ")");
       focus.select("text").text(function() { return messageForYear(year); });
+
+      if(year.rate > 90) {
+        focus.select(".tooltip--svg").attr("transform", "translate(-85, -30)")
+        focus.select("text").attr("y", -20).attr("x", -80);
+      } else if(year.rate > 75) {
+        focus.select("text").attr("y", -20).attr("x", -40);
+        focus.select(".tooltip--svg").attr("transform", "translate(-45, -30)")
+      } else {
+        focus.select("text").attr("y", 0).attr("x", 20)
+        focus.select(".tooltip--svg").attr("transform", "translate(16, -10)")
+      }
       focus.select(".x-hover-line").attr("y2", options.height - margin.bottom - margin.top - yScale(year.years));
       focus.select(".y-hover-line").attr("x2",xScale(year.rate)*-1 );
     });
@@ -166,7 +183,9 @@ function highlightSr(nRate, nMarketRate, nWr) {
   xScale = d3.scaleLinear()
       .domain([1,100])
       .range([0, options.width - margin.left - margin.right]);
-  var xAxis = d3.axisBottom().scale(xScale),
+  var xTickCount = options.width / 100;
+  if(xTickCount > 20) { xTickCount = 20; }
+  var xAxis = d3.axisBottom().scale(xScale).ticks(xTickCount),
     yAxis = d3.axisLeft().scale(yScale).ticks(6); //.orient("left");
 
 

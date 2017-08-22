@@ -208,3 +208,24 @@
     }
   }
 }
+
+@media only screen and (max-width: 900px) {
+  #fi--wrapper {
+    .card {
+      padding-right: 0;
+      padding-left: 0;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+    }
+  }
+  .graph {
+    .axis--label {
+      font-size: 14px;
+    }
+    .tick {
+      font-size: 14px;
+    }
+  }
+
+}

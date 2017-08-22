@@ -2497,7 +2497,7 @@ var svg,
   margin = {
     top: 20,
     left: 50,
-    right: 120,
+    right: 40,
     bottom: 30
   },
   options = {
@@ -2508,6 +2508,11 @@ var svg,
   years,
   bisectSr = d3.bisector(function(d) { return d.rate; }).left,
   initial, tooltip;
+
+if(options.width > window.getWidth()) {
+  options.width = window.getWidth();
+  margin.left = 40;
+}
 
 function createGraph() {
   // Define the div for the tooltip
@@ -2570,11 +2575,23 @@ function createGraph() {
       var x0 = xScale.invert(d3.mouse(this)[0]),
           i = bisectSr(years, x0, 1),
           d0 = years[i - 1],
-          d1 = years[i],
-          year = x0 - d0.year > d1.year - x0 ? d1 : d0;
+          d1 = years[i];
+      if(!d0 || !d1) { return true; }
+      var year = x0 - d0.year > d1.year - x0 ? d1 : d0;
 
       focus.attr("transform", "translate(" + xScale(year.rate) + "," + yScale(year.years) + ")");
       focus.select("text").text(function() { return messageForYear(year); });
+
+      if(year.rate > 90) {
+        focus.select(".tooltip--svg").attr("transform", "translate(-85, -30)")
+        focus.select("text").attr("y", -20).attr("x", -80);
+      } else if(year.rate > 75) {
+        focus.select("text").attr("y", -20).attr("x", -40);
+        focus.select(".tooltip--svg").attr("transform", "translate(-45, -30)")
+      } else {
+        focus.select("text").attr("y", 0).attr("x", 20)
+        focus.select(".tooltip--svg").attr("transform", "translate(16, -10)")
+      }
       focus.select(".x-hover-line").attr("y2", options.height - margin.bottom - margin.top - yScale(year.years));
       focus.select(".y-hover-line").attr("x2",xScale(year.rate)*-1 );
     });
@@ -2623,7 +2640,9 @@ function highlightSr(nRate, nMarketRate, nWr) {
   xScale = d3.scaleLinear()
       .domain([1,100])
       .range([0, options.width - margin.left - margin.right]);
-  var xAxis = d3.axisBottom().scale(xScale),
+  var xTickCount = options.width / 100;
+  if(xTickCount > 20) { xTickCount = 20; }
+  var xAxis = d3.axisBottom().scale(xScale).ticks(xTickCount),
     yAxis = d3.axisLeft().scale(yScale).ticks(6); //.orient("left");
 
 
@@ -2682,7 +2701,7 @@ function FiGraph() {
   this.margin = {
     top: 20,
     left: 100,
-    right: 120,
+    right: 0,
     bottom: 30
   };
   this.options = {
@@ -2690,6 +2709,11 @@ function FiGraph() {
     width: 900
   };
   this.finance = new Finance();
+
+  if(this.options.width > window.getWidth()) {
+    this.options.width = window.getWidth();
+    this.margin.left = 75;
+  }
 
   this.messageForAge = function(age) {
     return "$" + d3.format(".3s")(age.networth) + " @ age " + age.age;
@@ -2764,8 +2788,9 @@ function FiGraph() {
         var x0 = graph.xScale.invert(d3.mouse(this)[0]),
             i = bisectAge(graph.ages, x0, 1),
             d0 = graph.ages[i - 1],
-            d1 = graph.ages[i],
-            age = x0 - d0.age > d1.age - x0 ? d1 : d0;
+            d1 = graph.ages[i];
+        if(!d0 || !d1) { return true; }
+        var age = x0 - d0.age > d1.age - x0 ? d1 : d0;
 
         focus.attr("transform", "translate(" + graph.xScale(age.age) + "," + graph.yScale(age.networth) + ")");
         focus.select("text").text(function() { return graph.messageForAge(age); }.bind(graph));
@@ -2824,9 +2849,11 @@ function FiGraph() {
     this.xScale = d3.scaleLinear()
         .domain([user.age, maxAge])
         .range([0, this.options.width - this.margin.left - this.margin.right]);
+    var xTickCount = this.options.width / 100;
+    if(xTickCount > 20) { xTickCount = 20; }
     var xAxis = d3.axisBottom()
                   .scale(this.xScale)
-                  .ticks(10)
+                  .ticks(xTickCount)
                   .tickFormat(d3.format("d"));
       yAxis = d3.axisLeft()
                 .scale(this.yScale)

@@ -2,7 +2,7 @@ function FiGraph() {
   this.margin = {
     top: 20,
     left: 100,
-    right: 120,
+    right: 0,
     bottom: 30
   };
   this.options = {
@@ -10,6 +10,11 @@ function FiGraph() {
     width: 900
   };
   this.finance = new Finance();
+
+  if(this.options.width > window.getWidth()) {
+    this.options.width = window.getWidth();
+    this.margin.left = 75;
+  }
 
   this.messageForAge = function(age) {
     return "$" + d3.format(".3s")(age.networth) + " @ age " + age.age;
@@ -84,8 +89,9 @@ function FiGraph() {
         var x0 = graph.xScale.invert(d3.mouse(this)[0]),
             i = bisectAge(graph.ages, x0, 1),
             d0 = graph.ages[i - 1],
-            d1 = graph.ages[i],
-            age = x0 - d0.age > d1.age - x0 ? d1 : d0;
+            d1 = graph.ages[i];
+        if(!d0 || !d1) { return true; }
+        var age = x0 - d0.age > d1.age - x0 ? d1 : d0;
 
         focus.attr("transform", "translate(" + graph.xScale(age.age) + "," + graph.yScale(age.networth) + ")");
         focus.select("text").text(function() { return graph.messageForAge(age); }.bind(graph));
@@ -144,9 +150,11 @@ function FiGraph() {
     this.xScale = d3.scaleLinear()
         .domain([user.age, maxAge])
         .range([0, this.options.width - this.margin.left - this.margin.right]);
+    var xTickCount = this.options.width / 100;
+    if(xTickCount > 20) { xTickCount = 20; }
     var xAxis = d3.axisBottom()
                   .scale(this.xScale)
-                  .ticks(10)
+                  .ticks(xTickCount)
                   .tickFormat(d3.format("d"));
       yAxis = d3.axisLeft()
                 .scale(this.yScale)
