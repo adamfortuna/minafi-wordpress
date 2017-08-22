@@ -27,14 +27,9 @@ $(function() {
     window.sr = ScrollReveal();
   }
 
-  var revealOptions = {
+  sr.reveal('.fi--profile-image', {
     origin: 'left', distance: '0px', duration: 1000
-  };
-
-  ['adam', 'gwen', 'erdude', 'darrow'].forEach(function(profile) {
-    sr.reveal('#fi-profile--'+profile, revealOptions);
-    jQuery('#fi-profile--'+profile).css("visibility", "visible");
-  })
+  });
 
 
   $('.profile-toggle').on('click', function(e) {

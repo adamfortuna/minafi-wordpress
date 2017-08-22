@@ -561,6 +561,7 @@
 
 <?php include('profiles/adam.php'); ?>
 <?php include('profiles/gwen.php'); ?>
+<?php include('profiles/jmoney.php'); ?>
 <?php include('profiles/erdude.php'); ?>
 <?php include('profiles/darrow.php'); ?>
 

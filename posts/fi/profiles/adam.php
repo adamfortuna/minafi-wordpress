@@ -1,6 +1,6 @@
 <a name="profile-adam"></a><a name="adam"></a>
 <div style="background-color: rgba(229, 236, 247, 0.85);" class="py-3 mt-3 fi--profile fi--profile-collapsed clearfix">
-  <div id="fi-profile--adam" class="aesop-component aesop-image-component " style="visibility:hidden;">
+  <div id="fi-profile--adam" class="aesop-component aesop-image-component fi--profile-image" style="visibility:hidden;">
 		<div class="aesop-content">
 			<figure class="aesop-image-component-image aesop-component-align-right aesop-image-component-caption-left" style="margin-right:12%; width:500px;">
         <a class="aesop-lightbox" href="https://minafi.com/wp-content/uploads/2017/08/adam-japan-1024x682.jpg" title="Adam outside Niko in Japan">
