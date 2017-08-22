@@ -2125,6 +2125,11 @@ Tangle.classes.BlockSwitch = {
 $(function() {
   var element = document.getElementById("fi--wrapper");
 
+  // If on mobile, change all sliders to input boxes
+  if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    $(".FIAdjustableNumber").addClass("TKNumberField").removeClass("FIAdjustableNumber");
+  }
+
   var defaults = {
     exampleClick: 0,
     storeCookies: true,
