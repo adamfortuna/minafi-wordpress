@@ -659,7 +659,7 @@
   <p class="text-right text-muted"><small>A scenario I was running on my own finances</small></p>
 </div>
 
-<p>What I really like about <a href="https://track.flexlinkspro.com/a.ashx?foid=1106765.137967093&foc=1&fot=1001&fos=1" rel="nofollow" target="_blank">Personal Capital</a> is it goes beyond the averages used in this post to group scenarios by percentile. In this screenshot above, you can see a line for my median case, but also the worst 10 percentile. The little blocks are also me playing with life events: buying healthcare, taking social security and when Mrs. Minafi stops working.</p>
+<p>What I really like about <a href="https://track.flexlinkspro.com/a.ashx?foid=1106765.137967093&foc=1&fot=1001&fos=1" rel="nofollow" target="_blank" class="tooltippable" title="This is an affiliate link, but it is a service I use.">Personal Capital<sup>*</sup></a> is it goes beyond the averages used in this post to group scenarios by percentile. In this screenshot above, you can see a line for my median case, but also the worst 10 percentile. The little blocks are also me playing with life events: buying healthcare, taking social security and when Mrs. Minafi stops working.</p>
 
 
 

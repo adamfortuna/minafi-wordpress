@@ -16,7 +16,7 @@ function calcYears(sr, marketRate, wr) {
 
 function messageForYear(year, format) {
   var numYears = year.years;
-  if(numYears < 1) {
+  if(numYears < 5) {
     numYears = numYears.toFixed(2);
   } else {
     numYears = parseInt(numYears);
