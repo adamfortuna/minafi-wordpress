@@ -23,6 +23,11 @@
     &:hover
       text-decoration: underline
 
+@media only screen and (max-width: 700px)
+  .navbar
+    .dropdown-menu
+      left: -90px
+
 .navbar-brand
   text-decoration: none
 .navbar-brand--text
@@ -44,6 +49,10 @@
 @media only screen and (max-width: 700px)
   .navbar-brand--text
     display: none
+  .nav-link
+    font-size: 90%
+    padding: 0.25rem 0.3rem
+    line-height: 45px
 
 .search--link
   background-color: transparent

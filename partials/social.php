@@ -6,7 +6,7 @@
       <i class="fa fa-facebook-square" aria-hidden="true"></i>
       <a href="https://www.facebook.com/minafiblog" target="_blank">MinafiBlog</a>
     </li>
-    </li>
+    <li class="social--facebook">
       <div class="fb-like" data-href="https://www.facebook.com/minafiblog" data-layout="standard" data-action="like" data-size="large" data-show-faces="false" data-share="true"></div>
     </li>
   </ul>

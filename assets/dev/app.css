@@ -9580,6 +9580,10 @@ p.easc-modal-submit {
 .articles--list.articles--hero {
   border-right: 1px solid #eee; }
 
+@media only screen and (max-width: 992px) {
+  .articles--list.articles--hero {
+    border-right: none; } }
+
 .article--header-image {
   margin-bottom: 1rem;
   display: block;
@@ -9941,6 +9945,10 @@ body {
     .navbar .dropdown-item:hover {
       text-decoration: underline; }
 
+@media only screen and (max-width: 700px) {
+  .navbar .dropdown-menu {
+    left: -90px; } }
+
 .navbar-brand {
   text-decoration: none; }
 
@@ -9961,7 +9969,11 @@ body {
 
 @media only screen and (max-width: 700px) {
   .navbar-brand--text {
-    display: none; } }
+    display: none; }
+  .nav-link {
+    font-size: 90%;
+    padding: 0.25rem 0.3rem;
+    line-height: 45px; } }
 
 .search--link {
   background-color: transparent; }
@@ -11854,6 +11866,10 @@ span.entry-subtitle {
 
 .subscribe button {
   cursor: pointer; }
+
+.social--facebook {
+  max-width: 300px;
+  overflow: hidden; }
 
 .ea-share-count-wrap {
   margin: 0 auto;
