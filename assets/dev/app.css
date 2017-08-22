@@ -12081,7 +12081,8 @@ span.alert {
   pointer-events: all; }
 
 .graph .focus text {
-  font: 16px sans-serif; }
+  font: 16px sans-serif;
+  fill: rgba(0, 0, 0, 0.8); }
 
 .tooltip--svg {
   fill: #E5FAE8;
@@ -12150,6 +12151,10 @@ span.alert {
   -webkit-box-shadow: none; }
   .fi--share a:hover {
     background-color: transparent; }
+
+.graph .tick {
+  font-size: 18px;
+  fill: rgba(0, 0, 0, 0.8); }
 
 @media only screen and (max-width: 900px) {
   #fi--wrapper .card {

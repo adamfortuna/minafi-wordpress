@@ -2706,7 +2706,7 @@ function FiGraph() {
   this.margin = {
     top: 20,
     left: 100,
-    right: 0,
+    right: 30,
     bottom: 30
   };
   this.options = {

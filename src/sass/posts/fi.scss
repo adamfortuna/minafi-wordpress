@@ -119,6 +119,7 @@
 }
 .graph .focus text {
   font: 16px sans-serif;
+  fill: rgba(0,0,0,0.8);
 }
 .tooltip--svg {
   fill: #E5FAE8;
@@ -209,6 +210,12 @@
   }
 }
 
+.graph {
+  .tick {
+    font-size: 18px;
+    fill: rgba(0,0,0,0.8);
+  }
+}
 @media only screen and (max-width: 900px) {
   #fi--wrapper {
     .card {
@@ -227,5 +234,4 @@
       font-size: 14px;
     }
   }
-
 }
