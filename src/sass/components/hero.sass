@@ -1,27 +1,35 @@
-.home--hero-wrap
-  background-color: rgba(0,0,0,0.20)
-  position: relative
+@media only screen and (max-width: 768px)
+  body
+    .home--hero-content
+      background: url(../images/gate-top.jpg) no-repeat
+      background-position-y: 84%
+    .home--hero,
+    .home--hero-content
+      height: 200px !important
+    .hero--text
+      top: 1rem
+      p
+        margin-left: 0
+        font-size: 1.4rem
+        line-height: 1.6rem
 
-.home--hero
-  background: url(../images/gate.jpeg) no-repeat center center
+.home--hero-content
+  background: url(../images/gate-small.jpg) no-repeat
   background-size: cover
-  background-position-y: 63% !important
+  background-position-y: 26%
   margin-bottom: 3rem
 
-.home--hero-wrap,
-.home--hero
-  min-height: 350px
+.home--hero-content
+  height: 330px
 
 .home--text
-  height: 350px
   position: relative
-  color: #f6f6f6
-  h1
-    color: #fefefe
+  color: $gray-dark
+  h1, p, a
+    color: $gray-dark
   p
-    color: #fefefe
+    margin-left: 116px
   a
-    color: #fefefe
     text-decoration: underline
     &:hover
       text-decoration: none

@@ -9577,13 +9577,6 @@ p.easc-modal-submit {
 .article--social li a {
   font-weight: 400; }
 
-.articles--list.articles--hero {
-  border-right: 1px solid #eee; }
-
-@media only screen and (max-width: 992px) {
-  .articles--list.articles--hero {
-    border-right: none; } }
-
 .article--header-image {
   margin-bottom: 1rem;
   display: block;
@@ -11784,30 +11777,37 @@ span.entry-subtitle {
 #comments .comments-title span.entry-subtitle {
   display: none; }
 
-.home--hero-wrap {
-  background-color: rgba(0, 0, 0, 0.2);
-  position: relative; }
+@media only screen and (max-width: 768px) {
+  body .home--hero-content {
+    background: url(../images/gate-top.jpg) no-repeat;
+    background-position-y: 84%; }
+  body .home--hero,
+  body .home--hero-content {
+    height: 200px !important; }
+  body .hero--text {
+    top: 1rem; }
+    body .hero--text p {
+      margin-left: 0;
+      font-size: 1.4rem;
+      line-height: 1.6rem; } }
 
-.home--hero {
-  background: url(../images/gate.jpeg) no-repeat center center;
+.home--hero-content {
+  background: url(../images/gate-small.jpg) no-repeat;
   background-size: cover;
-  background-position-y: 63% !important;
+  background-position-y: 26%;
   margin-bottom: 3rem; }
 
-.home--hero-wrap,
-.home--hero {
-  min-height: 350px; }
+.home--hero-content {
+  height: 330px; }
 
 .home--text {
-  height: 350px;
   position: relative;
-  color: #f6f6f6; }
-  .home--text h1 {
-    color: #fefefe; }
+  color: rgba(0, 0, 0, 0.8); }
+  .home--text h1, .home--text p, .home--text a {
+    color: rgba(0, 0, 0, 0.8); }
   .home--text p {
-    color: #fefefe; }
+    margin-left: 116px; }
   .home--text a {
-    color: #fefefe;
     text-decoration: underline; }
     .home--text a:hover {
       text-decoration: none; }
@@ -11845,9 +11845,11 @@ span.entry-subtitle {
 
 .sidebar--group {
   margin-bottom: 2rem;
-  padding: 0 1rem 1rem 1rem; }
+  padding: 1rem;
+  background-color: rgba(229, 236, 247, 0.85);
+  border-radius: 2px; }
   .sidebar--group h3, .sidebar--group h2 {
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #AEC0DD;
     padding-bottom: 0.4rem;
     margin-bottom: 1rem; }
 
