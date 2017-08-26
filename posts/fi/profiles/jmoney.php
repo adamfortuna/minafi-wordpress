@@ -14,7 +14,7 @@
 	</div>
 
   <h3>J. Money from <a href="http://budgetsaresexy.com" target="_blank">Budgets Are Sexy</a> and <a href="http://rockstarfinance.com" target="_blank">Rockstart Finance</a></h3>
-  <p class="lead">37f, married, working and saving money in the Washington DC. $657,837.01 in savings. Spending $72k/yr now, $48k in retirement. FI by 45 in an expensive city. RE never. :)</p>
+  <p class="lead">37m, married, working and saving money in Washington, D.C. $657,837.01 in savings. Spending $72k/yr now, $48k in retirement. FI by 45 in an expensive city. RE never. :)</p>
   <p>
     I'm a daddy of two, blogger of two, and been a self-employed blogger since 2010. Love to see all the new faces coming up in the community as we need as much help with this $$$ stuff as we can get out there.
   </p>

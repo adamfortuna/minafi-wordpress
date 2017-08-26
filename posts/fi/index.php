@@ -562,8 +562,12 @@
 <?php include('profiles/adam.php'); ?>
 <?php include('profiles/gwen.php'); ?>
 <?php include('profiles/jmoney.php'); ?>
+<?php include('profiles/millennialboss.php'); ?>
 <?php include('profiles/erdude.php'); ?>
+<?php include('profiles/amy.php'); ?>
 <?php include('profiles/darrow.php'); ?>
+<?php include('profiles/frugalasianfinance.php'); ?>
+<?php include('profiles/cashfasting.php'); ?>
 
 <h3 class="mt-3 pt-3">Common Similarities In This Group</h3>
 
