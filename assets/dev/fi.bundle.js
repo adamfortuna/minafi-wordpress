@@ -2838,8 +2838,12 @@ function FiGraph() {
       var stashValue = this.finance.FV(this.user.marketGrowth*100, this.user.networth, years);
 
       // Growth in amount added each year
-      var depositValue = this.user.yearlySavings * Math.pow(1 + this.user.marketGrowth, d);
+      var depositValue = 0;
+      for(var i=0; i <= years; i++) {
+        depositValue = depositValue + this.user.yearlySavings * Math.pow(1 + this.user.marketGrowth, i);
+      }
 
+      // debugger
       return {
         age: d,
         networth: stashValue + depositValue

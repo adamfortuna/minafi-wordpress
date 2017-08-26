@@ -245,6 +245,7 @@
 
 <div class="card container container-wide graph--fi-date--container mb-3 card--info">
   <h3>Retirement Age Calculator</h3>
+  <p class="lead">This graph shows your future net worth given your current and future savings.</p>
 	<div class="graph graph--fi-date"></div>
 	<p class="lead fi--info">
 		<i>Adam Says:</i> This assumes you're
