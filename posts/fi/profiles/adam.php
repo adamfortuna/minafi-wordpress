@@ -14,7 +14,7 @@
 	</div>
 
   <h3>Adam from <a href="/" target="_blank">Minafi</a></h3>
-  <p class="lead">35m, married, working and saving money in Orlando, FL. $1,050,000 in savings. Spending $55k/yr now and in retirement. FI by 40 in a major city. RE date TBD.</p>
+  <p class="lead">35m, married, working and saving money in Orlando, FL. $1.05m in savings. Spending $55k/yr now and in retirement. FI by 40 in a major city. RE date TBD.</p>
   <p>
     That's me! I'm a web developer, board gamer and cocktail lover who is exploring personal finance and related fields. I've worked for years teaching people how to code at <a href="https://www.codeschool.com" target="_blank">Code School</a>, and want to educate others on FI while learning more myself. You can read more of <a href="/about" target="_blank">my story</a> if you'd like the full details.
   </p>
