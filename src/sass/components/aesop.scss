@@ -35,6 +35,19 @@
   }
 }
 
+@media only screen and (max-width: 700px) {
+  .aesop-image-component {
+    .aesop-content {
+      max-width: 100% !important;
+    }
+    .aesop-component-align-left,
+    .aesop-component-align-right {
+      margin-left: 0em !important;
+      margin-right: 0em !important;
+    }
+  }
+}
+
 .aesop-active .entry-content .aesop-image-component .aesop-component-align-left,
 .aesop-active .entry-content .aesop-image-component .aesop-component-align-right {
     margin-right: 3em;

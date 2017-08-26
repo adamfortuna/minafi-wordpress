@@ -4,10 +4,10 @@
       background: url(../images/gate-top.jpg) no-repeat
       background-position-y: 84%
     .home--hero,
-    .home--hero-content
+    .home--hero-content,
+    .hero--text
       height: 200px !important
     .hero--text
-      top: 1rem
       p
         margin-left: 0
         font-size: 1.4rem
@@ -19,10 +19,11 @@
   background-position-y: 26%
   margin-bottom: 3rem
 
-.home--hero-content
+.home--hero-content,
+.hero--text
   height: 330px
 
-.home--text
+.hero--text
   position: relative
   color: $gray-dark
   h1, p, a
@@ -33,9 +34,9 @@
     text-decoration: underline
     &:hover
       text-decoration: none
-.hero--text
+.hero--text-content
   position: absolute
-  bottom: 1rem
+  top: 15%
 
 .article--content
   .more-link

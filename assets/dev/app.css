@@ -10109,6 +10109,14 @@ body {
     margin-right: 1em !important;
     float: none; } }
 
+@media only screen and (max-width: 700px) {
+  .aesop-image-component .aesop-content {
+    max-width: 100% !important; }
+  .aesop-image-component .aesop-component-align-left,
+  .aesop-image-component .aesop-component-align-right {
+    margin-left: 0em !important;
+    margin-right: 0em !important; } }
+
 .aesop-active .entry-content .aesop-image-component .aesop-component-align-left,
 .aesop-active .entry-content .aesop-image-component .aesop-component-align-right {
   margin-right: 3em;
@@ -11782,14 +11790,13 @@ span.entry-subtitle {
     background: url(../images/gate-top.jpg) no-repeat;
     background-position-y: 84%; }
   body .home--hero,
-  body .home--hero-content {
-    height: 200px !important; }
+  body .home--hero-content,
   body .hero--text {
-    top: 1rem; }
-    body .hero--text p {
-      margin-left: 0;
-      font-size: 1.4rem;
-      line-height: 1.6rem; } }
+    height: 200px !important; }
+  body .hero--text p {
+    margin-left: 0;
+    font-size: 1.4rem;
+    line-height: 1.6rem; } }
 
 .home--hero-content {
   background: url(../images/gate-small.jpg) no-repeat;
@@ -11797,24 +11804,25 @@ span.entry-subtitle {
   background-position-y: 26%;
   margin-bottom: 3rem; }
 
-.home--hero-content {
+.home--hero-content,
+.hero--text {
   height: 330px; }
 
-.home--text {
+.hero--text {
   position: relative;
   color: rgba(0, 0, 0, 0.8); }
-  .home--text h1, .home--text p, .home--text a {
+  .hero--text h1, .hero--text p, .hero--text a {
     color: rgba(0, 0, 0, 0.8); }
-  .home--text p {
+  .hero--text p {
     margin-left: 116px; }
-  .home--text a {
+  .hero--text a {
     text-decoration: underline; }
-    .home--text a:hover {
+    .hero--text a:hover {
       text-decoration: none; }
 
-.hero--text {
+.hero--text-content {
   position: absolute;
-  bottom: 1rem; }
+  top: 15%; }
 
 .article--content .more-link {
   display: block;
