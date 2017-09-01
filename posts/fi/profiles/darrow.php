@@ -1,5 +1,5 @@
 <a name="profile-darrow"></a><a name="darrow"></a>
-<div style="background-color: #e8f2fd; min-height:446px;" class="py-3 fi--profile fi--profile-collapsed clearfix">
+<div style="min-height:446px;" class="py-3 fi--profile fi--profile-collapsed clearfix fi--profile-blue">
   <div id="fi-profile--darrow" class="aesop-component aesop-image-component fi--profile-image" style="visibility:hidden;">
 		<div class="aesop-content">
 			<figure class="aesop-image-component-image aesop-component-align-right aesop-image-component-caption-left" style="margin-right:12%; width:500px;">
@@ -37,7 +37,7 @@
   </div>
 
   <p>
-    <a href="#" class="profile-toggle">
+    <a href="#darrow" class="profile-toggle">
       <span class="profile-toggle--read-more">Read more about Darrow <i class="fa fa-angle-double-down" aria-hidden="true"></i></span>
       <span class="profile-toggle--read-less">Collapse <i class="fa fa-angle-double-up" aria-hidden="true"></i></span>
     </a>

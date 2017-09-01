@@ -555,7 +555,7 @@
 </div>
 <h2 class="pt-3">Part 7: Who is actually doing this?</h2>
 
-<p>You might be surprised by who is pursuing FI. It ranges from people in debt to multi-millionaires who are FI already. There is likely someone who is in a similar situation to you out there.</p>
+<p>You might be surprised by who is pursuing FI. It ranges from people in debt to multi-millionaires who are retired already. There is likely someone who is in a similar situation to you out there.</p>
 
 <p>I was lucky enough to chat with a number of people who are in various states of financial independence and get their takes on the subject.</p>
 
@@ -567,9 +567,17 @@
 <?php include('profiles/erdude.php'); ?>
 <?php include('profiles/amy.php'); ?>
 <?php include('profiles/darrow.php'); ?>
-<?php include('profiles/frugalasianfinance.php'); ?>
 <?php include('profiles/cashfasting.php'); ?>
+<?php include('profiles/frugalasianfinance.php'); ?>
 <?php include('profiles/jim.php'); ?>
+
+<?php include('profiles/adventurerich.php'); ?>
+<?php include('profiles/jacob.php'); ?>
+<?php include('profiles/workingoptimal.php'); ?>
+<?php include('profiles/frugalhacker.php'); ?>
+<?php include('profiles/zencents.php'); ?>
+<?php include('profiles/moneysmartguides.php'); ?>
+<?php include('profiles/pt.php'); ?>
 
 <h3 class="mt-3 pt-3">Common Similarities In This Group</h3>
 

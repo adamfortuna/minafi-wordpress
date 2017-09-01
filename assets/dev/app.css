@@ -12178,6 +12178,18 @@ span.alert {
   .graph .tick {
     font-size: 14px; } }
 
+.fi--profile-blue {
+  background-color: rgba(229, 236, 247, 0.85); }
+
+.fi--profile-green {
+  background-color: rgba(207, 223, 208, 0.6); }
+
+.fi--profile-orange {
+  background-color: #fee3e4; }
+
+.fi--profile-purple {
+  background-color: #e3dff4; }
+
 a {
   text-decoration: underline; }
   a:hover {

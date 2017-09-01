@@ -37,7 +37,7 @@
   </div>
 
   <p>
-    <a href="#" class="profile-toggle">
+    <a href="#jane" class="profile-toggle">
       <span class="profile-toggle--read-more">Read more about Jane <i class="fa fa-angle-double-down" aria-hidden="true"></i></span>
       <span class="profile-toggle--read-less">Collapse <i class="fa fa-angle-double-up" aria-hidden="true"></i></span>
     </a>

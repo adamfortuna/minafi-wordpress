@@ -2928,8 +2928,16 @@ $(function() {
 
 
   $('.profile-toggle').on('click', function(e) {
-    e.preventDefault();
+    var name = $(e.target).closest("a").attr('href').replace("#", ""),
+        a = $("a[name='"+name+"']");
 
+    if($(e.target).text().indexOf("Read more") !== -1) {
+      $('html, body').animate({
+          scrollTop: a.offset().top
+      }, 400);
+    } else {
+      e.preventDefault();
+    }
     $(this).closest('.fi--profile')
            .toggleClass('fi--profile-collapsed')
            .find('.profile-toggle--more')

@@ -235,3 +235,18 @@
     }
   }
 }
+
+
+.fi--profile-blue {
+  background-color: rgba(229, 236, 247, 0.85);
+}
+
+.fi--profile-green {
+  background-color: rgba(207, 223, 208,0.6);
+}
+.fi--profile-orange {
+  background-color: lighten($goals, 15%);
+}
+.fi--profile-purple {
+  background-color: darken(#F0EEF9, 4%);
+}

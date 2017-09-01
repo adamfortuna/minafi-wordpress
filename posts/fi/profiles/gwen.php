@@ -1,5 +1,5 @@
 <a name="profile-gwen"></a><a name="gwen"></a>
-<div style="background-color: #FFE9D6; min-height:446px;" class="py-3 fi--profile fi--profile-collapsed clearfix">
+<div style="min-height:446px;" class="py-3 fi--profile fi--profile-collapsed clearfix fi--profile-orange">
   <div id="fi-profile--gwen" class="aesop-component aesop-image-component fi--profile-image" style="visibility:hidden;">
 		<div class="aesop-content">
 			<figure class="aesop-image-component-image aesop-component-align-right aesop-image-component-caption-left" style="margin-right:12%; width:500px;">
@@ -38,7 +38,7 @@
   </div>
 
   <p>
-    <a href="#" class="profile-toggle">
+    <a href="#gwen" class="profile-toggle">
       <span class="profile-toggle--read-more">Read more about Gwen <i class="fa fa-angle-double-down" aria-hidden="true"></i></span>
       <span class="profile-toggle--read-less">Collapse <i class="fa fa-angle-double-up" aria-hidden="true"></i></span>
     </a>

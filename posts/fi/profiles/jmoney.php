@@ -1,4 +1,4 @@
-<a name="profile-j$"></a><a name="j$"></a>
+<a name="jmoney"></a><a name="j$"></a>
 <div style="background-color: rgba(207, 223, 208,0.6); min-height:446px;" class="py-3 fi--profile fi--profile-collapsed clearfix">
   <div id="fi-profile--j$" class="aesop-component aesop-image-component fi--profile-image" style="visibility:hidden;">
 		<div class="aesop-content">
@@ -13,7 +13,7 @@
 		</div>
 	</div>
 
-  <h3>J. Money from <a href="http://budgetsaresexy.com" target="_blank">Budgets Are Sexy</a> and <a href="http://rockstarfinance.com" target="_blank">Rockstart Finance</a></h3>
+  <h3>J. Money from <a href="http://budgetsaresexy.com" target="_blank">Budgets Are Sexy</a> and <a href="http://rockstarfinance.com" target="_blank">Rockstar Finance</a></h3>
   <p class="lead">37m, married, working and saving money in Washington, D.C. $657,837.01 in savings. Spending $72k/yr now, $48k in retirement. FI by 45 in an expensive city. RE never. :)</p>
   <p>
     I'm a daddy of two, blogger of two, and been a self-employed blogger since 2010. Love to see all the new faces coming up in the community as we need as much help with this $$$ stuff as we can get out there.
@@ -37,7 +37,7 @@
   </div>
 
   <p>
-    <a href="#" class="profile-toggle">
+    <a href="#jmoney" class="profile-toggle">
       <span class="profile-toggle--read-more">Read more about J. Money <i class="fa fa-angle-double-down" aria-hidden="true"></i></span>
       <span class="profile-toggle--read-less">Collapse <i class="fa fa-angle-double-up" aria-hidden="true"></i></span>
     </a>
