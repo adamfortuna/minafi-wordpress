@@ -12193,6 +12193,10 @@ span.alert {
 .fi--profile-purple {
   background-color: #e3dff4; }
 
+.fi--email .card {
+  border: none;
+  background-color: transparent; }
+
 a {
   text-decoration: underline; }
   a:hover {

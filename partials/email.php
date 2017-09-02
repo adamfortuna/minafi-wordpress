@@ -33,7 +33,7 @@
   <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_d2476f8b6bf5aa45f4014a563_d5d7523566" tabindex="-1" value=""></div>
 
   <div class="group">
-		<button type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-sm btn-outline-primary">Subscribe</button>
+		<button type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-sm btn-primary">Subscribe</button>
 	</div>
 
 </form>

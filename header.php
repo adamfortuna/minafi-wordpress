@@ -40,7 +40,10 @@
 					</a>
 
 	        <ul class="nav collapse navbar-toggleable-xs pull-right"  id="collapsingNavbar">
-	          <li class="nav-item">
+						<li class="nav-item">
+	            <a class="nav-link" href="/fi">What is FI?</a>
+	          </li>
+						<li class="nav-item">
 	            <a class="nav-link" href="/about">About</a>
 	          </li>
 

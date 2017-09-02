@@ -254,3 +254,11 @@
 .fi--profile-purple {
   background-color: darken(#F0EEF9, 4%);
 }
+
+
+.fi--email {
+  .card {
+    border: none;
+    background-color: transparent;
+  }
+}

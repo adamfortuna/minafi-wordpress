@@ -1,5 +1,5 @@
 <a name="jmoney"></a><a name="j$"></a>
-<div style="background-color: rgba(207, 223, 208,0.6); min-height:446px;" class="py-3 fi--profile fi--profile-collapsed clearfix">
+<div style="min-height:446px;" class="py-3 fi--profile fi--profile-collapsed clearfix fi--profile-green">
   <div id="fi-profile--j$" class="aesop-component aesop-image-component fi--profile-image" style="visibility:hidden;">
 		<div class="aesop-content">
 			<figure class="aesop-image-component-image aesop-component-align-right aesop-image-component-caption-left" style="margin-right:12%; width:500px;">

@@ -584,8 +584,10 @@
 <h3>Minafi Email List</h3>
 <p>Here at Minafi, I write about the intersection of minimalism, mindfulness and financial independence. I'll also be releasing more interactive posts like this one in the months to come. Sign up to be notified about all posts, or just the next interactive one. You'll only get emails when posts come out for the topics you're interested in.</p>
 
-<div class="card container container-slim p-3 my-3">
-<?php include(get_template_directory().'/partials/email.php'); ?>
+<div class="fi--profile-green my-3 fi--email">
+  <div class="card container container-slim p-3 my-3">
+    <?php include(get_template_directory().'/partials/email.php'); ?>
+  </div>
 </div>
 
 <h3>Books</h3>
