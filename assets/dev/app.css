@@ -12025,6 +12025,9 @@ span.alert {
   line-height: 1.4rem;
   margin-bottom: 1rem;
   max-width: 100%; }
+  .card--info .fi--info.fi--info-notop {
+    border-top: none;
+    padding-top: 0; }
 
 .card--info .fi--info:before {
   /*content: "";
@@ -12185,7 +12188,7 @@ span.alert {
   background-color: rgba(207, 223, 208, 0.6); }
 
 .fi--profile-orange {
-  background-color: #fee3e4; }
+  background-color: white; }
 
 .fi--profile-purple {
   background-color: #e3dff4; }

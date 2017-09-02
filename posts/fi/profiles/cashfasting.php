@@ -14,7 +14,7 @@
 	</div>
 
   <h3>Jane from <a href="https://cash-fasting.com" target="_blank">Cash Fasting</a></h3>
-  <p class="lead">25f, working and saving money in New York City. $65k in savings. Spending $25k/yr now. FI by 35. RE TBD in an city metro.</p>
+  <p class="lead">25f, working and saving money in New York City. $65k in savings. Spending $25k/yr now. FI by 35. RE TBD in a city metro.</p>
   <p>
     I'm a VA native trying to build wealth in the Big Apple. I'm relatively new to the idea of FIRE, but I've jumped on board and I'm eagerly tracking my progress. I enjoy dancing, cooking, trying out new restaurants, and telling my friends to invest more in their retirement accounts.
   </p>

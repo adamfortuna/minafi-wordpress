@@ -41,6 +41,10 @@
   line-height: 1.4rem;
   margin-bottom: 1rem;
   max-width: 100%;
+  &.fi--info-notop {
+    border-top: none;
+    padding-top: 0;
+  }
 }
 
 .card--info .fi--info:before {
@@ -245,7 +249,7 @@
   background-color: rgba(207, 223, 208,0.6);
 }
 .fi--profile-orange {
-  background-color: lighten($goals, 15%);
+  background-color: lighten($goals, 25%);
 }
 .fi--profile-purple {
   background-color: darken(#F0EEF9, 4%);

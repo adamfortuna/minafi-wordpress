@@ -14,7 +14,7 @@
 	</div>
 
   <h3>Jacob from <a href="https://earlyretirementextreme.com/" target="_blank">Early Retirement Extreme</a></h3>
-  <p class="lead">41m, married, retired in Chicago. <i>Enough</i> in savings and spending $11k/yr (<$7k/person). FI by 30. RE at 33 in an city metro.</p>
+  <p class="lead">41m, married, retired in Chicago. <i>Enough</i> in savings and spending $11k/yr (<$7k/person). FI by 30. RE at 33 in a city metro.</p>
   <p>
     Renaissance man and an intellectual gunslinger with an attention span of 3-5 years. I enjoy thinking about hard interdisciplinary problems and finding practical solutions. I've worked with problems in nuclear astrophysics, energy resources, sustainability, algorithmic trading, and extreme FIRE.
   </p>

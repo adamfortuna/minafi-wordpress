@@ -16,7 +16,7 @@
   <h3>Jim from <a href="https://www.routetoretire.com/" target="_blank">Route to Retire</a></h3>
   <p class="lead">41m, married, working and saving money in Ohio. ~$1.08m in savings. Spending $60k/yr now, $45k in retirement. FI &amp; RE by 49 in a rural area.</p>
   <p>
-    I'm currently in IT management and have been at the same company for over 18 years.  While they've always taken care of me, I don't enjoy the day-to-day anymore.  When my daughter was born, I hated having to go to work everyday - I felt like I was missing out even though this is common for dads to do.  Since then, I've been on a mission to be free from the financial burden shackling me to an office everyday.  We now have three rental units and are hoping to purchase 2-3 more before I quit my job in a few years.
+    I'm currently in IT management and have been at the same company for over 18 years.  While they've always taken care of me, I don't enjoy the day-to-day anymore.  When my daughter was born, I hated having to go to work every day - I felt like I was missing out even though this is common for dads to do.  Since then, I've been on a mission to be free from the financial burden shackling me to an office every day.  We now have three rental units and are hoping to purchase 2-3 more before I quit my job in a few years.
   </p>
 
   <div class="profile-toggle--more">

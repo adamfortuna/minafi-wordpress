@@ -14,7 +14,7 @@
 	</div>
 
   <h3>Ms. FAF from <a href="https://frugalasianfinance.com/" target="_blank">Frugal Asian Finance</a></h3>
-  <p class="lead">30f, married, working and saving money in Washington, D.C. $320k in savings. Spending $50k/yr now and in retirement. FI &amp; RE by 50 in an city metro.</p>
+  <p class="lead">30f, married, working and saving money in Washington, D.C. $320k in savings. Spending $50k/yr now and in retirement. FI &amp; RE by 50 in a city metro.</p>
   <p>
     I am an Asian personal finance blogger, a full-time working mother of one, a devoted wife, and a real estate dreamer. I am passionate about saving money while living a fulfilling life.
   </p>

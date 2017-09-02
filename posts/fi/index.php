@@ -35,7 +35,8 @@
 	<li><a href="#part-6">Part 6: What can I do to retire sooner?</a></li>
   <li><a href="#part-7">Part 7: Who is actually doing this?</a></li>
   <li><a href="#part-8">Part 8: Where can I learn more?</a></li>
-  <li><a href="#part-9">Part 9: What Next?</a></li>
+  <li><a href="#part-9">Part 9: Recap</a></li>
+  <li><a href="#part-10">Part 10: What Next?</a></li>
 </ul>
 
 
@@ -59,7 +60,7 @@
   <span data-var="exampleClick" class="MultiToggle TKSwitch with--tip">
 		<span>green dotted unlined text</span>
 		<span>yes! just like that!</span>
-	</span>, that indicates this is a place that needs your input! Just hover over it and it'll tell you what to do. <b>The content of this post will change based on your input</b>. Consider it an old-school choose your own adventure blog post like you read as a kid. Give the one in this paragraph a shot. Also consider these <i>estimates</i> rather than hard numbers.
+	</span>, that indicates this is a place that needs your input! Just hover over it and it'll tell you what to do. <b>The content of this post will change based on your input</b>. Consider it an old-school choose your own adventure blog post like you read as a kid. Give the one in this paragraph a shot. Also, consider these <i>estimates</i> rather than hard numbers.
 </p>
 
 <p>Next, let's dive into <b>your numbers</b> starting with some basics.</p>
@@ -129,6 +130,7 @@
 
 <div class="container text-center pb-3 mb-3">
   <img src="https://minafi.com/wp-content/uploads/2017/08/callistus-ndemo-157554.jpg" alt="hiking">
+  <p class="text-center text-muted"><small>Get ready for a long journey.</small></p>
 </div>
 
 <h3>Saving Money is a Hike</h3>
@@ -146,7 +148,7 @@
 <p>Find a way to enjoy saving the same way you'd enjoy a hike. Make it effortless, make it relaxing, make it feel right.</p>
 
 <p>
-  You could be reading this and think there's no way I could save up <span class="tangle--dynamic" data-var="impliedRetirementStashNeeded" data-format="currency"></span>. I know when I was growing up, at times my mom was scrapping to make ends meet, and saving was the last thing on her mind. For those reading in that situation, I empathize with you, but struggle to find the best advice. You know your situation better than I ever could, as well as what you could do to make it better.
+  You could be reading this and think there's no way I could save up <span class="tangle--dynamic" data-var="impliedRetirementStashNeeded" data-format="currency"></span>. I know when I was growing up, at times my mom was scrapping to make ends meet, and saving was the last thing on her mind. For those reading in that situation, I empathize with you but struggle to find the best advice. You know your situation better than I ever could, as well as what you could do to make it better.
 </p>
 
 <a name="part-3"></a>
@@ -289,7 +291,9 @@
 <a name="part-4"></a>
 <div class="container text-center pb-3 mb-3">
   <img src="https://minafi.com/wp-content/uploads/2017/08/manik-rathee-57410.jpg" alt="financial independence">
+  <p class="text-center text-muted"><small>Financial Independence (FI) is a freeing idea and a beneficial goal.</small></p>
 </div>
+
 <h2>Part 4: How much could I spend then?</h2>
 
 <p>Up until this point, we've been a little rosy in our withdrawal rate (WR). The withdrawal rate is the percent of your savings you withdraw each year. This can be calculated as follows:</p>
@@ -329,7 +333,9 @@
 <a name="part-5"></a>
 <div class="container text-center pb-3 mb-3">
   <img src="https://minafi.com/wp-content/uploads/2016/08/financial.jpg" alt="investing">
+  <p class="text-center text-muted"><small>The math does add up, with some additional work.</small></p>
 </div>
+
 <h2 class="pt-5">Part 5: How is this enough?</h2>
 
 <p>When I first saw these numbers and did the math on it, I immediately asked the following question:</p>
@@ -348,11 +354,11 @@
 
 <h3>Factoring In Inflation</h3>
 
-<p>There is some bad news here unfortunately. Each of those <span data-var="yearsOfFiNoInvestment" data-format="years" class="tangle--dynamic tangle--dynamic"></span>, your spending power would be slightly less due to inflation, which is generally around 3%. Inflation is something we have no control over individually but is something we can plan for.</p>
+<p>There is some bad news here, unfortunately. Each of those <span data-var="yearsOfFiNoInvestment" data-format="years" class="tangle--dynamic tangle--dynamic"></span>, your spending power would be slightly less due to inflation, which is generally around 3%. Inflation is something we have no control over individually but is something we can plan for.</p>
 
 <p>Inflation means that each year, what you can buy with your money is going down by some small amount. If you've seen prices rise since you were a kid, that's potentially a result of inflation.</p>
 
-<p>In <span data-var="yearsOfFiNoInvestment" data-format="years" class="tangle--dynamic tangle--dynamic"></span>, in order to spend <span data-var="retirementYearlySpending" data-format="currency" class="tangle--dynamic tangle--dynamic"></span> in todays dollars, you would need <span data-var="retirementYearlySpendingWithInflation" data-format="currency" class="tangle--dynamic"></span> in the year
+<p>In <span data-var="yearsOfFiNoInvestment" data-format="years" class="tangle--dynamic tangle--dynamic"></span>, in order to spend <span data-var="retirementYearlySpending" data-format="currency" class="tangle--dynamic tangle--dynamic"></span> in today's dollars, you would need <span data-var="retirementYearlySpendingWithInflation" data-format="currency" class="tangle--dynamic"></span> in the year
 <span data-var="retirementYear" data-format="integer" class="tangle--dynamic"></span>.
 <p>
   Because of this, we need to increase our total funds by
@@ -365,7 +371,7 @@
 </p>
 
 <p>
-  So why are we using <span data-var="retirementYearlySpending" data-format="currency" class="tangle--dynamic tangle--dynamic"></span> for these numbers rather than <span data-var="retirementYearlySpendingWithInflation" data-format="currency" class="tangle--dynamic tangle--dynamic"></span>? The reason is that inflation doesn't mean all of your expenses will rise by this much every year, but that the Consumer Price Index and Prodict Price Indexes indicate that this shift in prices.
+  So why are we using <span data-var="retirementYearlySpending" data-format="currency" class="tangle--dynamic tangle--dynamic"></span> for these numbers rather than <span data-var="retirementYearlySpendingWithInflation" data-format="currency" class="tangle--dynamic tangle--dynamic"></span>? The reason is that inflation doesn't mean all of your expenses will rise by this much every year, but that the Consumer Price Index and Product Price Indexes indicate that this shift in prices.
 </p>
 
 <p>
@@ -409,6 +415,7 @@
 <a name="part-6"></a>
 <div class="container text-center pb-3 mb-3">
   <img src="https://minafi.com/wp-content/uploads/2017/08/pexels-photo-287240.jpeg" alt="retire sooner">
+  <p class="text-center text-muted"><small>Speed up your FI hike with a few small lifestyle tweaks.</small></p>
 </div>
 
 <h2 class="pt-6">Part 6: What can I do to retire sooner?</h2>
@@ -430,7 +437,7 @@
 		<span data-var="spendingReductionPercent" data-format="percentDecimal" data-step="0.01" data-max="1" data-min="0" class="tangle--dynamic FIAdjustableNumber"></span>
 		(saving
 		<span data-var="impliedSpendingReductionYearlySavings" data-format="currency" class="tangle--dynamic "></span>
-		a year more), then you could retire
+		a year more), then you could be FI
 		<span data-var="spendingReductionYearsEarlier" data-format="years" class="tangle--dynamic"> earlier</span>
 		once you have saved
 		<span data-var="spendingReductionStash" data-format="currency" class="tangle--dynamic"></span>.
@@ -486,33 +493,9 @@
   <p>A side hustle is something you do to earn money outside a traditional job.</p>
 </blockquote>
 
-<p>If you're like me, and haven't made money outside the boundaries of a W-2 for your career, this might just seem like more work and not FIRE. The distiction to me is in having a side hustle that you love doing. One that you look forward to waking up to work on.</p>
+<p>If you're like me and haven't made money outside the boundaries of a W-2 for your career, this might just seem like more work and not FIRE. The distinction to me is in having a side hustle that you love doing. One that you look forward to waking up to work on.</p>
 
-<p>At that point, this additional revenue stream can become another challenge in your life, or another form of self expression.</p>
-
-<!--
-<div class="card container container-slim card--info">
-	<h2>What If: Your Income Grows but your Expenses Don't?</h2>
-
-	<p>
-		What if each year of your working career your income grows, but rather than spending it you save it? By <a href="https://minafi.com/avoiding-the-lifestyle-inflation-trap/" target="_blank">avoiding lifestyle inflation</a>, you can benefit from increased earnings without your yearly spending increasing.
-  </p>
-
-  <p>
-    If your earnings increase by
-    <span data-var="payIncreasePercent" data-format="percent" data-step="0.01" data-max="1" data-min="0" class="tangle--dynamic TKAdjustableNumber">/yr</span>,
-    and you save all of it, then you could retire
-		<span data-var="payIncreaseSooner" data-format="years" class="tangle--dynamic"></span> earlier!
-	</p>
-
-	<p class="lead fi--info">
-		<i>Adam says:</i> Growing your income without increasing expenses is more difficult than it sounds. I'd recommend keeping track of your savings over time so you know you're sticking to it.
-	</p>
-</div>
-
-<p>For many careers, getting a "cost of living" increase comes with the job. If you can keep your cost of the living the same and bank this increase, it starts to add up fast.</p>
-
--->
+<p>At that point, this additional revenue stream can become another challenge in your life or another form of self-expression.</p>
 
 <p><b>Lowering expenses</b> and <b>earning money in retirement</b> are three very clear ways to reduce the time until you are financially independent.</p>
 
@@ -524,11 +507,7 @@
     You reduce spending by <span data-var="spendingReductionPercent" data-format="percentDecimal" data-step="0.01" data-max="1" data-min="0" class="tangle--dynamic FIAdjustableNumber"></span>
     while replacing
     <span data-var="eirIncomePercent" data-format="percent" data-step="0.01" data-max="1" data-min="0" class="tangle--dynamic FIAdjustableNumber"></span>
-    of your income during retirement (<span data-var="impliedSpendingReductionYearlySavings" data-format="currency" class="tangle--dynamic"></span>)
-    <!--
-    while also having your yearly income increase by
-    <span data-var="payIncreasePercent" data-format="percent" data-step="0.01" data-max="1" data-min="0" class="tangle--dynamic TKAdjustableNumber">/yr</span> while you're working
-    and saving it-->.
+    of your income during retirement (<span data-var="impliedSpendingReductionYearlySavings" data-format="currency" class="tangle--dynamic"></span>).
   </ul>
 
 	<p>
@@ -552,10 +531,12 @@
 <a name="part-7"></a>
 <div class="container text-center pb-3 mb-3">
   <img src="https://minafi.com/wp-content/uploads/2017/08/tegan-mierle-157974.jpg" alt="who is this for">
+  <p class="text-center text-muted"><small>There are 291k subscribers to <a href="https://www.reddit.com/r/financialindependence/" target="_blank">/r/financialindependence/</a> alone.</small></p>
 </div>
+
 <h2 class="pt-3">Part 7: Who is actually doing this?</h2>
 
-<p>You might be surprised by who is pursuing FI. It ranges from people in debt to multi-millionaires who are retired already. There is likely someone who is in a similar situation to you out there.</p>
+<p>You might be surprised by who is pursuing FI. It ranges from people in debt to multi-millionaires who have retired already. There is likely someone who is in a similar situation to you out there.</p>
 
 <p>I was lucky enough to chat with a number of people who are in various states of financial independence and get their takes on the subject.</p>
 
@@ -570,7 +551,6 @@
 <?php include('profiles/cashfasting.php'); ?>
 <?php include('profiles/frugalasianfinance.php'); ?>
 <?php include('profiles/jim.php'); ?>
-
 <?php include('profiles/adventurerich.php'); ?>
 <?php include('profiles/jacob.php'); ?>
 <?php include('profiles/workingoptimal.php'); ?>
@@ -581,16 +561,20 @@
 
 <h3 class="mt-3 pt-3">Common Similarities In This Group</h3>
 
-<p>When reading over everyones answers to these questions, a few themes start to stand out real quick.</p>
+<p>When reading over everyone's answers to these questions, a few themes start to stand out real quick.</p>
 
 <h4>They avoided lifestyle inflation</h4>
 <p>Nearly everyone mentioned <a href="https://minafi.com/avoiding-the-lifestyle-inflation-trap/" target="_blank">avoiding lifestyle inflation</a> as an essential component. If your expenses increase with your income, you'll never save more. All of the numbers in this post assume that your expenses do <i>not</i> go up. If you spend more each year, you'll need more money to retire, and it'll take you more time to accumulate it.</p>
 
-<h4>They didnt start with everything</h4>
-<p>No one I talked to got lucky with the lottery, an inheritance, a business acquisition or a lucky Bitcoin investment that accounted for a sudden retirement. There are some out there who hit the jackpot, but for most people it's going to take hard work and time.</p>
+<h4>They didn't start with everything</h4>
+<p>No one I talked to got lucky with the lottery, an inheritance, a business acquisition or a lucky Bitcoin investment that accounted for a sudden retirement. There are some out there who hit the jackpot, but for most people, it's going to take hard work and time.</p>
 
-<h4>They spent on areas that matter to them</h4>
+<h4>They spent in areas that matter to them</h4>
 <p>Going overboard on saving can make you miserable. Focus on spending money on things that will what bring joy into your life and makes you and those around you happy. This may seem at odds with lifestyle inflation, but it's important to strike a balance between these two.</p>
+
+<div class="card card--info container container-slim clearfix">
+<p class="fi--info fi--info-notop"><small>Adam says: Thanks so much for all the people who agreed to be interviewed for this post! Their time and support mean a lot to me. If you're looking for some other reading, check out their blogs and events!</small></p>
+</div>
 
 <a name="part-8"></a>
 <h2 class="pt-3">Part 8: Where can I learn more?</h2>
@@ -598,7 +582,7 @@
 <p>There are a few amazing books on the topic of financial independence and early retirement that go into these topics with much more eloquence than and depth than I could ever explore. If you're curious to learn more, these are all amazing resources.</p>
 
 <h3>Minafi Email List</h3>
-<p>Here at Minafi, I write about the intersection of minimalism, mindfulness and financial independence here at Minafi. I also try to release a new interactive article every few months. Sign up to be notified about all posts, or just the next interactive one.</p>
+<p>Here at Minafi, I write about the intersection of minimalism, mindfulness and financial independence. I'll also be releasing more interactive posts like this one in the months to come. Sign up to be notified about all posts, or just the next interactive one. You'll only get emails when posts come out for the topics you're interested in.</p>
 
 <div class="card container container-slim p-3 my-3">
 <?php include(get_template_directory().'/partials/email.php'); ?>
@@ -607,11 +591,11 @@
 <h3>Books</h3>
 <p>Here are some of the top sources in different mediums to learn about financial independence</p>
 
-<div id="fi-profile--adam" class="aesop-component aesop-image-component " style="visibility:hidden;">
+<div class="aesop-component aesop-image-component fi--animate-from-right" style="visibility:hidden;">
 	<div class="aesop-content">
 		<figure class="aesop-image-component-image aesop-component-align-right aesop-image-component-caption-left" style="margin-right:25%; width:250px;">
-      <a class="aesop-lightbox" href="https://minafi.com/wp-content/uploads/2017/08/your-monet.jpeg" title="Megacon 2016 in Orlando, FL.">
-				<img src="https://minafi.com/wp-content/uploads/2017/08/your-monet.jpeg" alt="Adam at the Ghibli Museum in Tokyo.">
+      <a class="aesop-lightbox" href="https://minafi.com/recommends/your-money-or-your-life/" title="Your money or your life">
+				<img src="https://minafi.com/wp-content/uploads/2017/08/your-monet.jpeg" alt="Your money or your life">
 			</a>
 	  </figure>
 	</div>
@@ -622,11 +606,11 @@
 <p class="card-text">As great as <i>Your Money</i> is, it borders on self-help as opposed to finance - which actually helps its topics connect deeper for me.</p>
 
 
-<div id="fi-profile--adam" class="aesop-component aesop-image-component " style="visibility:hidden;">
+<div class="fi--animate-from-left aesop-component aesop-image-component " style="visibility:hidden;">
 	<div class="aesop-content">
 		<figure class="aesop-image-component-image aesop-component-align-left aesop-image-component-caption-left" style="margin-left:16%; width:250px;">
-      <a class="aesop-lightbox" href="https://minafi.com/wp-content/uploads/2016/08/bogleheads.jpg" title="Megacon 2016 in Orlando, FL.">
-				<img src="https://minafi.com/wp-content/uploads/2016/08/bogleheads.jpg" alt="Adam at the Ghibli Museum in Tokyo.">
+      <a class="aesop-lightbox" href="https://minafi.com/recommends/the-bogleheads-guide-to-investing/" title="The Bogleheads' Guide to Investing">
+				<img src="https://minafi.com/wp-content/uploads/2016/08/bogleheads.jpg" alt="The Bogleheads' Guide to Investing">
 			</a>
 	  </figure>
 	</div>
@@ -636,11 +620,11 @@
 <p class="card-text"><i>The Bogleheads Guide</i> consistently ranks as one of the 3 most influential books I have ever read in my life - serving as an introduction and education all in one.</p>
 
 
-<div id="fi-profile--adam" class="aesop-component aesop-image-component " style="visibility:hidden;">
+<div class="fi--animate-from-right aesop-component aesop-image-component " style="visibility:hidden;">
   <div class="aesop-content">
     <figure class="aesop-image-component-image aesop-component-align-right aesop-image-component-caption-left" style="margin-right:25%; width:250px;">
-      <a class="aesop-lightbox" href="https://minafi.com/wp-content/uploads/2017/08/millionaire.jpg" title="Megacon 2016 in Orlando, FL.">
-        <img src="https://minafi.com/wp-content/uploads/2017/08/millionaire.jpg" alt="Adam at the Ghibli Museum in Tokyo.">
+      <a class="aesop-lightbox" href="https://minafi.com/recommends/millionaire-next-door/" title="The Millionaire Next Door">
+        <img src="https://minafi.com/wp-content/uploads/2017/08/millionaire.jpg" alt="The Millionaire Next Door">
       </a>
     </figure>
   </div>
@@ -670,34 +654,119 @@
 
 <div class="container container-wide">
   <img src="https://minafi.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-20-at-11.17.01-PM.png" alt="Personal Capital Breakdown" />
-  <p class="text-right text-muted"><small>A scenario I was running on my own finances</small></p>
+  <p class="text-center text-muted"><small>A scenario I was running on my own finances</small></p>
 </div>
 
 <p>What I really like about <a href="https://track.flexlinkspro.com/a.ashx?foid=1106765.137967093&foc=1&fot=1001&fos=1" rel="nofollow" target="_blank" class="tooltippable" title="This is an affiliate link, but it is a service I use.">Personal Capital<sup>*</sup></a> is it goes beyond the averages used in this post to group scenarios by percentile. In this screenshot above, you can see a line for my median case, but also the worst 10 percentile. The little blocks are also me playing with life events: buying healthcare, taking social security and when Mrs. Minafi stops working.</p>
 
-
-
 <a name="part-9"></a>
-<h2 class="pt-3">Part 9: What Next?</h2>
+<h2 class="pt-3">Part 9: Recap</h2>
+<p>You made it to the end! Let's recap a little about where you are now and where you're going.</p>
+
+
+<div class="card container container-slim card--info">
+  <h3>Here's A Snapshot of your Financial Health</h3>
+  <p>
+    You're a
+    <span data-var="age" class="FIAdjustableNumber" data-min="8" data-max="100"> year old</span>
+    <span data-var="gender" class="MultiToggle TKSwitch">
+			<span>man</span>
+			<span>woman</span>
+      <span class="tooltippable" data-placement="top" title="Including non-binary, gender fluid, and genderqueer">trans*</span>
+      <span>other</span>
+      <span>undisclosed</span>
+		</span>
+    currently earning
+    $<span data-var="yearlyIncome" data-format="currency" class="TKNumberField" data-min="0" data-max="10000000"></span>/yr
+    and saving
+    $<span data-var="yearlySavings" data-format="currency" class="TKNumberField" data-min="0" data-max="10000000"></span>/yr
+    for a savings rate (SR) of about
+    <span data-var="savingsRate" data-format="percent" class="tangle--dynamic"></span>.
+  </p>
+  <p>
+    You've managed to save up
+    $<span data-var="networth" data-format="currency" class="TKNumberField" data-min="0" data-max="10000000"></span> so far.
+		Right now, you're
+		<span data-var="phase" class="MultiToggle TKSwitch">
+			<span>retired</span>
+			<span>saving money for retirement</span>
+      <span>paying off debt</span>
+		</span>
+    and spending
+    $<span data-var="yearlySpending" data-format="currency" class="TKNumberField" data-min="0" data-max="10000000"></span>/yr.
+	</p>
+
+  <p>
+    In retirement, you're hoping to spend
+    <span data-var="retirementSpendingPercent" data-format="percent" class="FIAdjustableNumber tooltippable" data-step="0.01" data-min="0" data-max="3" data-toggle="tooltip" data-placement="bottom" title="If you're not sure, stick to 80% here."></span> of what you spend today (equal to about <span data-var="retirementYearlySpending" data-format="currency" class="tangle--dynamic"></span>/yr) and retire at age
+    <span data-var="goalReAge" class="FIAdjustableNumber" data-min="8" data-max="100"> years old</span>.
+  </p>
+
+  <p>
+    You're on track to be financially independent in
+    <span class="tangle--dynamic" data-var="yearsUntilFi" data-format="years"></span>
+    – at age
+    <span class="tangle--dynamic" data-var="fiAge" data-format="years"></span>
+    once you've saved up
+    <span class="tangle--dynamic" data-var="fiStash" data-format="currency"></span>
+  </p>
+
+  <p>
+    For your calculations, you're assuming the markets will rise
+    <span data-var="marketGrowth" class="FIAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic">/yr</span>
+    and that your withdrawal rate will be
+    <span data-var="wr" class="FIAdjustableNumber" data-step="0.001" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic"></span>.
+  </p>
+
+  <p>
+    If you permanently reduce your spending by <span data-var="spendingReductionPercent" data-format="percentDecimal" data-step="0.01" data-max="1" data-min="0" class="tangle--dynamic FIAdjustableNumber"></span> (saving <span data-var="impliedSpendingReductionYearlySavings" data-format="currency" class="tangle--dynamic">/yr</span>) then you could be FI in <span data-var="spendingReductionYearsUntilFi" data-format="years" class="tangle--dynamic"></span>.
+  </p>
+
+  <p>
+    If you earn a little money in retirement, say
+    <span data-var="eirIncomePercent" data-format="percent" data-step="0.01" data-max="1" data-min="0" class="tangle--dynamic FIAdjustableNumber"></span>, then you'd be FI in
+    <span data-var="eirTimeUntilFi" data-format="years" class="tangle--dynamic"></span>.
+  </p>
+
+  <p>
+    If you permanently reduce spending by
+    <span data-var="spendingReductionPercent" data-format="percentDecimal" data-step="0.01" data-max="1" data-min="0" class="tangle--dynamic FIAdjustableNumber"></span>
+    <i>and</i>
+    earn a side income of
+    <span data-var="eirIncomePercent" data-format="percent" data-step="0.01" data-max="1" data-min="0" class="tangle--dynamic FIAdjustableNumber"></span>,
+    then you'll be on track to be FI in
+    <span data-var="allSoonerYears" data-format="years" class="tangle--dynamic"></span> --
+    <span data-var="allSoonerYearsEarly" data-format="years" class="tangle--dynamic"></span> earlier than your current path.
+  </p>
+
+  <p class="lead fi--info">
+		<i>Adam Says:</i> This is a dense area, but it includes all adjustable numbers in this post. If you're wanting to just play around and see the results of any scenario, this is your chance!
+	</p>
+</div>
+
+
+
+<a name="part-10"></a>
+<h2 class="pt-3">Part 10: What Next?</h2>
 <p>
-  If there's one takeaway you get from this post, it's that <b>the concept of financial independence isn't solely for those who are extremely weathy or for those who are nearing social security</b>.
+  If there's one takeaway you get from this post, it's that <b>the concept of financial independence isn't solely for those who are extremely wealthy or for those who are nearing social security</b>.
 </p>
 <p>
-  It's a path that starts with understanding and minimizing your expenses -- a valuable undertaking regardless of your long-term goal. Beyond that, it's about understanding how much you need to save to live the life you want and making a plan for it.
+  It's a path that starts with understanding what you want out of life and figuring out what you'd need to do to get there. The fastest way often means removing excess from your life that isn't increasing happiness in proportion to the amount spent. Beyond that, it's about understanding how much you need to save to live the life you want and making a plan for it.
 </p>
 <p>
   There is no predetermined group that financial independence is for. It could work well for people in extreme debt who want to get out and work towards a different future -- or for people in their career looking for what comes next.
 </p>
 
+<h3>My Recommendations For You</h3>
 <ul>
   <li>Track your spending for a month. Learn where every cent is going.</li>
-  <li>Find a community of people to learn from. This could one of the above places, a blog you enjoy, a podcast you jive with - anything that keeps your learning.</li>
-  <li>Read more about <a href="/category/minimalism/" target="_blank">minimalism</a>, <a href="/category/mindfulness/" target="_blank">mindfulness</a> or <a href="/category/financial-independence/" target="_blank">financial independence</a> here on Minafi.</li>
   <li>Start learning the basics of investing. I recommend starting with a <a href="/simple-three-fund-portfolio-vanguard/" target="_blank">Simple Three-Fund Portfolio at Vanguard</a> or in your 401k. Understand what you're investing in there.</li>
-  <li>Stick with investing for a year, putting in more money as you feel comforable, and continuing your education.</li>
-  <li>Make a plan for when you'd want to be FI, and work backwards to understand what changes you'd need to make in your life to get there.</li>
+  <li>Stick with investing for a year, putting in more money as you feel comfortable, and continuing your education.</li>
+  <li>Find a community of people to learn from. This could one of the above places, a blog you enjoy, a podcast you jive with - anything that keeps you learning.</li>
+  <li>Make a plan for when you'd want to be FI, and work backward to understand when you'd get there and how to get there sooner!</li>
+  <li>Read more about <a href="/category/minimalism/" target="_blank">minimalism</a>, <a href="/category/mindfulness/" target="_blank">mindfulness</a> or <a href="/category/financial-independence/" target="_blank">financial independence</a> here on Minafi.</li>
 </ul>
-
 
 <div class="card container container-wide mb-3">
   <div class="row mt-3">

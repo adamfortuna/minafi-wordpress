@@ -13,7 +13,7 @@
 		</div>
 	</div>
 
-  <h3>Mr and Mrs Frugal Hacker from <a href="https://www.frugalhackers.com/" target="_blank">Frugal Hackers</a></h3>
+  <h3>Mr. and Mrs. Frugal Hacker from <a href="https://www.frugalhackers.com/" target="_blank">Frugal Hackers</a></h3>
   <p class="lead">27f/30m, married and saving in San Francisco, CA. $480k+ in savings. Spending $56,845.07/yr now, $36,568.63/yr in retirement. FIRE 30 (Mrs) and 33 (Mr) in a super expensive city.</p>
   <p>
     We are two young married Canadians of Indian origin living and working in San Francisco making $300k in annual income before taxes and expenses. Mr. Frugal Hacker is a Software Engineer and Mrs. Frugal Hacker is a CPA. A typical weekend is usually some combination of long-distance cycling, hiking, walking around San Francisco, board games with friends, building personal finance spreadsheets and working on our blog, frugalhackers.com
@@ -38,7 +38,7 @@
 
   <p>
     <a href="#frugalhackers" class="profile-toggle">
-      <span class="profile-toggle--read-more">Read more about Mr and Mrs Frugal Hacker <i class="fa fa-angle-double-down" aria-hidden="true"></i></span>
+      <span class="profile-toggle--read-more">Read more about Mr. and Mrs. Frugal Hacker <i class="fa fa-angle-double-down" aria-hidden="true"></i></span>
       <span class="profile-toggle--read-less">Collapse <i class="fa fa-angle-double-up" aria-hidden="true"></i></span>
     </a>
   </p>

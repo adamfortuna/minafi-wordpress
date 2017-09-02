@@ -2926,6 +2926,16 @@ $(function() {
     origin: 'left', distance: '0px', duration: 1000
   });
 
+  sr.reveal('.fi--animate-from-right', {
+    origin: 'left', distance: '0px', duration: 1000
+  });
+
+  sr.reveal('.fi--animate-from-left', {
+    origin: 'right', distance: '0px', duration: 1000
+  });
+
+
+
 
   $('.profile-toggle').on('click', function(e) {
     var name = $(e.target).closest("a").attr('href').replace("#", ""),

@@ -14,7 +14,7 @@
 	</div>
 
   <h3>J. from <a href="http://millennialboss.com" target="_blank">Millennial Boss</a></h3>
-  <p class="lead">28f, married, working and saving money in the Pacific Northwest. $300k in savings. Spending varies by location, $60k in retirement. FI by 35. RE by 40 in an city metro.</p>
+  <p class="lead">28f, married, working and saving money in the Pacific Northwest. $300k in savings. Spending varies by location, $60k in retirement. FI by 35. RE by 40 in a city metro.</p>
   <p>
     I'm J and I love dabbling in various side hustles, travel hacking, and reading personal development books. I plan to retire with my husband and my dog near family but the truth is that I love dabbling so much that I always see myself bringing in some sort of income. I'm currently an Etsy seller and make a few hundred dollars per month through that.
   </p>
