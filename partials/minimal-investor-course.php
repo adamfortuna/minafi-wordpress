@@ -1,6 +1,6 @@
 <form action="//minafi.us16.list-manage.com/subscribe/post?u=d2476f8b6bf5aa45f4014a563&amp;id=704b6324f7" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" novalidate target="_blank">
   <h3>The Minimal Investor Course</h3>
-	<p><small>Sign up to become a <a href="/minimal-investor-course" target="_blank">Minimal Investor</a> with this 10-week email course.</small></p>
+	<p><small>Sign up to become a <a href="/minimal-investor-course" target="_blank">Minimal Investor</a> with this free 10-week email course.</small></p>
 
 	<div class="form-group">
 		<input type="email" placeholder="Email" value="" name="EMAIL" class="email--signup required email form-control form-control-sm">
