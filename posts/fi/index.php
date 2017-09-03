@@ -412,6 +412,19 @@
 
 <p>When I first did the math on compound interest I was floored. The idea that I'd make more money during retirement than during my working years seemed counterintuitive, but the numbers were right there.</p>
 
+<h3>Become an Investor</h3>
+<p>If you're not currently investing, learning enough to feel confident can be intimidating. It takes time, patient and the occasional leap of faith. I've put together a 10-week email course to help.</p>
+
+<div class="fi--profile-green my-3 fi--email">
+  <div class="card container container-slim p-3 my-3">
+    <?php include(get_template_directory().'/partials/minimal-investor-course.php'); ?>
+  </div>
+</div>
+
+<p>In this course, I'll email you a new set of tasks to accomplish each week. Sometimes this will include articles to read, or activities to perform on Vanguard.</p>
+
+<p>By the end of this course, you'll have a balanced understanding of investing and confidence to invest for the rest of your life. If you've been putting off learning how to invest, this is where you should start. If you'd like to learn more, you can read about <a href="https://minafi.com/minimal-investor-course/" target="_blank">The Minimal Investor Course</a> and sign up.</p>
+
 <a name="part-6"></a>
 <div class="container text-center pb-3 mb-3">
   <img src="https://minafi.com/wp-content/uploads/2017/08/pexels-photo-287240.jpeg" alt="retire sooner">
@@ -764,7 +777,7 @@
 <ul>
   <li>Track your spending for a month. Learn where every cent is going.</li>
   <li>Start learning the basics of investing. I recommend starting with a <a href="/simple-three-fund-portfolio-vanguard/" target="_blank">Simple Three-Fund Portfolio at Vanguard</a> or in your 401k. Understand what you're investing in there.</li>
-  <li>Stick with investing for a year, putting in more money as you feel comfortable, and continuing your education.</li>
+  <li>Sign up for my <a href="/minimal-investor-course" target="_blank">Minimal Investor Course</a>.</li>
   <li>Find a community of people to learn from. This could one of the above places, a blog you enjoy, a podcast you jive with - anything that keeps you learning.</li>
   <li>Make a plan for when you'd want to be FI, and work backward to understand when you'd get there and how to get there sooner!</li>
   <li>Read more about <a href="/category/minimalism/" target="_blank">minimalism</a>, <a href="/category/mindfulness/" target="_blank">mindfulness</a> or <a href="/category/financial-independence/" target="_blank">financial independence</a> here on Minafi.</li>
@@ -772,7 +785,7 @@
 
 <div class="card container container-wide mb-3">
   <div class="row mt-3">
-    <p class="col-md-10 h2 text-center fi-share--message">I read an Interactive Guide to Financial Independence and Early Retirement on Minafi and now know when I'll be FI!</p>
+    <p class="col-md-10 h2 text-center fi-share--message">I read An Interactive Guide to Financial Independence and Early Retirement on Minafi and now know when I'll be FI!</p>
     <p class="col-md-2 h1 fi--share">
       <span class="h6 text-center">Share On</span><br/>
       <a href="#" title="Share on Facebook" class="fi-share-fb" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
@@ -783,6 +796,17 @@
 
 <p class="lead">If you enjoyed this article, or have any thoughts on it, please share it and <a href="/contact" target="_blank">let me know</a> what you think. I would love to hear from you!</p>
 
+
+<div class="card container container-wide mb-3">
+  <div class="row mt-3">
+    <p class="col-md-10 h2 text-center fi-share--message">An Interactive Guide to Financial Independence and Early Retirement via @minafiblog</p>
+    <p class="col-md-2 h1 fi--share">
+      <span class="h6 text-center">Share On</span><br/>
+      <a href="#" title="Share on Facebook" class="fi-share-fb" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+      <a href="#" class="fi-share-twitter" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+    </p>
+  </div>
+</div>
 
 <h3>Credits</h3>
 <p>Special thanks to the following people for helping out on this!</p>
