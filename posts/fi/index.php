@@ -262,10 +262,6 @@
 
     <span data-var="marketGrowth" class="FIAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0.001" data-format="percentDecimal" class="tangle--dynamic">/yr investment growth</span> and you'll use a
     <span data-var="wr" class="FIAdjustableNumber" data-step="0.001" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic"> WR</span>.
-
-    Retire at <span data-var="goalReAge" class="FIAdjustableNumber" data-min="8" data-max="100"> years old</span>, spending <span data-var="retirementYearlySpending" data-format="currency" class="tangle--dynamic"></span>/yr, about
-
-    <span data-var="retirementSpendingPercent" data-format="percent" class="FIAdjustableNumber tooltippable" data-step="0.01" data-min="0" data-max="3" data-toggle="tooltip" data-placement="bottom" title="If you're not sure, stick to 80% here."></span> of current spending.
 	</p>
 </div>
 
