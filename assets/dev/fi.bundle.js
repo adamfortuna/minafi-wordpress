@@ -2956,12 +2956,12 @@ $(function() {
 
   $('.fi-share-twitter').on('click', function() {
     var message = $(this).closest('.card').find('.fi-share--message').text();
-    $(this).attr('href', "https://twitter.com/share?url=https://minafi.com/fi&text="+message)
+    $(this).attr('href', "https://twitter.com/share?url=https://minafi.com/interactive-guide-early-retirement-financial-independence/&text=" + message);
   });
 
   $('.fi-share-fb').on('click', function() {
     var message = $(this).closest('.card').find('.fi-share--message').text();
-    var url = "https://www.facebook.com/sharer/sharer.php?u=https://minafi.com/fi/&display=popup&ref=plugin&src=share_button&quote="+message;
+    var url = "https://www.facebook.com/sharer/sharer.php?u=https://minafi.com/interactive-guide-early-retirement-financial-independence/&display=popup&ref=plugin&src=share_button&quote="+message;
     $(this).attr('href', url);
   });
 

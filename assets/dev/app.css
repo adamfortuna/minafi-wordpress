@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
- * Bootstrap v4.0.0-alpha.6 (https://getbootstrap.com)
+ * Bootstrap v4.0.0-beta (https://getbootstrap.com)
  * Copyright 2011-2017 The Bootstrap Authors
  * Copyright 2011-2017 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -8,15 +8,7 @@
 @media print {
   *,
   *::before,
-  *::after,
-  p::first-letter,
-  div::first-letter,
-  blockquote::first-letter,
-  li::first-letter,
-  p::first-line,
-  div::first-line,
-  blockquote::first-line,
-  li::first-line {
+  *::after {
     text-shadow: none !important;
     box-shadow: none !important; }
   a,
@@ -491,30 +483,28 @@ pre {
   margin-right: auto;
   margin-left: auto;
   padding-right: 15px;
-  padding-left: 15px; }
+  padding-left: 15px;
+  width: 100%; }
   @media (min-width: 576px) {
     .container {
-      width: 540px;
-      max-width: 100%; } }
+      max-width: 540px; } }
   @media (min-width: 768px) {
     .container {
-      width: 720px;
-      max-width: 100%; } }
+      max-width: 720px; } }
   @media (min-width: 992px) {
     .container {
-      width: 960px;
-      max-width: 100%; } }
+      max-width: 960px; } }
   @media (min-width: 1200px) {
     .container {
-      width: 1140px;
-      max-width: 100%; } }
+      max-width: 1140px; } }
 
 .container-fluid {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
   padding-right: 15px;
-  padding-left: 15px; }
+  padding-left: 15px;
+  width: 100%; }
 
 .row {
   display: flex;
@@ -1718,7 +1708,8 @@ fieldset[disabled] a.btn {
   .btn-link, .btn-link:active, .btn-link.active, .btn-link:disabled {
     background-color: transparent; }
   .btn-link, .btn-link:focus, .btn-link:active {
-    border-color: transparent; }
+    border-color: transparent;
+    box-shadow: none; }
   .btn-link:hover {
     border-color: transparent; }
   .btn-link:focus, .btn-link:hover {
@@ -1794,6 +1785,10 @@ tbody.collapse.show {
 
 .dropdown-toggle:empty::after {
   margin-left: 0; }
+
+.dropup .dropdown-menu {
+  margin-top: 0;
+  margin-bottom: 0.125rem; }
 
 .dropup .dropdown-toggle::after {
   border-top: 0;
@@ -2304,12 +2299,6 @@ tbody.collapse.show {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between; }
-    @media (max-width: 575px) {
-      .navbar > .container,
-      .navbar > .container-fluid {
-        width: 100%;
-        margin-right: 0;
-        margin-left: 0; } }
 
 .navbar-brand {
   display: inline-block;
@@ -2341,7 +2330,8 @@ tbody.collapse.show {
   padding-bottom: 0.5rem; }
 
 .navbar-collapse {
-  flex-basis: 100%; }
+  flex-basis: 100%;
+  align-items: center; }
 
 .navbar-toggler {
   padding: 0.25rem 0.75rem;
@@ -3749,6 +3739,9 @@ a.bg-light:focus, a.bg-light:hover {
 a.bg-dark:focus, a.bg-dark:hover {
   background-color: rgba(0, 0, 0, 0.8) !important; }
 
+.bg-white {
+  background-color: #fff !important; }
+
 .bg-transparent {
   background-color: transparent !important; }
 
@@ -3793,6 +3786,9 @@ a.bg-dark:focus, a.bg-dark:hover {
 
 .border-dark {
   border-color: rgba(0, 0, 0, 0.8) !important; }
+
+.border-white {
+  border-color: #fff !important; }
 
 .rounded {
   border-radius: 0.25rem !important; }
@@ -5675,7 +5671,7 @@ a.text-dark:focus, a.text-dark:hover {
   color: rgba(0, 0, 0, 0.8) !important; }
 
 .text-muted {
-  color: #ced4da !important; }
+  color: rgba(0, 0, 0, 0.8) !important; }
 
 .text-hide {
   font: 0/0 a;
@@ -9966,7 +9962,9 @@ body {
   .nav-link {
     font-size: 90%;
     padding: 0.25rem 0.3rem;
-    line-height: 45px; } }
+    line-height: 45px; }
+  .nav-item--search {
+    display: none; } }
 
 .search--link {
   background-color: transparent; }
@@ -11792,7 +11790,7 @@ span.entry-subtitle {
   body .home--hero,
   body .home--hero-content,
   body .hero--text {
-    height: 200px !important; }
+    height: 240px !important; }
   body .hero--text p {
     margin-left: 0;
     font-size: 1.4rem;
@@ -12140,9 +12138,6 @@ span.alert {
 
 .fi--profile.fi--profile-collapsed .profile-toggle--read-more {
   display: inline-block; }
-
-.articles--list #post-4404 {
-  display: none; }
 
 .icon--adam {
   position: relative; }

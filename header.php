@@ -13,6 +13,7 @@
 <head itemscope itemtype="http://schema.org/WebSite">
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="p:domain_verify" content="e6b90cdd99284ef5b749982befb28b37"/>
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
@@ -60,7 +61,7 @@
 			        </div>
 			      </li>
 
-	          <li class="nav-item">
+	          <li class="nav-item nav-item--search">
 							<form role="search" method="get" class="form-inline search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
                 <div class="search--form form-group">
                   <label class="sr-only" for="searchInput">Search</label>

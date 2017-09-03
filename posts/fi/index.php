@@ -14,15 +14,15 @@
 <script src="<?php echo $theme_path; ?>/assets/js/fi.bundle.js"></script>
 <?php } ?>
 
-<p>Let's talk about financial independence and early retirement! These phrases alone have a lot of weight associated with them, and you might have an immediate gut response to just hearing these terms.</p>
+<p>Let's talk about early retirement and financial independence ! These phrases alone have a lot of weight associated with them, and you might have an immediate gut response to just hearing these terms.</p>
 
-<p>You might love your job and wouldn't think about leaving it. Maybe you hate your job and can't wait to leave it. Maybe you're looking for a change. Maybe you feel you never want to retire because you'd just "be bored", Or maybe you plan to work until you can't anymore. <b>For this post, I'm going to ask one request of you:</b></p>
+<p>You might love your job and wouldn't think about leaving it. Maybe you hate your job and can't wait to leave it. Maybe you're looking for a change. Maybe you feel you never want to retire because you'd just "be bored", or maybe you plan to work until you can't work anymore. <b>For this post, I'm going to ask one thing...</b></p>
 
 <blockquote class="text-center">
   <p>My request for you:<br/> Don't assume financial independence means retirement.</p>
 </blockquote>
 
-<p>Instead, for this post, think of financial independence (abbreviated FI) as the point where if for any reason you stopped working, you'd be set for the rest of your life. What you choose to do with your life at that point is up to you!</p>
+<p>Instead, for this post, think of financial independence (abbreviated FI) as the point where if for any reason you stopped working, you'd be set for the rest of your life at your desired lifestyle. What you choose to do with your life at that point is up to you!</p>
 
 <p>After making your way through this post and filling in your numbers, you're going to know what you'll need to do in order to make it happen. Here's a rundown of what we'll be talking about.</p>
 
@@ -52,7 +52,7 @@
 
 <p>This is going to be the core question we answer in this article, exploring it in a number of different ways. My goal is that after reading this post, you know exactly how much you'd need to retire in your current state, but also give some advice on small tweaks to your lifestyle that could hugely impact this number.</p>
 
-<p>The first step is understanding your current financial footing and where your current path would take you. Depending on your current financial health, this can range from a breath a relief to a sobering realization. <b>Please</b>, bear with it. I guarantee that knowing your financial health is better than not knowing.</p>
+<p>The first step is understanding your financial footing today and where your current path would take you. Depending on your financial health, this can range from a breath of relief to a sobering realization. <b>Please</b>, bear with it. I guarantee that knowing your financial health is better than not knowing.</p>
 
 <h3>This Article Is Interactive!</h3>
 <p>
@@ -93,7 +93,7 @@
 	</p>
 </div>
 
-<p>When working towards FI and Retirement, <b>your savings rate is one of the most important numbers</b>. The more you save each year, the faster you'll be able to retire – that's obvious – but <b>how much faster</b>? See where your <span class="tangle--dynamic" data-var="savingsRate" data-format="percent"></span> SR falls on the following chart:</p>
+<p>When working towards retirement and financial independence, <b>your savings rate is one of the most important numbers</b>. The more you save each year, the faster you'll be able to retire – that's obvious – but <b>how much faster</b>? See where your <span class="tangle--dynamic" data-var="savingsRate" data-format="percent"></span> SR falls on the following chart:</p>
 
 <div class="card container container-wide graph--sr--container mb-3 card--info">
   <h3>Years to FI/retirement by Savings Rate Calculator</h3>
@@ -168,8 +168,8 @@
       <span>other</span>
       <span>undisclosed</span>
 		</span>
-		and have a total combined savings of about
-		$<span data-var="networth" data-format="currency" class="tooltippable TKNumberField" data-min="0" data-max="10000000" data-toggle="tooltip" data-placement="top" title="For simplicity sake, we'll just look at your savings - 401k, Roth IRA, brokerage and any other currency assets."></span>.
+		and have a total combined savings &amp; investments of about
+		$<span data-var="networth" data-format="currency" class="tooltippable TKNumberField" data-min="0" data-max="10000000"></span>.
 		Right now, I'm
 		<span data-var="phase" class="MultiToggle TKSwitch">
 			<span>retired</span>
