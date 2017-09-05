@@ -130,7 +130,11 @@ $(function() {
       var combinedStashNeeded = this.calcStash(this.retirementYearlySpending - this.eirIncomeAfterRetirement - this.impliedSpendingReductionYearlySavings);
       this.allSoonerYears = this.calcTimeUntilFi(this.impliedSpendingReductionYearlySavingsTotal, combinedStashNeeded, this.networth, this.marketGrowth);
       this.allSoonerYearsEarly = this.yearsUntilFi - this.allSoonerYears;
-      this.allSoonerPercent = this.allSoonerYearsEarly / this.yearsUntilFi;
+      if(this.yearsUntilFi > 0) {
+        this.allSoonerPercent = this.allSoonerYearsEarly / this.yearsUntilFi;
+      } else {
+        this.allSoonerPercent =  0;
+      }
     },
 
 
@@ -326,8 +330,12 @@ $(function() {
       var result = this.resultState(),
           changedItems = this.changedValues(result);
       if(changedItems.length >= 2) {
-        this.database.ref("fipost/"+this.env()+'/'+window.user.uid)
-                .set(result);
+        try {
+          this.database.ref("fipost/"+this.env()+'/'+window.user.uid)
+                       .set(result);
+        } catch(e) {
+          console.log("Error updating firebase", e);
+        }
       }
     },
     deleteFirebase: function() {

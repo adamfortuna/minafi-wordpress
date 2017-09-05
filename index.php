@@ -23,8 +23,9 @@ include('partials/hero.php');
 	<div class="row">
 		<section class='articles--list articles--hero col-lg-8'>
 			<p class="text-right pr-3 mb-0 lead recent-posts">
+				Recent Posts
 				<a href="/feed"><i class="fa fa-rss" aria-hidden="true"></i></a>
-				Recent Posts <i class="fa fa-level-down" aria-hidden="true"></i></p>
+			</p>
 			<?php
 				// Show recent 5 posts with
 				$i = 0;
@@ -36,6 +37,7 @@ include('partials/hero.php');
 
 		<section class="col-lg-4 sidebar">
 			<?php include('partials/about.php'); ?>
+			<?php include('partials/fi.php'); ?>
 			<?php include('partials/categories.php') ?>
 			<?php include('partials/social.php') ?>
 			<?php include('partials/email-sidebar.php'); ?>

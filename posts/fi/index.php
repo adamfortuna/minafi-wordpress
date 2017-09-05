@@ -377,9 +377,9 @@
 
 <h3>Enter Market Investing</h3>
 
-<p>The missing piece here is that you can <a href="https://minafi.com/investment-literacy/" target="_blank">invest that money in the stock market</a> -- both while you're growing it and when you're drawing down from it.</p>
+<p>The missing piece here is that you can <a href="https://minafi.com/minimal-investor-course/" target="_blank">invest that money in the stock market</a> -- both while you're growing it and when you're drawing down from it.</p>
 
-<p>Stock markets in the US have returned on average 7% a year since their beginning. This is an important number! If you're withdrawing at most 4% of this, and 3% of it is going to inflation, then your net worth will last forever. Unfortunately, the stock market has ups and down, so we can't make predictions quite that bold, but we can use it as a baseline. This is why 4% is often sighted as the maximum WR to use in calculations.</p>
+<p>Stock markets in the US have returned on average 7% a year since their beginning. This is an important number! If you're withdrawing at most 4% of this, and 3% of it is going to inflation, then your net worth will last forever. Unfortunately, the stock market has ups and downs, so we can't make predictions quite that bold, but we can use it as a baseline. This is why 4% is often sighted as the maximum WR to use in calculations.</p>
 
 <p>Learning how to invest and earn ~7% will sound intimidating at first. It will take trial and error, but more than that it'll take being brave and putting money into the stock market. Using a simple <a href="https://minafi.com/simple-three-fund-portfolio-vanguard/" target="_blank">3-fund portfolio</a> is a great place to start learning how to invest.</p>
 
@@ -409,7 +409,7 @@
 <p>When I first did the math on compound interest I was floored. The idea that I'd make more money during retirement than during my working years seemed counterintuitive, but the numbers were right there.</p>
 
 <h3>Become an Investor</h3>
-<p>If you're not currently investing, learning enough to feel confident can be intimidating. It takes time, patient and the occasional leap of faith. I've put together a 10-week email course to help.</p>
+<p>If you're not currently investing, learning enough to feel confident can be intimidating. It takes time, patience and the occasional leap of faith. I've put together a 10-week email course to help you get started.</p>
 
 <div class="fi--profile-green my-3 fi--email">
   <div class="card container container-slim p-3 my-3">
@@ -591,7 +591,7 @@
 <p>There are a few amazing books on the topic of financial independence and early retirement that go into these topics with much more eloquence than and depth than I could ever explore. If you're curious to learn more, these are all amazing resources.</p>
 
 <h3>Minafi Email List</h3>
-<p>Here at Minafi, I write about the intersection of minimalism, mindfulness and financial independence. I'll also be releasing more interactive posts like this one in the months to come. Sign up to be notified about all posts, or just the next interactive one. You'll only get emails when posts come out for the topics you're interested in.</p>
+<p>Here at Minafi, I write about the intersection of minimalism, mindfulness and financial independence. I'll also be releasing more interactive posts like this one in the months to come. Sign up to get <b>one email each month</b> with what I'm writing about.</p>
 
 <div class="fi--profile-green my-3 fi--email">
   <div class="card container container-slim p-3 my-3">
@@ -668,7 +668,7 @@
   <p class="text-center text-muted"><small>A scenario I was running on my own finances</small></p>
 </div>
 
-<p>What I really like about <a href="https://track.flexlinkspro.com/a.ashx?foid=1106765.137967093&foc=1&fot=1001&fos=1" rel="nofollow" target="_blank" class="tooltippable" title="This is an affiliate link, but it is a service I use.">Personal Capital<sup>*</sup></a> is it goes beyond the averages used in this post to group scenarios by percentile. In this screenshot above, you can see a line for my median case, but also the worst 10 percentile. The little blocks are also me playing with life events: buying healthcare, taking social security and when Mrs. Minafi stops working.</p>
+<p>What I really like about <a href="https://track.flexlinkspro.com/a.ashx?foid=1106765.137967093&foc=1&fot=1001&fos=1" rel="nofollow" target="_blank" class="tooltippable" title="This is an affiliate link, but it is a service I use.">Personal Capital<sup>*</sup></a> is it goes beyond the averages used in this post to group scenarios by percentile. In this screenshot above, you can see a line for my median case, but also the worst 10 percentile. The little blocks are me playing with life events: buying healthcare, taking social security and when Mrs. Minafi stops working.</p>
 
 <a name="part-9"></a>
 <h2 class="pt-3">Part 9: Recap</h2>
