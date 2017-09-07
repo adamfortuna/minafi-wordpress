@@ -19,6 +19,11 @@
   }
 }
 
+.aesop-lightbox {
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+}
+
 @media only screen and (max-width: 1080px) {
   .aesop-image-component {
     .aesop-content {

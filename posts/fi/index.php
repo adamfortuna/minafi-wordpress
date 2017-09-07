@@ -657,6 +657,9 @@
 <h4><a href="https://forum.mrmoneymustache.com/" target="_blank">Mr. Money Mustache Community</a></h4>
 <p>While Bogleheads leans towards investing, the MMM community ranges from "do it yourself" to "real estate investing" to "taxes" and "entrepreneurship".</p>
 
+<h4><a href="https://forum.earlyretirementextreme.com/" target="_blank">Early Retirement Extreme Forums</a></h4>
+<p>The Early Retirement Extreme community (created by <a href="#jacob">Jacob</a> interviewed above!) focuses on all parts of retiring early with a slant towards extreme lifestyle changes that can make the process go faster.</p>
+
 <h3>Calculators</h3>
 <p>
   The graphs in this post are only a starting point for understanding your financial future. The best tool I've found for digging deeper into these numbers and incorporating many more variables is
