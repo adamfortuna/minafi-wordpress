@@ -1,5 +1,5 @@
 <form action="https://www.getdrip.com/forms/590874722/submissions" method="post" data-drip-embedded-form="590874722">
-  <h3 data-drip-attribute="headline">The Minimal Investor Course</h3>
+  <h3>The Minimal Investor Course</h3>
   <p><small>Sign up to become a <a href="/minimal-investor-course" target="_blank">Minimal Investor</a> with this free 10-week email course.</small></p>
 
   <div class="form-group">
