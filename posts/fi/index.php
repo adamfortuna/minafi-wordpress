@@ -202,7 +202,7 @@
 	</p>
 	<p>
 	 At age
-	 	<span class="tangle--dynamic" data-var="fiAge" data-format="years"></span>, you would have
+	 	<span class="tangle--dynamic" data-var="fiAge" data-format="years"></span>, you would need
 		<span data-var="fiStash" data-format="currency" class="tangle--dynamic"></span>
 		in retirement savings and can start withdrawing
 		<span data-var="retirementYearlySpending" data-format="currency" class="tangle--dynamic"></span>/yr.
@@ -212,7 +212,7 @@
 	<div class="BlockSwitch" data-var="fiPhase">
 		<div class="alert alert-success" role="alert">
 			<h3>Ahead of Schedule</h3>
-      <p>You're way on track to be FI by your goal retirement date. Why not try setting a stretch goal for this post? Turn down the stock market rate of <span data-var="marketGrowth" class="FIAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic">/yr</span> or turn the withdrawal rate down even further below <span data-var="wr" class="FIAdjustableNumber" data-step="0.001" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic"></span>.</p>
+      <p>You're way on track to be FI by your goal retirement date. Why not try setting a stretch goal for this post? Turn down the stock market rate of <span data-var="marketGrowth" class="FIAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0.001" data-format="percentDecimal" class="tangle--dynamic">/yr</span> or turn the withdrawal rate down even further below <span data-var="wr" class="FIAdjustableNumber" data-step="0.001" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic"></span>.</p>
 		</div>
 		<div class="alert alert-info" role="alert">
 		  <h3>Close but Calculated</h3>
@@ -238,7 +238,7 @@
 	</div>
 
 	<p class="lead fi--info">
-		<i>Adam Says:</i> For these numbers, I'm assuming <span data-var="marketGrowth" class="FIAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic">/yr investment growth</span> and a <span data-var="wr" class="FIAdjustableNumber" data-step="0.001" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic"> withdrawal rate</span>. If you're not sure what these numbers mean, don't worry! I'll explain them later on in this post.
+		<i>Adam Says:</i> For these numbers, I'm assuming <span data-var="marketGrowth" class="FIAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0.001" data-format="percentDecimal" class="tangle--dynamic">/yr investment growth</span> and a <span data-var="wr" class="FIAdjustableNumber" data-step="0.001" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic"> withdrawal rate</span>. If you're not sure what these numbers mean, don't worry! I'll explain them later on in this post.
 	</p>
 </div>
 
@@ -317,7 +317,7 @@
 
 	<p class="lead fi--info">Adam Says:
     This assumes the same
-    <span data-var="marketGrowth" class="FIAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic">/yr investment growth</span> as before.
+    <span data-var="marketGrowth" class="FIAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0.001" data-format="percentDecimal" class="tangle--dynamic">/yr investment growth</span> as before.
     According to the <a href="https://www.bogleheads.org/wiki/Trinity_study_update" target="_blank">Trinity Study</a>, 3% WR will work 98% of the time, while 4% WR will work out 87% over 30 years.
 </div>
 
@@ -386,7 +386,7 @@
 <h3>Your Numbers with Market Investing</h3>
 <p>
 	If you put your money into savings and withdrew some of it each year, the total amount you'd spend would be <span data-var="fiStash" data-format="currency" class="tangle--dynamic"></span>. However, if you <i>invested</i> this and it grew at a pace of
-	<span data-var="marketGrowth" class="FIAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic">/yr</span>,
+	<span data-var="marketGrowth" class="FIAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0.001" data-format="percentDecimal" class="tangle--dynamic">/yr</span>,
 	and you withdrew an inflation adjusted
 	<span data-var="retirementYearlySpending" data-format="currency" class="tangle--dynamic tangle--dynamic">/yr</span>,
 	then this amount could provide you with
@@ -726,8 +726,8 @@
   </p>
 
   <p>
-    For your calculations, you're assuming the markets will rise
-    <span data-var="marketGrowth" class="FIAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic">/yr</span>
+    You're Assuming markets will rise
+    <span data-var="marketGrowth" class="FIAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0.001" data-format="percentDecimal" class="tangle--dynamic">/yr</span>
     and that your withdrawal rate will be
     <span data-var="wr" class="FIAdjustableNumber" data-step="0.001" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic"></span>.
   </p>
