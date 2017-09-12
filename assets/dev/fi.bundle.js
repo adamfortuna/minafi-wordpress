@@ -2057,6 +2057,14 @@ Tangle.formats.years = function(value) {
   return result;
 }
 
+Tangle.formats.months = function(value) {
+  if(value === 1) {
+    return "1 month";
+  } else {
+    return value + " months";
+  }
+}
+
 Tangle.formats.date = function (date) {
   var monthNames = [
     "January", "February", "March",
