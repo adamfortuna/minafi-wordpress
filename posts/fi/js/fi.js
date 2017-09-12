@@ -42,7 +42,11 @@ $(function() {
       this.savingsRate = this.yearlySavings / this.yearlyIncome;
 
       this.impliedYearlySpending = this.yearlyIncome - this.yearlySavings;
-      this.impliedRetirementStashNeeded = this.calcStash(this.impliedYearlySpending);
+      if(this.impliedYearlySpending < 0) {
+        this.impliedYearlySpending = this.yearlyIncome;
+      }
+      var possibleYearlySpending = (this.impliedYearlySpending < 0) ? this.yearlyIncome : this.impliedYearlySpending;
+      this.impliedRetirementStashNeeded = this.calcStash(possibleYearlySpending);
       this.yearsUntilFiOnlySR = this.calcTimeUntilFi(this.yearlySavings, this.impliedRetirementStashNeeded, 0, this.marketGrowth)
 
 
@@ -344,5 +348,12 @@ $(function() {
     deleteFirebase: function() {
       this.database.ref("fipost/"+this.env()+'/'+window.user.uid).remove();
     }
+  });
+
+
+
+  $('.fi--reset').on('click', function(e) {
+    e.preventDefault();
+    tangle.setValues(defaults);
   });
 });

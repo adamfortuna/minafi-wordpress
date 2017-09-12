@@ -2178,7 +2178,11 @@ $(function() {
       this.savingsRate = this.yearlySavings / this.yearlyIncome;
 
       this.impliedYearlySpending = this.yearlyIncome - this.yearlySavings;
-      this.impliedRetirementStashNeeded = this.calcStash(this.impliedYearlySpending);
+      if(this.impliedYearlySpending < 0) {
+        this.impliedYearlySpending = this.yearlyIncome;
+      }
+      var possibleYearlySpending = (this.impliedYearlySpending < 0) ? this.yearlyIncome : this.impliedYearlySpending;
+      this.impliedRetirementStashNeeded = this.calcStash(possibleYearlySpending);
       this.yearsUntilFiOnlySR = this.calcTimeUntilFi(this.yearlySavings, this.impliedRetirementStashNeeded, 0, this.marketGrowth)
 
 
@@ -2481,6 +2485,13 @@ $(function() {
       this.database.ref("fipost/"+this.env()+'/'+window.user.uid).remove();
     }
   });
+
+
+
+  $('.fi--reset').on('click', function(e) {
+    e.preventDefault();
+    tangle.setValues(defaults);
+  });
 });
 
 function calcYears(sr, marketRate, wr) {
@@ -2532,7 +2543,7 @@ var svg,
     height: 400,
     width: 900
   },
-  savingsRates = d3.range(1, 100, 1),
+  savingsRates = d3.range(1, 101, 1),
   years,
   bisectSr = d3.bisector(function(d) { return d.rate; }).left,
   initial, tooltip;
@@ -2691,9 +2702,15 @@ function highlightSr(nRate, nMarketRate, nWr) {
 
 
   // Featured year
-  var year = years.find(function(year) {
-    return parseInt(year.rate) == parseInt(rate*100);
-  });
+  if(rate < 0.01) {
+    var year = years[0]
+  } else if(rate > 1) {
+    var year = years[years.length-1]
+  } else {
+    var year = years.find(function(year) {
+      return parseInt(year.rate) == parseInt(rate*100);
+    });
+  }
   var x = xScale(year.rate),
       y = yScale(year.years);
 
@@ -2930,11 +2947,6 @@ $(function() {
 
   $.each($("#fi--wrapper .TKNumberFieldInput"), function(index, el) {
     adjustInputSize($(el));
-  });
-
-  $('.fi--reset').on('click', function(e) {
-    e.preventDefault();
-    tangle.setValues(defaults);
   });
 
   $('.tooltippable').tooltip();

@@ -14,11 +14,6 @@ $(function() {
     adjustInputSize($(el));
   });
 
-  $('.fi--reset').on('click', function(e) {
-    e.preventDefault();
-    tangle.setValues(defaults);
-  });
-
   $('.tooltippable').tooltip();
 
 

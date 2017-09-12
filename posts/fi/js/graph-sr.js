@@ -47,7 +47,7 @@ var svg,
     height: 400,
     width: 900
   },
-  savingsRates = d3.range(1, 100, 1),
+  savingsRates = d3.range(1, 101, 1),
   years,
   bisectSr = d3.bisector(function(d) { return d.rate; }).left,
   initial, tooltip;
@@ -206,9 +206,15 @@ function highlightSr(nRate, nMarketRate, nWr) {
 
 
   // Featured year
-  var year = years.find(function(year) {
-    return parseInt(year.rate) == parseInt(rate*100);
-  });
+  if(rate < 0.01) {
+    var year = years[0]
+  } else if(rate > 1) {
+    var year = years[years.length-1]
+  } else {
+    var year = years.find(function(year) {
+      return parseInt(year.rate) == parseInt(rate*100);
+    });
+  }
   var x = xScale(year.rate),
       y = yScale(year.years);
 
