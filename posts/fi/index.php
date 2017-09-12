@@ -273,8 +273,8 @@
 <div class="card container container-wide mb-3">
   <div class="row mt-3">
     <p class="col-md-10 h2 text-center fi-share--message">I'm on track to be financially independent in <span class="tangle--dynamic" data-var="yearsUntilFi" data-format="years"></span> at age <span class="tangle--dynamic" data-var="fiAge" data-format="yearsOnly"></span>! Find your FI date at Minafi.</p>
-    <p class="col-md-2 h1 fi--share">
-      <span class="h6 text-center">Share On</span><br/>
+    <p class="col-md-2 h1 fi--share text-center">
+      <span class="h6">Share On</span><br/>
       <a href="#" title="Share on Facebook" class="fi-share-fb" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
       <a href="#" class="fi-share-twitter" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
     </p>
@@ -786,8 +786,8 @@
 <div class="card container container-wide mb-3">
   <div class="row mt-3">
     <p class="col-md-10 h2 text-center fi-share--message">I read An Interactive Guide to Financial Independence and Early Retirement on Minafi and now know when I'll be FI!</p>
-    <p class="col-md-2 h1 fi--share">
-      <span class="h6 text-center">Share On</span><br/>
+    <p class="col-md-2 h1 fi--share text-center">
+      <span class="h6">Share On</span><br/>
       <a href="#" title="Share on Facebook" class="fi-share-fb" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
       <a href="#" class="fi-share-twitter" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
     </p>
@@ -800,8 +800,8 @@
 <div class="card container container-wide mb-3">
   <div class="row mt-3">
     <p class="col-md-10 h2 text-center fi-share--message">An Interactive Guide to Financial Independence and Early Retirement via @minafiblog</p>
-    <p class="col-md-2 h1 fi--share">
-      <span class="h6 text-center">Share On</span><br/>
+    <p class="col-md-2 h1 fi--share text-center">
+      <span class="h6">Share On</span><br/>
       <a href="#" title="Share on Facebook" class="fi-share-fb" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
       <a href="#" class="fi-share-twitter" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
     </p>
