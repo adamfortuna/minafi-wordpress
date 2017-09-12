@@ -160,7 +160,8 @@
 	<h3>Let's Talk More About You</h3>
 	<p class="lead"></p>
   <p>
-    I'm a <span data-var="age" class="FIAdjustableNumber" data-min="8" data-max="100"> years old</span>
+    I'm a <span data-var="age" class="FIAdjustableNumber" data-min="8" data-max="100"> years</span>
+    and <span data-var="ageMonths" class="FIAdjustableNumber" data-min="0" data-max="11"> months</span> old
     <span data-var="gender" class="MultiToggle TKSwitch">
 			<span>man</span>
 			<span>woman</span>

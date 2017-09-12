@@ -13,6 +13,7 @@ $(function() {
     yearlySavings: 10000,
     phase: 1,
     age: 30,
+    ageMonths: 0,
     gender: 0,
     networth: 5000,
     yearlySpending: 40000,
@@ -58,7 +59,7 @@ $(function() {
 
 
       this.fiPhase = this.calcFiPhase();
-      this.fiAge = this.age + this.yearsUntilFi;
+      this.fiAge = this.age + (this.ageMonths/12) + this.yearsUntilFi;
 
       // Reducing Spending
       this.impliedSpendingReductionYearlySavings = this.yearlySpending * this.spendingReductionPercent;
@@ -177,7 +178,7 @@ $(function() {
     },
 
     calcFiPhase: function() {
-      var calcYearsUntilFi = this.goalReAge - this.age,
+      var calcYearsUntilFi = this.goalReAge - this.age - this.ageMonths,
           diff = this.yearsUntilFi - calcYearsUntilFi;
 
       if(diff <= -1) {
@@ -199,6 +200,7 @@ $(function() {
         'yearlySavings',
         'phase',
         'age',
+        'ageMonths',
         'networth',
         'yearlySpending',
         'retirementSpendingPercent',
@@ -323,6 +325,7 @@ $(function() {
     },
     updateFirebase: function() {
       if(!window.user) { return false; }
+      if(!window.firebase) { return false; }
 
       if(!this.database) {
         this.database = firebase.database();
