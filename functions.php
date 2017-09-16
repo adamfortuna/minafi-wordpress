@@ -446,3 +446,13 @@ if ( ! function_exists( 'minafi_related_posts' ) ) {
     wp_reset_query();
   }
 }
+
+
+function init_drip_feed() {
+  add_feed('drip', 'add_drip_feed');
+}
+add_action('init', 'init_drip_feed');
+function add_drip_feed() {
+  add_filter('pre_option_rss_use_excerpt', '__return_zero');
+  load_template(TEMPLATEPATH . '/feeds/drip.php' );
+}
