@@ -200,10 +200,10 @@
 
 .fi--share {
   a {
-    box-shadow: none;
-    -webkit-box-shadow: none;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
     &:hover {
-      background-color: transparent;
+      background-color: transparent !important;
     }
   }
 }

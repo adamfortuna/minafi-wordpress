@@ -10254,7 +10254,7 @@ return jQuery;
 
 /**!
  * @fileOverview Kickass library to create and place poppers near their reference elements.
- * @version 1.10.8
+ * @version 1.12.5
  * @license
  * Copyright (c) 2016 Federico Zivolo and contributors
  *
@@ -10430,30 +10430,6 @@ function getScrollParent(element) {
   return getScrollParent(getParentNode(element));
 }
 
-function isOffsetContainer(element) {
-  var nodeName = element.nodeName;
-
-  if (nodeName === 'BODY') {
-    return false;
-  }
-  return nodeName === 'HTML' || element.firstElementChild.offsetParent === element;
-}
-
-/**
- * Finds the root node (document, shadowDOM root) of the given element
- * @method
- * @memberof Popper.Utils
- * @argument {Element} node
- * @returns {Element} root node
- */
-function getRoot(node) {
-  if (node.parentNode !== null) {
-    return getRoot(node.parentNode);
-  }
-
-  return node;
-}
-
 /**
  * Returns the offset parent of the given element
  * @method
@@ -10470,7 +10446,37 @@ function getOffsetParent(element) {
     return window.document.documentElement;
   }
 
+  // .offsetParent will return the closest TD or TABLE in case
+  // no offsetParent is present, I hate this job...
+  if (['TD', 'TABLE'].indexOf(offsetParent.nodeName) !== -1 && getStyleComputedProperty(offsetParent, 'position') === 'static') {
+    return getOffsetParent(offsetParent);
+  }
+
   return offsetParent;
+}
+
+function isOffsetContainer(element) {
+  var nodeName = element.nodeName;
+
+  if (nodeName === 'BODY') {
+    return false;
+  }
+  return nodeName === 'HTML' || getOffsetParent(element.firstElementChild) === element;
+}
+
+/**
+ * Finds the root node (document, shadowDOM root) of the given element
+ * @method
+ * @memberof Popper.Utils
+ * @argument {Element} node
+ * @returns {Element} root node
+ */
+function getRoot(node) {
+  if (node.parentNode !== null) {
+    return getRoot(node.parentNode);
+  }
+
+  return node;
 }
 
 /**
@@ -10595,7 +10601,7 @@ var isIE10$1 = function () {
 };
 
 function getSize(axis, body, html, computedStyle) {
-  return Math.max(body['offset' + axis], html['client' + axis], html['offset' + axis], isIE10$1() ? html['offset' + axis] + computedStyle['margin' + (axis === 'Height' ? 'Top' : 'Left')] + computedStyle['margin' + (axis === 'Height' ? 'Bottom' : 'Right')] : 0);
+  return Math.max(body['offset' + axis], body['scroll' + axis], html['client' + axis], html['offset' + axis], html['scroll' + axis], isIE10$1() ? html['offset' + axis] + computedStyle['margin' + (axis === 'Height' ? 'Top' : 'Left')] + computedStyle['margin' + (axis === 'Height' ? 'Bottom' : 'Right')] : 0);
 }
 
 function getWindowSizes() {
@@ -11121,6 +11127,7 @@ function update() {
   var data = {
     instance: this,
     styles: {},
+    arrowStyles: {},
     attributes: {},
     flipped: false,
     offsets: {}
@@ -11173,10 +11180,10 @@ function isModifierEnabled(modifiers, modifierName) {
  * @method
  * @memberof Popper.Utils
  * @argument {String} property (camelCase)
- * @returns {String} prefixed property (camelCase)
+ * @returns {String} prefixed property (camelCase or PascalCase, depending on the vendor prefix)
  */
 function getSupportedPropertyName(property) {
-  var prefixes = [false, 'ms', 'webkit', 'moz', 'o'];
+  var prefixes = [false, 'ms', 'Webkit', 'Moz', 'O'];
   var upperProp = property.charAt(0).toUpperCase() + property.slice(1);
 
   for (var i = 0; i < prefixes.length - 1; i++) {
@@ -11365,9 +11372,9 @@ function applyStyle(data) {
   // they will be set as HTML attributes of the element
   setAttributes(data.instance.popper, data.attributes);
 
-  // if the arrow style has been computed, apply the arrow style
-  if (data.offsets.arrow) {
-    setStyles(data.arrowElement, data.offsets.arrow);
+  // if arrowElement is defined and arrowStyles has some properties
+  if (data.arrowElement && Object.keys(data.arrowStyles).length) {
+    setStyles(data.arrowElement, data.arrowStyles);
   }
 
   return data;
@@ -11487,9 +11494,10 @@ function computeStyle(data, options) {
     'x-placement': data.placement
   };
 
-  // Update attributes and styles of `data`
+  // Update `data` attributes, styles and arrowStyles
   data.attributes = _extends({}, attributes, data.attributes);
   data.styles = _extends({}, styles, data.styles);
+  data.arrowStyles = _extends({}, data.offsets.arrow, data.arrowStyles);
 
   return data;
 }
@@ -11562,13 +11570,15 @@ function arrow(data, options) {
   var isVertical = ['left', 'right'].indexOf(placement) !== -1;
 
   var len = isVertical ? 'height' : 'width';
-  var side = isVertical ? 'top' : 'left';
+  var sideCapitalized = isVertical ? 'Top' : 'Left';
+  var side = sideCapitalized.toLowerCase();
   var altSide = isVertical ? 'left' : 'top';
   var opSide = isVertical ? 'bottom' : 'right';
   var arrowElementSize = getOuterSizes(arrowElement)[len];
 
   //
-  // extends keepTogether behavior making sure the popper and its reference have enough pixels in conjuction
+  // extends keepTogether behavior making sure the popper and its
+  // reference have enough pixels in conjuction
   //
 
   // top/left side
@@ -11584,7 +11594,9 @@ function arrow(data, options) {
   var center = reference[side] + reference[len] / 2 - arrowElementSize / 2;
 
   // Compute the sideValue using the updated popper offsets
-  var sideValue = center - getClientRect(data.offsets.popper)[side];
+  // take popper margin in account because we don't have this info available
+  var popperMarginSide = getStyleComputedProperty(data.instance.popper, 'margin' + sideCapitalized).replace('px', '');
+  var sideValue = center - getClientRect(data.offsets.popper)[side] - popperMarginSide;
 
   // prevent arrowElement from being placed not contiguously to its popper
   sideValue = Math.max(Math.min(popper[len] - arrowElementSize, sideValue), 0);
@@ -12106,7 +12118,7 @@ function inner(data) {
 
   var subtractLength = ['top', 'left'].indexOf(basePlacement) === -1;
 
-  popper[isHoriz ? 'left' : 'top'] = reference[placement] - (subtractLength ? popper[isHoriz ? 'width' : 'height'] : 0);
+  popper[isHoriz ? 'left' : 'top'] = reference[basePlacement] - (subtractLength ? popper[isHoriz ? 'width' : 'height'] : 0);
 
   data.placement = getOppositePlacement(placement);
   data.offsets.popper = getClientRect(popper);
@@ -12184,6 +12196,9 @@ var modifiers = {
    * '10 - 5vh + 3%'
    * '-10px + 5vh, 5px - 6%'
    * ```
+   * > **NB**: If you desire to apply offsets to your poppers in a way that may make them overlap
+   * > with their reference element, unfortunately, you will have to disable the `flip` modifier.
+   * > More on this [reading this issue](https://github.com/FezVrasta/popper.js/issues/373)
    *
    * @memberof modifiers
    * @inner
@@ -12446,6 +12461,7 @@ var modifiers = {
  * @property {Boolean} data.hide True if the reference element is out of boundaries, useful to know when to hide the popper.
  * @property {HTMLElement} data.arrowElement Node used as arrow by arrow modifier
  * @property {Object} data.styles Any CSS property defined here will be applied to the popper, it expects the JavaScript nomenclature (eg. `marginBottom`)
+ * @property {Object} data.arrowStyles Any CSS property defined here will be applied to the popper arrow, it expects the JavaScript nomenclature (eg. `marginBottom`)
  * @property {Object} data.boundaries Offsets of the popper boundaries
  * @property {Object} data.offsets The measurements of popper, reference and arrow elements.
  * @property {Object} data.offsets.popper `top`, `left`, `width`, `height` values
@@ -12686,7 +12702,7 @@ return Popper;
 //# sourceMappingURL=popper.js.map
 
 /*!
- * Bootstrap v4.0.0-alpha.6 (https://getbootstrap.com)
+ * Bootstrap v4.0.0-beta (https://getbootstrap.com)
  * Copyright 2011-2017 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
@@ -12715,7 +12731,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-alpha.6): util.js
+ * Bootstrap (v4.0.0-beta): util.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -12737,10 +12753,9 @@ var Util = function ($) {
     MozTransition: 'transitionend',
     OTransition: 'oTransitionEnd otransitionend',
     transition: 'transitionend'
-  };
 
-  // shoutout AngusCroll (https://goo.gl/pxwQGp)
-  function toType(obj) {
+    // shoutout AngusCroll (https://goo.gl/pxwQGp)
+  };function toType(obj) {
     return {}.toString.call(obj).match(/\s([a-zA-Z]+)/)[1].toLowerCase();
   }
 
@@ -12868,7 +12883,7 @@ var Util = function ($) {
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-alpha.6): alert.js
+ * Bootstrap (v4.0.0-beta): alert.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -12882,7 +12897,7 @@ var Alert = function ($) {
    */
 
   var NAME = 'alert';
-  var VERSION = '4.0.0-alpha.6';
+  var VERSION = '4.0.0-beta';
   var DATA_KEY = 'bs.alert';
   var EVENT_KEY = '.' + DATA_KEY;
   var DATA_API_KEY = '.data-api';
@@ -12903,14 +12918,14 @@ var Alert = function ($) {
     ALERT: 'alert',
     FADE: 'fade',
     SHOW: 'show'
+
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
+
   };
-
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
-
   var Alert = function () {
     function Alert(element) {
       _classCallCheck(this, Alert);
@@ -13047,7 +13062,7 @@ var Alert = function ($) {
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-alpha.6): button.js
+ * Bootstrap (v4.0.0-beta): button.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -13061,7 +13076,7 @@ var Button = function ($) {
    */
 
   var NAME = 'button';
-  var VERSION = '4.0.0-alpha.6';
+  var VERSION = '4.0.0-beta';
   var DATA_KEY = 'bs.button';
   var EVENT_KEY = '.' + DATA_KEY;
   var DATA_API_KEY = '.data-api';
@@ -13084,14 +13099,14 @@ var Button = function ($) {
   var Event = {
     CLICK_DATA_API: 'click' + EVENT_KEY + DATA_API_KEY,
     FOCUS_BLUR_DATA_API: 'focus' + EVENT_KEY + DATA_API_KEY + ' ' + ('blur' + EVENT_KEY + DATA_API_KEY)
+
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
+
   };
-
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
-
   var Button = function () {
     function Button(element) {
       _classCallCheck(this, Button);
@@ -13217,7 +13232,7 @@ var Button = function ($) {
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-alpha.6): carousel.js
+ * Bootstrap (v4.0.0-beta): carousel.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -13231,7 +13246,7 @@ var Carousel = function ($) {
    */
 
   var NAME = 'carousel';
-  var VERSION = '4.0.0-alpha.6';
+  var VERSION = '4.0.0-beta';
   var DATA_KEY = 'bs.carousel';
   var EVENT_KEY = '.' + DATA_KEY;
   var DATA_API_KEY = '.data-api';
@@ -13294,14 +13309,14 @@ var Carousel = function ($) {
     INDICATORS: '.carousel-indicators',
     DATA_SLIDE: '[data-slide], [data-slide-to]',
     DATA_RIDE: '[data-ride="carousel"]'
+
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
+
   };
-
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
-
   var Carousel = function () {
     function Carousel(element, config) {
       _classCallCheck(this, Carousel);
@@ -13724,7 +13739,7 @@ var Carousel = function ($) {
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-alpha.6): collapse.js
+ * Bootstrap (v4.0.0-beta): collapse.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -13738,7 +13753,7 @@ var Collapse = function ($) {
    */
 
   var NAME = 'collapse';
-  var VERSION = '4.0.0-alpha.6';
+  var VERSION = '4.0.0-beta';
   var DATA_KEY = 'bs.collapse';
   var EVENT_KEY = '.' + DATA_KEY;
   var DATA_API_KEY = '.data-api';
@@ -13778,14 +13793,14 @@ var Collapse = function ($) {
   var Selector = {
     ACTIVES: '.show, .collapsing',
     DATA_TOGGLE: '[data-toggle="collapse"]'
+
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
+
   };
-
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
-
   var Collapse = function () {
     function Collapse(element, config) {
       _classCallCheck(this, Collapse);
@@ -14087,7 +14102,7 @@ var Collapse = function ($) {
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-alpha.6): dropdown.js
+ * Bootstrap (v4.0.0-beta): dropdown.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -14109,7 +14124,7 @@ var Dropdown = function ($) {
    */
 
   var NAME = 'dropdown';
-  var VERSION = '4.0.0-alpha.6';
+  var VERSION = '4.0.0-beta';
   var DATA_KEY = 'bs.dropdown';
   var EVENT_KEY = '.' + DATA_KEY;
   var DATA_API_KEY = '.data-api';
@@ -14166,14 +14181,14 @@ var Dropdown = function ($) {
     placement: 'string',
     offset: '(number|string)',
     flip: 'boolean'
+
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
+
   };
-
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
-
   var Dropdown = function () {
     function Dropdown(element, config) {
       _classCallCheck(this, Dropdown);
@@ -14312,8 +14327,6 @@ var Dropdown = function ($) {
     };
 
     Dropdown.prototype._getPopperConfig = function _getPopperConfig() {
-      var _this10 = this;
-
       var popperConfig = {
         placement: this._getPlacement(),
         modifiers: {
@@ -14324,16 +14337,11 @@ var Dropdown = function ($) {
             enabled: this._config.flip
           }
         }
-      };
 
-      if (this._inNavbar) {
-        popperConfig.modifiers.AfterApplyStyle = {
-          enabled: true,
-          order: 901, // ApplyStyle order + 1
-          fn: function fn() {
-            // reset Popper styles
-            $(_this10._menu).attr('style', '');
-          }
+        // Disable Popper.js for Dropdown in Navbar
+      };if (this._inNavbar) {
+        popperConfig.modifiers.applyStyle = {
+          enabled: !this._inNavbar
         };
       }
       return popperConfig;
@@ -14519,7 +14527,7 @@ var Dropdown = function ($) {
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-alpha.6): modal.js
+ * Bootstrap (v4.0.0-beta): modal.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -14533,7 +14541,7 @@ var Modal = function ($) {
    */
 
   var NAME = 'modal';
-  var VERSION = '4.0.0-alpha.6';
+  var VERSION = '4.0.0-beta';
   var DATA_KEY = 'bs.modal';
   var EVENT_KEY = '.' + DATA_KEY;
   var DATA_API_KEY = '.data-api';
@@ -14584,14 +14592,14 @@ var Modal = function ($) {
     DATA_DISMISS: '[data-dismiss="modal"]',
     FIXED_CONTENT: '.fixed-top, .fixed-bottom, .is-fixed, .sticky-top',
     NAVBAR_TOGGLER: '.navbar-toggler'
+
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
+
   };
-
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
-
   var Modal = function () {
     function Modal(element, config) {
       _classCallCheck(this, Modal);
@@ -14616,7 +14624,7 @@ var Modal = function ($) {
     };
 
     Modal.prototype.show = function show(relatedTarget) {
-      var _this11 = this;
+      var _this10 = this;
 
       if (this._isTransitioning) {
         return;
@@ -14647,24 +14655,24 @@ var Modal = function ($) {
       this._setResizeEvent();
 
       $(this._element).on(Event.CLICK_DISMISS, Selector.DATA_DISMISS, function (event) {
-        return _this11.hide(event);
+        return _this10.hide(event);
       });
 
       $(this._dialog).on(Event.MOUSEDOWN_DISMISS, function () {
-        $(_this11._element).one(Event.MOUSEUP_DISMISS, function (event) {
-          if ($(event.target).is(_this11._element)) {
-            _this11._ignoreBackdropClick = true;
+        $(_this10._element).one(Event.MOUSEUP_DISMISS, function (event) {
+          if ($(event.target).is(_this10._element)) {
+            _this10._ignoreBackdropClick = true;
           }
         });
       });
 
       this._showBackdrop(function () {
-        return _this11._showElement(relatedTarget);
+        return _this10._showElement(relatedTarget);
       });
     };
 
     Modal.prototype.hide = function hide(event) {
-      var _this12 = this;
+      var _this11 = this;
 
       if (event) {
         event.preventDefault();
@@ -14703,7 +14711,7 @@ var Modal = function ($) {
       if (transition) {
 
         $(this._element).one(Util.TRANSITION_END, function (event) {
-          return _this12._hideModal(event);
+          return _this11._hideModal(event);
         }).emulateTransitionEnd(TRANSITION_DURATION);
       } else {
         this._hideModal();
@@ -14738,7 +14746,7 @@ var Modal = function ($) {
     };
 
     Modal.prototype._showElement = function _showElement(relatedTarget) {
-      var _this13 = this;
+      var _this12 = this;
 
       var transition = Util.supportsTransitionEnd() && $(this._element).hasClass(ClassName.FADE);
 
@@ -14766,11 +14774,11 @@ var Modal = function ($) {
       });
 
       var transitionComplete = function transitionComplete() {
-        if (_this13._config.focus) {
-          _this13._element.focus();
+        if (_this12._config.focus) {
+          _this12._element.focus();
         }
-        _this13._isTransitioning = false;
-        $(_this13._element).trigger(shownEvent);
+        _this12._isTransitioning = false;
+        $(_this12._element).trigger(shownEvent);
       };
 
       if (transition) {
@@ -14781,24 +14789,24 @@ var Modal = function ($) {
     };
 
     Modal.prototype._enforceFocus = function _enforceFocus() {
-      var _this14 = this;
+      var _this13 = this;
 
       $(document).off(Event.FOCUSIN) // guard against infinite focus loop
       .on(Event.FOCUSIN, function (event) {
-        if (document !== event.target && _this14._element !== event.target && !$(_this14._element).has(event.target).length) {
-          _this14._element.focus();
+        if (document !== event.target && _this13._element !== event.target && !$(_this13._element).has(event.target).length) {
+          _this13._element.focus();
         }
       });
     };
 
     Modal.prototype._setEscapeEvent = function _setEscapeEvent() {
-      var _this15 = this;
+      var _this14 = this;
 
       if (this._isShown && this._config.keyboard) {
         $(this._element).on(Event.KEYDOWN_DISMISS, function (event) {
           if (event.which === ESCAPE_KEYCODE) {
             event.preventDefault();
-            _this15.hide();
+            _this14.hide();
           }
         });
       } else if (!this._isShown) {
@@ -14807,11 +14815,11 @@ var Modal = function ($) {
     };
 
     Modal.prototype._setResizeEvent = function _setResizeEvent() {
-      var _this16 = this;
+      var _this15 = this;
 
       if (this._isShown) {
         $(window).on(Event.RESIZE, function (event) {
-          return _this16.handleUpdate(event);
+          return _this15.handleUpdate(event);
         });
       } else {
         $(window).off(Event.RESIZE);
@@ -14819,16 +14827,16 @@ var Modal = function ($) {
     };
 
     Modal.prototype._hideModal = function _hideModal() {
-      var _this17 = this;
+      var _this16 = this;
 
       this._element.style.display = 'none';
       this._element.setAttribute('aria-hidden', true);
       this._isTransitioning = false;
       this._showBackdrop(function () {
         $(document.body).removeClass(ClassName.OPEN);
-        _this17._resetAdjustments();
-        _this17._resetScrollbar();
-        $(_this17._element).trigger(Event.HIDDEN);
+        _this16._resetAdjustments();
+        _this16._resetScrollbar();
+        $(_this16._element).trigger(Event.HIDDEN);
       });
     };
 
@@ -14840,7 +14848,7 @@ var Modal = function ($) {
     };
 
     Modal.prototype._showBackdrop = function _showBackdrop(callback) {
-      var _this18 = this;
+      var _this17 = this;
 
       var animate = $(this._element).hasClass(ClassName.FADE) ? ClassName.FADE : '';
 
@@ -14857,17 +14865,17 @@ var Modal = function ($) {
         $(this._backdrop).appendTo(document.body);
 
         $(this._element).on(Event.CLICK_DISMISS, function (event) {
-          if (_this18._ignoreBackdropClick) {
-            _this18._ignoreBackdropClick = false;
+          if (_this17._ignoreBackdropClick) {
+            _this17._ignoreBackdropClick = false;
             return;
           }
           if (event.target !== event.currentTarget) {
             return;
           }
-          if (_this18._config.backdrop === 'static') {
-            _this18._element.focus();
+          if (_this17._config.backdrop === 'static') {
+            _this17._element.focus();
           } else {
-            _this18.hide();
+            _this17.hide();
           }
         });
 
@@ -14891,7 +14899,7 @@ var Modal = function ($) {
         $(this._backdrop).removeClass(ClassName.SHOW);
 
         var callbackRemove = function callbackRemove() {
-          _this18._removeBackdrop();
+          _this17._removeBackdrop();
           if (callback) {
             callback();
           }
@@ -14935,7 +14943,7 @@ var Modal = function ($) {
     };
 
     Modal.prototype._setScrollbar = function _setScrollbar() {
-      var _this19 = this;
+      var _this18 = this;
 
       if (this._isBodyOverflowing) {
         // Note: DOMNode.style.paddingRight returns the actual value or '' if not set
@@ -14945,14 +14953,14 @@ var Modal = function ($) {
         $(Selector.FIXED_CONTENT).each(function (index, element) {
           var actualPadding = $(element)[0].style.paddingRight;
           var calculatedPadding = $(element).css('padding-right');
-          $(element).data('padding-right', actualPadding).css('padding-right', parseFloat(calculatedPadding) + _this19._scrollbarWidth + 'px');
+          $(element).data('padding-right', actualPadding).css('padding-right', parseFloat(calculatedPadding) + _this18._scrollbarWidth + 'px');
         });
 
         // Adjust navbar-toggler margin
         $(Selector.NAVBAR_TOGGLER).each(function (index, element) {
           var actualMargin = $(element)[0].style.marginRight;
           var calculatedMargin = $(element).css('margin-right');
-          $(element).data('margin-right', actualMargin).css('margin-right', parseFloat(calculatedMargin) + _this19._scrollbarWidth + 'px');
+          $(element).data('margin-right', actualMargin).css('margin-right', parseFloat(calculatedMargin) + _this18._scrollbarWidth + 'px');
         });
 
         // Adjust body padding
@@ -15041,7 +15049,7 @@ var Modal = function ($) {
    */
 
   $(document).on(Event.CLICK_DATA_API, Selector.DATA_TOGGLE, function (event) {
-    var _this20 = this;
+    var _this19 = this;
 
     var target = void 0;
     var selector = Util.getSelectorFromElement(this);
@@ -15063,8 +15071,8 @@ var Modal = function ($) {
       }
 
       $target.one(Event.HIDDEN, function () {
-        if ($(_this20).is(':visible')) {
-          _this20.focus();
+        if ($(_this19).is(':visible')) {
+          _this19.focus();
         }
       });
     });
@@ -15090,7 +15098,7 @@ var Modal = function ($) {
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-alpha.6): scrollspy.js
+ * Bootstrap (v4.0.0-beta): scrollspy.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -15104,7 +15112,7 @@ var ScrollSpy = function ($) {
    */
 
   var NAME = 'scrollspy';
-  var VERSION = '4.0.0-alpha.6';
+  var VERSION = '4.0.0-beta';
   var DATA_KEY = 'bs.scrollspy';
   var EVENT_KEY = '.' + DATA_KEY;
   var DATA_API_KEY = '.data-api';
@@ -15148,17 +15156,17 @@ var ScrollSpy = function ($) {
   var OffsetMethod = {
     OFFSET: 'offset',
     POSITION: 'position'
+
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
+
   };
-
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
-
   var ScrollSpy = function () {
     function ScrollSpy(element, config) {
-      var _this21 = this;
+      var _this20 = this;
 
       _classCallCheck(this, ScrollSpy);
 
@@ -15172,7 +15180,7 @@ var ScrollSpy = function ($) {
       this._scrollHeight = 0;
 
       $(this._scrollElement).on(Event.SCROLL, function (event) {
-        return _this21._process(event);
+        return _this20._process(event);
       });
 
       this.refresh();
@@ -15184,7 +15192,7 @@ var ScrollSpy = function ($) {
     // public
 
     ScrollSpy.prototype.refresh = function refresh() {
-      var _this22 = this;
+      var _this21 = this;
 
       var autoMethod = this._scrollElement !== this._scrollElement.window ? OffsetMethod.POSITION : OffsetMethod.OFFSET;
 
@@ -15220,8 +15228,8 @@ var ScrollSpy = function ($) {
       }).sort(function (a, b) {
         return a[0] - b[0];
       }).forEach(function (item) {
-        _this22._offsets.push(item[0]);
-        _this22._targets.push(item[1]);
+        _this21._offsets.push(item[0]);
+        _this21._targets.push(item[1]);
       });
     };
 
@@ -15404,7 +15412,7 @@ var ScrollSpy = function ($) {
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-alpha.6): tab.js
+ * Bootstrap (v4.0.0-beta): tab.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -15418,7 +15426,7 @@ var Tab = function ($) {
    */
 
   var NAME = 'tab';
-  var VERSION = '4.0.0-alpha.6';
+  var VERSION = '4.0.0-beta';
   var DATA_KEY = 'bs.tab';
   var EVENT_KEY = '.' + DATA_KEY;
   var DATA_API_KEY = '.data-api';
@@ -15448,14 +15456,14 @@ var Tab = function ($) {
     DATA_TOGGLE: '[data-toggle="tab"], [data-toggle="pill"], [data-toggle="list"]',
     DROPDOWN_TOGGLE: '.dropdown-toggle',
     DROPDOWN_ACTIVE_CHILD: '> .dropdown-menu .active'
+
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
+
   };
-
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
-
   var Tab = function () {
     function Tab(element) {
       _classCallCheck(this, Tab);
@@ -15468,7 +15476,7 @@ var Tab = function ($) {
     // public
 
     Tab.prototype.show = function show() {
-      var _this23 = this;
+      var _this22 = this;
 
       if (this._element.parentNode && this._element.parentNode.nodeType === Node.ELEMENT_NODE && $(this._element).hasClass(ClassName.ACTIVE) || $(this._element).hasClass(ClassName.DISABLED)) {
         return;
@@ -15510,7 +15518,7 @@ var Tab = function ($) {
 
       var complete = function complete() {
         var hiddenEvent = $.Event(Event.HIDDEN, {
-          relatedTarget: _this23._element
+          relatedTarget: _this22._element
         });
 
         var shownEvent = $.Event(Event.SHOWN, {
@@ -15518,7 +15526,7 @@ var Tab = function ($) {
         });
 
         $(previous).trigger(hiddenEvent);
-        $(_this23._element).trigger(shownEvent);
+        $(_this22._element).trigger(shownEvent);
       };
 
       if (target) {
@@ -15536,13 +15544,13 @@ var Tab = function ($) {
     // private
 
     Tab.prototype._activate = function _activate(element, container, callback) {
-      var _this24 = this;
+      var _this23 = this;
 
       var active = $(container).find(Selector.ACTIVE)[0];
       var isTransitioning = callback && Util.supportsTransitionEnd() && active && $(active).hasClass(ClassName.FADE);
 
       var complete = function complete() {
-        return _this24._transitionComplete(element, active, isTransitioning, callback);
+        return _this23._transitionComplete(element, active, isTransitioning, callback);
       };
 
       if (active && isTransitioning) {
@@ -15656,7 +15664,7 @@ var Tab = function ($) {
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-alpha.6): tooltip.js
+ * Bootstrap (v4.0.0-beta): tooltip.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -15678,7 +15686,7 @@ var Tooltip = function ($) {
    */
 
   var NAME = 'tooltip';
-  var VERSION = '4.0.0-alpha.6';
+  var VERSION = '4.0.0-beta';
   var DATA_KEY = 'bs.tooltip';
   var EVENT_KEY = '.' + DATA_KEY;
   var JQUERY_NO_CONFLICT = $.fn[NAME];
@@ -15756,14 +15764,14 @@ var Tooltip = function ($) {
     FOCUS: 'focus',
     CLICK: 'click',
     MANUAL: 'manual'
+
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
+
   };
-
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
-
   var Tooltip = function () {
     function Tooltip(element, config) {
       _classCallCheck(this, Tooltip);
@@ -15854,7 +15862,7 @@ var Tooltip = function ($) {
     };
 
     Tooltip.prototype.show = function show() {
-      var _this25 = this;
+      var _this24 = this;
 
       if ($(this.element).css('display') === 'none') {
         throw new Error('Please use show on visible elements');
@@ -15912,11 +15920,11 @@ var Tooltip = function ($) {
           },
           onCreate: function onCreate(data) {
             if (data.originalPlacement !== data.placement) {
-              _this25._handlePopperPlacementChange(data);
+              _this24._handlePopperPlacementChange(data);
             }
           },
           onUpdate: function onUpdate(data) {
-            _this25._handlePopperPlacementChange(data);
+            _this24._handlePopperPlacementChange(data);
           }
         });
 
@@ -15931,16 +15939,16 @@ var Tooltip = function ($) {
         }
 
         var complete = function complete() {
-          if (_this25.config.animation) {
-            _this25._fixTransition();
+          if (_this24.config.animation) {
+            _this24._fixTransition();
           }
-          var prevHoverState = _this25._hoverState;
-          _this25._hoverState = null;
+          var prevHoverState = _this24._hoverState;
+          _this24._hoverState = null;
 
-          $(_this25.element).trigger(_this25.constructor.Event.SHOWN);
+          $(_this24.element).trigger(_this24.constructor.Event.SHOWN);
 
           if (prevHoverState === HoverState.OUT) {
-            _this25._leave(null, _this25);
+            _this24._leave(null, _this24);
           }
         };
 
@@ -15953,20 +15961,20 @@ var Tooltip = function ($) {
     };
 
     Tooltip.prototype.hide = function hide(callback) {
-      var _this26 = this;
+      var _this25 = this;
 
       var tip = this.getTipElement();
       var hideEvent = $.Event(this.constructor.Event.HIDE);
       var complete = function complete() {
-        if (_this26._hoverState !== HoverState.SHOW && tip.parentNode) {
+        if (_this25._hoverState !== HoverState.SHOW && tip.parentNode) {
           tip.parentNode.removeChild(tip);
         }
 
-        _this26._cleanTipClass();
-        _this26.element.removeAttribute('aria-describedby');
-        $(_this26.element).trigger(_this26.constructor.Event.HIDDEN);
-        if (_this26._popper !== null) {
-          _this26._popper.destroy();
+        _this25._cleanTipClass();
+        _this25.element.removeAttribute('aria-describedby');
+        $(_this25.element).trigger(_this25.constructor.Event.HIDDEN);
+        if (_this25._popper !== null) {
+          _this25._popper.destroy();
         }
 
         if (callback) {
@@ -16061,28 +16069,28 @@ var Tooltip = function ($) {
     };
 
     Tooltip.prototype._setListeners = function _setListeners() {
-      var _this27 = this;
+      var _this26 = this;
 
       var triggers = this.config.trigger.split(' ');
 
       triggers.forEach(function (trigger) {
         if (trigger === 'click') {
-          $(_this27.element).on(_this27.constructor.Event.CLICK, _this27.config.selector, function (event) {
-            return _this27.toggle(event);
+          $(_this26.element).on(_this26.constructor.Event.CLICK, _this26.config.selector, function (event) {
+            return _this26.toggle(event);
           });
         } else if (trigger !== Trigger.MANUAL) {
-          var eventIn = trigger === Trigger.HOVER ? _this27.constructor.Event.MOUSEENTER : _this27.constructor.Event.FOCUSIN;
-          var eventOut = trigger === Trigger.HOVER ? _this27.constructor.Event.MOUSELEAVE : _this27.constructor.Event.FOCUSOUT;
+          var eventIn = trigger === Trigger.HOVER ? _this26.constructor.Event.MOUSEENTER : _this26.constructor.Event.FOCUSIN;
+          var eventOut = trigger === Trigger.HOVER ? _this26.constructor.Event.MOUSELEAVE : _this26.constructor.Event.FOCUSOUT;
 
-          $(_this27.element).on(eventIn, _this27.config.selector, function (event) {
-            return _this27._enter(event);
-          }).on(eventOut, _this27.config.selector, function (event) {
-            return _this27._leave(event);
+          $(_this26.element).on(eventIn, _this26.config.selector, function (event) {
+            return _this26._enter(event);
+          }).on(eventOut, _this26.config.selector, function (event) {
+            return _this26._leave(event);
           });
         }
 
-        $(_this27.element).closest('.modal').on('hide.bs.modal', function () {
-          return _this27.hide();
+        $(_this26.element).closest('.modal').on('hide.bs.modal', function () {
+          return _this26.hide();
         });
       });
 
@@ -16329,7 +16337,7 @@ var Tooltip = function ($) {
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-alpha.6): popover.js
+ * Bootstrap (v4.0.0-beta): popover.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -16343,7 +16351,7 @@ var Popover = function ($) {
    */
 
   var NAME = 'popover';
-  var VERSION = '4.0.0-alpha.6';
+  var VERSION = '4.0.0-beta';
   var DATA_KEY = 'bs.popover';
   var EVENT_KEY = '.' + DATA_KEY;
   var JQUERY_NO_CONFLICT = $.fn[NAME];
@@ -16382,14 +16390,14 @@ var Popover = function ($) {
     FOCUSOUT: 'focusout' + EVENT_KEY,
     MOUSEENTER: 'mouseenter' + EVENT_KEY,
     MOUSELEAVE: 'mouseleave' + EVENT_KEY
+
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
+
   };
-
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
-
   var Popover = function (_Tooltip) {
     _inherits(Popover, _Tooltip);
 
@@ -16523,7 +16531,7 @@ var Popover = function ($) {
 }(jQuery);
 
 
-})()
+})();
 window.addComment = {
 	moveForm: function( commId, parentId, respondId, postId ) {
 		var div, element, style, cssHidden,
@@ -16621,6 +16629,7 @@ window.addComment = {
 	}
 };
 
+var socialWarfarePlugin=socialWarfarePlugin||{};!function(a,b){var c,d=a.socialWarfarePlugin;d.throttle=c=function(a,c,e,f){function g(){function d(){i=+new Date,e.apply(j,l)}function g(){h=b}var j=this,k=+new Date-i,l=arguments;f&&!h&&d(),h&&clearTimeout(h),f===b&&k>a?d():c!==!0&&(h=setTimeout(f?g:d,f===b?a-k:a))}var h,i=0;return"boolean"!=typeof c&&(f=e,e=c,c=b),d.guid&&(g.guid=e.guid=e.guid||d.guid++),g},d.debounce=function(a,d,e){return e===b?c(a,d,!1):c(a,e,d!==!1)}}(this),function(a,b,c){"use strict";function d(a){return parseInt(a,10)}function e(c){var d=b.Event(c);b(a).trigger(d)}function f(){b(".nc_socialPanel:not(.nc_socialPanelSide) .nc_tweetContainer:not(.swp_nohover) .iconFiller").removeAttr("style"),b(".nc_socialPanel:not(.nc_socialPanelSide) .nc_tweetContainer:not(.swp_nohover)").removeAttr("style")}function g(){b(".nc_wrapper").length&&b(".nc_wrapper").remove();var a=b(".nc_socialPanel").not('[data-float="float_ignore"]').first(),c=(b(".nc_socialPanel").index(a),a.attr("data-float")),d=a.attr("data-align");if(c){var e=b(".nc_socialPanel").attr("data-floatColor");b('<div class="nc_wrapper" style="background-color:'+e+'"></div>').appendTo("body");var f=a.attr("data-float");a.clone().appendTo(".nc_wrapper"),b(".nc_wrapper").hide().addClass("floatLeft"==f?"floatBottom":f);var g=a.outerWidth(!0),h=a.offset();b(".nc_socialPanel").last().addClass("nc_floater").css({width:g,left:"center"==d?0:h.left}),b(".nc_socialPanel .swp_count").css({transition:"padding .1s linear"}),b(".nc_socialPanel").eq(0).addClass("swp_one"),b(".nc_socialPanel").eq(2).addClass("swp_two"),b(".nc_socialPanel").eq(1).addClass("swp_three")}}function h(){var c=b(".nc_socialPanel"),d=c.not('[data-float="float_ignore"]').eq(0).attr("data-float"),f=b(a),g=f.height(),h=b(".nc_wrapper"),i=b(".nc_socialPanelSide").filter(":not(.mobile)"),j=(b(".nc_socialPanel").attr("data-position"),i.attr("data-screen-width")),k=c.eq(0).offset(),l=f.scrollTop();b(a).scrollTop();"undefined"==typeof a.swpOffsets&&(a.swpOffsets={});var m=!1;if("floatLeft"==d){var n=b(".nc_socialPanelSide").attr("data-mobileFloat");b(".nc_socialPanel").not(".nc_socialPanelSide").length?(b(".nc_socialPanel").not(".nc_socialPanelSide, .nc_floater").each(function(){var a=b(this).offset(),c=b(this).height();a.top+c>l&&a.top<l+g&&(m=!0)}),k.left<100||b(a).width()<j?(m=!0,"bottom"==n&&(d="floatBottom")):m||(m=!1)):b(a).width()>j?m=!1:(m=!0,"bottom"==n&&(d="floatBottom"));var o=i.attr("data-transition");"slide"==o?1==m?i.css({left:"-100px"},200):i.css({left:"5px"}):"fade"==o&&(1==m?i.fadeOut(200):i.fadeIn(200))}if("floatBottom"==d||"floatTop"==d)if(m=!1,b(".nc_socialPanel").not(".nc_socialPanelSide, .nc_floater").each(function(){var a=b(this).offset(),c=b(this).height();a.top+c>l&&a.top<l+g&&(m=!0)}),m)h.hide(),"floatBottom"==d?b("body").animate({"padding-bottom":a.bodyPaddingBottom+"px"},0):"floatTop"==d&&b("body").animate({"padding-top":a.bodyPaddingTop+"px"},0);else{var p,q;h.show(),e("floating_bar_revealed"),"floatBottom"==d?(p=a.bodyPaddingBottom+50,b("body").animate({"padding-bottom":p+"px"},0)):"floatTop"==d&&(q=b(".nc_socialPanel").not(".nc_socialPanelSide, .nc_wrapper .nc_socialPanel").first().offset(),q.top>l+g&&(p=a.bodyPaddingTop+50,b("body").animate({"padding-top":p+"px"},0)))}}function i(){0!==b(".nc_socialPanel").length&&(g(),l.activateHoverStates(),k(),b(a).scrollTop(),b(a).scroll(l.throttle(50,function(){h()})),b(a).trigger("scroll"),b(".nc_socialPanel").css({opacity:1}))}function j(){var c={wrap:'<div class="sw-pinit" />',pageURL:document.URL},d=b.extend(c,d);b(".swp-content-locator").parent().find("img").each(function(){var c=b(this);if(!(c.outerHeight()<swpPinIt.minHeight||c.outerWidth()<swpPinIt.minWidth)){var e=!1;if("undefined"!=typeof swpPinIt.image_source?e=swpPinIt.image_source:c.data("media")?e=c.data("media"):b(this).attr("data-lazy-src")?e=b(this).attr("data-lazy-src"):c[0].src&&(e=c[0].src),!1!==e&&!c.hasClass("no_pin")){var f="";"undefined"!=typeof swpPinIt.image_description?f=swpPinIt.image_description:c.attr("title")?f=c.attr("title"):c.attr("alt")&&(f=c.attr("alt"));var g="http://pinterest.com/pin/create/bookmarklet/?media="+encodeURI(e)+"&url="+encodeURI(d.pageURL)+"&is_video=false&description="+encodeURIComponent(f),h=c.attr("class"),i=c.attr("style");c.removeClass().attr("style","").wrap(d.wrap),c.after('<a href="'+g+'" class="sw-pinit-button sw-pinit-'+swpPinIt.vLocation+" sw-pinit-"+swpPinIt.hLocation+'">Save</a>'),c.parent(".sw-pinit").addClass(h).attr("style",i),b(".sw-pinit .sw-pinit-button").on("click",function(){if(a.open(b(this).attr("href"),"Pinterest","width=632,height=253,status=0,toolbar=0,menubar=0,location=1,scrollbars=1"),"function"==typeof ga&&!0===swpClickTracking){var c="pin_image";console.log(c+" Button Clicked"),ga("send","event","social_media","swp_"+c+"_share")}return!1})}}})}function k(){b(".nc_tweet, a.swp_CTT").off("click"),b(".nc_tweet, a.swp_CTT").on("click",function(c){if(b(this).hasClass("noPop"))return!1;if(console.log(b(this)),b(this).attr("data-link")){c.preventDefault?c.preventDefault():c.returnValue=!1;var d=b(this).attr("data-link");console.log(d);var e,f,g;if(d=d.replace("’","'"),b(this).hasClass("pinterest")||b(this).hasClass("buffer_link")||b(this).hasClass("flipboard")?(e=550,f=775):(e=270,f=500),g=a.open(d,"_blank","height="+e+",width="+f),"function"==typeof ga&&!0===swpClickTracking){if(b(this).hasClass("nc_tweet"))var h=b(this).parents(".nc_tweetContainer").attr("data-network");else if(b(this).hasClass("swp_CTT"))var h="ctt";console.log(h+" Button Clicked"),ga("send","event","social_media","swp_"+h+"_share")}return!1}})}var l=a.socialWarfarePlugin,m={};socialWarfarePlugin.fetchShares=function(){b.when(b.get("https://graph.facebook.com/?fields=og_object{likes.summary(true).limit(0)},share&id="+swp_post_url),swp_post_recovery_url?b.get("https://graph.facebook.com/?fields=og_object{likes.summary(true).limit(0)},share&id="+swp_post_recovery_url):"").then(function(a,c){if("undefined"!=typeof a[0].share){console.log(a);var e=d(a[0].share.share_count),f=d(a[0].share.comment_count);if("undefined"!=typeof a[0].og_object)var g=d(a[0].og_object.likes.summary.total_count);else var g=0;var h=e+f+g;if(swp_post_recovery_url){if(console.log(c),"undefined"!=typeof c[0].share)var i=d(c[0].share.share_count),j=d(c[0].share.comment_count);else var i=0,j=0;if("undefined"!=typeof c[0].og_object)var k=d(c[0].og_object.likes.summary.total_count);else var k=0;var l=i+j+k;h!==l&&(h+=l)}m={action:"swp_facebook_shares_update",post_id:swp_post_id,activity:h},b.post(swp_admin_ajax,m,function(a){console.log("Facebook Shares Response: "+h)})}})},l.activateHoverStates=function(){e("pre_activate_buttons"),b(".nc_socialPanel:not(.nc_socialPanelSide) .nc_tweetContainer:not(.swp_nohover)").on("mouseenter",function(){f();var a=b(this).find(".swp_share").outerWidth(),c=b(this).find("i.sw").outerWidth(),d=b(this).width(),e=1+(a+35)/d;b(this).find(".iconFiller").width(a+c+25+"px"),b(this).css({flex:e+" 1 0%"})}),b(".nc_socialPanel:not(.nc_socialPanelSide)").on("mouseleave",function(){f()})},b(a).on("load",function(){"undefined"!=typeof swpPinIt&&swpPinIt.enabled&&j()}),b(document).ready(function(){k(),i(),a.bodyPaddingTop=d(b("body").css("padding-top").replace("px","")),a.bodyPaddingBottom=d(b("body").css("padding-bottom").replace("px",""));var c=!1;if(b(".nc_socialPanel").hover(function(){c=!0},function(){c=!1}),b(a).resize(l.debounce(250,function(){b(".nc_socialPanel").length&&!1!==c||(a.swpAdjust=1,i())})),b(document.body).on("post-load",function(){i()}),0!==b(".nc_socialPanelSide").length){var e=b(".nc_socialPanelSide").height(),f=b(a).height(),g=d(f/2-e/2);setTimeout(function(){b(".nc_socialPanelSide").animate({top:g},0)},105)}swp_isMobile.phone&&b(".swp_whatsapp").addClass("mobile"),1===b(".swp-content-locator").parent().children().length&&b(".swp-content-locator").parent().hide()})}(this,jQuery),function(a){var b=/iPhone/i,c=/iPod/i,d=/iPad/i,e=/(?=.*\bAndroid\b)(?=.*\bMobile\b)/i,f=/Android/i,g=/(?=.*\bAndroid\b)(?=.*\bSD4930UR\b)/i,h=/(?=.*\bAndroid\b)(?=.*\b(?:KFOT|KFTT|KFJWI|KFJWA|KFSOWI|KFTHWI|KFTHWA|KFAPWI|KFAPWA|KFARWI|KFASWI|KFSAWI|KFSAWA)\b)/i,i=/Windows Phone/i,j=/(?=.*\bWindows\b)(?=.*\bARM\b)/i,k=/BlackBerry/i,l=/BB10/i,m=/Opera Mini/i,n=/(CriOS|Chrome)(?=.*\bMobile\b)/i,o=/(?=.*\bFirefox\b)(?=.*\bMobile\b)/i,p=new RegExp("(?:Nexus 7|BNTV250|Kindle Fire|Silk|GT-P1000)","i"),q=function(a,b){return a.test(b)},r=function(a){var r=a||navigator.userAgent,s=r.split("[FBAN");if("undefined"!=typeof s[1]&&(r=s[0]),s=r.split("Twitter"),"undefined"!=typeof s[1]&&(r=s[0]),this.apple={phone:q(b,r),ipod:q(c,r),tablet:!q(b,r)&&q(d,r),device:q(b,r)||q(c,r)||q(d,r)},this.amazon={phone:q(g,r),tablet:!q(g,r)&&q(h,r),device:q(g,r)||q(h,r)},this.android={phone:q(g,r)||q(e,r),tablet:!q(g,r)&&!q(e,r)&&(q(h,r)||q(f,r)),device:q(g,r)||q(h,r)||q(e,r)||q(f,r)},this.windows={phone:q(i,r),tablet:q(j,r),device:q(i,r)||q(j,r)},this.other={blackberry:q(k,r),blackberry10:q(l,r),opera:q(m,r),firefox:q(o,r),chrome:q(n,r),device:q(k,r)||q(l,r)||q(m,r)||q(o,r)||q(n,r)},this.seven_inch=q(p,r),this.any=this.apple.device||this.android.device||this.windows.device||this.other.device||this.seven_inch,this.phone=this.apple.phone||this.android.phone||this.windows.phone,this.tablet=this.apple.tablet||this.android.tablet||this.windows.tablet,"undefined"==typeof window)return this},s=function(){var a=new r;return a.Class=r,a};"undefined"!=typeof module&&module.exports&&"undefined"==typeof window?module.exports=r:"undefined"!=typeof module&&module.exports&&"undefined"!=typeof window?module.exports=s():"function"==typeof define&&define.amd?define("swp_isMobile",[],a.swp_isMobile=s()):a.swp_isMobile=s()}(this);
 function toggleSearch(e) {
   var $searchInput = $('#searchInput');
 

@@ -33,9 +33,10 @@ gulp.task('sass:watch', function () {
 gulp.task('js:concat', function () {
   var files = [
     'src/components/jquery/dist/jquery.js',
-    'src/components/popper.js/index.js',
+    'src/components/popper.js/dist/umd/popper.js',
     'src/components/bootstrap/dist/js/bootstrap.js',
     'src/js/vendor/comment-reply.js',
+    '../../plugins/social-warfare/js/script.min.js',
     'src/js/app.js',
     '../../plugins/aesop-story-engine/public/assets/js/ai-core.min.js',
     '../../plugins/aesop-story-engine/public/assets/js/ast.js',

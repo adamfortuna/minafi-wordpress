@@ -365,7 +365,8 @@ add_action( 'init', 'disable_wp_emojicons' );
 function deregister_styles() {
   wp_deregister_style('contact-form-7');
   wp_deregister_style('ea-share-count');
-  wp_deregister_style( 'jetpack_css');
+  wp_deregister_style('jetpack_css');
+  wp_deregister_style('social_warfare');
 }
 add_action( 'wp_print_styles', 'deregister_styles', 100 );
 
