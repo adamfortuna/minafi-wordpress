@@ -22,6 +22,7 @@ try {
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       window.user = user;
+      $(".field--firebase_id").val(user.uid);
     }
   });
 } catch(e) {

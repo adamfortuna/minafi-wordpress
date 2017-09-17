@@ -65,7 +65,8 @@
 
 <p>Next, let's dive into <b>your numbers</b> starting with some basics.</p>
 
-<div class="card container container-slim card--info">
+<div class="container container-slim">
+<div class="card card--info">
 	<h3>Savings Rate Calculator</h3>
 	<p class="lead">Try changing the underlined values and see what happens!</p>
 	<p>
@@ -78,7 +79,7 @@
 	</p>
 	<p>This is calculated with the following formula:</p>
 	<p class="text-center">
-	  (<span  class="tangle--dynamic" data-var="yearlySavings" data-format="currency"></span> / <span class="tangle--dynamic" data-var="yearlyIncome" data-format="currency"></span>) * 100% = <span class="tangle--dynamic" data-var="savingsRate" data-format="percent"></span> Savings Rate
+	  (<span class="tangle--dynamic" data-var="yearlySavings" data-format="currency"></span> / <span class="tangle--dynamic" data-var="yearlyIncome" data-format="currency"></span>) * 100% = <span class="tangle--dynamic" data-var="savingsRate" data-format="percent"></span> Savings Rate
 	</p>
 	<p class="lead fi--info">
 		<i>Adam Says:</i> These values <span data-var="storeCookies" class="TKToggle TKSwitch tooltippable" title="All stats are anonymous - no IP or personally identiable information.">
@@ -91,16 +92,21 @@
 			</span>
 			see the same results. If you want you can <a href="#" class="fi--reset">reset all values to the defaults</a> at any time.
 	</p>
+
+  <?php include('email_results.php'); ?>
+</div>
 </div>
 
 <p>When working towards retirement and financial independence, <b>your savings rate is one of the most important numbers</b>. The more you save each year, the faster you'll be able to retire – that's obvious – but <b>how much faster</b>? See where your <span class="tangle--dynamic" data-var="savingsRate" data-format="percent"></span> SR falls on the following chart:</p>
 
-<div class="card container container-wide graph--sr--container mb-3 card--info">
+<div class="container container-wide">
+<div class="card graph--sr--container mb-3 card--info">
   <h3>Years to FI/retirement by Savings Rate Calculator</h3>
 	<div class="graph graph--sr"></div>
 	<p class="lead fi--info">
 		<i>Adam Says:</i> Assumptions abound! This assumes $0 current savings, you save what you don't spend, <span data-var="marketGrowth" class="FIAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0.001" data-format="percentDecimal" class="tangle--dynamic">/yr investment growth</span>, <span data-var="wr" class="FIAdjustableNumber" data-step="0.001" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic"> WR</span>, and that your spending will be the same when you retire. If you don't know what these terms mean, don't worry -- we'll get to them.
 	</p>
+</div>
 </div>
 
 <p>
@@ -156,7 +162,8 @@
 
 <p>In order to understand how much you need, we'll need to learn a little more about you.</p>
 
-<div class="card container container-slim card--info">
+<div class="container container-slim">
+<div class="card card--info">
 	<h3>Let's Talk More About You</h3>
 	<p class="lead"></p>
   <p>
@@ -241,6 +248,9 @@
 	<p class="lead fi--info">
 		<i>Adam Says:</i> For these numbers, I'm assuming <span data-var="marketGrowth" class="FIAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0.001" data-format="percentDecimal" class="tangle--dynamic">/yr investment growth</span> and a <span data-var="wr" class="FIAdjustableNumber" data-step="0.001" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic"> withdrawal rate</span>. If you're not sure what these numbers mean, don't worry! I'll explain them later on in this post.
 	</p>
+
+  <?php include('email_results.php'); ?>
+</div>
 </div>
 
 <p>This is where things start to get fun! There's now enough information to know a rough estimate of when you'd be <b>financially independent</b> – in <span class="tangle--dynamic" data-var="yearsUntilFi" data-format="years"></span> at age <span class="tangle--dynamic" data-var="fiAge" data-format="years"></span>. Let's dive into how we got to this number.
@@ -678,8 +688,8 @@
 <h2 class="pt-3">Part 9: Recap</h2>
 <p>You made it to the end! Let's recap a little about where you are now and where you're going.</p>
 
-
-<div class="card container container-slim card--info">
+<div class="container container-slim">
+<div class="card card--info">
   <h3>Here's A Snapshot of your Financial Health</h3>
   <p>
     You're a
@@ -757,6 +767,9 @@
   <p class="lead fi--info">
 		<i>Adam Says:</i> This is a dense area, but it includes all adjustable numbers in this post. If you're wanting to just play around and see the results of any scenario, this is your chance!
 	</p>
+
+  <?php include('email_results.php'); ?>
+</div>
 </div>
 
 

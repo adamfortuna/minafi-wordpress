@@ -9,6 +9,7 @@ $(function() {
   var defaults = {
     exampleClick: 0,
     storeCookies: true,
+    emailDownload: 0,
     yearlyIncome: 50000,
     yearlySavings: 10000,
     phase: 1,
@@ -217,7 +218,8 @@ $(function() {
         'payIncreasePercent',
         'inflationRate',
         'gender',
-        'goalReAge'
+        'goalReAge',
+        'emailDownload'
       ];
     },
     state: function() {

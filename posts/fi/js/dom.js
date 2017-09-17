@@ -54,6 +54,18 @@ $(function() {
            .fadeToggle();
   });
 
+  $(".pdf--download-link").on('click', function(e) {
+    e.preventDefault();
+    $(e.target).closest(".card-footer").find('.pdf--subscribe').slideToggle();
+  });
+
+
+  // Create the fi age Graph
+  window.fiGraph = new FiGraph('.graph--fi-date');
+  window.fiGraph.setup();
+
+
+
   $('.fi-share-twitter').on('click', function() {
     var message = $(this).closest('.card').find('.fi-share--message').text();
     $(this).attr('href', "https://twitter.com/share?url=https://minafi.com/interactive-guide-early-retirement-financial-independence/&text=" + message);
@@ -64,9 +76,4 @@ $(function() {
     var url = "https://www.facebook.com/sharer/sharer.php?u=https://minafi.com/interactive-guide-early-retirement-financial-independence/&display=popup&ref=plugin&src=share_button&quote="+message;
     $(this).attr('href', url);
   });
-
-
-  // Create the fi age Graph
-  window.fiGraph = new FiGraph('.graph--fi-date');
-  window.fiGraph.setup();
 });

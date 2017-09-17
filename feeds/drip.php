@@ -81,7 +81,10 @@ do_action( 'rss_tag_pre', 'rss2' );
 	 */
 	do_action( 'rss2_head');
 
-	while( have_posts()) : the_post();
+  $args = array('posts_per_page' => 30, 'paged' => 1);
+  $query = new WP_Query( $args );
+	// while( have_posts()) : the_post();
+  while( $query->have_posts()) : $query->the_post();
 	?>
 	<item>
 		<title><?php the_title_rss() ?></title>
@@ -97,9 +100,9 @@ do_action( 'rss_tag_pre', 'rss2' );
 <guid isPermaLink="false"><?php the_guid(); ?></guid>
 <description><![CDATA[<?php echo the_post_thumbnail('medium'); ?>]]></description>
 <content:encoded><![CDATA[<?php
-  echo wp_trim_words( strip_tags(get_the_content()), 60, '...' );
+  echo wp_trim_words( strip_tags(get_the_content()), 65, '...' );
   $count = get_comments_number();
-  echo "<br/>Posted on ".get_the_time( get_option('date_format') ) .". ". sprintf(_n( '%s Comment.', '%s Comments.', $count), $count ) . " <a href='".esc_url(get_permalink())."'>Continue reading</a>";
+  echo "<br/><br/><i>Posted on ".get_the_time( get_option('date_format') ) .". ". sprintf(_n( '%s Comment.', '%s Comments.', $count), $count ) . " <a href='".esc_url(get_permalink())."'>Continue reading</a></i>";
 ?>]]></content:encoded>
 
 <?php if ( get_comments_number() || comments_open() ) : ?>

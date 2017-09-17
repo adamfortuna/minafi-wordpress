@@ -13486,6 +13486,9 @@ span.alert {
   border: none;
   background-color: transparent; }
 
+.pdf--subscribe {
+  display: none; }
+
 a {
   text-decoration: underline; }
   a:hover {
