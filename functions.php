@@ -183,10 +183,10 @@ function minafi_scripts() {
 	// Theme stylesheet.
 	wp_enqueue_style( 'minafi-style', get_stylesheet_directory_uri() . '/assets/css/app.css', '', null);
 
-	// wp_enqueue_script( 'minafi-script', get_template_directory_uri() . '/assets/js/app.bundle.js', '', null);
+	wp_enqueue_script( 'minafi-script', get_template_directory_uri() . '/assets/js/app.bundle.js', '', null);
   // wp_enqueue_script( 'minafi-script', get_template_directory_uri() . '/assets/dev/app.bundle.js', '', '5');
 
-	wp_deregister_script('jquery');
+	// wp_deregister_script('jquery');
   // wp_deregister_script('');
 }
 add_action( 'wp_enqueue_scripts', 'minafi_scripts' );
@@ -401,7 +401,7 @@ $GLOBALS['$already_added_js'] = false;
 
 function minafi_js_script() {
   if(!$GLOBALS['$already_added_js']) {
-    echo "<script type='text/javascript' src='/wp-content/themes/minafi/assets/js/app.bundle.js'></script>";
+    echo "<script type='text/javascript' src='/wp-content/themes/minafi/assets/js/story.bundle.js'></script>";
   }
   $GLOBALS['$already_added_js'] = true;
 }

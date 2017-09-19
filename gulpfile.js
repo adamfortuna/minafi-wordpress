@@ -30,14 +30,33 @@ gulp.task('sass:watch', function () {
   gulp.watch('./assets/dev/**/*.css', ['css:minify']);
 });
 
-gulp.task('js:concat', function () {
+gulp.task('js:core:concat', function () {
   var files = [
     'src/components/jquery/dist/jquery.js',
+    '../../plugins/js/bj-lazy-load.js'
+  ];
+
+  return gulp.src(files)
+    .pipe(concat('app.bundle.js'))
+    .pipe(gulp.dest('assets/dev'));
+});
+
+gulp.task('js:more:concat', function () {
+  var files = [
     'src/components/popper.js/dist/umd/popper.js',
     'src/components/bootstrap/dist/js/bootstrap.js',
     'src/js/vendor/comment-reply.js',
     '../../plugins/social-warfare/js/script.min.js',
-    'src/js/app.js',
+    'src/js/app.js'
+  ];
+
+  return gulp.src(files)
+    .pipe(concat('more.bundle.js'))
+    .pipe(gulp.dest('assets/dev'));
+});
+
+gulp.task('js:story:concat', function () {
+  var files = [
     '../../plugins/aesop-story-engine/public/assets/js/ai-core.min.js',
     '../../plugins/aesop-story-engine/public/assets/js/ast.js',
     '../../plugins/aesop-story-engine/public/assets/js/scrollreveal.js',
@@ -45,7 +64,7 @@ gulp.task('js:concat', function () {
   ];
 
   return gulp.src(files)
-    .pipe(concat('app.bundle.js'))
+    .pipe(concat('story.bundle.js'))
     .pipe(gulp.dest('assets/dev'));
 });
 
@@ -80,7 +99,7 @@ gulp.task('js:fi:minify', function(cb) {
   ], cb);
 });
 
-gulp.task('js:minify', function(cb) {
+gulp.task('js:core:minify', function(cb) {
   pump([
     gulp.src('assets/dev/app.bundle.js'),
     uglify(),
@@ -88,9 +107,25 @@ gulp.task('js:minify', function(cb) {
   ], cb);
 });
 
+gulp.task('js:more:minify', function(cb) {
+  pump([
+    gulp.src('assets/dev/more.bundle.js'),
+    uglify(),
+    gulp.dest('assets/js')
+  ], cb);
+});
+
+gulp.task('js:story:minify', function(cb) {
+  pump([
+    gulp.src('assets/dev/story.bundle.js'),
+    uglify(),
+    gulp.dest('assets/js')
+  ], cb);
+});
+
 gulp.task('js:watch', function () {
-  gulp.watch('./src/js/**/*.js', ['js:concat']);
-  gulp.watch('./assets/dev/app.bundle.js', ['js:minify']);
+  gulp.watch('./src/js/**/*.js', ['js:more:concat']);
+  gulp.watch('./assets/dev/more.bundle.js', ['js:more:minify']);
   gulp.watch('./posts/fi/**/*.js', ['js:fi:concat']);
   gulp.watch('./assets/dev/fi.bundle.js', ['js:fi:minify']);
 });

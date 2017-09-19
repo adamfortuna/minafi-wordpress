@@ -34,6 +34,8 @@
 
 <?php do_action('aesop_theme_body_inside_bottom'); ?>
 <?php minafi_js_script() ?>
+<script type='text/javascript' src='/wp-content/themes/minafi/assets/js/more.bundle.js'></script>
+
 <div id="fb-root"></div>
   <script>(function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
@@ -57,18 +59,6 @@
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(dc, s);
   })();
-</script>
-
-<!-- Hotjar Tracking Code for minafi.com -->
-<script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:626135,hjsv:5};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
 </body>
 <?php do_action('aesop_theme_body_after'); ?>
