@@ -8,9 +8,9 @@
   <div class="email--toggle mb-2" style="display: none;">
     <input type="text" id="drip-name" name="fields[name]" value="" placeholder="Your first name" class="email form-control form-control-sm" />
     <div class="mt-2">
-      <input type="radio" name="fields[subscription]" value="all" id="email--subscription-all" checked="checked" /> <label for="email--subscription-all"><small>New Articles &amp; Monthly Newsletter</small></label>
+      <input type="radio" name="fields[subscription]" value="all" id="email--subscription-all" checked="checked" /> <label for="email--subscription-all"><small>Weekly Newsletter</small></label>
       <br/>
-      <input type="radio" name="fields[subscription]" value="monthly" id="email--subscription-monthly" /> <label for="email--subscription-monthly"><small>Monthly Newsletter Only</small></label>
+      <input type="radio" name="fields[subscription]" value="monthly" id="email--subscription-monthly" /> <label for="email--subscription-monthly"><small>Monthly Newsletter</small></label>
     </small>
     </div>
   </div>

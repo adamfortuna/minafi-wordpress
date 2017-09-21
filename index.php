@@ -36,11 +36,11 @@ include('partials/hero.php');
 		</section>
 
 		<section class="col-lg-4 sidebar">
+			<?php include('partials/email-sidebar.php'); ?>
 			<?php include('partials/about.php'); ?>
 			<?php include('partials/fi.php'); ?>
 			<?php include('partials/categories.php') ?>
 			<?php include('partials/social.php') ?>
-			<?php include('partials/email-sidebar.php'); ?>
 			<?php include('partials/archives.php'); ?>
 		</section>
 	</div>
