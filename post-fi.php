@@ -53,9 +53,13 @@ get_header();
 			  <?php include('posts/fi/index.php'); ?>
       </div>
       <?php do_action('ase_theme_post_inside_bottom'); ?>
+
 	  </section>
 
 		<section class="article--meta container container-slim">
+      <div class="col-12">
+        <?php social_warfare() ?>
+      </div>
       <div class="col-12">
         <?php echo get_the_category_list() ?>
       </div>

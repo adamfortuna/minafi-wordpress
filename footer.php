@@ -58,6 +58,7 @@
     s.parentNode.insertBefore(dc, s);
   })();
 </script>
+<?php wp_footer(); ?>
 </body>
 <?php do_action('aesop_theme_body_after'); ?>
 </html>

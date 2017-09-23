@@ -13173,10 +13173,12 @@ span.entry-subtitle {
   max-width: 300px;
   overflow: hidden; }
 
-.ea-share-count-wrap {
-  margin: 0 auto;
-  max-width: 700px;
-  padding: 0 15px; }
+.nc_socialPanelSide {
+  top: 40%;
+  transform: translateY(-40%);
+  opacity: 1; }
+  .nc_socialPanelSide .nc_tweetContainer {
+    border: 1px solid #ccc; }
 
 /*
  *  TangleKit.css
