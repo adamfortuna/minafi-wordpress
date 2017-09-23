@@ -401,7 +401,7 @@ $GLOBALS['$already_added_js'] = false;
 
 function minafi_js_script() {
   if(!$GLOBALS['$already_added_js']) {
-    echo "<script type='text/javascript' src='/wp-content/themes/minafi/assets/js/app.bundle.js'></script>";
+    echo "<script type='text/javascript' src='/wp-content/themes/minafi/assets/js/app.bundle.js'></script><script type='text/javascript' src='/wp-content/themes/minafi/assets/js/story.bundle.js'></script>";
   }
   $GLOBALS['$already_added_js'] = true;
 }

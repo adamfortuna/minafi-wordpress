@@ -36,16 +36,24 @@ gulp.task('js:concat', function () {
     'src/components/popper.js/dist/umd/popper.js',
     'src/components/bootstrap/dist/js/bootstrap.js',
     'src/js/vendor/comment-reply.js',
-    '../../plugins/social-warfare/js/script.min.js',
-    'src/js/app.js',
-    '../../plugins/aesop-story-engine/public/assets/js/ai-core.min.js',
-    '../../plugins/aesop-story-engine/public/assets/js/ast.js',
-    '../../plugins/aesop-story-engine/public/assets/js/scrollreveal.js',
-    '../../plugins/aesop-story-engine/public/assets/js/waypoints.js'
+    '../../plugins/social-warfare/js/script.js',
+    'src/js/app.js'
   ];
 
   return gulp.src(files)
     .pipe(concat('app.bundle.js'))
+    .pipe(gulp.dest('assets/dev'));
+});
+
+
+gulp.task('js:story:concat', function () {
+  var files = [
+    'src/js/vendor/ai-core.min.js',
+    '../../plugins/aesop-story-engine/public/assets/js/ast.js',
+    '../../plugins/aesop-story-engine/public/assets/js/scrollreveal.js',
+  ];
+  return gulp.src(files)
+    .pipe(concat('story.bundle.js'))
     .pipe(gulp.dest('assets/dev'));
 });
 
@@ -87,6 +95,15 @@ gulp.task('js:minify', function(cb) {
     gulp.dest('assets/js')
   ], cb);
 });
+
+gulp.task('js:story:minify', function(cb) {
+  pump([
+    gulp.src('assets/dev/story.bundle.js'),
+    uglify(),
+    gulp.dest('assets/js')
+  ], cb);
+});
+
 
 gulp.task('js:watch', function () {
   gulp.watch('./src/js/**/*.js', ['js:concat']);

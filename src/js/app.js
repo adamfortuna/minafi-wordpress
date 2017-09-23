@@ -1,30 +1,33 @@
-function toggleSearch(e) {
-  var $searchInput = $('#searchInput');
+(function() {
 
-  if($searchInput.val().length > 0) {
-    // Do nothing and let the submission continue
-  } else {
-    e.preventDefault();
-    var $this = $(this);
+  function toggleSearch(e) {
+    var $searchInput = $('#searchInput');
 
-    // Not showing form
-    if($('.search--link').hasClass('nav-link')) {
-      $('#searchInput').blur();
-    } else { // Showing form
-      setTimeout(function() {
-        $('#searchInput').focus();
-      }, 1000);
+    if($searchInput.val().length > 0) {
+      // Do nothing and let the submission continue
+    } else {
+      e.preventDefault();
+      var $this = $(this);
+
+      // Not showing form
+      if($('.search--link').hasClass('nav-link')) {
+        $('#searchInput').blur();
+      } else { // Showing form
+        setTimeout(function() {
+          $('#searchInput').focus();
+        }, 1000);
+      }
+
+      $this.closest('.nav-item').toggleClass('search--searching');
     }
-
-    $this.closest('.nav-item').toggleClass('search--searching');
   }
-}
 
 
-$(function(){
-  $('.search--link').on('click', toggleSearch);
+  $(function(){
+    $('.search--link').on('click', toggleSearch);
 
-  $('.email--signup').on('focus', function() {
-    $('.email--toggle').slideDown();
-  })
-});
+    $('.email--signup').on('focus', function() {
+      $('.email--toggle').slideDown();
+    })
+  });
+})();
