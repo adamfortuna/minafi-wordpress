@@ -11382,6 +11382,9 @@ body {
   padding-left: 15px;
   padding-right: 15px; }
 
+.aesop-entry-content .tablepress {
+  max-width: 900px; }
+
 .aesop-entry-content ul {
   padding-left: 40px; }
 
