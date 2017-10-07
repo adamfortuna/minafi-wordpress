@@ -162,7 +162,8 @@ function twentysixteen_fonts_url() {
 	$fonts_url = '';
 	$fonts     = array();
 	$subsets   = 'latin,latin-ext';
-	$fonts[] = 'Lato:300,400,700,900|Merriweather:300,300i,400,400i,700';
+	// $fonts[] = 'Lato:300,400,700,900|Merriweather:300,300i,400,400i,700';
+  $fonts[] = 'Lato:300,400,700,900';
 	// $fonts[] = 'Open Sans:400,700,900,400italic,700italic';
 
 	if ( $fonts ) {
@@ -187,6 +188,7 @@ function minafi_scripts() {
   // wp_enqueue_script( 'minafi-script', get_template_directory_uri() . '/assets/dev/app.bundle.js', '', '5');
 
 	wp_deregister_script('jquery');
+  wp_deregister_script('wp-embed');
   // wp_deregister_script('');
 }
 add_action( 'wp_enqueue_scripts', 'minafi_scripts' );
@@ -366,7 +368,9 @@ function deregister_styles() {
   wp_deregister_style('contact-form-7');
   wp_deregister_style('ea-share-count');
   wp_deregister_style('jetpack_css');
+  wp_deregister_style('jetpack_css-css');
   wp_deregister_style('social_warfare');
+  wp_deregister_style('tablepress-default');
 }
 add_action( 'wp_print_styles', 'deregister_styles', 100 );
 
@@ -401,7 +405,9 @@ $GLOBALS['$already_added_js'] = false;
 
 function minafi_js_script() {
   if(!$GLOBALS['$already_added_js']) {
-    echo "<script type='text/javascript' src='/wp-content/themes/minafi/assets/js/app.bundle.js'></script><script type='text/javascript' src='/wp-content/themes/minafi/assets/js/story.bundle.js'></script>";
+    // Leaving this hook in case I want to add it back
+    echo "<script type='text/javascript' src='/wp-content/themes/minafi/assets/js/app.bundle.js'></script>";
+    //echo "<script type='text/javascript' src='/wp-content/themes/minafi/assets/js/story.bundle.js'></script>";
   }
   $GLOBALS['$already_added_js'] = true;
 }
