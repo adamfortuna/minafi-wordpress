@@ -11367,6 +11367,19 @@ body {
     .footer--content a:hover {
       text-decoration: none; }
 
+.cover--image {
+  display: block;
+  position: relative; }
+  .cover--image .cover--image-overlay {
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    transition: background-color 0.3s; }
+  .cover--image:hover .cover--image-overlay {
+    background-color: rgba(0, 0, 0, 0.25); }
+
 .latest-article {
   height: 26px; }
   .latest-article span {
