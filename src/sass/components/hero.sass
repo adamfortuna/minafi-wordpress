@@ -1,17 +1,22 @@
-@media only screen and (max-width: 768px)
+@media only screen and (max-width: 992px)
   body
-    .home--hero-content
-      background: url(../images/gate-top.jpg) no-repeat
-      background-position-y: 84%
+    .home--hero
+      margin-bottom: 2rem !important
+    .hero--text-content
+      position: relative
     .home--hero,
     .home--hero-content,
     .hero--text
-      height: 240px !important
+      height: auto !important
     .hero--text
       p
         margin-left: 0
         font-size: 1.4rem
         line-height: 1.6rem
+    .home--hero-content
+      margin-bottom: 0
+    .home--hero-email
+      margin-top: 2rem !important
 
 .home--hero-content
   background: url(../images/gate-small.jpg) no-repeat
@@ -58,3 +63,13 @@
 
 .recent-posts
   font-size: 1rem
+
+
+.home--hero-email
+  .sidebar--group
+    background-color: rgba(255,255,255,0.95)
+    border-radius: 4px
+    p
+      line-height: 1.6rem
+    .email-submit
+      cursor: pointer

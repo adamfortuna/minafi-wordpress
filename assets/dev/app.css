@@ -13082,18 +13082,23 @@ span.entry-subtitle {
 #comments .comments-title span.entry-subtitle {
   display: none; }
 
-@media only screen and (max-width: 768px) {
-  body .home--hero-content {
-    background: url(../images/gate-top.jpg) no-repeat;
-    background-position-y: 84%; }
+@media only screen and (max-width: 992px) {
+  body .home--hero {
+    margin-bottom: 2rem !important; }
+  body .hero--text-content {
+    position: relative; }
   body .home--hero,
   body .home--hero-content,
   body .hero--text {
-    height: 240px !important; }
+    height: auto !important; }
   body .hero--text p {
     margin-left: 0;
     font-size: 1.4rem;
-    line-height: 1.6rem; } }
+    line-height: 1.6rem; }
+  body .home--hero-content {
+    margin-bottom: 0; }
+  body .home--hero-email {
+    margin-top: 2rem !important; } }
 
 .home--hero-content {
   background: url(../images/gate-small.jpg) no-repeat;
@@ -13139,6 +13144,14 @@ span.entry-subtitle {
 .recent-posts {
   font-size: 1rem; }
 
+.home--hero-email .sidebar--group {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 4px; }
+  .home--hero-email .sidebar--group p {
+    line-height: 1.6rem; }
+  .home--hero-email .sidebar--group .email-submit {
+    cursor: pointer; }
+
 .sidebar p {
   line-height: 1.8rem; }
 
@@ -13151,10 +13164,8 @@ span.entry-subtitle {
 .sidebar--group {
   margin-bottom: 2rem;
   padding: 1rem;
-  background-color: rgba(229, 236, 247, 0.85);
   border-radius: 2px;
-  -webkit-box-shadow: 1px 2px 2px #AEC0DD;
-  box-shadow: 1px 2px 2px #AEC0DD; }
+  border: 1px solid #ddd; }
   .sidebar--group h3, .sidebar--group h2 {
     border-bottom: 1px solid #AEC0DD;
     padding-bottom: 0.4rem;
