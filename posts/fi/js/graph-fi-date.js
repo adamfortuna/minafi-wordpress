@@ -129,14 +129,16 @@ function FiGraph() {
     if(maxAge < user.age) { maxAge = user.age + 25; }
     this.ages = d3.range(user.age, maxAge, 1).map(function(d) {
       var years = d - this.user.age;
-
-      // Growth in the original deposit
-      var stashValue = this.finance.FV(this.user.marketGrowth*100, this.user.networth, years);
-
-      // Growth in amount added each year
       var depositValue = 0;
-      for(var i=0; i <= years; i++) {
-        depositValue = depositValue + this.user.yearlySavings * Math.pow(1 + this.user.marketGrowth, i);
+      if(years === 0) {
+        var stashValue = this.user.networth;
+      } else {
+        // Growth in the original deposit
+        var stashValue = this.finance.FV(this.user.marketGrowth*100, this.user.networth, years-1);
+        // Growth in amount added each year
+        for(var i=1; i <= (years); i++) {
+          depositValue = depositValue + this.user.yearlySavings * Math.pow(1 + this.user.marketGrowth, i);
+        }
       }
 
       // debugger
