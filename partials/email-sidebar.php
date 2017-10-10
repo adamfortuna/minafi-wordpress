@@ -15,7 +15,7 @@
       </small>
     </p>
     <div class="group">
-      <input type="submit" name="submit" value="Subscribe" data-drip-attribute="sign-up-button" class="btn btn-sm btn-success btn-block email-submit" />
+      <button type="submit" class="btn btn-sm btn-success btn-block email-submit"><i class="fa fa-envelope pr-2"></i> Sign me up</button>
     </div>
   </form>
 </div>
