@@ -2,3 +2,11 @@
   font-weight: 300
   line-height: 1.8rem
   margin-bottom: 1.4rem
+
+.pagination
+  .nav-links
+    @extend .breadcrumb
+  .page-numbers
+    @extend .breadcrumb-item
+    &.current
+      color: $breadcrumb-active-color

@@ -462,3 +462,10 @@ function add_drip_feed() {
   add_filter('pre_option_rss_use_excerpt', '__return_zero');
   load_template(TEMPLATEPATH . '/feeds/drip.php' );
 }
+
+
+function change_wp_search_size($queryVars) {
+	$queryVars['posts_per_page'] = 9;
+	return $queryVars; // Return our modified query variables
+}
+add_filter('request', 'change_wp_search_size');

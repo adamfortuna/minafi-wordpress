@@ -24,7 +24,7 @@
 <?php do_action('aesop_theme_body_before'); ?>
 <body <?php body_class(); ?>>
 	<?php do_action('ase_theme_body_inside_top'); ?>
-	<div class="container <?php if(use_slim_container()) { echo 'container-slim'; } ?>">
+	<div id="header" class="container <?php if(use_slim_container()) { echo 'container-slim'; } ?>">
 	  <div class='row justify-content-center'>
 	    <div class="header <?php minafi_columns(); ?>">
 	      <nav class="navbar navbar-toggleable-md">

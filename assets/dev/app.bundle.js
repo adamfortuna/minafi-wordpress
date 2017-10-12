@@ -17276,6 +17276,7 @@ var socialWarfarePlugin = socialWarfarePlugin || {};
 })(this);
 
 (function() {
+  // var toggleSlim = $("#header").hasClass("container-slim");
 
   function toggleSearch(e) {
     var $searchInput = $('#searchInput');
@@ -17295,7 +17296,17 @@ var socialWarfarePlugin = socialWarfarePlugin || {};
         }, 1000);
       }
 
-      $this.closest('.nav-item').toggleClass('search--searching');
+      var navItem = $this.closest('.nav-item');
+      navItem.toggleClass('search--searching');
+      // if(toggleSlim) {
+      //   $("#header").toggleClass("container-slim");
+      // }
+
+      // if(navItem.hasClass('search--searching')) {
+      //
+      // } else {
+      //   $("#header").removeClass("container-slim");
+      // }
     }
   }
 

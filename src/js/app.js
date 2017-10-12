@@ -1,4 +1,5 @@
 (function() {
+  // var toggleSlim = $("#header").hasClass("container-slim");
 
   function toggleSearch(e) {
     var $searchInput = $('#searchInput');
@@ -18,7 +19,17 @@
         }, 1000);
       }
 
-      $this.closest('.nav-item').toggleClass('search--searching');
+      var navItem = $this.closest('.nav-item');
+      navItem.toggleClass('search--searching');
+      // if(toggleSlim) {
+      //   $("#header").toggleClass("container-slim");
+      // }
+
+      // if(navItem.hasClass('search--searching')) {
+      //
+      // } else {
+      //   $("#header").removeClass("container-slim");
+      // }
     }
   }
 

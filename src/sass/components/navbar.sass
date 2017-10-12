@@ -1,3 +1,6 @@
+#header
+  transition: width 1s, max-width 1s
+
 .navbar
   padding-left: 0
   padding-right: 0
@@ -5,6 +8,7 @@
 
   .nav
     margin-top: 0.6rem
+    margin-right: 60px
   .nav-link
     color: $gray-dark
     font-weight: 700
@@ -140,7 +144,14 @@
   &:focus
     outline: none
 
+.nav-item--search
+  position: absolute
+  right: 0
+
 .search--searching
+  position: absolute
+  right: 0
+  transition: absolute 1s
   .search--form
     display: inline-block !important
     input
