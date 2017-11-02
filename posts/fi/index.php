@@ -229,7 +229,7 @@
         <span class="tangle--dynamic" data-var="fiAge" data-format="years"></span>
         so if you retire at age
         <span class="tangle--dynamic" data-var="goalReAge" data-format="years"></span>
-        you should be good shape.
+        you should be in good shape.
       </p>
 		</div>
 		<div class="alert alert-warning" role="alert">
