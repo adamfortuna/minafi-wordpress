@@ -4,7 +4,7 @@
 		<div class="aesop-content">
 			<figure class="aesop-image-component-image aesop-component-align-right aesop-image-component-caption-left" style="margin-right:12%; width:500px;">
         <a class="aesop-lightbox" href="https://minafi.com/wp-content/uploads/2017/08/Me-Amy-Blacklock.jpeg" title="Amy, under her backyard grape arbor, trying for a good pic...">
-					<img src="https://minafi.com/wp-content/uploads/2017/08/Me-Amy-Blacklock.jpeg" height="333" alt="Amy, under her backyard grape arbor, trying for a good pic...">
+					<img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="https://minafi.com/wp-content/uploads/2017/08/Me-Amy-Blacklock.jpeg" height="333" alt="Amy, under her backyard grape arbor, trying for a good pic...">
 				</a>
   			<figcaption class="aesop-image-component-caption">
   				Amy, under her backyard grape arbor, trying for a good pic...

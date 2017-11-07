@@ -4,7 +4,7 @@
 		<div class="aesop-content">
 			<figure class="aesop-image-component-image aesop-component-align-right aesop-image-component-caption-left" style="margin-right:12%; width:500px;">
         <a class="aesop-lightbox" href="https://minafi.com/wp-content/uploads/2017/08/Jane-Cash-Fasting-Jane-H-1024x678.jpg" title="Jane enjoying fall views in NYC">
-					<img src="https://minafi.com/wp-content/uploads/2017/08/Jane-Cash-Fasting-Jane-H-1024x678.jpg" height="333" alt="Jane enjoying fall views in NYC">
+					<img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="https://minafi.com/wp-content/uploads/2017/08/Jane-Cash-Fasting-Jane-H-1024x678.jpg" height="333" alt="Jane enjoying fall views in NYC">
 				</a>
   			<figcaption class="aesop-image-component-caption">
   				Jane enjoying fall views in NYC

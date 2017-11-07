@@ -4,7 +4,7 @@
 		<div class="aesop-content">
 			<figure class="aesop-image-component-image aesop-component-align-right aesop-image-component-caption-left" style="margin-right:12%; width:500px;">
         <a class="aesop-lightbox" href="https://minafi.com/wp-content/uploads/2017/08/20170610_1303230-Jim-White.jpg" title="Jim spending time on the beaches of Panama with his daughter.">
-					<img src="https://minafi.com/wp-content/uploads/2017/08/20170610_1303230-Jim-White.jpg" height="333" alt="Jim spending time on the beaches of Panama with his daughter.">
+					<img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="https://minafi.com/wp-content/uploads/2017/08/20170610_1303230-Jim-White.jpg" height="333" alt="Jim spending time on the beaches of Panama with his daughter.">
 				</a>
   			<figcaption class="aesop-image-component-caption">
   				Jim spending time on the beaches of Panama with his daughter.

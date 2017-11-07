@@ -4,7 +4,7 @@
 		<div class="aesop-content">
 			<figure class="aesop-image-component-image aesop-component-align-right aesop-image-component-caption-left" style="margin-right:12%; width:500px;">
         <a class="aesop-lightbox" href="https://minafi.com/wp-content/uploads/2017/08/New-Zealand-Frugal-Hackers.jpg" title="Early Retiree Darrow Kirkpatrick in the Pecos Wilderness">
-					<img src="https://minafi.com/wp-content/uploads/2017/08/New-Zealand-Frugal-Hackers.jpg" height="333" alt="Frugal Hackers at Milford Sound, New Zealand">
+					<img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="https://minafi.com/wp-content/uploads/2017/08/New-Zealand-Frugal-Hackers.jpg" height="333" alt="Frugal Hackers at Milford Sound, New Zealand">
 				</a>
   			<figcaption class="aesop-image-component-caption">
   				Frugal Hackers at Milford Sound, New Zealand

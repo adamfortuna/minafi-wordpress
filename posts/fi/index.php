@@ -135,7 +135,7 @@
 <p>If you're hoping to be financially independent before collecting social security, you'll need to save more than 10%. Let's look into ways to reduce this number. These estimates are making a <b>LOT</b> of assumptions. We can refine this a little, but for that, I'm going to need your help – in the form of answering a few more questions.</p>
 
 <div class="container text-center pb-3 mb-3">
-  <img src="https://minafi.com/wp-content/uploads/2017/08/callistus-ndemo-157554.jpg" alt="hiking">
+  <img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="https://minafi.com/wp-content/uploads/2017/08/callistus-ndemo-157554.jpg" alt="hiking">
   <p class="text-center text-muted"><small>Get ready for a long journey.</small></p>
 </div>
 
@@ -297,7 +297,7 @@
 
 <a name="part-4"></a>
 <div class="container text-center pb-3 mb-3">
-  <img src="https://minafi.com/wp-content/uploads/2017/08/manik-rathee-57410.jpg" alt="financial independence">
+  <img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="https://minafi.com/wp-content/uploads/2017/08/manik-rathee-57410.jpg" alt="financial independence">
   <p class="text-center text-muted"><small>Financial Independence (FI) is a freeing idea and a beneficial goal.</small></p>
 </div>
 
@@ -339,7 +339,7 @@
 
 <a name="part-5"></a>
 <div class="container text-center pb-3 mb-3">
-  <img src="https://minafi.com/wp-content/uploads/2016/08/financial.jpg" alt="investing">
+  <img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="https://minafi.com/wp-content/uploads/2016/08/financial.jpg" alt="investing">
   <p class="text-center text-muted"><small>The math does add up, with some additional work.</small></p>
 </div>
 
@@ -413,7 +413,7 @@
 	Imagine how many more years you'd need to work to save this amount without investing. Actually, no need to imagine -- it's <span data-var="investmentYearsDifference" data-format="years" class="tangle--dynamic"></span>! If you learn how to invest, you can retire <span data-var="investmentYearsDifference" data-format="years" class="tangle--dynamic"></span> earlier.
 </p>
 
-<p class="text-center"><img src="<?php echo $theme_path; ?>/posts/fi/images/mind_blown.gif"></p>
+<p class="text-center"><img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="<?php echo $theme_path; ?>/posts/fi/images/mind_blown.gif"></p>
 
 <p>This is the number one difference between people who retire early and those who wait until social security -- <b>people who retire early learn how to invest</b>.</p>
 
@@ -434,7 +434,7 @@
 
 <a name="part-6"></a>
 <div class="container text-center pb-3 mb-3">
-  <img src="https://minafi.com/wp-content/uploads/2017/08/pexels-photo-287240.jpeg" alt="retire sooner">
+  <img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="https://minafi.com/wp-content/uploads/2017/08/pexels-photo-287240.jpeg" alt="retire sooner">
   <p class="text-center text-muted"><small>Speed up your FI hike with a few small lifestyle tweaks.</small></p>
 </div>
 
@@ -550,7 +550,7 @@
 
 <a name="part-7"></a>
 <div class="container text-center pb-3 mb-3">
-  <img src="https://minafi.com/wp-content/uploads/2017/08/tegan-mierle-157974.jpg" alt="who is this for">
+  <img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="https://minafi.com/wp-content/uploads/2017/08/tegan-mierle-157974.jpg" alt="who is this for">
   <p class="text-center text-muted"><small>There are 291k subscribers to <a href="https://www.reddit.com/r/financialindependence/" target="_blank">/r/financialindependence/</a> alone.</small></p>
 </div>
 
@@ -617,7 +617,7 @@
 	<div class="aesop-content">
 		<figure class="aesop-image-component-image aesop-component-align-right aesop-image-component-caption-left" style="margin-right:25%; width:250px;">
       <a class="aesop-lightbox" href="https://minafi.com/recommends/your-money-or-your-life/" title="Your money or your life">
-				<img src="https://minafi.com/wp-content/uploads/2017/08/your-monet.jpeg" alt="Your money or your life">
+				<img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="https://minafi.com/wp-content/uploads/2017/08/your-monet.jpeg" alt="Your money or your life">
 			</a>
 	  </figure>
 	</div>
@@ -632,7 +632,7 @@
 	<div class="aesop-content">
 		<figure class="aesop-image-component-image aesop-component-align-left aesop-image-component-caption-left" style="margin-left:16%; width:250px;">
       <a class="aesop-lightbox" href="https://minafi.com/recommends/the-bogleheads-guide-to-investing/" title="The Bogleheads' Guide to Investing">
-				<img src="https://minafi.com/wp-content/uploads/2016/08/bogleheads.jpg" alt="The Bogleheads' Guide to Investing">
+				<img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="https://minafi.com/wp-content/uploads/2016/08/bogleheads.jpg" alt="The Bogleheads' Guide to Investing">
 			</a>
 	  </figure>
 	</div>
@@ -646,7 +646,7 @@
   <div class="aesop-content">
     <figure class="aesop-image-component-image aesop-component-align-right aesop-image-component-caption-left" style="margin-right:25%; width:250px;">
       <a class="aesop-lightbox" href="https://minafi.com/recommends/millionaire-next-door/" title="The Millionaire Next Door">
-        <img src="https://minafi.com/wp-content/uploads/2017/08/millionaire.jpg" alt="The Millionaire Next Door">
+        <img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="https://minafi.com/wp-content/uploads/2017/08/millionaire.jpg" alt="The Millionaire Next Door">
       </a>
     </figure>
   </div>
@@ -678,7 +678,7 @@
 </p>
 
 <div class="container container-wide">
-  <img src="https://minafi.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-20-at-11.17.01-PM.png" alt="Personal Capital Breakdown" />
+  <img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="https://minafi.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-20-at-11.17.01-PM.png" alt="Personal Capital Breakdown" />
   <p class="text-center text-muted"><small>A scenario I was running on my own finances</small></p>
 </div>
 

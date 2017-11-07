@@ -4,7 +4,7 @@
 		<div class="aesop-content">
 			<figure class="aesop-image-component-image aesop-component-align-right aesop-image-component-caption-left" style="margin-right:12%; width:500px;">
         <a class="aesop-lightbox" href="https://minafi.com/wp-content/uploads/2017/08/PT-Steps-NYC-Philip-Taylor.jpg" title="PT hanging out on the steps at Bryant Park in NYC.">
-					<img src="https://minafi.com/wp-content/uploads/2017/08/PT-Steps-NYC-Philip-Taylor.jpg" height="333" alt="PT hanging out on the steps at Bryant Park in NYC.">
+					<img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="https://minafi.com/wp-content/uploads/2017/08/PT-Steps-NYC-Philip-Taylor.jpg" height="333" alt="PT hanging out on the steps at Bryant Park in NYC.">
 				</a>
   			<figcaption class="aesop-image-component-caption">
   				PT hanging out on the steps at Bryant Park in NYC.

@@ -4,7 +4,7 @@
 		<div class="aesop-content">
 			<figure class="aesop-image-component-image aesop-component-align-right aesop-image-component-caption-left" style="margin-right:12%; width:500px;">
         <a class="aesop-lightbox" href="https://minafi.com/wp-content/uploads/2017/08/zed_zencents_strange_clouds-Zen-Cents.jpg" title="Zed admiring the strange cloud formations on Mt. Etna.">
-					<img src="https://minafi.com/wp-content/uploads/2017/08/zed_zencents_strange_clouds-Zen-Cents.jpg" height="333" alt="Zed admiring the strange cloud formations on Mt. Etna.">
+					<img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="https://minafi.com/wp-content/uploads/2017/08/zed_zencents_strange_clouds-Zen-Cents.jpg" height="333" alt="Zed admiring the strange cloud formations on Mt. Etna.">
 				</a>
   			<figcaption class="aesop-image-component-caption">
   				Zed admiring the strange cloud formations on Mt. Etna.
