@@ -90,7 +90,7 @@
 				<span>will NOT</span>
 				<span>will</span>
 			</span>
-			see the same results. If you want you can <a href="#" class="fi--reset">reset all values to the defaults</a> at any time.
+			see the same results. If you want, you can <a href="#" class="fi--reset">reset all values to the defaults</a> at any time.
 	</p>
 
   <?php include('email_results.php'); ?>
@@ -278,7 +278,7 @@
 
 <p>The dashed horizontal line in this graph is how much you'd need to be financially independent given your current numbers. The other line is your net worth at each age. The point where these lines intersect is your FI Age -- the age in which you'd have enough to be financially independent.</p>
 
-<p>Financial Independence (FI) is different from retirement. Think of financial independence as the amount of money you'd need in order to never work again. Retirement (RE), on the other hand, is the act of not working.</p>
+<p>Financial Independence (FI) is different from retirement. Think of financial independence as the amount of money you'd need in order to never work again. Retirement (RE), on the other hand, generally means not being employed, but being self-sufficent.</p>
 
 <div class="card container container-wide mb-3">
   <div class="row mt-3">
@@ -334,7 +334,7 @@
 
 <p>Withdrawal rate is one the most talked about (and heavily debated) topics when it comes to early retirement. I'm only going to introduce the topic in this article, but if you want to read more here's a great post on <a href="https://earlyretirementdude.com/4-rule-come-anyway-hint-wasnt-trinity-study/" target="_blank">Where'd the 4% Rule Come From Anyway?</a></p>
 
-<p>My personal withdrawal rate I use for calculations is 3%. I'm in no rush to retire right now, and I'd prefer to rest easy and be overwhelmingly confident -- or at least as much as possible.</p>
+<p>My personal withdrawal rate I use for calculations is somewhere between 3% and 4%. I'm in no rush to retire right now, and I'd prefer to rest easy and be overwhelmingly confident -- or at least as much as possible.</p>
 
 
 <a name="part-5"></a>
@@ -357,7 +357,7 @@
   <span data-var="yearsOfFiNoInvestment" data-format="years" class="tangle--dynamic tangle--dynamic"></span>?
 </blockquote>
 
-<p>If you put your money into a savings account, then this is exactly how long your investment would last. There are better places to put your money than a savings account through!</p>
+<p>If you put your money into a savings account, then this is exactly how long your investment would last. There are better places to put your money through!</p>
 
 <h3>Factoring In Inflation</h3>
 
@@ -410,7 +410,7 @@
 	wouldn't be all at once but in the form of
 	<span data-var="retirementYearlySpending" data-format="currency" class="tangle--dynamic">/yr</span>.
 	This is the true power of compound interest!
-	Imagine how many more years you'd need to work to save this amount without investing. Actually, no need to imagine -- it's <span data-var="investmentYearsDifference" data-format="years" class="tangle--dynamic"></span>! If you learn how to invest, you can retire <span data-var="investmentYearsDifference" data-format="years" class="tangle--dynamic"></span> years earlier.
+	Imagine how many more years you'd need to work to save this amount without investing. Actually, no need to imagine -- it's <span data-var="investmentYearsDifference" data-format="years" class="tangle--dynamic"></span>! If you learn how to invest, you can retire <span data-var="investmentYearsDifference" data-format="years" class="tangle--dynamic"></span> earlier.
 </p>
 
 <p class="text-center"><img src="<?php echo $theme_path; ?>/posts/fi/images/mind_blown.gif"></p>
@@ -473,7 +473,7 @@
 		Adam Says: Are there things in your lifestyle that you'd be happy to cut? Would you rather cut spending by
 		<span data-var="impliedSpendingReductionYearlySavings" data-format="currency" class="tangle--dynamic ">/yr</span>
 		or work for an additional
-		<span data-var="spendingReductionYearsEarlier" data-format="years" class="tangle--dynamic"> years</span>?
+		<span data-var="spendingReductionYearsEarlier" data-format="years" class="tangle--dynamic"></span>?
 	</p>
 </div>
 
