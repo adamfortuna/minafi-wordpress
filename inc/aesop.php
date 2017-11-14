@@ -3,7 +3,7 @@
 function aesop_setup(){
   // Add extended style support for aesop
   // add_theme_support("aesop-component-styles", array("image", "quote", "gallery", "content", "video", "collection", "chapter", "document", "character"));
-  add_theme_support("aesop-component-styles", array("parallax", "image", "quote", "gallery", "content", "video", "audio", "collection", "chapter", "document", "character", "map", "timeline" ) );
+  add_theme_support("aesop-component-styles", array("parallax", "image", "quote", "gallery", "content", "video", "audio", "collection", "chapter", "document", "character", "timeline" ) );
 
   if ( function_exists( 'register_nav_menus' ) ){
 		register_nav_menus(
@@ -14,7 +14,7 @@ function aesop_setup(){
 	}
 }
 
-add_theme_support("aesop-component-styles", array("parallax", "image", "quote", "gallery", "content", "video", "audio", "collection", "chapter", "document", "character", "map", "timeline" ) );
+add_theme_support("aesop-component-styles", array("parallax", "image", "quote", "gallery", "content", "video", "audio", "collection", "chapter", "document", "character", "timeline" ) );
 
 function aesop_body_class($classes){
   $classes[] = 'aesop-minafi-theme';

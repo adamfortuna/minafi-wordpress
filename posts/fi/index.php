@@ -9,12 +9,12 @@
 <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
 
 <? if(in_array($_SERVER['REMOTE_ADDR'], $whitelist)) { ?>
-<script src="<?php echo $theme_path; ?>/assets/dev/fi.bundle.js"></script>
+<script src="<?php echo $theme_path; ?>/assets/dev/fi.bundle.js" async></script>
 <? } else { ?>
-<script src="<?php echo $theme_path; ?>/assets/js/fi.bundle.js"></script>
+<script src="<?php echo $theme_path; ?>/assets/js/fi.bundle.js" async></script>
 <?php } ?>
 
-<p>Let's talk about early retirement and financial independence ! These phrases alone have a lot of weight associated with them, and you might have an immediate gut response to just hearing these terms.</p>
+<p>Let's talk about early retirement and financial independence! These phrases alone have a lot of weight associated with them, and you might have an immediate gut response to just hearing these terms.</p>
 
 <p>You might love your job and wouldn't think about leaving it. Maybe you hate your job and can't wait to leave it. Maybe you're looking for a change. Maybe you feel you never want to retire because you'd just "be bored", or maybe you plan to work until you can't work anymore. <b>For this post, I'm going to ask one thing...</b></p>
 

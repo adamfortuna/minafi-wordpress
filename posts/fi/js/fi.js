@@ -187,7 +187,7 @@ $(function() {
       var calcYearsUntilFi = this.goalReAge - this.age - (this.ageMonths/12),
           diff = this.yearsUntilFi - calcYearsUntilFi;
 
-      debugger
+      // debugger
       if(diff <= -1) {
         return 0;
       } else if(diff > -1 && diff < 1) {
