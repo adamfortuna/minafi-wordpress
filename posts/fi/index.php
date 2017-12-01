@@ -172,7 +172,7 @@
     <span data-var="gender" class="MultiToggle TKSwitch">
 			<span>man</span>
 			<span>woman</span>
-      <span class="tooltippable" data-placement="top" title="Including non-binary, gender fluid, and genderqueer">trans*</span>
+      <span class="tooltippable" data-placement="top" title="Including non-binary, gender fluid, and genderqueer">trans person*</span>
       <span>other</span>
       <span>undisclosed</span>
 		</span>
