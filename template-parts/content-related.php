@@ -1,6 +1,6 @@
 <?php $read_time = do_shortcode('[rt_reading_time label="" postfix="min read." postfix_singular="min read."]') ?>
 
-<article id="post-<?php the_ID(); ?>" class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+<article id="post-<?php the_ID(); ?>" class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
   <a href='<?php echo esc_url(get_permalink()); ?>' class="article--header-image">
     <div class="post-thumbnail thumbnail--small">
       <div class="article--header-overlay"></div>
