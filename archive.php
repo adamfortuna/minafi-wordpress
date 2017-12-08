@@ -53,7 +53,7 @@ get_header(); ?>
 		endif;
 		?>
 
-		</main><!-- .site-main -->
+		</section><!-- .site-main -->
 	</div><!-- .content-area -->
 
 <?php get_footer(); ?>

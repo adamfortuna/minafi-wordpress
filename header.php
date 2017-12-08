@@ -42,7 +42,7 @@
 
 	        <ul class="nav collapse navbar-toggleable-xs pull-right"  id="collapsingNavbar">
 						<li class="nav-item">
-	            <a class="nav-link" href="/fi">What is FI?</a>
+	            <a class="nav-link" href="/start-here">Start Here</a>
 	          </li>
 						<li class="nav-item">
 	            <a class="nav-link" href="/about">About</a>
