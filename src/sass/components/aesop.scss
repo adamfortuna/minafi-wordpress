@@ -4,7 +4,7 @@
     max-width: 700px;
     margin: 0rem auto 2rem;
   }
-  p, h1, h2, h3, h4, h5, h6, ol, ul,  table, dl, hr, blockquote, section.article--content, > figure, .wpcf7, .nc_socialPanel, twitterwidget {
+  p, h1, h2, h3, h4, h5, h6, ol, ul,  table, dl, hr, blockquote, section.article--content, > figure, .wpcf7, .nc_socialPanel, twitterwidget, .aesop-sequence-gallery-wrap, .review-wrapper {
     width: 100%;
     max-width: 700px;
     margin: 0rem auto 2rem;
@@ -19,6 +19,15 @@
   }
   h2, h3 {
     margin-bottom: 0.6rem
+  }
+}
+
+.aesop-grid-gallery {
+  .aesop-grid-gallery-item {
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
   }
 }
 

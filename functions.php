@@ -511,3 +511,10 @@ function change_wp_search_size($queryVars) {
 	return $queryVars; // Return our modified query variables
 }
 add_filter('request', 'change_wp_search_size');
+
+// Disable
+add_filter( 'jetpack_subscriptions_exclude_these_categories', 'exclude_these' );
+function exclude_these( $categories ) {
+    $categories = array( 'pre-minafi');
+    return $categories;
+}
