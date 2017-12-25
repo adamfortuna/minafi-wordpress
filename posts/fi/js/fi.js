@@ -1,3 +1,4 @@
+$ = jQuery;
 $(function() {
   var element = document.getElementById("fi--wrapper");
 

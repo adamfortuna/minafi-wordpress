@@ -32,16 +32,10 @@ gulp.task('sass:watch', function () {
 
 gulp.task('js:concat', function () {
   var files = [
-    'src/components/jquery/dist/jquery.js',
     'src/components/popper.js/dist/umd/popper.js',
     'src/components/bootstrap/dist/js/bootstrap.js',
     'src/js/vendor/comment-reply.js',
-    '../../plugins/social-warfare/js/script.js',
-    'src/js/app.js',
-    'src/js/vendor/ai-core.min.js',
-    '../../plugins/aesop-story-engine/public/assets/js/ast.js',
-    '../../plugins/aesop-story-engine/public/assets/js/scrollreveal.js',
-    '../../../wp-includes/js/wp-embed.min.js'
+    'src/js/app.js'
   ];
 
   return gulp.src(files)

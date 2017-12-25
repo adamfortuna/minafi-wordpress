@@ -111,7 +111,8 @@
 
 <p>
   For your savings rate, <span class="tangle--dynamic" data-var="savingsRate" data-format="percent"></span>, you can see on the chart that you would need <span class="tangle--dynamic" data-var="yearsUntilFiOnlySR" data-format="years"></span> to earn enough to be financially independent if you were starting today.
-
+</p>
+<p>
   If you were to continue saving and investing <span class="tangle--dynamic" data-var="yearlySavings" data-format="currency"></span> every year during that time, eventually you would have
   <span class="tangle--dynamic" data-var="impliedRetirementStashNeeded" data-format="currency"></span>
   saved up. At that point, you would be able to retire and withdraw

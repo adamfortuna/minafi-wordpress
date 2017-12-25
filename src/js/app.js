@@ -1,4 +1,5 @@
 (function() {
+  $ = jQuery;
   // var toggleSlim = $("#header").hasClass("container-slim");
 
   function toggleSearch(e) {

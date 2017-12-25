@@ -183,24 +183,6 @@ function minafi_scripts() {
 
 	// Theme stylesheet.
 	wp_enqueue_style( 'minafi-style', get_stylesheet_directory_uri() . '/assets/css/app.css', '', null);
-
-	// wp_enqueue_script( 'minafi-script', get_template_directory_uri() . '/assets/js/app.bundle.js', '', null);
-  wp_deregister_script('jquery');
-  // wp_enqueue_script('minafi', get_template_directory_uri() . '/assets/js/app.bundle.js', '', null);
-// /wp-content/themes/minafi/assets/js/app.bundle.js
-  wp_deregister_script('wp-embed');
-  wp_deregister_script('ta_main_js');
-
-  wp_deregister_script('contact-form-7');
-  wp_deregister_script('ai-core');
-  wp_deregister_script('social_warfare_script');
-  wp_deregister_script('wpcom-notes-admin-bar');
-  wp_deregister_script('backbone');
-  wp_deregister_script('underscore');
-  wp_deregister_script('mustache');
-
-
-  // wp_deregister_script('');
 }
 add_action( 'wp_enqueue_scripts', 'minafi_scripts' );
 
@@ -372,7 +354,7 @@ function disable_wp_emojicons() {
   // filter to remove TinyMCE emojis
   // add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
 }
-add_action( 'init', 'disable_wp_emojicons' );
+// add_action( 'init', 'disable_wp_emojicons' );
 
 
 function deregister_styles() {
@@ -380,12 +362,30 @@ function deregister_styles() {
   wp_deregister_style('ea-share-count');
   wp_deregister_style('social_warfare');
   wp_deregister_style('tablepress-default');
+
+  // wp_enqueue_script( 'minafi-script', get_template_directory_uri() . '/assets/js/app.bundle.js', '', null);
+  wp_deregister_script('jquery');
+  // wp_enqueue_script('minafi', get_template_directory_uri() . '/assets/js/app.bundle.js', '', null);
+// /wp-content/themes/minafi/assets/js/app.bundle.js
+  wp_deregister_script('wp-embed');
+  wp_deregister_script('ta_main_js');
+
+  wp_deregister_script('contact-form-7');
+  wp_deregister_script('ai-core');
+  wp_deregister_script('social_warfare_script');
+  wp_deregister_script('wpcom-notes-admin-bar');
+  wp_deregister_script('backbone');
+  wp_deregister_script('underscore');
+  wp_deregister_script('mustache');
+
+
+  // wp_deregister_script('');
 }
-add_action( 'wp_print_styles', 'deregister_styles', 100 );
+// add_action( 'wp_print_styles', 'deregister_styles', 100 );
 
 
 // First, make sure Jetpack doesn't concatenate all its CSS
-add_filter( 'jetpack_implode_frontend_css', '__return_false' );
+// add_filter( 'jetpack_implode_frontend_css', '__return_false' );
 // Then, remove each CSS file, one at a time
 function remove_jetpack_styles() {
   wp_deregister_style( 'AtD_style' ); // After the Deadline
@@ -414,7 +414,7 @@ function remove_jetpack_styles() {
   wp_deregister_style( 'widget-grid-and-list' ); // Top Posts widget
   wp_deregister_style( 'jetpack-widgets' ); // Widgets
 }
-add_action('wp_print_styles', 'remove_jetpack_styles' );
+// add_action('wp_print_styles', 'remove_jetpack_styles' );
 
 
 function remove_subtitles_support() {
@@ -449,7 +449,7 @@ $GLOBALS['$already_added_js'] = false;
 function minafi_js_script() {
   if(!$GLOBALS['$already_added_js']) {
     // Leaving this hook in case I want to add it back
-    echo "<script type='text/javascript' src='/wp-content/themes/minafi/assets/js/app.bundle.js'></script>";
+    //echo "<script type='text/javascript' src='/wp-content/themes/minafi/assets/js/app.bundle.js'></script>";
   }
   $GLOBALS['$already_added_js'] = true;
 }

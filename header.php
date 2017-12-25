@@ -79,3 +79,4 @@
 	    </div>
 	  </div>
 	</div>
+	<script type='text/javascript' src='/wp-content/themes/minafi/assets/js/app.bundle.js'></script>
