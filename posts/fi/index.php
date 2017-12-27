@@ -19,7 +19,7 @@
 <p>You might love your job and wouldn't think about leaving it. Maybe you hate your job and can't wait to leave it. Maybe you're looking for a change. Maybe you feel you never want to retire because you'd just "be bored", or maybe you plan to work until you can't work anymore. <b>For this post, I'm going to ask one thing...</b></p>
 
 <blockquote class="text-center">
-  <p>My request for you:<br/> Don't assume financial independence means retirement.</p>
+  <p>My request for you:<br/> Don't assume financial independence<br/>means retirement.</p>
 </blockquote>
 
 <p>Instead, for this post, think of financial independence (abbreviated FI) as the point where if for any reason you stopped working, you'd be set for the rest of your life at your desired lifestyle. What you choose to do with your life at that point is up to you!</p>
@@ -188,9 +188,7 @@
 	</p>
 
   <p>
-    Each year I spend about $<span data-var="yearlySpending" data-format="currency" class="TKNumberField" data-min="0" data-max="10000000"></span>, but when I retire I'll likely spend
-
-		<span data-var="retirementSpendingPercent" data-format="percent" class="FIAdjustableNumber tooltippable" data-step="0.01" data-min="0" data-max="3" data-toggle="tooltip" data-placement="bottom" title="If you're not sure, stick to 80% here."></span> of that (equal to about <span data-var="retirementYearlySpending" data-format="currency" class="tangle--dynamic"></span>/yr).
+    Each year I spend about $<span data-var="yearlySpending" data-format="currency" class="TKNumberField" data-min="0" data-max="10000000"></span>, but when I retire I'll likely spend <span data-var="retirementSpendingPercent" data-format="percent" class="FIAdjustableNumber tooltippable" data-step="0.01" data-min="0" data-max="3" data-toggle="tooltip" data-placement="bottom" title="If you're not sure, stick to 80% here."></span> of that (equal to about <span data-var="retirementYearlySpending" data-format="currency" class="tangle--dynamic"></span>/yr).
   </p>
 
   <p>I'm hoping to retire when I'm <span data-var="goalReAge" class="FIAdjustableNumber" data-min="8" data-max="100"> years old</span>.
@@ -265,21 +263,17 @@
 		<i>Adam Says:</i> This assumes you're
     <span data-var="age" class="FIAdjustableNumber" data-min="8" data-max="100"> years old</span>
     with
-    $<span data-var="networth" data-format="currency" class="TKNumberField" data-min="0" data-max="10000000"></span> in savings.
-
-    You spend
+    $<span data-var="networth" data-format="currency" class="TKNumberField" data-min="0" data-max="10000000"></span> in savings. You spend
     $<span data-var="yearlySpending" data-format="currency" class="TKNumberField" data-min="0" data-max="10000000">/yr</span>
     and save
-    $<span data-var="yearlySavings" data-format="currency" class="tooltippable TKNumberField" data-min="0" data-max="10000000" data-toggle="tooltip" title="Include 401k + IRA + Roth + checking + brokerage savings.">/yr</span>.
-
-    <span data-var="marketGrowth" class="FIAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0.001" data-format="percentDecimal" class="tangle--dynamic">/yr investment growth</span> and you'll use a
+    $<span data-var="yearlySavings" data-format="currency" class="tooltippable TKNumberField" data-min="0" data-max="10000000" data-toggle="tooltip" title="Include 401k + IRA + Roth + checking + brokerage savings.">/yr</span>. <span data-var="marketGrowth" class="FIAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0.001" data-format="percentDecimal" class="tangle--dynamic">/yr investment growth</span> and you'll use a
     <span data-var="wr" class="FIAdjustableNumber" data-step="0.001" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic"> WR</span>.
 	</p>
 </div>
 
 <p>The dashed horizontal line in this graph is how much you'd need to be financially independent given your current numbers. The other line is your net worth at each age. The point where these lines intersect is your FI Age -- the age in which you'd have enough to be financially independent.</p>
 
-<p>Financial Independence (FI) is different from retirement. Think of financial independence as the amount of money you'd need in order to never work again. Retirement (RE), on the other hand, generally means not being employed, but being self-sufficent.</p>
+<p>Financial Independence (FI) is different from retirement. Think of financial independence as the amount of money you'd need in order to never need to work again. Retirement (RE), on the other hand, generally means not being employed, but being self-sufficent.</p>
 
 <div class="card container container-wide mb-3">
   <div class="row mt-3">
@@ -330,7 +324,7 @@
 	<p class="lead fi--info">Adam Says:
     This assumes the same
     <span data-var="marketGrowth" class="FIAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0.001" data-format="percentDecimal" class="tangle--dynamic">/yr investment growth</span> as before.
-    According to the <a href="https://www.bogleheads.org/wiki/Trinity_study_update" target="_blank">Trinity Study</a>, 3% WR will work 98% of the time, while 4% WR will work out 87% over 30 years.
+    According to the <a href="https://www.bogleheads.org/wiki/Trinity_study_update" target="_blank">Trinity Study</a>, 4% WR will work 98% of the time, while 3% WR will work out 87% over 30 years.
 </div>
 
 <p>Withdrawal rate is one the most talked about (and heavily debated) topics when it comes to early retirement. I'm only going to introduce the topic in this article, but if you want to read more here's a great post on <a href="https://earlyretirementdude.com/4-rule-come-anyway-hint-wasnt-trinity-study/" target="_blank">Where'd the 4% Rule Come From Anyway?</a></p>
@@ -397,7 +391,7 @@
 
 <h3>Your Numbers with Market Investing</h3>
 <p>
-	If you put your money into savings and withdrew some of it each year, the total amount you'd spend would be <span data-var="fiStash" data-format="currency" class="tangle--dynamic"></span>. However, if you <i>invested</i> this and it grew at a pace of
+	If you put your money into a savings account and withdrew some of it each year, the total amount you'd withdraw would be around <span data-var="fiStash" data-format="currency" class="tangle--dynamic"></span>. However, if you <i>invested</i> this and it grew at a pace of
 	<span data-var="marketGrowth" class="FIAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0.001" data-format="percentDecimal" class="tangle--dynamic">/yr</span>,
 	and you withdrew an inflation adjusted
 	<span data-var="retirementYearlySpending" data-format="currency" class="tangle--dynamic tangle--dynamic">/yr</span>,
@@ -421,7 +415,7 @@
 <p>When I first did the math on compound interest I was floored. The idea that I'd make more money during retirement than during my working years seemed counterintuitive, but the numbers were right there.</p>
 
 <h3>Become an Investor</h3>
-<p>If you're not currently investing, learning enough to feel confident can be intimidating. It takes time, patience and the occasional leap of faith. I've put together a 10-week email course to help you get started.</p>
+<p>If you're not currently investing, learning enough to feel confident can be intimidating. It takes time, patience and the occasional leap of faith. I've put together a <b>free</b> 10-week email course to help you get started.</p>
 
 <div class="fi--profile-green my-3 fi--email">
   <div class="card container container-slim p-3 my-3">
@@ -494,7 +488,7 @@
 		<span data-var="retirementYearlySpending" data-format="currency" class="tangle--dynamic">/yr</span>
 		during retirement. What if you still spent this exact same amount, but
 		<span data-var="eirIncomePercent" data-format="percent" data-step="0.01" data-max="1" data-min="0" class="tangle--dynamic FIAdjustableNumber"></span>
-		of it comes from income in retirement? This would be finding a way to make
+		of it comes from income in retirement? This would involve you finding a way to make
 		<span data-var="eirIncomeAfterRetirement" data-format="currency" class="tangle--dynamic">/yr</span> in side income.
 	</p>
 
@@ -508,7 +502,7 @@
 	</p>
 </div>
 
-<p>Finding a small way to supplement your income can reduce the amount you'll need to save. The concept of a <a href="http://www.sidehustlenation.com/" target="_blank">side hustle</a> has grown a bunch in the last years, with people opting to find ways to control their financial destiny. I like Side Hustle Nations description of a side hustle:</p>
+<p>Finding a small way to supplement your income can reduce the amount you'll need to save. The concept of a <a href="http://www.sidehustlenation.com/" target="_blank">side hustle</a> has grown a bunch in the last few years, with people opting to find ways to control their financial destiny. I like Side Hustle Nations description of a side hustle:</p>
 
 <blockquote>
   <p>A side hustle is something you do to earn money outside a traditional job.</p>
@@ -600,10 +594,10 @@
 <a name="part-8"></a>
 <h2 class="pt-3">Part 8: Where can I learn more?</h2>
 
-<p>There are a few amazing books on the topic of financial independence and early retirement that go into these topics with much more eloquence than and depth than I could ever explore. If you're curious to learn more, these are all amazing resources.</p>
+<p>There are a few amazing books on the topic of financial independence and early retirement that go into these topics with much more eloquence and depth than I could ever explore. If you're curious to learn more, these are all amazing resources.</p>
 
 <h3>Minafi Email List</h3>
-<p>Here at Minafi, I write about the intersection of minimalism, mindfulness and financial independence. I'll also be releasing more interactive posts like this one in the months to come. Sign up to get <b>one email each month</b> with what I'm writing about.</p>
+<p>Here at Minafi, I write about the intersection of minimalism, mindfulness and financial independence. I'll also be releasing more interactive posts like this one in the months to come. Sign up to get <b>one email each month, or each week</b> with what I'm writing about.</p>
 
 <div class="fi--profile-green my-3 fi--email">
   <div class="card container container-slim p-3 my-3">
@@ -738,7 +732,7 @@
   </p>
 
   <p>
-    You're Assuming markets will rise
+    You're assuming markets will rise
     <span data-var="marketGrowth" class="FIAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0.001" data-format="percentDecimal" class="tangle--dynamic">/yr</span>
     and that your withdrawal rate will be
     <span data-var="wr" class="FIAdjustableNumber" data-step="0.001" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic"></span>.
@@ -790,8 +784,7 @@
 <h3>My Recommendations For You</h3>
 <ul>
   <li>Track your spending for a month. Learn where every cent is going.</li>
-  <li>Start learning the basics of investing. I recommend starting with a <a href="/simple-three-fund-portfolio-vanguard/" target="_blank">Simple Three-Fund Portfolio at Vanguard</a> or in your 401k. Understand what you're investing in there.</li>
-  <li>Sign up for my <a href="/minimal-investor-course" target="_blank">Minimal Investor Course</a>.</li>
+  <li>Sign up for my <a href="/minimal-investor-course" target="_blank">Minimal Investor Course</a> and learn how to invest.</li>
   <li>Find a community of people to learn from. This could one of the above places, a blog you enjoy, a podcast you jive with - anything that keeps you learning.</li>
   <li>Make a plan for when you'd want to be FI, and work backward to understand when you'd get there and how to get there sooner!</li>
   <li>Read more about <a href="/category/minimalism/" target="_blank">minimalism</a>, <a href="/category/mindfulness/" target="_blank">mindfulness</a> or <a href="/category/financial-independence/" target="_blank">financial independence</a> here on Minafi.</li>

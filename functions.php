@@ -518,3 +518,11 @@ function exclude_these( $categories ) {
     $categories = array( 'pre-minafi');
     return $categories;
 }
+
+
+add_filter( 'rss2_head', 'feedly_head' );
+function feedly_head() {
+ echo '<webfeeds:cover image="https://minafi.com/wp-content/uploads/2017/07/mfi-logo-200x200.png" />';
+ echo '<webfeeds:icon>https://minafi.com/wp-content/uploads/2017/07/mfi-logo-200x200.png</webfeeds:icon>';
+ echo '<webfeeds:logo>https://minafi.com/wp-content/uploads/2017/07/mfi-logo-200x200.png</webfeeds:logo>';
+}
