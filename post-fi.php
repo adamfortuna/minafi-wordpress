@@ -39,6 +39,10 @@ get_header();
         </span>
       </div>
 
+      <?php if(post_has_affiliate_link()) { ?>
+        <p class="pt-2 article--disclosure">This post contains affiliate links. Please read <a href="/disclosure">my disclosure</a> for more information.</p>
+      <?php } ?>
+
       <?php do_action('ase_theme_post_inside_header_bottom'); ?>
 	  </header>
 

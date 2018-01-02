@@ -342,7 +342,7 @@ h5, .h5 {
 h6, .h6 {
   font-size: 1rem; }
 
-.lead {
+.lead, .article--disclosure {
   font-size: 1.25rem;
   font-weight: 300; }
 
@@ -11002,6 +11002,10 @@ div.nc_socialPanel .nc_tweetContainer.swp_emphasize {
       .article--content ul li ul li {
         margin-bottom: 0; }
 
+.article--disclosure {
+  line-height: 1rem;
+  font-size: 1rem; }
+
 .article--meta {
   border-bottom: 1px solid #eee;
   padding: 1rem 0;
@@ -13427,7 +13431,7 @@ span.entry-subtitle {
   .sidebar--categories li, .sidebar--archives li {
     color: rgba(0, 0, 0, 0.6); }
 
-.sidebar--email .lead {
+.sidebar--email .lead, .sidebar--email .article--disclosure {
   font-size: 1rem;
   margin: 0; }
 
