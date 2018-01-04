@@ -611,14 +611,14 @@
 <div class="aesop-component aesop-image-component fi--animate-from-right" style="visibility:hidden;">
 	<div class="aesop-content">
 		<figure class="aesop-image-component-image aesop-component-align-right aesop-image-component-caption-left" style="margin-right:25%; width:250px;">
-      <a class="aesop-lightbox" href="https://minafi.com/recommends/your-money-or-your-life/" title="Your money or your life">
+      <a class="aesop-lightbox" rel="nofollow" href="https://minafi.com/your-money-or-your-life-book" title="Your money or your life">
 				<img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="https://minafi.com/wp-content/uploads/2017/08/your-monet.jpeg" alt="Your money or your life">
 			</a>
 	  </figure>
 	</div>
 </div>
 
-<h4 class="card-title"><a href="https://minafi.com/recommends/your-money-or-your-life/" target="_blank">Your Money or Your Life</a></h4>
+<h4 class="card-title"><a rel="nofollow" href="https://minafi.com/your-money-or-your-life-book" target="_blank">Your Money or Your Life</a></h4>
 <p class="card-text"><i>Your Money</i> is an amazing exploration into developing a relationship with money that goes deeper than just buying things. This book is the origin of many articles and concepts that you'll read about in the FI world, told beautifully.</p>
 <p class="card-text">As great as <i>Your Money</i> is, it borders on self-help as opposed to finance - which actually helps its topics connect deeper for me.</p>
 
@@ -626,13 +626,13 @@
 <div class="fi--animate-from-left aesop-component aesop-image-component " style="visibility:hidden;">
 	<div class="aesop-content">
 		<figure class="aesop-image-component-image aesop-component-align-left aesop-image-component-caption-left" style="margin-left:16%; width:250px;">
-      <a class="aesop-lightbox" href="https://minafi.com/recommends/the-bogleheads-guide-to-investing/" title="The Bogleheads' Guide to Investing">
+      <a class="aesop-lightbox" rel="nofollow" href="https://minafi.com/bogleheads-guide-to-investing-book" title="The Bogleheads' Guide to Investing">
 				<img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="https://minafi.com/wp-content/uploads/2016/08/bogleheads.jpg" alt="The Bogleheads' Guide to Investing">
 			</a>
 	  </figure>
 	</div>
 </div>
-<h4 class="card-title"><a href="https://minafi.com/recommends/the-bogleheads-guide-to-investing/" target="blank">The Bogleheads' Guide to Investing</a></h4>
+<h4 class="card-title"><a href="https://minafi.com/bogleheads-guide-to-investing-book" rel="nofollow" target="blank">The Bogleheads' Guide to Investing</a></h4>
 <p class="card-text">This is the book that personally got me into investing and thinking about this subject. By introducing things like the 4% for withdrawal rate, understanding investing, diversification, fees, fund types, account types and more, this book served as my education on investing.</p>
 <p class="card-text"><i>The Bogleheads Guide</i> consistently ranks as one of the 3 most influential books I have ever read in my life - serving as an introduction and education all in one.</p>
 
@@ -640,13 +640,13 @@
 <div class="fi--animate-from-right aesop-component aesop-image-component " style="visibility:hidden;">
   <div class="aesop-content">
     <figure class="aesop-image-component-image aesop-component-align-right aesop-image-component-caption-left" style="margin-right:25%; width:250px;">
-      <a class="aesop-lightbox" href="https://minafi.com/recommends/millionaire-next-door/" title="The Millionaire Next Door">
+      <a rel="nofollow" class="aesop-lightbox" href="https://minafi.com/millionaire-next-door-book" title="The Millionaire Next Door">
         <img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="https://minafi.com/wp-content/uploads/2017/08/millionaire.jpg" alt="The Millionaire Next Door">
       </a>
     </figure>
   </div>
 </div>
-<h4 class="card-title"><a href="https://minafi.com/recommends/millionaire-next-door/" target="blank">The Millionaire Next Door</a></h4>
+<h4 class="card-title"><a rel="nofollow" href="https://minafi.com/millionaire-next-door-book" target="blank">The Millionaire Next Door</a></h4>
 <p class="card-text">The term "millionaire" has a connotation of lavish spending and abundance in popular culture. This book looks at a different side of that - working millionaires who worked hard to create a life they wanted.</p>
 <p class="card-text">In order to achieve FI, most people will need to earn more than a million dollars. This book put that number into perspective for me, bringing it down to earth.</p>
 
@@ -826,3 +826,49 @@
   <li class="list-unstyled-item"><b>All of the bloggers</b> who agreed to an interview.</li>
   <li class="list-unstyled-item">Everyone who's shared this post to help spread the word of FI!</li>
 </ul>
+
+
+<script>(function(w, d){
+	var b = d.getElementsByTagName("body")[0];
+	var s = d.createElement("script"); s.async = true;
+	var v = !("IntersectionObserver" in w) ? "8.5.2" : "10.3.5";
+	s.src = "https://minafi.com/wp-content/plugins/rocket-lazy-load/assets/js/lazyload-" + v + ".min.js";
+	w.lazyLoadOptions = {
+		elements_selector: "img, iframe",
+		data_src: "lazy-src",
+		data_srcset: "lazy-srcset",
+		skip_invisible: false,
+		class_loading: "lazyloading",
+		class_loaded: "lazyloaded",
+		threshold: 300,
+		callback_load: function(element) {
+			if ( element.tagName === "IFRAME" && element.dataset.rocketLazyload == "fitvidscompatible" ) {
+				if (element.classList.contains("lazyloaded") ) {
+					if (typeof window.jQuery != "undefined") {
+						if (jQuery.fn.fitVids) {
+							jQuery(element).parent().fitVids();
+						}
+					}
+				}
+			}
+		}
+	};
+	b.appendChild(s);
+}(window, document));
+
+// Listen to the Initialized event
+window.addEventListener('LazyLoad::Initialized', function (e) {
+    // Get the instance and puts it in the lazyLoadInstance variable
+	var lazyLoadInstance = e.detail.instance;
+
+	var observer = new MutationObserver(function(mutations) {
+		mutations.forEach(function(mutation) {
+			lazyLoadInstance.update();
+		} );
+	} );
+
+	var b      = document.getElementsByTagName("body")[0];
+	var config = { childList: true, subtree: true };
+
+	observer.observe(b, config);
+}, false);</script>
