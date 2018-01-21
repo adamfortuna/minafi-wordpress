@@ -71,9 +71,9 @@
 	<p class="lead">Try changing the underlined values and see what happens!</p>
 	<p>
 		My yearly after-tax income (w/401k included) is
-    $<span data-var="yearlyIncome" data-format="currency" class="TKNumberField tooltippable with--tip" data-min="0" data-max="10000000" data-toggle="tooltip" title="Use take home pay + 401k contribution, and subtract taxes. This is the total amount that you have to play with after taxes."></span>
+    $<span data-var="yearlyIncome" data-format="currency" class="TKNumberField tooltippable with--tip" data-min="0" data-max="10000000"></span>
     and I save
-    $<span data-var="yearlySavings" data-format="currency" class="tooltippable TKNumberField" data-min="0" data-max="10000000" data-toggle="tooltip" title="Include 401k + IRA + Roth + checking + brokerage savings."></span>
+    $<span data-var="yearlySavings" data-format="currency" class="tooltippable TKNumberField" data-min="0" data-max="10000000"></span>
     total for retirement – including 401k and all other means. Using these figures, my savings rate (SR) will be about
     <span data-var="savingsRate" data-format="percent" class="tangle--dynamic"></span>.
 	</p>

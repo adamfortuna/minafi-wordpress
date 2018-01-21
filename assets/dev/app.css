@@ -11044,6 +11044,10 @@ div.nc_socialPanel .nc_tweetContainer.swp_emphasize {
   .articles--group .article--header-image {
     max-height: 233px;
     overflow: hidden; }
+  .article--header-image .post-thumbnail img {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%); }
 
 .article--header-overlay {
   background-color: transparent;
