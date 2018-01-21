@@ -8,10 +8,10 @@
     </div>
     <p>
       <small class="pl-2">
-        <input type="radio" name="fields[subscription]" value="all" id="email--subscription-all" checked="checked" /> <label for="email--subscription-all"><small>Weekly Magazine</small></label>
+        <input type="radio" name="fields[subscription]" value="all" id="email--subscription-all" checked="checked" /> <label for="email--subscription-all"><small>All Articles</small></label>
       </small>
       <small class="pl-3">
-        <input type="radio" name="fields[subscription]" value="monthly" id="email--subscription-monthly" /> <label for="email--subscription-monthly"><small>Monthly Magazine</small></label>
+        <input type="radio" name="fields[subscription]" value="weekly" id="email--subscription-weekly" /> <label for="email--subscription-weekly"><small>Weekly Magazine</small></label>
       </small>
     </p>
     <div class="group">

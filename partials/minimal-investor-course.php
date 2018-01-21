@@ -10,10 +10,10 @@
     <div class="mt-2">
       <p class="px-1">
         <small>
-          <input type="radio" name="fields[subscription]" value="all" id="mic-email--subscription-all" checked="checked" /> <label for="mic-email--subscription-all"><small>Weekly Magazine</small></label>
+          <input type="radio" name="fields[subscription]" value="all" id="mic-email--subscription-all" checked="checked" /> <label for="mic-email--subscription-all"><small>All Articles</small></label>
         </small>
         <small class="pl-3">
-          <input type="radio" name="fields[subscription]" value="monthly" id="mic-email--subscription-monthly" /> <label for="mic-email--subscription-monthly"><small>Monthly Magazine</small></label>
+          <input type="radio" name="fields[subscription]" value="weekly" id="mic-email--subscription-weekly" /> <label for="mic-email--subscription-weekly"><small>Weekly Magazine</small></label>
         </small>
       </p>
     </div>

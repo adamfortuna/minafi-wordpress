@@ -7,6 +7,15 @@
   </div>
   <div class="email--toggle mb-2" style="display: none;">
       <input type="text" id="drip-name" name="fields[name]" value="" placeholder="Your first name" class="email form-control form-control-sm" />
+
+      <p>
+        <small class="pl-2">
+          <input type="radio" name="fields[subscription]" value="all" id="email--subscription-all" checked="checked" /> <label for="email--subscription-all"><small>All Articles</small></label>
+        </small>
+        <small class="pl-3">
+          <input type="radio" name="fields[subscription]" value="weekly" id="email--subscription-weekly" /> <label for="email--subscription-weekly"><small>Weekly Magazine</small></label>
+        </small>
+      </p>
   </div>
   <div class="group">
     <input type="submit" name="submit" value="Email Me When the Book is Ready" data-drip-attribute="sign-up-button" class="btn btn-sm btn-success" />
