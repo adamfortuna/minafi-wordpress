@@ -370,7 +370,7 @@ function deregister_styles() {
   wp_deregister_script('wp-embed');
   wp_deregister_script('ta_main_js');
 
-  wp_deregister_script('contact-form-7');
+
   wp_deregister_script('ai-core');
   wp_deregister_script('social_warfare_script');
   wp_deregister_script('wpcom-notes-admin-bar');
@@ -383,6 +383,11 @@ function deregister_styles() {
 }
 // add_action( 'wp_print_styles', 'deregister_styles', 100 );
 
+function deregister_useless_scripts_and_styles() {
+  wp_deregister_style('contact-form-7');
+  wp_deregister_script('contact-form-7');
+}
+add_action( 'wp_print_styles', 'deregister_useless_scripts_and_styles', 100 );
 
 // First, make sure Jetpack doesn't concatenate all its CSS
 // add_filter( 'jetpack_implode_frontend_css', '__return_false' );
