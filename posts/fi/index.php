@@ -669,7 +669,7 @@
 <h3>Calculators</h3>
 <p>
   The graphs in this post are only a starting point for understanding your financial future. The best tool I've found for digging deeper into these numbers and incorporating many more variables is
-  <a href="https://track.flexlinkspro.com/a.ashx?foid=1106765.137967093&foc=1&fot=1001&fos=1" rel="nofollow" target="_blank" class="tooltippable" title="This is an affiliate link, but it is a service I use.">Personal Capital</a><img src="https://track.flexlinkspro.com/i.ashx?foid=1106765.137967093&fot=1001&foc=1&fos=1" border="0" width="0" height="0" style="opacity: 0;"/>. They have a Retirement Planner tool that I've been using for years to understand my own finances. Check them out if you're hoping to dig deeper into graphs.
+  <a href="/personalcapital" rel="nofollow" target="_blank" class="tooltippable" title="This is an affiliate link, but it is a service I use.">Personal Capital</a>. They have a Retirement Planner tool that I've been using for years to understand my own finances. Check them out if you're hoping to dig deeper into graphs.
 </p>
 
 <div class="container container-wide">
@@ -677,7 +677,7 @@
   <p class="text-center text-muted"><small>A scenario I was running on my own finances</small></p>
 </div>
 
-<p>What I really like about <a href="https://track.flexlinkspro.com/a.ashx?foid=1106765.137967093&foc=1&fot=1001&fos=1" rel="nofollow" target="_blank" class="tooltippable" title="This is an affiliate link, but it is a service I use.">Personal Capital</a> is it goes beyond the averages used in this post to group scenarios by percentile. In this screenshot above, you can see a line for my median case, but also the worst 10 percentile. The little blocks are me playing with life events: buying healthcare, taking social security and when Mrs. Minafi stops working.</p>
+<p>What I really like about <a href="/personalcapital" rel="nofollow" target="_blank" class="tooltippable" title="This is an affiliate link, but it is a service I use.">Personal Capital</a> is it goes beyond the averages used in this post to group scenarios by percentile. In this screenshot above, you can see a line for my median case, but also the worst 10 percentile. The little blocks are me playing with life events: buying healthcare, taking social security and when Mrs. Minafi stops working.</p>
 
 <a name="part-9"></a>
 <h2 class="pt-3">Part 9: Recap</h2>
