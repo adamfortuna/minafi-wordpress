@@ -10,10 +10,10 @@
 
       <p>
         <small class="pl-2">
-          <input type="radio" name="fields[subscription]" value="all" id="email--subscription-all" checked="checked" /> <label for="email--subscription-all"><small>All Articles</small></label>
+          <input type="radio" name="fields[subscription]" value="all" id="email--subscription-all" checked="checked" /> <label for="email--subscription-all" class="pl-1"><small>All Articles</small></label>
         </small>
         <small class="pl-3">
-          <input type="radio" name="fields[subscription]" value="weekly" id="email--subscription-weekly" /> <label for="email--subscription-weekly"><small>Weekly Magazine</small></label>
+          <input type="radio" name="fields[subscription]" value="weekly" id="email--subscription-weekly" /> <label for="email--subscription-weekly" class="pl-1"><small>Weekly Magazine</small></label>
         </small>
       </p>
   </div>

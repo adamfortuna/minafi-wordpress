@@ -8,9 +8,9 @@
     <input type="hidden" class="field--firebase_id" name="fields[firebase_id]" value="" />
   </div>
   <div class="mt-2 form-group mx-3">
-    <input type="radio" name="fields[subscription]" value="all" id="email--subscription-all" checked="checked" /> <label for="email--subscription-all"><small>New Articles &amp; Monthly Newsletter</small></label>
+    <input type="radio" name="fields[subscription]" value="all" id="email--subscription-all" checked="checked" /> <label for="email--subscription-all"><small>All Articles</small></label>
     <br/>
-    <input type="radio" name="fields[subscription]" value="monthly" id="email--subscription-monthly" /> <label for="email--subscription-monthly"><small>Monthly Newsletter Only</small></label>
+    <input type="radio" name="fields[subscription]" value="weekly" id="email--subscription-weekly" /> <label for="email--subscription-weekly"><small>Weekly Newsletter</small></label>
   </div>
   <div class="group form-group mx-3">
     <input type="checkbox" checked="checked" disabled="disabled" id="email--link" name="fields[link]" required="required" value="yes" /> <label for="email--link"><small>Link my data with my email (required to create PDF)</small></label>
