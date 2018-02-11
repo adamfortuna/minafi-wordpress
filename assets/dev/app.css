@@ -342,7 +342,7 @@ h5, .h5 {
 h6, .h6 {
   font-size: 1rem; }
 
-.lead, .article--disclosure {
+.lead, .article--disclosure, .comment-notes {
   font-size: 1.25rem;
   font-weight: 300; }
 
@@ -5670,7 +5670,7 @@ a.text-light:focus, a.text-light:hover {
 a.text-dark:focus, a.text-dark:hover {
   color: rgba(0, 0, 0, 0.8) !important; }
 
-.text-muted {
+.text-muted, .comment-notes {
   color: rgba(0, 0, 0, 0.8) !important; }
 
 .text-hide {
@@ -10976,8 +10976,8 @@ div.nc_socialPanel .nc_tweetContainer.swp_emphasize {
   margin-top: 0.8rem;
   font-family: "Lato", sans-serif;
   color: rgba(0, 0, 0, 0.75);
-  font-size: 22px;
-  line-height: 31px;
+  font-size: 20px;
+  line-height: 28px;
   font-weight: 500; }
   .article--content a:not(.nc_tweet) {
     color: rgba(0, 0, 0, 0.8);
@@ -11242,6 +11242,12 @@ a[href$='/category/goals/'], a[href$='/category/goals'] {
 .form-submit {
   display: none; }
 
+.comment-notes {
+  font-size: 1rem; }
+
+.comment-form .form-control {
+  font-size: 1.2rem; }
+
 .comment-form-author,
 .comment-form-url {
   margin-right: 1rem; }
@@ -11283,6 +11289,9 @@ a[href$='/category/goals/'], a[href$='/category/goals'] {
       text-decoration: none;
       background-color: rgba(229, 250, 232, 0.85); }
 
+#cren_subscribe_to_comment {
+  margin-right: 10px; }
+
 .comment-list {
   margin: 0;
   padding: 0; }
@@ -11320,11 +11329,12 @@ a[href$='/category/goals/'], a[href$='/category/goals'] {
       position: absolute;
       top: 24px;
       left: 65px;
-      font-size: 1.1rem; }
+      font-size: 18px; }
     .comment-list li .comment-content {
       clear: both;
       padding-top: 1rem;
-      line-height: 1.8rem; }
+      line-height: 1.4rem;
+      font-size: 1rem; }
     .comment-list li .comment-body {
       position: relative;
       padding: 1rem;
@@ -13440,7 +13450,7 @@ span.entry-subtitle {
   .sidebar--categories li, .sidebar--archives li {
     color: rgba(0, 0, 0, 0.6); }
 
-.sidebar--email .lead, .sidebar--email .article--disclosure {
+.sidebar--email .lead, .sidebar--email .article--disclosure, .sidebar--email .comment-notes {
   font-size: 1rem;
   margin: 0; }
 
