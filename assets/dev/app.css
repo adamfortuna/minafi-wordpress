@@ -10975,9 +10975,9 @@ div.nc_socialPanel .nc_tweetContainer.swp_emphasize {
 .article--content {
   margin-top: 0.8rem;
   font-family: "Lato", sans-serif;
-  color: rgba(0, 0, 0, 0.75);
-  font-size: 20px;
-  line-height: 28px;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 1.2rem;
+  line-height: 1.9rem;
   font-weight: 500; }
   .article--content a:not(.nc_tweet) {
     color: rgba(0, 0, 0, 0.8);
@@ -11064,7 +11064,7 @@ div.nc_socialPanel .nc_tweetContainer.swp_emphasize {
   margin-right: 0; }
 
 .articles--list .article--header {
-  margin-bottom: 2rem; }
+  margin-bottom: 1rem; }
   .articles--list .article--header h2 {
     font-size: 1.8rem;
     margin-bottom: 0.3rem;
@@ -11334,7 +11334,7 @@ a[href$='/category/goals/'], a[href$='/category/goals'] {
       clear: both;
       padding-top: 1rem;
       line-height: 1.4rem;
-      font-size: 1rem; }
+      font-size: 1.1rem; }
     .comment-list li .comment-body {
       position: relative;
       padding: 1rem;
@@ -13404,9 +13404,10 @@ span.entry-subtitle {
   display: block;
   font-size: 1.2rem;
   width: 180px;
-  text-align: center;
-  float: right;
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+  position: absolute;
+  right: 0;
+  margin-top: 10px; }
 
 .articles--list-hero {
   margin-bottom: 4rem;
