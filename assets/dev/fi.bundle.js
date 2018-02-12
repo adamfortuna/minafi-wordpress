@@ -2297,7 +2297,7 @@ $(function() {
       return j/d;
     },
     calcStash: function(spending) {
-      return spending * (100/(this.wr*100))
+      return Math.ceil(100*spending * (100/(this.wr*100)))/100;
     },
     calcFiSpending: function() {
       var stash = this.fiStash,

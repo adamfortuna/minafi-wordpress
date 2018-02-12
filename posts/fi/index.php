@@ -352,7 +352,7 @@
   <span data-var="yearsOfFiNoInvestment" data-format="years" class="tangle--dynamic tangle--dynamic"></span>?
 </blockquote>
 
-<p>If you put your money into a savings account, then this is exactly how long your investment would last. There are better places to put your money through!</p>
+<p>If you put your money into a savings account, then this is exactly how long your investment would last. There are better places to put your money though!</p>
 
 <h3>Factoring In Inflation</h3>
 
@@ -360,7 +360,7 @@
 
 <p>Inflation means that each year, what you can buy with your money is going down by some small amount. If you've seen prices rise since you were a kid, that's potentially a result of inflation.</p>
 
-<p>In <span data-var="yearsOfFiNoInvestment" data-format="years" class="tangle--dynamic tangle--dynamic"></span>, in order to spend <span data-var="retirementYearlySpending" data-format="currency" class="tangle--dynamic tangle--dynamic"></span> in today's dollars, you would need <span data-var="retirementYearlySpendingWithInflation" data-format="currency" class="tangle--dynamic"></span> in the year
+<p>In <span data-var="yearsUntilFi" data-format="years" class="tangle--dynamic tangle--dynamic"></span>, in order to spend <span data-var="retirementYearlySpending" data-format="currency" class="tangle--dynamic tangle--dynamic"></span> in today's dollars, you would need <span data-var="retirementYearlySpendingWithInflation" data-format="currency" class="tangle--dynamic"></span> in the year
 <span data-var="retirementYear" data-format="integer" class="tangle--dynamic"></span>.
 <p>
   Because of this, we need to increase our total funds by
