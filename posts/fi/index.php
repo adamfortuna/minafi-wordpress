@@ -321,10 +321,10 @@
 		In other words, at a <span data-var="wr" data-format="percentDecimal" class="tangle--dynamic tangle--dynamic"> WR</span> , you'll need to save up <span data-var="fiStash" data-format="currency" class="tangle--dynamic"></span> before you stop working completely. At your current pace, this will take <span class="tangle--dynamic" data-var="yearsUntilFi" data-format="years" class="tangle--dynamic"></span> - allowing you retire at age <span data-var="fiAge" data-format="years" class="tangle--dynamic"></span>.
 	</p>
 
-	<p class="lead fi--info">Adam Says:
-    This assumes the same
+	<p class="lead fi--info" style="padding-left: ">Adam Says:
+    This uses the same
     <span data-var="marketGrowth" class="FIAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0.001" data-format="percentDecimal" class="tangle--dynamic">/yr investment growth</span> as before.
-    According to the <a href="https://www.bogleheads.org/wiki/Trinity_study_update" target="_blank">Trinity Study</a>, 4% WR will work 98% of the time, while 3% WR will work out 87% over 30 years.
+    According to the <a href="https://www.bogleheads.org/wiki/Trinity_study_update" target="_blank">Trinity Study</a>, a 4% WR works 92% of the time over 40 years, while a 3% WR works out 100% of the time.
 </div>
 
 <p>Withdrawal rate is one the most talked about (and heavily debated) topics when it comes to early retirement. I'm only going to introduce the topic in this article, but if you want to read more here's a great post on <a href="https://earlyretirementdude.com/4-rule-come-anyway-hint-wasnt-trinity-study/" target="_blank">Where'd the 4% Rule Come From Anyway?</a></p>
