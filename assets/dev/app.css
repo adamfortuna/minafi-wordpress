@@ -11170,7 +11170,8 @@ a.mindfulness--text:hover {
   .post-categories li {
     display: inline;
     padding-left: 0;
-    padding-right: 0.5rem; }
+    padding-right: 0.5rem;
+    margin-bottom: 0.2rem; }
     .post-categories li a {
       background-color: #eee;
       padding: 6px 10px;
@@ -11178,7 +11179,8 @@ a.mindfulness--text:hover {
       color: rgba(0, 0, 0, 0.6);
       font-weight: 400;
       font-size: 1rem;
-      text-decoration: none; }
+      text-decoration: none;
+      display: inline-block; }
       .post-categories li a:hover {
         background-color: #d5d5d5; }
       .post-categories li a[href$='/category/minimalism/'] {
@@ -13427,7 +13429,7 @@ span.entry-subtitle {
   font-size: 2.4rem; }
 
 .articles--group .articles--list-hero .article--header-image {
-  max-height: 350px; }
+  max-height: 100%; }
 
 .article-hero--excerpt {
   font-size: 1.5rem;
@@ -13630,13 +13632,25 @@ img.lazyloaded {
 
 .home--fi {
   background-color: rgba(229, 250, 232, 0.85); }
-  .home--fi h2 a {
-    color: #258C32;
-    font-size: 1.6rem; }
+  .home--fi .home--fi-featured {
+    font-size: 1rem; }
+  .home--fi h2 {
+    line-height: 1.6rem; }
+    .home--fi h2 a {
+      color: #258C32;
+      font-size: 1.6rem;
+      text-decoration: none; }
+      .home--fi h2 a:hover {
+        text-decoration: underline; }
   .home--fi p {
     color: rgba(0, 0, 0, 0.7);
     font-size: 1.2rem;
     line-height: 1.8rem; }
+    .home--fi p a {
+      color: #258C32; }
+
+.articles--list-recent p, .articles--list-recent h2, .articles--list-recent h2 a {
+  font-size: 80%; }
 
 .widget--form {
   padding: 1rem; }

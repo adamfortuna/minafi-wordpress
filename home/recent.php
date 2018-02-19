@@ -22,7 +22,7 @@
       </small>
     </h2>
   </div>
-  <div class="articles--list articles--group">
+  <div class="articles--list articles--group articles--list-recent">
     <?php
       $args = array(
         'posts_per_page'   => 1

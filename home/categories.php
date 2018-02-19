@@ -10,7 +10,7 @@
       $categories = get_categories( array(
           'orderby' => 'count',
           'order'   => 'DESC',
-          'include' => array(1,58,59,56,57),
+          'include' => array(1,58,59,56,57,78),
           // 'include' => array(1,73,74,75,76,77)
       ) );
       foreach( $categories as $category ) {
