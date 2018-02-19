@@ -207,7 +207,7 @@ table {
 caption {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(0, 0, 0, 0.6);
   text-align: left;
   caption-side: bottom; }
 
@@ -1196,7 +1196,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   display: block;
   margin-bottom: 0.5rem; }
   .form-check.disabled .form-check-label {
-    color: rgba(0, 0, 0, 0.8); }
+    color: rgba(0, 0, 0, 0.6); }
 
 .form-check-label {
   padding-left: 1.25rem;
@@ -5671,7 +5671,7 @@ a.text-dark:focus, a.text-dark:hover {
   color: rgba(0, 0, 0, 0.8) !important; }
 
 .text-muted, .comment-notes {
-  color: rgba(0, 0, 0, 0.8) !important; }
+  color: rgba(0, 0, 0, 0.6) !important; }
 
 .text-hide {
   font: 0/0 a;
@@ -11103,9 +11103,6 @@ div.nc_socialPanel .nc_tweetContainer.swp_emphasize {
   line-height: 1.6rem;
   font-size: 19px; }
 
-.articles--group {
-  margin-top: 3rem; }
-
 .article--header-categories {
   margin-top: 1rem; }
 
@@ -13377,8 +13374,7 @@ span.entry-subtitle {
 .home--hero-content {
   background: url(../images/gate-small.jpg) no-repeat;
   background-size: cover;
-  background-position-y: 16%;
-  margin-bottom: 3rem; }
+  background-position-y: 16%; }
 
 .home--hero-content,
 .hero--text {
@@ -13409,12 +13405,8 @@ span.entry-subtitle {
   right: 0;
   margin-top: 10px; }
 
-.articles--list-hero {
-  margin-bottom: 4rem;
-  padding-left: 0;
-  padding-right: 0; }
-  .articles--list-hero .article--content .aesop-image-component {
-    display: none; }
+.articles--list-hero .article--content .aesop-image-component {
+  display: none; }
 
 .recent-posts {
   font-size: 1rem; }
@@ -13426,6 +13418,21 @@ span.entry-subtitle {
     line-height: 1.6rem; }
   .home--hero-email .sidebar--group .email-submit {
     cursor: pointer; }
+
+.home--section small {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.6); }
+
+.articles--group .articles--list-hero .article--header h2 {
+  font-size: 2.4rem; }
+
+.articles--group .articles--list-hero .article--header-image {
+  max-height: 350px; }
+
+.article-hero--excerpt {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: rgba(0, 0, 0, 0.7); }
 
 .sidebar p {
   line-height: 1.8rem; }
@@ -13601,6 +13608,35 @@ img.lazyloaded {
     float: none; }
   .review-wrapper .review-total {
     float: right; }
+
+.home--about {
+  background-color: rgba(229, 236, 247, 0.85); }
+  .home--about p {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1.2rem;
+    line-height: 1.8rem; }
+
+.home--categories li a {
+  display: block;
+  font-size: 1.8rem;
+  height: 200px; }
+  .home--categories li a small {
+    display: block;
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.6); }
+  .home--categories li a .home-category--description {
+    font-size: 1.1rem;
+    color: rgba(0, 0, 0, 0.6); }
+
+.home--fi {
+  background-color: rgba(229, 250, 232, 0.85); }
+  .home--fi h2 a {
+    color: #258C32;
+    font-size: 1.6rem; }
+  .home--fi p {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1.2rem;
+    line-height: 1.8rem; }
 
 .widget--form {
   padding: 1rem; }

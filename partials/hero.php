@@ -1,4 +1,4 @@
-<div class="home--hero mt-3">
+<div class="home--hero mt-3 mb-3">
   <div class="home--hero-content container wide-container home--text">
     <div class="row">
 
