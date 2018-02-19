@@ -19,7 +19,7 @@
     <?php
       $args = array(
         'posts_per_page'   => 1,
-        'category' => 74
+        'category' => 89
       );
       $myposts = get_posts( $args );
       foreach($myposts as $post) : setup_postdata( $post );
@@ -31,7 +31,7 @@
       <?php
         $args = array(
           'posts_per_page'   => 3,
-          'category' 				 => 74,
+          'category' 				 => 89,
           'offset'           => 1
         );
         $myposts = get_posts( $args );
