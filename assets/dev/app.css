@@ -13374,9 +13374,9 @@ span.entry-subtitle {
     margin-top: 2rem !important; } }
 
 .home--hero-content {
-  background: url(../images/gate-small.jpg) no-repeat;
+  background: url(../images/gate.jpeg) no-repeat;
   background-size: cover;
-  background-position-y: 16%; }
+  background-position-y: 63%; }
 
 .home--hero-content,
 .hero--text {
@@ -13388,7 +13388,7 @@ span.entry-subtitle {
   .hero--text h1, .hero--text p, .hero--text a {
     color: rgba(0, 0, 0, 0.8); }
   .hero--text p {
-    margin-left: 116px; }
+    margin-left: 0px; }
   .hero--text a {
     text-decoration: underline; }
     .hero--text a:hover {
@@ -13618,17 +13618,17 @@ img.lazyloaded {
     font-size: 1.2rem;
     line-height: 1.8rem; }
 
-.home--categories li a {
+.home--categories li .home--category-title {
+  font-size: 1.8rem; }
+
+.home--categories li small {
   display: block;
-  font-size: 1.8rem;
-  height: 200px; }
-  .home--categories li a small {
-    display: block;
-    font-size: 1rem;
-    color: rgba(0, 0, 0, 0.6); }
-  .home--categories li a .home-category--description {
-    font-size: 1.1rem;
-    color: rgba(0, 0, 0, 0.6); }
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.6); }
+
+.home--categories li .home-category--description {
+  font-size: 1.1rem;
+  color: rgba(0, 0, 0, 0.6); }
 
 .home--fi {
   background-color: rgba(229, 250, 232, 0.85); }
@@ -13651,6 +13651,37 @@ img.lazyloaded {
 
 .articles--list-recent p, .articles--list-recent h2, .articles--list-recent h2 a {
   font-size: 80%; }
+
+.table--mic .mic--full {
+  width: 300px;
+  border: 3px solid #e9ecef;
+  border-bottom: 0;
+  border-top: 0; }
+
+.table--mic .mic--description {
+  width: 300px; }
+
+.table--mic thead .mic--full {
+  border-radius: 8px;
+  border-top: 3px solid #e9ecef; }
+
+.table--mic tbody .mic--full {
+  border-radius: 0px; }
+
+.table--mic tbody .mic-header th {
+  font-size: 1.6rem; }
+
+.table--mic tbody th {
+  font-size: 1.4rem; }
+
+.table--mic tfoot .mic--full {
+  border-bottom: 3px solid #e9ecef; }
+
+.table--mic .mic--email {
+  width: 200px; }
+
+.table--mic .mic-header th {
+  text-transform: uppercase; }
 
 .widget--form {
   padding: 1rem; }

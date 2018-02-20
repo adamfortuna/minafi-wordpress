@@ -17,7 +17,7 @@
     <h2>
       Recent Articles
       <small>
-        Everything I've written recently in one handy place.
+        Everything I've written recently in <a href="/archives/">one handy place</a>.
         <a href="/feed"><i class="fa fa-rss" aria-hidden="true"></i></a>
       </small>
     </h2>
@@ -25,10 +25,12 @@
   <div class="articles--list articles--group articles--list-recent">
     <?php
       $args = array(
-        'posts_per_page'   => 1
+        'posts_per_page'   => 1,
+        'exclude' => $GLOBALS['posts']
       );
       $myposts = get_posts( $args );
       foreach($myposts as $post) : setup_postdata( $post );
+        array_push($GLOBALS['posts'], $post->ID);
         get_template_part( 'template-parts/content-hero', get_post_format() );
       endforeach;
       wp_reset_postdata();
@@ -37,10 +39,12 @@
       <?php
         $args = array(
           'posts_per_page'   => 6,
-          'offset'           => 1
+          'offset'           => 1,
+          'exclude' => $GLOBALS['posts']
         );
         $myposts = get_posts( $args );
         foreach($myposts as $post) : setup_postdata( $post );
+          array_push($GLOBALS['posts'], $post->ID);
           get_template_part( 'template-parts/content-title', get_post_format() );
         endforeach;
         wp_reset_postdata();

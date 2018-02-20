@@ -14,6 +14,8 @@
  * @since Twenty Sixteen 1.0
  */
 
+$GLOBALS['posts'] = [];
+
 get_header();
 
 include('partials/hero.php');
@@ -21,6 +23,7 @@ include('partials/hero.php');
 
 <?php include('home/featured.php'); ?>
 <?php include('home/about.php'); ?>
+<?php //include('home/minimal-investor-course.php'); ?>
 <?php include('home/categories.php'); ?>
 <?php include('home/fi.php'); ?>
 <?php include('home/recent.php'); ?>

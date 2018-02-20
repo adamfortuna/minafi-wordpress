@@ -20,9 +20,11 @@
       $args = array(
         'posts_per_page'   => 1,
         'category' => 89
+        // 'category' 				 => 1
       );
       $myposts = get_posts( $args );
       foreach($myposts as $post) : setup_postdata( $post );
+        array_push($GLOBALS['posts'], $post->ID);
         get_template_part( 'template-parts/content-hero', get_post_format() );
       endforeach;
       wp_reset_postdata();
@@ -32,10 +34,12 @@
         $args = array(
           'posts_per_page'   => 3,
           'category' 				 => 89,
+          // 'category' 				 => 1,
           'offset'           => 1
         );
         $myposts = get_posts( $args );
         foreach($myposts as $post) : setup_postdata( $post );
+          array_push($GLOBALS['posts'], $post->ID);
           get_template_part( 'template-parts/content-title', get_post_format() );
         endforeach;
         wp_reset_postdata();
