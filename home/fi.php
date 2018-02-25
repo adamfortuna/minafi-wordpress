@@ -2,7 +2,7 @@
   <div class="container wide-container">
     <div class="row">
     <div class="col-md-6 col-xs-12">
-      <a href="/interactive-guide-early-retirement-financial-independence/"><img src="https://minafi.com/wp-content/uploads/2017/09/Header-Twitter5.png"></a>
+      <a href="/interactive-guide-early-retirement-financial-independence/"><img src="https://minafi.com/wp-content/uploads/2017/09/Header-Twitter5-500x250.png"></a>
     </div>
       <div class="col-md-6 col-xs-12">
         <p class="text-muted home--fi-featured mb-0">Featured Guide</p>

@@ -18,6 +18,17 @@
 	<?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php endif; ?>
+
+	<style>
+	<?php
+		if(is_singular()) {
+			include('src/css/critical-post.css');
+		} else {
+			include('src/css/critical-index.css');
+		}
+	?>
+	</style>
+
 	<?php wp_head(); ?>
 	<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap_index.xml" />
 

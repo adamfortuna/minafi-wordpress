@@ -63,3 +63,4 @@ require get_template_directory() . '/inc/images.php';
 require get_template_directory() . '/inc/settings.php';
 require get_template_directory() . '/inc/styles.php';
 require get_template_directory() . '/inc/template-tags.php';
+require get_template_directory() . '/inc/optimizations.php';

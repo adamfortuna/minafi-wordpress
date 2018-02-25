@@ -29,6 +29,6 @@ function minafi_scripts() {
 	// wp_enqueue_style( 'minafi-fonts', minafi_fonts_url(), array(), null );
 
 	// Theme stylesheet.
-	wp_enqueue_style( 'minafi-style', get_stylesheet_directory_uri() . '/assets/css/app.css', '', null);
+	wp_enqueue_style('minafi-style', get_stylesheet_directory_uri() . '/assets/css/app.css', array(), null);
 }
 add_action( 'wp_enqueue_scripts', 'minafi_scripts' );

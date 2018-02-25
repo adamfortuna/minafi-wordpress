@@ -30,30 +30,6 @@ gulp.task('sass:watch', function () {
   gulp.watch('./assets/dev/**/*.css', ['css:minify']);
 });
 
-gulp.task('js:concat', function () {
-  var files = [
-    'src/components/popper.js/dist/umd/popper.js',
-    'src/components/bootstrap/dist/js/bootstrap.js',
-    'src/js/app.js'
-  ];
-
-  return gulp.src(files)
-    .pipe(concat('app.bundle.js'))
-    .pipe(gulp.dest('assets/dev'));
-});
-
-
-gulp.task('js:story:concat', function () {
-  var files = [
-    'src/js/vendor/ai-core.min.js',
-    '../../plugins/aesop-story-engine/public/assets/js/ast.js',
-    '../../plugins/aesop-story-engine/public/assets/js/scrollreveal.js',
-  ];
-  return gulp.src(files)
-    .pipe(concat('story.bundle.js'))
-    .pipe(gulp.dest('assets/dev'));
-});
-
 gulp.task('js:fi:concat', function () {
   var files = [
     'posts/fi/js/firebase.js',
@@ -76,7 +52,6 @@ gulp.task('js:fi:concat', function () {
     .pipe(concat('fi.bundle.js'))
     .pipe(gulp.dest('assets/dev'));
 });
-
 gulp.task('js:fi:minify', function(cb) {
   pump([
     gulp.src('assets/dev/fi.bundle.js'),
@@ -85,28 +60,31 @@ gulp.task('js:fi:minify', function(cb) {
   ], cb);
 });
 
+
+
+gulp.task('js:concat', function () {
+  var files = [
+    'src/components/popper.js/dist/umd/popper.js',
+    'src/components/bootstrap/dist/js/bootstrap.js',
+    'src/js/app.js'
+  ];
+
+  return gulp.src(files)
+    .pipe(concat('app.bundle.js'))
+    .pipe(gulp.dest('assets/dev'));
+});
+gulp.task('js:watch', function () {
+  gulp.watch('./src/js/**/*.js', ['js:concat']);
+  gulp.watch('./assets/dev/app.bundle.js', ['js:minify']);
+  gulp.watch('./posts/fi/**/*.js', ['js:fi:concat']);
+  gulp.watch('./assets/dev/fi.bundle.js', ['js:fi:minify']);
+});
 gulp.task('js:minify', function(cb) {
   pump([
     gulp.src('assets/dev/app.bundle.js'),
     uglify(),
     gulp.dest('assets/js')
   ], cb);
-});
-
-gulp.task('js:story:minify', function(cb) {
-  pump([
-    gulp.src('assets/dev/story.bundle.js'),
-    uglify(),
-    gulp.dest('assets/js')
-  ], cb);
-});
-
-
-gulp.task('js:watch', function () {
-  gulp.watch('./src/js/**/*.js', ['js:concat']);
-  gulp.watch('./assets/dev/app.bundle.js', ['js:minify']);
-  gulp.watch('./posts/fi/**/*.js', ['js:fi:concat']);
-  gulp.watch('./assets/dev/fi.bundle.js', ['js:fi:minify']);
 });
 
 gulp.task('default', ['watch', 'sass', 'js:concat', 'js:minify']);

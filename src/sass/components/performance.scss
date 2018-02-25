@@ -4,7 +4,7 @@ img[data-lazy-src] {
    opacity: 0;
 }
 /* Image without 'data' attribute is (or becomes) visible */
-img.lazyloaded {
+img.jetpack-lazy-image--handled {
 /* prepare the future animation */
    -webkit-transition: opacity .5s linear 0.2s;
        -moz-transition: opacity .5s linear 0.2s;

@@ -1,85 +1,34 @@
 @import 'config/variables'
-@import '../components/bootstrap/scss/bootstrap'
+@import 'vendor/bootstrap'
+
+@import '../components/bootstrap/scss/_variables'
 @import '../components/font-awesome/scss/font-awesome'
 
-@import 'vendor/fonts'
-
+@import 'components/aesop'
+@import 'components/archive'
 @import 'components/article'
 @import 'components/articles'
-@import 'components/colors'
 @import 'components/categories'
-@import 'components/archive'
+@import 'components/colors'
 @import 'components/comments'
 @import 'components/dropdown'
 @import 'components/footer'
+@import 'components/hero'
+@import 'components/home'
 @import 'components/image'
 @import 'components/latest-article'
 @import 'components/navbar'
-@import 'components/related-posts'
-@import 'components/aesop'
-@import 'components/subtitles'
-@import 'components/hero'
-@import 'components/sidebar'
-@import 'components/share'
-@import 'components/tangle'
-@import 'components/alert'
 @import 'components/performance'
 @import 'components/review'
-@import 'components/home'
+@import 'components/share'
 
+// Unused
+// @import 'components/sidebar'
+// @import 'components/subtitles'
+// @import 'components/alert'
+
+// Interactivity
+@import 'components/tangle'
 @import 'posts/fi'
 
-a
-  text-decoration: underline
-  &:hover
-    text-decoration: none
-
-img
-  max-width: 100%
-
-h1, h2, h3, h4, h5, h6
-  font-weight: 700
-  color: rgba(0,0,0,0.8)
-  font-family: $font-family-sans-serif
-  line-height: 1.4
-
-button
-  cursor: pointer
-
-.first-content
-  margin-top: 1rem
-
-.container-slim
-  max-width: 700px
-  width: 100%
-
-@media only screen and (min-width: 900px)
-  .container-wide
-    max-width: 900px !important
-    width: 900px !important
-
-.hidden
-  display: none
-img
-  max-width: 100% !important
-  height: auto !important
-
-.screen-reader-text
-  display: none
-
-
-blockquote.wp-embedded-content
-  display: none
-iframe.wp-embedded-content
-  position: relative !important
-  width: 100%
-
-
-.fa-facebook, .fa-facebook-square
-  color: #3b5998
-  &:hover
-    color: darken(#3b5998, 10%)
-.fa-twitter, .fa-twitter-square
-  color: #00aced
-  &:hover
-    color: darken(#00aced, 10%)
+@import 'config/global'
