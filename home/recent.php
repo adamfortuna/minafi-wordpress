@@ -39,7 +39,6 @@
       <?php
         $args = array(
           'posts_per_page'   => 6,
-          'offset'           => 1,
           'exclude' => $GLOBALS['posts']
         );
         $myposts = get_posts( $args );
