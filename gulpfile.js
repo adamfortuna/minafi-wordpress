@@ -34,7 +34,6 @@ gulp.task('js:concat', function () {
   var files = [
     'src/components/popper.js/dist/umd/popper.js',
     'src/components/bootstrap/dist/js/bootstrap.js',
-    'src/js/vendor/comment-reply.js',
     'src/js/app.js'
   ];
 

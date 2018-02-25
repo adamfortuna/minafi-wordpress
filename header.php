@@ -35,7 +35,7 @@
 	<?php do_action('ase_theme_body_inside_top'); ?>
 	<div id="header" class="container <?php if(use_slim_container()) { echo 'container-slim'; } ?>">
 	  <div class='row justify-content-center'>
-	    <div class="header <?php minafi_columns(); ?>">
+	    <div class="header col">
 	      <nav class="navbar navbar-toggleable-md">
 	        <a class="navbar-brand" itemprop="publisher url" href="/" itemscope itemtype="http://schema.org/Organization">
 						<span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
@@ -51,7 +51,7 @@
 
 	        <ul class="nav collapse navbar-toggleable-xs pull-right"  id="collapsingNavbar">
 						<li class="nav-item">
-	            <a class="nav-link" href="/fi">What is FI?</a>
+	            <a class="nav-link" href="/interactive-guide-early-retirement-financial-independence">What is FI?</a>
 	          </li>
 						<li class="nav-item">
 	            <a class="nav-link" href="/about">About</a>
@@ -88,4 +88,3 @@
 	    </div>
 	  </div>
 	</div>
-	<script type='text/javascript' src='/wp-content/themes/minafi/assets/js/app.bundle.js'></script>

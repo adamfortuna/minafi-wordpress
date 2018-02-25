@@ -38,7 +38,7 @@
         </div>
       </div>
       <div class="col-md-6 col-xs-12">
-        <a href="/about"><img src="https://minafi.com/wp-content/uploads/2017/07/megacon_small.jpg"></a>
+        <a href="/about"><img src="https://minafi.com/wp-content/uploads/2017/07/megacon_small-768x512.jpg"></a>
       </div>
     </div>
   </div>

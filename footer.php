@@ -34,6 +34,7 @@
 
 <?php do_action('aesop_theme_body_inside_bottom'); ?>
 
+<script type='text/javascript' src='/wp-content/themes/minafi/assets/js/app.bundle.js'></script>
 <?php include('partials/tracking.php'); ?>
 <?php wp_footer(); ?>
 </body>

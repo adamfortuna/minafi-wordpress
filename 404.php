@@ -10,7 +10,7 @@
 get_header(); ?>
 
 <div class='first-content container'>
-	<section class="error-404 not-found <?php minafi_columns(); ?>">
+	<section class="error-404 not-found col">
 		<header class="page-header">
 			<h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'twentysixteen' ); ?></h1>
 		</header><!-- .page-header -->

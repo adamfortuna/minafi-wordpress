@@ -131,5 +131,5 @@
 <section class='container'>
   <h2>Related Posts</h2>
   <p class="lead">Here are a few similar posts you might enjoy checking out.</p>
-  <?php if ( function_exists( "minafi_related_posts" ) ) { minafi_related_posts(); } ?>
+  <?php minafi_related_posts(); ?>
 </section>
