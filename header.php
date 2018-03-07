@@ -62,13 +62,18 @@
 
 	        <ul class="nav collapse navbar-toggleable-xs pull-right"  id="collapsingNavbar">
 						<li class="nav-item">
-	            <a class="nav-link" href="/interactive-guide-early-retirement-financial-independence">What is FI?</a>
-	          </li>
-						<li class="nav-item">
 	            <a class="nav-link" href="/about">About</a>
 	          </li>
+						
+						<li class="nav-item dropdown dropdown--highlights">
+	            <a class="nav-link dropdown-toggle" href="#" id="highlightsDropdownLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Highlights</a>
+			        <div class="dropdown-menu" role="menu" aria-labelledby="highlightsDropdownLink">
+			          <a class="dropdown-item" href="/interactive-guide-early-retirement-financial-independence">Interactive Guide to FIRE</a>
+			          <a class="dropdown-item" href="/minimal-investor-course/">The Minimal Investor Course</a>
+			        </div>
+			      </li>
 
-	          <li class="nav-item dropdown">
+	          <li class="nav-item dropdown dropdown--articles">
 	            <a class="nav-link dropdown-toggle" href="#" id="navArticlesDropdownLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Articles</a>
 			        <div class="dropdown-menu" role="menu" aria-labelledby="navArticlesDropdownLink">
 			          <a class="dropdown-item" href="/category/minimalism">Minimalism</a>

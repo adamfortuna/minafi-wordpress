@@ -17,6 +17,15 @@
       text-decoration: underline
 
   .dropdown
+    &.dropdown--articles
+      &:before,
+      &:after
+        right: 44px
+    &.dropdown--highlights
+      .dropdown-menu
+        &:before,
+        &:after
+          right: 69px
     .dropdown-menu
       visibility: hidden
       display: block
@@ -24,7 +33,6 @@
       transition: all 0.4s
       -webkit-box-shadow: 2px 4px 16px rgba(0,0,0,.125)
       box-shadow: 2px 4px 16px rgba(0,0,0,.125)
-      left: -90px
       -webkit-transform: scale(0)
       -moz-transform: scale(0)
       -o-transform: scale(0)
@@ -42,7 +50,6 @@
         content: ""
         display: inline-block
         position: absolute
-        right: 44px
       &:before
         border-bottom: 11px solid rgba(0,0,0,0.12)
         top: -11px
@@ -74,11 +81,18 @@
   .navbar
     .nav
       margin-right: 0px
-    .dropdown-menu
-      left: -150px !important
-      &:before,
-      &:after
-        right: 5px !important
+    .dropdown--articles
+      .dropdown-menu
+        left: -150px !important
+        &:before,
+        &:after
+          right: 5px !important
+    .dropdown--highlights
+      .dropdown-menu
+        left: -100px !important
+        &:before,
+        &:after
+          right: 81px !important
 
 
 .navbar-brand
