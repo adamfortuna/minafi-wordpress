@@ -1,7 +1,7 @@
 <div id="mc_embed_signup" class="sidebar--group sidebar--email">
   <form action="https://www.getdrip.com/forms/620724064/submissions" method="post" data-drip-embedded-form="620724064">
-    <h3 data-drip-attribute="headline">The Minafi Magazine</h3>
-    <p><small data-drip-attribute="description">A dose of investment advice, minimalism and mindfulness <b>delivered just for you</b>.</small></p>
+    <h3>The Minafi Magazine</h3>
+    <p><small>A dose of financial advice, minimalism and mindfulness <b>delivered just for you</b>.</small></p>
 
     <div class="form-group">
       <input type="email" placeholder="What's Your Email?" value="" name="fields[email]" class="email--signup email form-control form-control-sm">
