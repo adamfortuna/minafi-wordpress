@@ -29,7 +29,7 @@
     </div>
 
     <div class="article-hero--excerpt my-3">
-      <p itemprop="description"><? echo get_the_excerpt(); ?></p>
+      <p itemprop="description"><?php echo the_excerpt(); ?></p>
     </div>
 
     <div class="article--header-meta">

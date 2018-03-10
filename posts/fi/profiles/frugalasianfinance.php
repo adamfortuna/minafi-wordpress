@@ -4,7 +4,7 @@
 		<div class="aesop-content">
 			<figure class="aesop-image-component-image aesop-component-align-right aesop-image-component-caption-left" style="margin-right:12%; width:500px;">
         <a class="aesop-lightbox" href="https://minafi.com/wp-content/uploads/2017/08/Box_4.18.17-Ms.-Frugal-Asian-Finance-e1503715317638.jpg" title="Photo of a $300 gift my husband gave me.">
-					<img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="https://minafi.com/wp-content/uploads/2017/08/Box_4.18.17-Ms.-Frugal-Asian-Finance-e1503715317638.jpg" height="333" alt="Photo of a $300 gift my husband gave me.">
+					<img src="https://minafi.com/wp-content/uploads/2017/08/Box_4.18.17-Ms.-Frugal-Asian-Finance-e1503715317638.jpg" height="333" alt="Photo of a $300 gift my husband gave me.">
 				</a>
   			<figcaption class="aesop-image-component-caption">
   				Photo of a $300 gift my husband gave me. I later urged him to return it for a refund. This is a constant reminder that we don't need to show our love and build our family w/expensive gifts.

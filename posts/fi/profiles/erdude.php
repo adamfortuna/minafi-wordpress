@@ -4,7 +4,7 @@
 		<div class="aesop-content">
 			<figure class="aesop-image-component-image aesop-component-align-right aesop-image-component-caption-left" style="margin-right:12%; width:500px;">
         <a class="aesop-lightbox" href="https://minafi.com/wp-content/uploads/2017/08/Thumbs-up-Ed-Ditto.jpg" title="Actual photo of the author.">
-					<img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="https://minafi.com/wp-content/uploads/2017/08/Thumbs-up-Ed-Ditto.jpg" width="500" height="333" alt="Actual photo of the author." />
+					<img src="https://minafi.com/wp-content/uploads/2017/08/Thumbs-up-Ed-Ditto.jpg" width="500" height="333" alt="Actual photo of the author." />
 				</a>
   			<figcaption class="aesop-image-component-caption">
   				Actual photo of the author.

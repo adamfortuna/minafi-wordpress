@@ -54,7 +54,8 @@ get_header();
 
 	  <section class="article--content aesop-entry-content">
       <div id="fi--wrapper">
-			  <?php include('posts/fi/index.php'); ?>
+			  <?php include(get_template_directory().'/posts/fi/index.php');
+        ?>
       </div>
       <?php do_action('ase_theme_post_inside_bottom'); ?>
 

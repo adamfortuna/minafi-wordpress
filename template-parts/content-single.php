@@ -19,7 +19,7 @@
       <?php do_action('ase_theme_post_before_title'); ?>
 		  <h1 itemprop="name headline mainEntityOfPage"><?php the_title(); ?></h1>
       <?php do_action('ase_theme_post_after_title'); ?>
-      <p class="article-subtitle" itemprop="description"><? echo get_the_excerpt(); ?></p>
+      <p class="article-subtitle" itemprop="description"><?php echo get_the_excerpt(); ?></p>
 
       <div class="article--header-meta">
         <span class="article--header-meta-date">

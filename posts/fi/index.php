@@ -1,18 +1,5 @@
-<?php
-  $theme_path = get_template_directory_uri();
-  $whitelist = array(
-    '127.0.0.1',
-    '::1'
-);
-
-?>
 <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
-
-<? if(in_array($_SERVER['REMOTE_ADDR'], $whitelist)) { ?>
-<script src="<?php echo $theme_path; ?>/assets/dev/fi.bundle.js" async></script>
-<? } else { ?>
-<script src="<?php echo $theme_path; ?>/assets/js/fi.bundle.js" async></script>
-<?php } ?>
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/fi.bundle.js" async></script>
 
 <p>Let's talk about early retirement and financial independence! These phrases alone have a lot of weight associated with them, and you might have an immediate gut response to just hearing these terms.</p>
 
@@ -136,7 +123,7 @@
 <p>If you're hoping to be financially independent before collecting social security, you'll need to save more than 10%. Let's look into ways to reduce this number. These estimates are making a <b>LOT</b> of assumptions. We can refine this a little, but for that, I'm going to need your help – in the form of answering a few more questions.</p>
 
 <div class="container text-center pb-3 mb-3">
-  <img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="https://minafi.com/wp-content/uploads/2017/08/callistus-ndemo-157554.jpg" alt="hiking">
+  <img src="https://minafi.com/wp-content/uploads/2017/08/callistus-ndemo-157554.jpg" alt="hiking">
   <p class="text-center text-muted"><small>Get ready for a long journey.</small></p>
 </div>
 
@@ -292,7 +279,7 @@
 
 <a name="part-4"></a>
 <div class="container text-center pb-3 mb-3">
-  <img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="https://minafi.com/wp-content/uploads/2017/08/manik-rathee-57410.jpg" alt="financial independence">
+  <img src="https://minafi.com/wp-content/uploads/2017/08/manik-rathee-57410.jpg" alt="financial independence">
   <p class="text-center text-muted"><small>Financial Independence (FI) is a freeing idea and a beneficial goal.</small></p>
 </div>
 
@@ -334,7 +321,7 @@
 
 <a name="part-5"></a>
 <div class="container text-center pb-3 mb-3">
-  <img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="https://minafi.com/wp-content/uploads/2016/08/financial.jpg" alt="investing">
+  <img src="https://minafi.com/wp-content/uploads/2016/08/financial.jpg" alt="investing">
   <p class="text-center text-muted"><small>The math does add up, with some additional work.</small></p>
 </div>
 
@@ -408,7 +395,7 @@
 	Imagine how many more years you'd need to work to save this amount without investing. Actually, no need to imagine -- it's <span data-var="investmentYearsDifference" data-format="years" class="tangle--dynamic"></span>! If you learn how to invest, you can retire <span data-var="investmentYearsDifference" data-format="years" class="tangle--dynamic"></span> earlier.
 </p>
 
-<p class="text-center"><img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="<?php echo $theme_path; ?>/posts/fi/images/mind_blown.gif"></p>
+<p class="text-center"><img src="<?php echo $theme_path; ?>/posts/fi/images/mind_blown.gif"></p>
 
 <p>This is the number one difference between people who retire early and those who wait until social security -- <b>people who retire early learn how to invest</b>.</p>
 
@@ -429,7 +416,7 @@
 
 <a name="part-6"></a>
 <div class="container text-center pb-3 mb-3">
-  <img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="https://minafi.com/wp-content/uploads/2017/08/pexels-photo-287240.jpeg" alt="retire sooner">
+  <img src="https://minafi.com/wp-content/uploads/2017/08/pexels-photo-287240.jpeg" alt="retire sooner">
   <p class="text-center text-muted"><small>Speed up your FI hike with a few small lifestyle tweaks.</small></p>
 </div>
 
@@ -545,7 +532,7 @@
 
 <a name="part-7"></a>
 <div class="container text-center pb-3 mb-3">
-  <img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="https://minafi.com/wp-content/uploads/2017/08/tegan-mierle-157974.jpg" alt="who is this for">
+  <img src="https://minafi.com/wp-content/uploads/2017/08/tegan-mierle-157974.jpg" alt="who is this for">
   <p class="text-center text-muted"><small>There are 291k subscribers to <a href="https://www.reddit.com/r/financialindependence/" target="_blank">/r/financialindependence/</a> alone.</small></p>
 </div>
 
@@ -612,7 +599,7 @@
 	<div class="aesop-content">
 		<figure class="aesop-image-component-image aesop-component-align-right aesop-image-component-caption-left" style="margin-right:25%; width:250px;">
       <a class="aesop-lightbox" rel="nofollow" href="https://minafi.com/your-money-or-your-life-book" title="Your money or your life">
-				<img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="https://minafi.com/wp-content/uploads/2017/08/your-monet.jpeg" alt="Your money or your life">
+				<img src="https://minafi.com/wp-content/uploads/2017/08/your-monet.jpeg" alt="Your money or your life">
 			</a>
 	  </figure>
 	</div>
@@ -627,7 +614,7 @@
 	<div class="aesop-content">
 		<figure class="aesop-image-component-image aesop-component-align-left aesop-image-component-caption-left" style="margin-left:16%; width:250px;">
       <a class="aesop-lightbox" rel="nofollow" href="https://minafi.com/bogleheads-guide-to-investing-book" title="The Bogleheads' Guide to Investing">
-				<img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="https://minafi.com/wp-content/uploads/2016/08/bogleheads.jpg" alt="The Bogleheads' Guide to Investing">
+				<img src="https://minafi.com/wp-content/uploads/2016/08/bogleheads.jpg" alt="The Bogleheads' Guide to Investing">
 			</a>
 	  </figure>
 	</div>
@@ -641,7 +628,7 @@
   <div class="aesop-content">
     <figure class="aesop-image-component-image aesop-component-align-right aesop-image-component-caption-left" style="margin-right:25%; width:250px;">
       <a rel="nofollow" class="aesop-lightbox" href="https://minafi.com/millionaire-next-door-book" title="The Millionaire Next Door">
-        <img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="https://minafi.com/wp-content/uploads/2017/08/millionaire.jpg" alt="The Millionaire Next Door">
+        <img src="https://minafi.com/wp-content/uploads/2017/08/millionaire.jpg" alt="The Millionaire Next Door">
       </a>
     </figure>
   </div>
@@ -673,7 +660,7 @@
 </p>
 
 <div class="container container-wide">
-  <img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="https://minafi.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-20-at-11.17.01-PM.png" alt="Personal Capital Breakdown" />
+  <img src="https://minafi.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-20-at-11.17.01-PM.png" alt="Personal Capital Breakdown" />
   <p class="text-center text-muted"><small>A scenario I was running on my own finances</small></p>
 </div>
 
@@ -826,49 +813,3 @@
   <li class="list-unstyled-item"><b>All of the bloggers</b> who agreed to an interview.</li>
   <li class="list-unstyled-item">Everyone who's shared this post to help spread the word of FI!</li>
 </ul>
-
-
-<script>(function(w, d){
-	var b = d.getElementsByTagName("body")[0];
-	var s = d.createElement("script"); s.async = true;
-	var v = !("IntersectionObserver" in w) ? "8.5.2" : "10.3.5";
-	s.src = "https://minafi.com/wp-content/plugins/rocket-lazy-load/assets/js/lazyload-" + v + ".min.js";
-	w.lazyLoadOptions = {
-		elements_selector: "img, iframe",
-		data_src: "lazy-src",
-		data_srcset: "lazy-srcset",
-		skip_invisible: false,
-		class_loading: "lazyloading",
-		class_loaded: "lazyloaded",
-		threshold: 300,
-		callback_load: function(element) {
-			if ( element.tagName === "IFRAME" && element.dataset.rocketLazyload == "fitvidscompatible" ) {
-				if (element.classList.contains("lazyloaded") ) {
-					if (typeof window.jQuery != "undefined") {
-						if (jQuery.fn.fitVids) {
-							jQuery(element).parent().fitVids();
-						}
-					}
-				}
-			}
-		}
-	};
-	b.appendChild(s);
-}(window, document));
-
-// Listen to the Initialized event
-window.addEventListener('LazyLoad::Initialized', function (e) {
-    // Get the instance and puts it in the lazyLoadInstance variable
-	var lazyLoadInstance = e.detail.instance;
-
-	var observer = new MutationObserver(function(mutations) {
-		mutations.forEach(function(mutation) {
-			lazyLoadInstance.update();
-		} );
-	} );
-
-	var b      = document.getElementsByTagName("body")[0];
-	var config = { childList: true, subtree: true };
-
-	observer.observe(b, config);
-}, false);</script>

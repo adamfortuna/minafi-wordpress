@@ -4,7 +4,7 @@
 		<div class="aesop-content">
 			<figure class="aesop-image-component-image aesop-component-align-right aesop-image-component-caption-left" style="margin-right:12%; width:500px;">
         <a class="aesop-lightbox" href="https://minafi.com/wp-content/uploads/2017/08/Adventure-Rich-1024x768.jpg" title="Mrs. Adventure Rich planning her next adventure!">
-					<img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="https://minafi.com/wp-content/uploads/2017/08/Adventure-Rich-1024x768.jpg" height="333" alt="Mrs. Adventure Rich planning her next adventure!">
+					<img src="https://minafi.com/wp-content/uploads/2017/08/Adventure-Rich-1024x768.jpg" height="333" alt="Mrs. Adventure Rich planning her next adventure!">
 				</a>
   			<figcaption class="aesop-image-component-caption">
   				Mrs. Adventure Rich planning her next adventure!
