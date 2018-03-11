@@ -66,7 +66,8 @@ gulp.task('js:concat', function () {
   var files = [
     'src/components/popper.js/dist/umd/popper.js',
     'src/components/bootstrap/dist/js/bootstrap.js',
-    'src/js/app.js'
+    'src/js/app.js',
+    'src/js/vendor/comment-reply.js'
   ];
 
   return gulp.src(files)

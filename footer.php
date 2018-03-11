@@ -33,8 +33,6 @@
 </div>
 
 <?php do_action('aesop_theme_body_inside_bottom'); ?>
-
-<?php minafi_js_scripts(); ?>
 <?php include('partials/tracking.php'); ?>
 <?php wp_footer(); ?>
 </body>

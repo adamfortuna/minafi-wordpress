@@ -6278,6 +6278,41 @@ var Popover = function ($) {
 
 
 })();
+(function() {
+  $ = jQuery;
+  function toggleSearch(e) {
+    var $searchInput = $('#searchInput');
+
+    if($searchInput.val().length > 0) {
+      // Do nothing and let the submission continue
+    } else {
+      e.preventDefault();
+      var $this = $(this);
+
+      // Not showing form
+      if($('.search--link').hasClass('nav-link')) {
+        $('#searchInput').blur();
+      } else { // Showing form
+        setTimeout(function() {
+          $('#searchInput').focus();
+        }, 1000);
+      }
+
+      var navItem = $this.closest('.nav-item');
+      navItem.toggleClass('search--searching');
+    }
+  }
+
+
+  $(function(){
+    $('.search--link').on('click', toggleSearch);
+
+    $('.email--signup').on('focus', function() {
+      $('.email--toggle').slideDown();
+    });
+  });
+})();
+
 window.addComment = {
 	moveForm: function( commId, parentId, respondId, postId ) {
 		var div, element, style, cssHidden,
@@ -6327,46 +6362,6 @@ window.addComment = {
 			return false;
 		};
 
-		/*
-		 * Set initial focus to the first form focusable element.
-		 * Try/catch used just to avoid errors in IE 7- which return visibility
-		 * 'inherit' when the visibility value is inherited from an ancestor.
-		 */
-		try {
-			for ( var i = 0; i < commentForm.elements.length; i++ ) {
-				element = commentForm.elements[i];
-				cssHidden = false;
-
-				// Modern browsers.
-				if ( 'getComputedStyle' in window ) {
-					style = window.getComputedStyle( element );
-				// IE 8.
-				} else if ( document.documentElement.currentStyle ) {
-					style = element.currentStyle;
-				}
-
-				/*
-				 * For display none, do the same thing jQuery does. For visibility,
-				 * check the element computed style since browsers are already doing
-				 * the job for us. In fact, the visibility computed style is the actual
-				 * computed value and already takes into account the element ancestors.
-				 */
-				if ( ( element.offsetWidth <= 0 && element.offsetHeight <= 0 ) || style.visibility === 'hidden' ) {
-					cssHidden = true;
-				}
-
-				// Skip form elements that are hidden or disabled.
-				if ( 'hidden' === element.type || element.disabled || cssHidden ) {
-					continue;
-				}
-
-				element.focus();
-				// Stop after the first focusable element.
-				break;
-			}
-
-		} catch( er ) {}
-
 		return false;
 	},
 
@@ -6374,77 +6369,3 @@ window.addComment = {
 		return document.getElementById( id );
 	}
 };
-
-(function() {
-  $ = jQuery;
-  // var toggleSlim = $("#header").hasClass("container-slim");
-
-  function toggleSearch(e) {
-    var $searchInput = $('#searchInput');
-
-    if($searchInput.val().length > 0) {
-      // Do nothing and let the submission continue
-    } else {
-      e.preventDefault();
-      var $this = $(this);
-
-      // Not showing form
-      if($('.search--link').hasClass('nav-link')) {
-        $('#searchInput').blur();
-      } else { // Showing form
-        setTimeout(function() {
-          $('#searchInput').focus();
-        }, 1000);
-      }
-
-      var navItem = $this.closest('.nav-item');
-      navItem.toggleClass('search--searching');
-      // if(toggleSlim) {
-      //   $("#header").toggleClass("container-slim");
-      // }
-
-      // if(navItem.hasClass('search--searching')) {
-      //
-      // } else {
-      //   $("#header").removeClass("container-slim");
-      // }
-    }
-  }
-
-  function subscribeToDrip(e)  {
-    var form = $('.comment-form'),
-        subscriptionFields = form.find("input[name='subscription[]']:checked");
-    if(subscriptionFields.length > 0) {
-      var email = form.find('#email').val(),
-          name = form.find('#author').val(),
-          url = form.find('#url').val(),
-          subscriptions = $.map(subscriptionFields, function(i) {
-            return $(i).val();
-          }).join(",");
-      $.ajax({
-        type: "POST",
-        url: 'https://www.getdrip.com/forms/194467518/submissions',
-        data: {
-          fields: {
-            email: email,
-            name: name,
-            url: url,
-            subscription: subscriptions
-          }
-        }
-      });
-    }
-  }
-
-
-  $(function(){
-    $('.search--link').on('click', toggleSearch);
-
-    $('.email--signup').on('focus', function() {
-      $('.email--toggle').slideDown();
-    });
-
-
-    $('.comment-form').on('submit', subscribeToDrip);
-  });
-})();
