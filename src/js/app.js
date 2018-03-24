@@ -10,7 +10,7 @@
       var $this = $(this);
 
       // Not showing form
-      if($('.search--link').hasClass('nav-link')) {
+      if($('.search--link').closest('search--searching').length > 0) {
         $('#searchInput').blur();
       } else { // Showing form
         setTimeout(function() {
@@ -18,7 +18,7 @@
         }, 1000);
       }
 
-      var navItem = $this.closest('.nav-item');
+      var navItem = $this.closest('.nav-item--search');
       navItem.toggleClass('search--searching');
     }
   }

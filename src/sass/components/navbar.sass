@@ -1,6 +1,3 @@
-#header
-  transition: width 1s, max-width 1s
-
 .navbar
   padding-left: 0
   padding-right: 0
@@ -18,14 +15,19 @@
 
   .dropdown
     &.dropdown--articles
-      &:before,
-      &:after
-        right: 44px
+      .dropdown-menu
+        &:before,
+        &:after
+          right: 66px
+      .dropdown-menu
+        margin-left: -76px
     &.dropdown--highlights
       .dropdown-menu
         &:before,
         &:after
-          right: 69px
+          right: 79px
+      .dropdown-menu
+        margin-left: -87px
     .dropdown-menu
       visibility: hidden
       display: block
@@ -76,8 +78,31 @@
     text-decoration: none
     &:hover
       text-decoration: underline
-
-@media only screen and (max-width: 700px)
+@media only screen and (max-width: 767px)
+  .navbar .dropdown 
+    .dropdown-menu
+      visibility: visible
+      opacity: 1
+      -webkit-transform: scale(1)
+      -moz-transform: scale(1)
+      -o-transform: scale(1)
+      -ms-transform: scale(1)
+      transform: scale(1)
+      -webkit-transform-origin: 29px -50px
+      -moz-transform-origin: 29px -50px
+      -o-transform-origin: 29px -50px
+      -ms-transform-origin: 29px -50px
+      transform-origin: 29px -50px
+      &:before,
+      &:after
+        display: none
+      
+    &.dropdown--articles,
+    &.dropdown--highlights
+      .dropdown-menu
+        margin-left: 0px
+      
+@media only screen and (max-width: 767px)
   .navbar
     .nav
       margin-right: 0px
@@ -94,7 +119,9 @@
         &:after
           right: 81px !important
 
-
+.navbar--main-nav
+  margin-right: 64px
+// Brand
 .navbar-brand
   text-decoration: none
 .navbar-brand--text
@@ -106,74 +133,101 @@
   right: -10px
   position: relative
   transition: opacity 0.5s, right 0.5s, letter-spacing 0.2s
-
+  small
+    display: block
+    font-size: 12px
+    letter-spacing: 1px
 .navbar-brand:hover
   .navbar-brand--text
     opacity: 1
     right: 0
     letter-spacing: 3px
-
-@media only screen and (max-width: 700px)
+@media only screen and (max-width: 767px)
   .navbar-brand--text
-    display: none
-  .nav-link
-    font-size: 90%
-    padding: 0.25rem 0.3rem
-    line-height: 45px
-  .nav-item--search
-    display: none
+    opacity: 1
+    right: 0
+    letter-spacing: 3px
+    &:hover
+      small
+        text-decoration: underline
 
-.search--link
-  background-color: transparent
-
-.search--link,
-.search--form
-  display: inline-block !important
-.search--form
-  display: inline-block !important
-  overflow: hidden
-  position: relative
-
-  input
-    transition: 1s max-width, 1s left
-    max-width: 0px !important
-    border-color: transparent
-    background-color: #fff
-    left: 31px
-    z-index: 0 !important
-    &:focus
-      outline: none !important
-      border-color: $gray-lightest
-
-.search--link
-  border-top-left-radius: 0.25rem !important
-  border-bottom-left-radius: 0.25rem !important
-  border-left: 1px solid rgba(0, 0, 0, 0.15) !important
-  z-index: 1 !important
-  position: relative
-  background-color: #fff !important
-  cursor: pointer
+// Toggler
+.navbar-toggler
+  color: rgba(0,0,0,.75)
+  border-color: rgba(0, 0, 0, 0.15)
+  border-top-left-radius: 0px !important
+  border-bottom-left-radius: 0px !important
+  height: 49px
+  margin-top: -1px
   &:hover
     background-color: $gray-dark !important
     color: $gray-lightest
+    .navbar-toggler-icon
+      background-image: $navbar-dark-toggler-icon-bg
   &:focus
     outline: none
+.navbar-toggler-icon
+  background-image: $navbar-light-toggler-icon-bg
 
+@media only screen and (max-width: 767px)
+  .nav-item--search
+    right: 63px !important
+
+@media only screen and (max-width: 767px)
+  .nav-item--search
+    .search--link    
+      border-top-right-radius: 0px !important
+      border-bottom-right-radius: 0px !important
 .nav-item--search
   position: absolute
   right: 0
-
-.search--searching
-  position: absolute
-  right: 0
-  transition: absolute 1s
+  top: 23px
+  .search--link
+    background-color: transparent
+  .search--link,
   .search--form
     display: inline-block !important
+  .search--form
+    display: inline-block !important
+    overflow: hidden
+    position: relative
     input
-      max-width: 200px !important
-      border-color: $gray-lightest
-      left: 0px
+      transition: 1s max-width, 1s left
+      max-width: 0px !important
+      border-color: transparent
+      background-color: #fff
+      left: 31px
+      z-index: 0 !important
+      &:focus
+        outline: none !important
+        border-color: $gray-lightest
   .search--link
-    border-top-left-radius: 0 !important
-    border-bottom-left-radius: 0 !important
-    border-left: 0 !important
+    border-radius: 0.25rem
+    border: 1px solid rgba(0, 0, 0, 0.15) !important
+    border-color: rgba(0, 0, 0, 0.15) 
+    z-index: 1 !important
+    position: relative
+    background-color: #fff !important
+    cursor: pointer
+    &:hover
+      background-color: $gray-dark !important
+      color: $gray-lightest
+    &:focus
+      outline: none
+  &.search--searching
+    position: absolute
+    right: 0
+    transition: absolute 1s
+    .search--form
+      display: inline-block !important
+      input
+        max-width: 200px !important
+        border-color: rgba(0, 0, 0, 0.15)
+        left: 0px
+        outline: none
+        &:focus
+          outline: none
+    .search--link
+      border-top-left-radius: 0 !important
+      border-bottom-left-radius: 0 !important
+      border-left: 0 !important

@@ -1,28 +1,38 @@
 @media only screen and (max-width: 992px)
-  body
-    .home--hero
-      margin-bottom: 2rem !important
-    .hero--text-content
-      position: relative
-    .home--hero,
-    .home--hero-content,
-    .hero--text
-      height: auto !important
-    .hero--text
-      p
-        margin-left: 0
-        font-size: 1.4rem
-        line-height: 1.6rem
-    .home--hero-content
-      margin-bottom: 0
-    .home--hero-email
-      margin-top: 2rem !important
+  .home--hero
+    margin-bottom: 2rem !important
+  .hero--text-content
+    position: relative
+  .home--hero,
+  .home--hero-content,
+  .hero--text
+    height: auto !important
+  .hero--text
+    p
+      margin-left: 0
+      font-size: 1.4rem
+      line-height: 1.6rem
+  .home--hero-content
+    margin-bottom: 0
+  .home--hero-email
+    margin-top: 2rem !important
 
 .home--hero-content
   background: url(../images/gate.jpeg) no-repeat
   background-size: cover
   background-position-y: 63%
 
+@media only screen and (max-width: 767px)
+  .home--hero, .home--hero-email
+    margin-top: 0 !important
+    .col-xl-8
+      display: none
+    h3
+      font-size: 2rem
+  .home--hero-email
+    margin-top: 1rem !important
+
+    
 .home--hero-content,
 .hero--text
   height: 330px
