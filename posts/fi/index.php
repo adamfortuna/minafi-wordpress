@@ -395,7 +395,7 @@
 	Imagine how many more years you'd need to work to save this amount without investing. Actually, no need to imagine -- it's <span data-var="investmentYearsDifference" data-format="years" class="tangle--dynamic"></span>! If you learn how to invest, you can retire <span data-var="investmentYearsDifference" data-format="years" class="tangle--dynamic"></span> earlier.
 </p>
 
-<p class="text-center"><img src="<?php echo $theme_path; ?>/posts/fi/images/mind_blown.gif"></p>
+<p class="text-center"><img src="/wp-content/themes/minafi/posts/fi/images/mind_blown.gif"></p>
 
 <p>This is the number one difference between people who retire early and those who wait until social security -- <b>people who retire early learn how to invest</b>.</p>
 
