@@ -7894,8 +7894,11 @@ a.text-dark:hover, a.text-dark:focus {
 .aesop-entry-content .table-slim {
   max-width: 700px; }
 
-.aesop-entry-content ul {
-  padding-left: 40px; }
+.aesop-entry-content ul, .aesop-entry-content ol {
+  list-style-position: inside; }
+  .aesop-entry-content ul ul, .aesop-entry-content ul ol, .aesop-entry-content ol ul, .aesop-entry-content ol ol {
+    margin-bottom: 0;
+    margin-left: 2rem; }
 
 .aesop-entry-content h2, .aesop-entry-content h3 {
   margin-bottom: 0.6rem; }
