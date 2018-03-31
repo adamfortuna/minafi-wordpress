@@ -1,5 +1,5 @@
 <section class='container wide-container'>
-  <div class='row home--section mb-3'>
+  <div class='row home--section mb-1'>
     <h2 class="col-12">
       Categories
       <small>How to enjoy life now and later.</small>

@@ -10200,6 +10200,12 @@ body {
 .articles--list-recent p, .articles--list-recent h2, .articles--list-recent h2 a {
   font-size: 80%; }
 
+@media only screen and (max-width: 768px) {
+  .home h2 {
+    font-size: 2rem; }
+    .home h2 small {
+      display: none; } }
+
 .cover--image {
   display: block;
   position: relative; }

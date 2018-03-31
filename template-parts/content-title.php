@@ -22,7 +22,6 @@
 
   <header class="article--header article-header--hero">
     <h2><a href='<?php echo esc_url(get_permalink()); ?>'><?php the_title(); ?></a></h2>
-    <p class="article-subtitle--small"><?php echo get_the_excerpt(); ?></p>
 
     <div class="article--header-meta">
       <span class="article--header-meta-date">
