@@ -64,8 +64,8 @@
 						<meta itemprop="name" content="Minafi" />
 						<meta itemprop="url" content="https://minafi.com" />
 					</a>
-					
-					
+
+
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar" aria-controls="collapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
 			    	<span class="navbar-toggler-icon"></span>
 			  	</button>
@@ -79,9 +79,12 @@
 							<li class="nav-item dropdown dropdown--highlights mx-3">
 		            <a class="nav-link dropdown-toggle" href="#" id="highlightsDropdownLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Highlights</a>
 				        <div class="dropdown-menu" role="menu" aria-labelledby="highlightsDropdownLink">
-				          <a class="dropdown-item" href="/interactive-guide-early-retirement-financial-independence">Interactive Guide to FIRE</a>
+				          <a class="dropdown-item fi--text" href="/interactive-guide-early-retirement-financial-independence">Interactive Guide to FIRE</a>
 									<div class="dropdown-divider"></div>
-				          <a class="dropdown-item" href="/minimal-investor-course/">The Minimal Investor Course</a>
+				          <a class="dropdown-item fi--text" href="/minimal-investor-course/">The Minimal Investor Course</a>
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item" href="/vision">Vision & Values</a>
+									<a class="dropdown-item" href="/income">Income & Expenses</a>
 				        </div>
 				      </li>
 
@@ -100,7 +103,7 @@
 				      </li>
 		        </ul>
 					</div>
-				
+
 					<div class="nav-item--search">
 						<form role="search" method="get" class="form-inline search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 							<div class="search--form form-group">
