@@ -9818,48 +9818,49 @@ body.rtl {
       font-weight: 400;
       font-size: 1rem;
       text-decoration: none;
-      display: inline-block; }
+      display: inline-block;
+      margin-bottom: 0.6rem; }
       .post-categories li a:hover {
         background-color: #d5d5d5; }
-      .post-categories li a[href$='/category/minimalism/'] {
+      .post-categories li a[href$='/category/minimalism'] {
         background-color: #E5ECF7;
         color: #284777; }
-        .post-categories li a[href$='/category/minimalism/']:hover {
+        .post-categories li a[href$='/category/minimalism']:hover {
           background-color: #bed0eb; }
-      .post-categories li a[href$='/category/mindfulness/'] {
+      .post-categories li a[href$='/category/mindfulness'] {
         background-color: #F0EEF9;
         color: #4E287A; }
-        .post-categories li a[href$='/category/mindfulness/']:hover {
+        .post-categories li a[href$='/category/mindfulness']:hover {
           background-color: #cfc8ec; }
-      .post-categories li a[href$='/category/goals/'] {
+      .post-categories li a[href$='/category/goals'] {
         background-color: #fee3e4;
         color: #fc4d52; }
-        .post-categories li a[href$='/category/goals/']:hover {
+        .post-categories li a[href$='/category/goals']:hover {
           background-color: #fecacc; }
-      .post-categories li a[href$='/category/financial-independence/'], .post-categories li a[href$='/category/investing/'], .post-categories li a[href$='/category/finance/'] {
+      .post-categories li a[href$='/category/financial-independence'], .post-categories li a[href$='/category/investing'], .post-categories li a[href$='/category/finance'] {
         background-color: #E5FAE8;
         color: #258C32; }
-        .post-categories li a[href$='/category/financial-independence/']:hover, .post-categories li a[href$='/category/investing/']:hover, .post-categories li a[href$='/category/finance/']:hover {
+        .post-categories li a[href$='/category/financial-independence']:hover, .post-categories li a[href$='/category/investing']:hover, .post-categories li a[href$='/category/finance']:hover {
           background-color: #baf2c2; }
 
-a[href$='/category/minimalism/'], a[href$='/category/minimalism'] {
+a[href$='/category/minimalism'] {
   color: #758FB8; }
-  a[href$='/category/minimalism/']:hover, a[href$='/category/minimalism']:hover {
+  a[href$='/category/minimalism']:hover {
     color: #486696; }
 
-a[href$='/category/mindfulness/'], a[href$='/category/mindfulness'] {
+a[href$='/category/mindfulness'] {
   color: #9776BC; }
-  a[href$='/category/mindfulness/']:hover, a[href$='/category/mindfulness']:hover {
+  a[href$='/category/mindfulness']:hover {
     color: #704999; }
 
-a[href$='/category/financial-independence/'], a[href$='/category/investing/'], a[href$='/category/finance/'], a[href$='/category/financial-independence'], a[href$='/category/investing'], a[href$='/category/finance'] {
+a[href$='/category/financial-independence'], a[href$='/category/investing'], a[href$='/category/finance'] {
   color: #4CB058; }
-  a[href$='/category/financial-independence/']:hover, a[href$='/category/investing/']:hover, a[href$='/category/finance/']:hover, a[href$='/category/financial-independence']:hover, a[href$='/category/investing']:hover, a[href$='/category/finance']:hover {
+  a[href$='/category/financial-independence']:hover, a[href$='/category/investing']:hover, a[href$='/category/finance']:hover {
     color: #258C32; }
 
-a[href$='/category/goals/'], a[href$='/category/goals'] {
+a[href$='/category/goals'] {
   color: #FD989B; }
-  a[href$='/category/goals/']:hover, a[href$='/category/goals']:hover {
+  a[href$='/category/goals']:hover {
     color: #fc4d52; }
 
 .minimalism--text {

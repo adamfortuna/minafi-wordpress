@@ -6,7 +6,7 @@
         <div class="hero--text-content px-3 hero--text col-xl-7 col-md-10">
           <h1><?php echo get_bloginfo("name"); ?></h1>
           <p>
-            <?php echo get_bloginfo("description"); ?>
+            Exploring the intersection of minimalism, mindfulness and financial independence.
             <a href="/about">Read more</a>
           </p>
         </div>

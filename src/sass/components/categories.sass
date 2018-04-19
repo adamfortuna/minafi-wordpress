@@ -16,30 +16,31 @@
       font-size: 1rem
       text-decoration: none
       display: inline-block
+      margin-bottom: 0.6rem
       &:hover
         background-color: darken($gray-lightest, 10%)
 
-      &[href$='/category/minimalism/']
+      &[href$='/category/minimalism']
         background-color: $minimalism-lighter
         color: $minimalism-darker
         &:hover
           background-color: darken($minimalism-lighter, 10%)
 
-      &[href$='/category/mindfulness/']
+      &[href$='/category/mindfulness']
         background-color: $mindfulness-lighter
         color: $mindfulness-darker
         &:hover
           background-color: darken($mindfulness-lighter, 10%)
 
-      &[href$='/category/goals/']
+      &[href$='/category/goals']
         background-color: $goals-lighter
         color: $goals-dark
         &:hover
           background-color: darken($goals-lighter, 5%)
 
-      &[href$='/category/financial-independence/'],
-      &[href$='/category/investing/'],
-      &[href$='/category/finance/']
+      &[href$='/category/financial-independence'],
+      &[href$='/category/investing'],
+      &[href$='/category/finance']
         background-color: $financial-lighter
         color: $financial-darker
         &:hover
@@ -47,21 +48,16 @@
 
 
 a
-  &[href$='/category/minimalism/'],
   &[href$='/category/minimalism']
     color: $minimalism
     &:hover
       color: $minimalism-dark
 
-  &[href$='/category/mindfulness/'],
   &[href$='/category/mindfulness']
     color: $mindfulness
     &:hover
       color: $mindfulness-dark
 
-  &[href$='/category/financial-independence/'],
-  &[href$='/category/investing/'],
-  &[href$='/category/finance/'],
   &[href$='/category/financial-independence'],
   &[href$='/category/investing'],
   &[href$='/category/finance']
@@ -69,7 +65,6 @@ a
     &:hover
       color: $financial-darker
 
-  &[href$='/category/goals/'],
   &[href$='/category/goals']
     color: $goals
     &:hover
