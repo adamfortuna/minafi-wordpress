@@ -9622,19 +9622,17 @@ body.rtl {
     margin: 0 auto;
     display: block; }
 
-.article--header {
-  margin-bottom: 2rem; }
-  .article--header h1 {
-    font-size: 2.4rem;
-    margin-bottom: 0.3rem;
-    padding-bottom: 0.6rem;
-    -webkit-font-smoothing: antialiased;
-    -webkit-margin-after: 0px;
-    -webkit-margin-before: 0px;
-    -webkit-margin-end: 0px;
-    -webkit-margin-start: -2.5px;
-    letter-spacing: -1px;
-    text-rendering: optimizeLegibility; }
+.article--header h1 {
+  font-size: 2.4rem;
+  margin-bottom: 0.3rem;
+  padding-bottom: 0.6rem;
+  -webkit-font-smoothing: antialiased;
+  -webkit-margin-after: 0px;
+  -webkit-margin-before: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-margin-start: -2.5px;
+  letter-spacing: -1px;
+  text-rendering: optimizeLegibility; }
 
 .article-subtitle {
   color: rgba(0, 0, 0, 0.7);
@@ -9695,6 +9693,7 @@ body.rtl {
 
 .article--author {
   border-bottom: 1px solid #eee;
+  border-top: 1px solid #eee;
   padding: 1.4rem 0; }
 
 .article--author-name {

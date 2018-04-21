@@ -20,7 +20,7 @@
     </div>
   </a>
 
-  <header class="article--header article-header--hero">
+  <header class="article--header article-header--hero mb-2">
     <h2><a href='<?php echo esc_url(get_permalink()); ?>'><?php the_title(); ?></a></h2>
     <p class="article-subtitle--small"><?php echo get_the_excerpt(); ?></p>
 

@@ -14,7 +14,7 @@
     </div>
   </a>
 
-  <header class="article--header article-header--hero col-md-5 col-xs-12">
+  <header class="article--header article-header--hero mb-2 col-md-5 col-xs-12">
     <h2><a href='<?php echo esc_url(get_permalink()); ?>'><?php the_title(); ?></a></h2>
     <div class="article--header-meta">
       <span class="article--header-meta-date">
