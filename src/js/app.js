@@ -1,5 +1,6 @@
 (function() {
   $ = jQuery;
+
   function toggleSearch(e) {
     var $searchInput = $('#searchInput');
 
@@ -29,6 +30,24 @@
 
     $('.email--signup').on('focus', function() {
       $('.email--toggle').slideDown();
+    });
+
+    $(".navbar .dropdown a.dropdown-toggle").on('mouseenter', function() {
+      $(this).closest("li").addClass("active");
+    });
+
+    $(".navbar .dropdown").on('mouseleave', function() {
+      $(this).closest(".navbar--main-nav").find("> .active").removeClass("active");
+    });
+
+    var width = $("body").width()+"px";
+    $.each($('.megarow'), function(i, el) {
+      var $el = $(el),
+          left = $el.closest(".dropdown").offset().left;
+      $el.css({
+        width: width,
+        left: left*-1
+      });
     });
   });
 })();

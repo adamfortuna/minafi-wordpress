@@ -20,8 +20,8 @@
 /* TKToggle */
 
 .TKToggle, .MultiToggle {
-	color: $financial-dark;
-	border-bottom: 1px dashed $financial-dark;;
+	color: $primary-color;
+	border-bottom: 1px dashed $primary-color;
 	cursor: pointer;
 }
 
@@ -52,8 +52,8 @@
 
 .TKAdjustableNumber, .FIAdjustableNumber {
 	position:relative;
-	color: $financial-dark;
-	border-bottom: 1px dashed $financial-dark;
+	color: $primary-color;
+	border-bottom: 1px dashed $primary-color;
 	cursor: col-resize;
 }
 
@@ -64,7 +64,7 @@
 
 .TKAdjustableNumberHelp, .FIAdjustableNumberHelp {
 	position:absolute;
-	color: $financial-dark;
+	color: $primary-color;
 	font: 10px "Helvetica-Neue", "Arial", sans-serif;
 }
 
@@ -95,7 +95,7 @@
 			content: "change";
 	    display: none;
 	    position: absolute;
-			color: $financial-dark;
+			color: $primary-color;
 	    top: -23px;
 	    left: 50%;
 	    transform: translateX(-50%);
@@ -111,8 +111,8 @@
 }
 .TKNumberFieldInput {
   border: none;
-  border-bottom: 2px dotted $financial-dark;
-  color: $financial-dark;
+  border-bottom: 2px dotted $primary-color;
+  color: $primary-color;
 }
 
 .TKNumberFieldInput {

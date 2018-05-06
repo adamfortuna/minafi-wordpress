@@ -17,10 +17,13 @@
   .home--hero-email
     margin-top: 2rem !important
 
-.home--hero-content
+.content--header
   background: url(../images/gate.jpeg) no-repeat
   background-size: cover
-  background-position-y: 63%
+  margin-top: -$nav-height
+  min-height: 600px
+  .container
+    padding-top: $nav-height
 
 @media only screen and (max-width: 767px)
   .home--hero, .home--hero-email
@@ -32,7 +35,7 @@
   .home--hero-email
     margin-top: 1rem !important
 
-    
+
 .home--hero-content,
 .hero--text
   height: 330px

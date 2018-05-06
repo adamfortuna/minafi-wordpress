@@ -1,12 +1,12 @@
 .aesop-entry-content {
   > .aesop-content {
     width: 100%;
-    max-width: 700px;
+    max-width: $slim-container-size;
     margin: 0rem auto 2rem;
   }
   p, h1, h2, h3, h4, h5, h6, ol, ul,  table, dl, hr, blockquote, section.article--content, > figure, .wpcf7, .nc_socialPanel, twitterwidget, .aesop-sequence-gallery-wrap, .review-wrapper, .aesop-gallery-edit {
     width: 100%;
-    max-width: 700px;
+    max-width: $slim-container-size;
     margin: 0rem auto 2rem;
     padding-left: 15px;
     padding-right: 15px;
@@ -16,10 +16,10 @@
     @extend .table-bordered;
   }
   .table-wide {
-    max-width: 900px;
+    max-width: $container-size;
   }
   .table-slim {
-    max-width: 700px;
+    max-width: $slim-container-size;
   }
   ul, ol {
     list-style-position: inside;
@@ -50,7 +50,7 @@
 @media only screen and (max-width: 700px) {
   .aesop-image-component {
     .aesop-content {
-      max-width: 700px;
+      max-width: $slim-container-size;
       margin: 0 auto;
     }
     .aesop-component-align-left,
@@ -1666,7 +1666,7 @@ html.swipebox {
 }
 .aesop-document-component .aesop-pdf {
   width: 100%;
-  height: 900px;
+  height: $container-size;
 }
 .aesop-sequence-gallery-wrap {
   counter-reset: sequence-counter;

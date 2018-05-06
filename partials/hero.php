@@ -1,4 +1,4 @@
-<div class="home--hero mt-3 mb-3">
+<div class="home--hero mb-3 content--header">
   <div class="home--hero-content container wide-container home--text">
     <div class="row">
 
@@ -12,9 +12,7 @@
         </div>
       </div>
       <div class='col-xl-5 col-md-6 col-sm-12'>
-        <div class="home--hero-email card p-3 m-2">
-          <?php include('email-sidebar.php'); ?>
-        </div>
+
       </div>
     </div>
   </div>

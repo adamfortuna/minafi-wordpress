@@ -1,4 +1,4 @@
-<?php if(true) { ?>
+<?php if(false) { ?>
 <!-- Facebook Pixel Code -->
 <script>
   !function(f,b,e,v,n,t,s)
