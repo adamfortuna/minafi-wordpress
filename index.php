@@ -19,11 +19,9 @@ $GLOBALS['posts'] = [];
 get_header();
 
 include('partials/hero.php');
-// include('home/featured.php');
-// include('home/about.php'); 
-// include('home/categories.php');
-// include('home/fi.php');
-// include('home/recent.php');
+include('home/featured.php');
+include('home/about.php');
+include('home/recent.php');
 ?>
 
 <div class="container wide-container">

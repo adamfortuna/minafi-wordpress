@@ -1,5 +1,6 @@
 // Personal Colors
 $primary-color: #4cb058;
+$secondary-color: lighten($primary-color, 40%);
 
 $nav-height: 88px;
 $container-size: 1140px;

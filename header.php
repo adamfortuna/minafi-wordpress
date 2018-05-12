@@ -37,53 +37,57 @@
 <body <?php body_class(); ?>>
 	<?php do_action('ase_theme_body_inside_top'); ?>
 
-  <div class="container">
-		<nav class="navbar navbar-expand-md">
-      <a class="navbar-brand" itemprop="publisher url" href="/" itemscope itemtype="http://schema.org/Organization">
-				<span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
-					<img src="/wp-content/themes/minafi/assets/images/mfi-white-bg.png" class="d-inline-block align-top" width="42" height="42" alt="Minafi Logo" />
-					<meta itemprop="url" content="https://minafi.com/mfi-white-bg.png" />
-					<meta itemprop="width" content="230" />
-					<meta itemprop="height" content="230" />
-				</span>
-				<span class="navbar-brand--text">
-					inafi
-					<small class="d-md-none">
-						Invest, Minify, Retire Early
-					</small>
-				</span>
-				<meta itemprop="name" content="Minafi" />
-				<meta itemprop="url" content="https://minafi.com" />
-			</a>
+	<div id="navbar--wrapper">
+	  <div class="container">
+			<nav class="navbar navbar-expand-md">
+	      <a class="navbar-brand" itemprop="publisher url" href="/" itemscope itemtype="http://schema.org/Organization">
+					<span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+						<img src="/wp-content/themes/minafi/assets/images/mfi-white-bg.png" class="d-inline-block align-top" width="42" height="42" alt="Minafi Logo" />
+						<meta itemprop="url" content="https://minafi.com/mfi-white-bg.png" />
+						<meta itemprop="width" content="230" />
+						<meta itemprop="height" content="230" />
+					</span>
+					<span class="navbar-brand--text">
+						inafi
+						<small class="d-md-none">
+							Invest, Minify, Retire Early
+						</small>
+					</span>
+					<meta itemprop="name" content="Minafi" />
+					<meta itemprop="url" content="https://minafi.com" />
+				</a>
 
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar" aria-controls="collapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
-	    	<span class="navbar-toggler-icon"></span>
-	  	</button>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar" aria-controls="collapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
+		    	<span class="navbar-toggler-icon"></span>
+		  	</button>
 
-			<div class="collapse navbar-collapse navbar-toggleable-xs" id="collapsingNavbar">
-				<ul class="navbar-nav navbar--main-nav ml-auto mt-3">
-					<?php
-						include('partials/nav/learn_to_invest.php');
-						include('partials/nav/retire_early.php');
-						include('partials/nav/me.php');
-						include('partials/nav/archive.php');
-						//include('partials/nav/calculators.php');
-					?>
-					<li class="nav-item"><a class="nav-link" href="/subscribe">Subscribe</a></li>
-				</ul>
-			</div>
-			<div class="nav-item--search">
-				<form role="search" method="get" class="form-inline search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-					<div class="search--form form-group">
-						<label class="sr-only" for="searchInput">Search</label>
-						<div class="input-group">
-							<input type="text" class="form-control" id="searchInput" name="s" placeholder="Search articles...">
-							<button type="submit" class="input-group-addon search--link px-2">
-								<i class="fa fa-search" aria-hidden="true"></i>
-							</button>
+				<div class="collapse navbar-collapse navbar-toggleable-xs" id="collapsingNavbar">
+					<ul class="navbar-nav navbar--main-nav ml-auto mt-3">
+						<?php
+							include('partials/nav/learn_to_invest.php');
+							//include('partials/nav/retire_early.php');
+							include('partials/nav/me.php');
+							include('partials/nav/archive.php');
+							//include('partials/nav/calculators.php');
+						?>
+						<!--
+							<li class="nav-item"><a class="nav-link" href="/subscribe">Subscribe</a></li>
+						-->
+					</ul>
+				</div>
+				<div class="nav-item--search">
+					<form role="search" method="get" class="form-inline search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+						<div class="search--form form-group">
+							<label class="sr-only" for="searchInput">Search</label>
+							<div class="input-group">
+								<input type="text" class="form-control" id="searchInput" name="s" placeholder="Search articles...">
+								<button type="submit" class="input-group-addon search--link px-2">
+									<i class="fa fa-search" aria-hidden="true"></i>
+								</button>
+							</div>
 						</div>
-					</div>
-				</form>
-			</div>
-		</nav>
+					</form>
+				</div>
+			</nav>
+		</div>
 	</div>

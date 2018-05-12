@@ -6,8 +6,8 @@
     <div class="container">
       <div class="row justify-content-md-center">
         <div class="col-3">
-          <p><a href="/"><img src="https://minafi.com/wp-content/uploads/2017/09/minafi.com-2-400x200.png" /></a></p>
-          <p><a href="/"><img src="https://minafi.com/wp-content/uploads/2017/09/Header-Twitter5-400x200.png" /></a></p>
+          <p><a href="/minimal-investor-course"><img src="https://minafi.com/wp-content/uploads/2017/09/minafi.com-2-400x200.png" /></a></p>
+          <p><a href="/interactive-guide-early-retirement-financial-independence"><img src="https://minafi.com/wp-content/uploads/2017/09/Header-Twitter5-400x200.png" /></a></p>
           <p><a href="/archives" class="btn btn-block btn-primary">All Articles</a></p>
         </div>
 

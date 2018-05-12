@@ -33,7 +33,9 @@
       </div>
 
       <?php if(post_has_affiliate_link()) { ?>
-        <p class="pt-2 article--disclosure">This post contains affiliate links. Please read <a href="/disclosure">my disclosure</a> for more information.</p>
+        <p class="article--disclosure">
+          <i>Adam says:</i> This post contains affiliate links. Please read <a href="/disclosure">my disclosure</a> for more information. <br/> Any services I link to are pretty cool and Mustach-Adam approved!
+        </p>
       <?php } ?>
       <?php do_action('ase_theme_post_inside_header_bottom'); ?>
 	  </header>
@@ -87,13 +89,6 @@
             <li>
               <i class="fa fa-twitter-square" aria-hidden="true"></i>
               <a href="https://twitter.com/minafiblog" target="_blank">@minafiblog</a>
-            </li>
-            <li>
-              <a class="twitter-follow-button"
-                 data-show-screen-name="false"
-                 data-show-count="true"
-                 data-size="large"
-                 href="https://twitter.com/minafiblog">Follow @minafiblog</a>
             </li>
           </ul>
         </div>

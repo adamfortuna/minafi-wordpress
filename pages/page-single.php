@@ -99,13 +99,6 @@
               <i class="fa fa-twitter-square" aria-hidden="true"></i>
               <a href="https://twitter.com/minafiblog" target="_blank">@minafiblog</a>
             </li>
-            <li>
-              <a class="twitter-follow-button"
-                 data-show-screen-name="false"
-                 data-show-count="true"
-                 data-size="large"
-                 href="https://twitter.com/minafiblog">Follow @minafiblog</a>
-            </li>
           </ul>
         </div>
       </div>

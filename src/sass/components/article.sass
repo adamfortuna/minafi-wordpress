@@ -31,6 +31,7 @@
     -webkit-margin-start: -2.5px
     letter-spacing: -1px
     text-rendering: optimizeLegibility
+    @extend .row
 
 .article-subtitle
   color: rgba(0,0,0,0.7)
@@ -40,14 +41,16 @@
   line-height: 1.6rem
   font-style: italic
   font-family: $font-family-serif
+  @extend .row
 
 
 .article--header-meta
   font-size: 1rem
   color: rgba(0,0,0,0.5)
+
 .article--header-categories
   a
-    color: rgba(0,0,0,0.5)
+    color: $primary-color
 
 
 .article--content
@@ -62,9 +65,10 @@
     box-shadow: inset 0 -2px 0 $primary-color
     -webkit-box-shadow: inset 0 -2px 0 $primary-color
     text-decoration: none
+    transition: 0.2s background-color
     &:hover
       text-decoration: none
-      background-color: $primary-color
+      background-color: $secondary-color
 
   h2, h3
     font-weight: 900
@@ -84,8 +88,30 @@
 
 .article--disclosure
   @extend .lead
-  line-height: 1rem
+  @extend .mt-2
   font-size: 1rem
+  border: 1px solid #e5e5e5
+  border-radius: 4px
+  padding: 12px
+
+  &:before
+    content: ''
+    background: url('../images/face.png') no-repeat left
+    background-size: 54px
+    float: left
+    -moz-transition: 0.5s all
+    -webkit-transition: 0.5s all
+    height: 54px
+    width: 54px
+    margin-right: 1rem
+    margin-top: -4px
+    transform: rotate(-10deg)
+    -moz-transform: rotate(-10deg)
+    -webkit-transform: rotate(-10deg)
+  &:hover:before
+    transform: rotate(5deg)
+    -moz-transform: rotate(5deg)
+    -webkit-transform: rotate(5deg)
 
 .article--meta
   border-bottom: 1px solid $gray-lightest

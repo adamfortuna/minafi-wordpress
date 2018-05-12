@@ -60,6 +60,7 @@ add_action( 'after_setup_theme', 'minafi_setup' );
 require get_template_directory() . '/inc/aesop.php';
 require get_template_directory() . '/inc/feed.php';
 require get_template_directory() . '/inc/images.php';
+require get_template_directory() . '/inc/menus.php';
 require get_template_directory() . '/inc/settings.php';
 require get_template_directory() . '/inc/styles.php';
 require get_template_directory() . '/inc/template-tags.php';

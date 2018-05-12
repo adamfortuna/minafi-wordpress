@@ -17,7 +17,7 @@
     <h2>
       Recent Articles
       <small>
-        Everything I've written recently in <a href="/archives/">one handy place</a>.
+        Everything I've written recently in <a href="/archives">one handy place</a>.
         <a href="/feed"><i class="fa fa-rss" aria-hidden="true"></i></a>
       </small>
     </h2>
