@@ -122,9 +122,3 @@
 <?php } ?>
 
 <?php do_action('ase_theme_post_after'); ?>
-
-<section class='container'>
-  <h2>Recent Posts</h2>
-  <p class="lead">Here are a few recent posts you might enjoy checking out.</p>
-  <?php minafi_related_posts(); ?>
-</section>

@@ -4658,7 +4658,7 @@ button.bg-dark:focus {
 .m-2 {
   margin: 0.5rem !important; }
 
-.mt-2, .article--disclosure,
+.mt-2,
 .my-2 {
   margin-top: 0.5rem !important; }
 
@@ -4677,7 +4677,7 @@ button.bg-dark:focus {
 .m-3 {
   margin: 1rem !important; }
 
-.mt-3,
+.mt-3, .article--disclosure,
 .my-3 {
   margin-top: 1rem !important; }
 
@@ -9890,18 +9890,20 @@ body.rtl {
   font-size: 1rem;
   border: 1px solid #e5e5e5;
   border-radius: 4px;
-  padding: 12px; }
+  padding: 4px 10px 10px;
+  line-height: 1.4prem;
+  color: #777; }
   .article--disclosure:before {
     content: '';
     background: url("../images/face.png") no-repeat left;
-    background-size: 54px;
+    background-size: 46px;
     float: left;
     -moz-transition: 0.5s all;
     -webkit-transition: 0.5s all;
-    height: 54px;
-    width: 54px;
+    height: 46px;
+    width: 46px;
     margin-right: 1rem;
-    margin-top: -4px;
+    margin-top: 4px;
     transform: rotate(-10deg);
     -moz-transform: rotate(-10deg);
     -webkit-transform: rotate(-10deg); }
