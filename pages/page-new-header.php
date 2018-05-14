@@ -34,11 +34,11 @@ Template Name: Post - New Header
 
 	<div id="navbar--wrapper">
 	  <div class="container">
-			<?php wp_nav_menu( array('theme_location' => 'main-menu')); ?>
+			<?php wp_nav_menu( array('theme_location' => 'primary-menu')); ?>
 		</div>
 	</div>
 
-<?php 
+<?php
 	while ( have_posts() ) : the_post();
 	?>
 

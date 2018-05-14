@@ -4,14 +4,6 @@ function aesop_setup(){
   // Add extended style support for aesop
   // add_theme_support("aesop-component-styles", array("image", "quote", "gallery", "content", "video", "collection", "chapter", "document", "character"));
   add_theme_support("aesop-component-styles", array("parallax", "image", "quote", "gallery", "content", "video", "audio", "collection", "chapter", "document", "character", "timeline" ) );
-
-  if ( function_exists( 'register_nav_menus' ) ){
-		register_nav_menus(
-			array(
-			  'primary' => __('Primary','aesop-story-theme')
-			)
-		);
-	}
 }
 
 add_theme_support("aesop-component-styles", array("parallax", "image", "quote", "gallery", "content", "video", "audio", "collection", "chapter", "document", "character", "timeline" ) );
