@@ -19,6 +19,7 @@
 					<li class="list-inline-item"><a href="/contact">Contact Me</a></li>
 					<li class="list-inline-item"><a href="/minafi-brand-assets/">Assets</a></li>
 					<li class="list-inline-item"><a href="/disclosure">Advertiser Disclosure</a></li>
+					<li class="list-inline-item"><a href="/privacy-policy">Privacy Policy</a></li>
 
 			    <li class="list-inline-item pull-right ml-2">
 			      <a href="https://www.facebook.com/minafiblog" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>

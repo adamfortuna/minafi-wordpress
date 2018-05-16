@@ -10306,13 +10306,15 @@ body {
 .recent-posts {
   font-size: 1rem; }
 
-.home--hero-email .sidebar--group {
-  background-color: rgba(255, 255, 255, 0.95);
-  border-radius: 4px; }
-  .home--hero-email .sidebar--group p {
-    line-height: 1.6rem; }
-  .home--hero-email .sidebar--group .email-submit {
-    cursor: pointer; }
+.home--hero-email {
+  margin-top: 3rem !important; }
+  .home--hero-email .sidebar--group {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 4px; }
+    .home--hero-email .sidebar--group p {
+      line-height: 1.6rem; }
+    .home--hero-email .sidebar--group .email-submit {
+      cursor: pointer; }
 
 .home--section small {
   font-size: 1rem;
@@ -10656,6 +10658,11 @@ a.nav-link,
       border-top-left-radius: 0 !important;
       border-bottom-left-radius: 0 !important;
       border-left: 0 !important; }
+
+.rpwe-block li {
+  max-width: 260px !important;
+  float: left !important;
+  margin-right: 10px !important; }
 
 /* Image with 'data' attribute is hidden */
 img[data-lazy-src] {

@@ -58,6 +58,7 @@ function minafi_setup() {
 add_action( 'after_setup_theme', 'minafi_setup' );
 
 require get_template_directory() . '/inc/aesop.php';
+require get_template_directory() . '/inc/categories.php';
 require get_template_directory() . '/inc/feed.php';
 require get_template_directory() . '/inc/images.php';
 require get_template_directory() . '/inc/menus.php';

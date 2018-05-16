@@ -31,7 +31,7 @@
     </div>
 
     <div class="article--header-categories">
-      <?php echo get_the_category_list() ?>
+      <?php minafi_primary_category() ?>
     </div>
   </header>
 </article>

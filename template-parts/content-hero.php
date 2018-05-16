@@ -34,7 +34,7 @@
 
     <div class="article--header-meta">
       <span class="article--header-categories">
-        <?php echo get_the_category_list(); ?>
+        <?php minafi_primary_category() ?>
       </span>
     </div>
   </header>
