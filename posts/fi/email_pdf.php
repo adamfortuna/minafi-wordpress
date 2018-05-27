@@ -12,6 +12,7 @@
     <br/>
     <input type="radio" name="fields[subscription]" value="weekly" id="email--subscription-weekly" /> <label for="email--subscription-weekly"><small>Weekly Newsletter</small></label>
   </div>
+  <p class="px-1 mb-1 gdpr mx-3"><small><label><input type="checkbox" name="fields[eu_consent]" value="granted"> I consent to receive information via email.</label></small></p>
   <div class="group form-group mx-3">
     <input type="checkbox" checked="checked" disabled="disabled" id="email--link" name="fields[link]" required="required" value="yes" /> <label for="email--link"><small>Link my data with my email (required to create PDF)</small></label>
 

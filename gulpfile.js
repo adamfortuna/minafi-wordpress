@@ -35,7 +35,6 @@ gulp.task('js:fi:concat', function () {
     'posts/fi/js/firebase.js',
     'posts/fi/js/d3.js',
     'posts/fi/js/finance.js',
-    'src/components/js-cookie/src/js.cookie.js',
     'src/js/TangleKit/Tangle.js',
     'src/js/TangleKit/mootools.js',
     'src/js/TangleKit/sprintf.js',
@@ -66,6 +65,7 @@ gulp.task('js:concat', function () {
   var files = [
     'src/components/popper.js/dist/umd/popper.js',
     'src/components/bootstrap/dist/js/bootstrap.js',
+    'src/components/js-cookie/src/js.cookie.js',
     'src/js/app.js',
     'src/js/vendor/comment-reply.js'
   ];

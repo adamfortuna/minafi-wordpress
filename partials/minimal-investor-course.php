@@ -8,7 +8,7 @@
   <div class="email--toggle mb-2 px-1" style="display: none;">
     <input type="text" id="drip-name" name="fields[name]" value="" placeholder="Your first name" class="email form-control form-control-sm" />
     <div class="mt-2">
-      <p class="px-1">
+      <p class="px-1 mb-0">
         <small>
           <input type="radio" name="fields[subscription]" value="all" id="mic-email--subscription-all" checked="checked" /> <label for="mic-email--subscription-all" class="pl-1"><small>All Articles</small></label>
         </small>
@@ -16,6 +16,7 @@
           <input type="radio" name="fields[subscription]" value="weekly" id="mic-email--subscription-weekly" /> <label for="mic-email--subscription-weekly" class="pl-1"><small>Weekly Magazine</small></label>
         </small>
       </p>
+      <p class="px-1 mb-1 gdpr"><small><input type="checkbox" name="fields[eu_consent]" id="drip-eu-consent" value="granted"> <label for="drip-eu-consent">I consent to receive information via email.</label></small></p>
     </div>
   </div>
 

@@ -3470,13 +3470,13 @@ input[type="button"].btn-block {
   .alert-secondary .alert-link {
     color: rgba(0, 0, 0, 0.896); }
 
-.alert-success {
+.alert-success, .widget_eu_cookie_law_widget .hide-on-button {
   color: #285c2e;
   background-color: #dbefde;
   border-color: #cde9d0; }
-  .alert-success hr {
+  .alert-success hr, .widget_eu_cookie_law_widget .hide-on-button hr {
     border-top-color: #bbe1bf; }
-  .alert-success .alert-link {
+  .alert-success .alert-link, .widget_eu_cookie_law_widget .hide-on-button .alert-link {
     color: #19381c; }
 
 .alert-info {
@@ -10235,6 +10235,13 @@ body {
     .footer--content a:hover {
       text-decoration: underline; }
 
+.widget_eu_cookie_law_widget {
+  z-index: 9999;
+  display: block !important; }
+  .widget_eu_cookie_law_widget .hide-on-button {
+    background-color: #4cb058 !important;
+    color: #fff !important; }
+
 @media only screen and (max-width: 992px) {
   .home--hero {
     margin-bottom: 2rem !important; }
@@ -10308,13 +10315,10 @@ body {
 
 .home--hero-email {
   margin-top: 3rem !important; }
-  .home--hero-email .sidebar--group {
-    background-color: rgba(255, 255, 255, 0.95);
-    border-radius: 4px; }
-    .home--hero-email .sidebar--group p {
-      line-height: 1.6rem; }
-    .home--hero-email .sidebar--group .email-submit {
-      cursor: pointer; }
+  .home--hero-email .sidebar--group p {
+    line-height: 1.6rem; }
+  .home--hero-email .sidebar--group .email-submit {
+    cursor: pointer; }
 
 .home--section small {
   font-size: 1rem;

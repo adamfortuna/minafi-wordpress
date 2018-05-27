@@ -33,6 +33,8 @@
 	</div>
 </div>
 
+<div class="d-none"><?php dynamic_sidebar('hidden_widgets'); ?></div>
+
 <?php do_action('aesop_theme_body_inside_bottom'); ?>
 <?php include('partials/tracking.php'); ?>
 <?php wp_footer(); ?>
