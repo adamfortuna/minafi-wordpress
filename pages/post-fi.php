@@ -27,7 +27,7 @@ get_header();
       <?php do_action('ase_theme_post_before_title'); ?>
 		  <h1><?php the_title(); ?></h1>
       <?php do_action('ase_theme_post_after_title'); ?>
-      <p class="article-subtitle">This post is an experiment. Imagine a calculator, a choose-your-own-adventure book, a series of interviews & a guide to early retirement and financial independence all rolled into one!</p>
+      <p class="article-subtitle container container-slim">This post is an experiment. Imagine a calculator, a choose-your-own-adventure book, a series of interviews & a guide to early retirement and financial independence all rolled into one!</p>
 
       <div class="article--header-meta">
         <span class="article--header-meta-date">
@@ -40,7 +40,7 @@ get_header();
       </div>
 
       <?php if(post_has_affiliate_link()) { ?>
-        <p class="article--disclosure">
+        <p class="article--disclosure container container-slim">
           <i>Adam says:</i> This post contains affiliate links. Please read <a href="/disclosure">my disclosure</a> for more information. <br/> Any services I link to are pretty cool and Mustach-Adam approved!
         </p>
       <?php } ?>

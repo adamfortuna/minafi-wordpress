@@ -18,27 +18,33 @@
     margin-top: 2rem !important
 
 .content--header
-  background: url(../images/gate.jpeg) no-repeat
+  background: url(../images/gate-side.jpg) no-repeat 0
   background-size: cover
   margin-top: -$nav-height
-  min-height: 600px
+  min-height: 540px
   .container
     padding-top: $nav-height
 
 @media only screen and (max-width: 767px)
-  .home--hero, .home--hero-email
-    margin-top: 0 !important
-    .col-xl-8
-      display: none
-    h3
-      font-size: 2rem
-  .home--hero-email
-    margin-top: 1rem !important
+  .home--hero-content
+    padding-top: 1rem !important
 
-
-.home--hero-content,
-.hero--text
-  height: 330px
+@media only screen and (max-width: 778px)
+  .home--hero
+    margin-bottom: 2rem !important
+  .hero--text-content
+    position: relative
+  .home--hero,
+  .home--hero-content,
+  .hero--text
+    height: auto !important
+  .hero--text
+    p
+      margin-left: 0
+      font-size: 1.4rem
+      line-height: 1.6rem
+  .home--hero-content
+    margin-bottom: 0
 
 .hero--text
   position: relative
@@ -51,9 +57,9 @@
     text-decoration: underline
     &:hover
       text-decoration: none
-.hero--text-content
-  position: absolute
-  top: 15%
+// .hero--text-content
+//   position: absolute
+//   top: 15%
 
 .article--content
   .more-link
@@ -76,7 +82,7 @@
 
 
 .home--hero-email
-  margin-top: 3rem !important
+  margin-top: 2rem !important
   .sidebar--group
     p
       line-height: 1.6rem

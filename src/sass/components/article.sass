@@ -20,8 +20,8 @@
     display: block
 
 .article--header
+  max-width: 1140px !important
   h1
-    font-size: 2.4rem
     margin-bottom: 0.3rem
     padding-bottom: 0.6rem
     -webkit-font-smoothing: antialiased
@@ -29,24 +29,24 @@
     -webkit-margin-before: 0px
     -webkit-margin-end: 0px
     -webkit-margin-start: -2.5px
-    letter-spacing: -1px
+    letter-spacing: -2px
     text-rendering: optimizeLegibility
-    @extend .row
+    text-align: center
 
 .article-subtitle
   color: rgba(0,0,0,0.7)
-  margin: 0.6rem 0
   padding: 0
   font-weight: 300
   line-height: 1.6rem
   font-style: italic
   font-family: $font-family-serif
-  @extend .row
+  text-align: center
 
 
 .article--header-meta
   font-size: 1rem
   color: rgba(0,0,0,0.5)
+  text-align: center
 
 .article--header-categories
   a
@@ -70,8 +70,6 @@
       text-decoration: none
       background-color: $secondary-color
 
-  h2, h3
-    font-weight: 900
   blockquote
     font-style: italic
     font-size: 2rem
