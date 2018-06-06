@@ -2382,8 +2382,8 @@ var svg,
     bottom: 30
   },
   options = {
-    height: 400,
-    width: 900
+    height: 500,
+    width: 1140
   },
   savingsRates = d3.range(1, 101, 1),
   years,
@@ -2592,8 +2592,8 @@ function FiGraph() {
     bottom: 30
   };
   this.options = {
-    height: 400,
-    width: 900
+    height: 500,
+    width: 1140
   };
   this.finance = new Finance();
 

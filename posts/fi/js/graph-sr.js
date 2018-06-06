@@ -44,8 +44,8 @@ var svg,
     bottom: 30
   },
   options = {
-    height: 400,
-    width: 900
+    height: 500,
+    width: 1140
   },
   savingsRates = d3.range(1, 101, 1),
   years,

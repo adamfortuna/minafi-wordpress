@@ -6,8 +6,8 @@ function FiGraph() {
     bottom: 30
   };
   this.options = {
-    height: 400,
-    width: 900
+    height: 500,
+    width: 1140
   };
   this.finance = new Finance();
 

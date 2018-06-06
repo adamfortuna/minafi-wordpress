@@ -30,9 +30,10 @@ get_header();
       <p class="article-subtitle container container-slim">This post is an experiment. Imagine a calculator, a choose-your-own-adventure book, a series of interviews & a guide to early retirement and financial independence all rolled into one!</p>
 
       <div class="article--header-meta">
-        <span class="article--header-meta-date">
-          <?php the_time( get_option('date_format') ); ?>.
-        </span>
+        <p class="article--header-meta-date mb-1">
+          Written <?php the_time( get_option('date_format') ); ?>.
+          <?php echo get_last_updated_date(); ?>
+        </p>
         <?php echo do_shortcode('[rt_reading_time label="" postfix="min read." postfix_singular="min read."]') ?>
         <span class="article--header-categories">
           <?php echo get_the_category_list(', '); ?>.
@@ -41,7 +42,7 @@ get_header();
 
       <?php if(post_has_affiliate_link()) { ?>
         <p class="article--disclosure container container-slim">
-          <i>Adam says:</i> This post contains affiliate links. Please read <a href="/disclosure">my disclosure</a> for more information. <br/> Any services I link to are pretty cool and Mustach-Adam approved!
+          <i>Adam says:</i> This post contains affiliate links. Please read <a href="/disclosure">my disclosure</a> for more information. <br/> All services I link to are pretty cool and Mustach-Adam approved!
         </p>
       <?php } ?>
 

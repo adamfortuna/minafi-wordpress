@@ -70,4 +70,25 @@
   function post_has_affiliate_link() {
     return has_tag("affiliate");
   }
+
+  function get_last_updated_date() {
+    $u_time = get_the_time('U');
+    $u_modified_time = get_the_modified_time('U');
+    $custom_content = '';
+    if ($u_modified_time >= $u_time + 604800) {
+      $updated_date = get_the_modified_time('F jS, Y');
+      $updated_time = get_the_modified_time('h:i a');
+      $custom_content .= 'Updated '. $updated_date .'.';
+    }
+    return $custom_content;
+  }
+
+  function updated_after_some_time() {
+    $u_time = get_the_time('U');
+    $u_modified_time = get_the_modified_time('U');
+    $custom_content = '';
+    if($u_modified_time <= $u_time + 604800) {
+      echo "hidden";
+    }
+  }
 ?>

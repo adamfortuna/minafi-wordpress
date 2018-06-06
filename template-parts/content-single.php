@@ -21,10 +21,10 @@
       <?php do_action('ase_theme_post_after_title'); ?>
 
       <div class="article--header-meta">
-        <span class="article--header-meta-date">
-          <time datetime="<?php echo get_the_date( DATE_W3C ) ?>" itemprop="datePublished"><?php the_time( get_option('date_format') ); ?></time>.
-          <time class="hidden" datetime="<?php echo the_modified_date( DATE_W3C ) ?>" itemprop="dateModified"><?php the_modified_date( get_option('date_format') ); ?></time>
-        </span>
+        <p class="article--header-meta-date">
+          <time datetime="<?php echo get_the_date( DATE_W3C ) ?>" itemprop="datePublished">Written <?php the_time( get_option('date_format') ); ?></time>.
+          <time class="<?php updated_after_some_time(); ?>" datetime="<?php echo the_modified_date( DATE_W3C ) ?>" itemprop="dateModified">Updated <?php the_modified_date( get_option('date_format') ); ?>.</time>
+        </p>
         <?php echo do_shortcode('[rt_reading_time label="" postfix="min read." postfix_singular="min read."]') ?>
         <span class="article--header-categories">
           <?php echo get_the_category_list(', '); ?>.
