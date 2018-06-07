@@ -5,12 +5,6 @@
     <div class="post-thumbnail thumbnail--small">
       <div class="article--header-overlay"></div>
       <?php
-        $count = get_comments_number();
-        $comments = sprintf(_n( '%s Comment', '%s Comments', $count), $count );
-      ?>
-      <span class="article--comments-count"><?php echo $comments ?></span>
-
-      <?php
         if(has_post_thumbnail()) {
       		the_post_thumbnail('medium');
         } else { ?>
@@ -21,7 +15,7 @@
   </a>
 
   <header class="article--header article-header--hero mb-2">
-    <h2><a href='<?php echo esc_url(get_permalink()); ?>'><?php the_title(); ?></a></h2>
+    <h5><a href='<?php echo esc_url(get_permalink()); ?>'><?php the_title(); ?></a></h5>
     <p class="article-subtitle--small"><?php echo get_the_excerpt(); ?></p>
 
     <div class="article--header-meta">
@@ -29,10 +23,15 @@
         <?php the_time( get_option('date_format') ); ?>.
       </span>
       <?php echo $read_time ?>
+      <?php
+        $count = get_comments_number();
+        $comments = sprintf(_n( '%s Comment', '%s Comments', $count), $count );
+      ?>
+      <span class="article--comments-count"><?php echo $comments ?></span>
     </div>
 
     <div class="article--header-categories">
-      <?php echo get_the_category_list() ?>
+      <?php minafi_primary_category() ?>
     </div>
   </header>
 </article>
