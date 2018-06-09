@@ -10662,6 +10662,12 @@ a.nav-link,
 .mega-sticky-wrapper #mega-menu-wrap-primary-menu {
   background-color: #fff !important; }
 
+.mega-sticky-wrapper .mega-menu > .mega-menu-item > .mega-menu-link:before,
+.mega-sticky-wrapper .mega-menu > .mega-menu-item.mega-toggle-on > .mega-menu-link:before,
+.mega-sticky-wrapper .mega-menu > .mega-menu-item > .mega-menu-link:hover:before,
+.mega-sticky-wrapper .mega-menu > .mega-menu-item.mega-toggle-on > .mega-menu-link:hover:before {
+  bottom: 8px !important; }
+
 /* Image with 'data' attribute is hidden */
 img[data-lazy-src] {
   /* we set the opacity to 0 */
