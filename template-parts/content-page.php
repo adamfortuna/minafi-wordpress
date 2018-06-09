@@ -17,7 +17,9 @@
 		<h1><?php the_title(); ?></h1>
     <?php do_action('ase_theme_post_after_title'); ?>
     <?php if(post_has_affiliate_link()) { ?>
-      <p class="pt-2 article--disclosure">This post contains affiliate links. Please read <a href="/disclosure">my disclosure</a> for more information.</p>
+      <p class="article--disclosure container-slim container">
+        <i>Adam says:</i> This post contains affiliate links. Please read <a href="/disclosure">my disclosure</a> for more information. <br/> Any services I link to are pretty cool and Mustach-Adam approved!
+      </p>
     <?php } ?>
     <?php do_action('ase_theme_post_inside_header_bottom'); ?>
 		<?php the_content(); ?>
