@@ -1,3 +1,8 @@
+@media only screen and (max-width: 991px)
+  #navbar--wrapper
+    .container
+      max-width: 100%
+
 .navbar
   padding-left: 0
   padding-right: 0
@@ -172,12 +177,18 @@ a.nav-link,
     letter-spacing: 3px
 @media only screen and (max-width: 767px)
   .navbar-brand--text
-    opacity: 1
-    right: 0
-    letter-spacing: 3px
-    &:hover
-      small
-        text-decoration: underline
+    opacity: 1 !important
+    right: 0 !important
+    letter-spacing: 3px !important
+.brand--text-small
+  line-height: 72px
+  padding-left: 3px
+  color: $gray-dark
+  font-size: 2rem
+  font-weight: 700
+  letter-spacing: 3px !important
+  position: relative
+
 
 // Toggler
 .navbar-toggler
@@ -268,3 +279,8 @@ a.nav-link,
   max-width: 260px !important
   float: left !important
   margin-right: 10px !important
+
+
+
+.mega-sticky-wrapper #mega-menu-wrap-primary-menu
+  background-color: #fff !important
