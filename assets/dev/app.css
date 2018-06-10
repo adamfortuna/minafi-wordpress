@@ -10711,6 +10711,11 @@ img.jetpack-lazy-image--handled {
   .fa-twitter:hover, .fa-twitter-square:hover {
     color: #0087ba; }
 
+.swp_pinterest .iconFiller {
+  color: #999; }
+  .swp_pinterest .iconFiller:hover {
+    color: #fff; }
+
 .sidebar p {
   line-height: 1.8rem; }
 
