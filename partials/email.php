@@ -16,6 +16,7 @@
           <input type="radio" name="fields[subscription]" value="weekly" id="g-email--subscription-weekly" /> <label for="g-email--subscription-weekly" class="pl-1"><small>Weekly Magazine</small></label>
         </small>
       </p>
+      <p class="px-1 mb-1 gdpr"><small><input type="checkbox" name="fields[eu_consent]" id="drip-eu-consent" value="granted"> <label for="drip-eu-consent">I consent to receive information via email.</label></small></p>
     </div>
   </div>
   <div class="group">

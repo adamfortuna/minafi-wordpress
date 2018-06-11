@@ -9961,7 +9961,7 @@ body.rtl {
   height: 100%;
   width: 100%;
   position: absolute;
-  z-index: 999;
+  z-index: 1;
   transition: background-color 0.3s; }
   .article--header-image:hover .article--header-overlay {
     background-color: rgba(0, 0, 0, 0.25); }
@@ -10667,6 +10667,20 @@ a.nav-link,
 .mega-sticky-wrapper .mega-menu > .mega-menu-item > .mega-menu-link:hover:before,
 .mega-sticky-wrapper .mega-menu > .mega-menu-item.mega-toggle-on > .mega-menu-link:hover:before {
   bottom: 8px !important; }
+
+.mega-sub-menu .mega-menu-link {
+  position: relative; }
+  .mega-sub-menu .mega-menu-link:hover:before {
+    width: 100%; }
+  .mega-sub-menu .mega-menu-link:before {
+    content: '';
+    height: 2px;
+    bottom: 3px;
+    left: 0;
+    position: absolute !important;
+    transition: width 300ms;
+    background: #4cb058;
+    width: 0%; }
 
 /* Image with 'data' attribute is hidden */
 img[data-lazy-src] {
