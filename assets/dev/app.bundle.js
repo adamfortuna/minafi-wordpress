@@ -6615,24 +6615,25 @@ return Popper;
 (function() {
   $ = jQuery;
 
-  var lastScrollTop = 0,
-      mainContentEl = $(".article--main-content"),
-      tocEl = $(".article--toc"),
+  var mainContentEl = $(".article--main-content"),
       win = $(window);
 
   function fixXsidebar() {
-    var s = $(".article--main-content > p");
-    $(".article--toc").css("left", (s[0].offsetLeft - (220*2))+"px");
+    var s = $(".article--main-content > p"),
+        contentStart = s[0].offsetLeft - 100;
+    if(win.width() > 1340) {
+      var offset = (contentStart / 2) - 110;
+
+    } else {
+      var offset = (s[0].offsetLeft - 220);
+    }
+
+    $(".article--toc").css("left", offset+"px");
   }
   function fixSidebar() {
-    var top = mainContentEl.offset().top,
-        bottom = top + mainContentEl.height(),
-        height = win.height(),
-        tocHeight = tocEl.outerHeight(true);
+    var top = mainContentEl.offset().top;
 
-    if((window.pageYOffset) > (bottom-tocHeight)) {
-      $(".article--toc").addClass("past").removeClass("active");
-    }  else if(window.pageYOffset >= top) {
+    if(window.pageYOffset >= top) {
       $(".article--toc").addClass("active").removeClass("past");
     } else {
       $(".article--toc").removeClass("active").removeClass("past");
@@ -6670,6 +6671,9 @@ return Popper;
         $el.attr('id', id);
         $('.article--toc-list').append('<li class="nav-item my-1"><a class="nav-link" href="#'+id+'">'+$el.text()+'</a></li>');
       });
+
+      var comments = $(".comments--current h2").text().trim();
+      $('.article--toc-list').append('<li class="nav-item my-1"><a class="nav-link" href="#comments">'+comments+'</a></li>');
 
       $('.article--toc-list').append('<li class="nav-item my-1"><a class="nav-link" href="#">Top <i class="fa fa-angle-double-up"></i></a></li>');
 

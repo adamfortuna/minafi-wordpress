@@ -39,8 +39,8 @@ $comments_number = get_comments_number();
 							printf(
 								/* translators: 1: number of comments, 2: post title */
 								_nx(
-									'%1$s comment',
-									'%1$s comments',
+									'Comment (%1$s)',
+									'Comments (%1$s)',
 									$comments_number,
 									'comments title',
 									'twentysixteen'

@@ -162,15 +162,25 @@
 .article--main, .article--main-content
   position: relative
 
-@media only screen and (max-width: 1640px)
+@media only screen and (max-width: 1140px)
   .article--toc
     display: none
+@media only screen and (min-width: 1141px) and (max-width: 1360px)
+  .tag-guide
+    figure
+      max-width: 900px !important
+    .aesop-image-component
+      margin: 0 auto
+      max-width: 900px
+      position: relative
+      right: -100px
+
 
 .article--toc
   position: absolute
   max-width: 220px
-  width: 330px
-  border-right: 1px solid $gray-lightest
+  width: 220px
+  // border-right: 1px solid $gray-lightest
   z-index: 10
   top: 0
   margin-top: 150px
