@@ -1,5 +1,17 @@
 <?php
 
+  function comment_count( $count ) {
+    if (!is_admin()) {
+      global $id;
+      $get_comments = get_comments('status=approve&post_id=' . $id);
+      $comments_by_type = separate_comments($get_comments);
+      return count($comments_by_type['comment']);
+    } else {
+      return $count;
+    }
+  }
+  add_filter('get_comments_number', 'comment_count', 0);
+
   function use_slim_container() {
     $template = explode(".", basename(get_page_template()))[0];
     if($template == 'all') { return false; }
