@@ -91,4 +91,8 @@
       echo "hidden";
     }
   }
+
+  function post_has_toc() {
+    return has_tag("guide");
+  }
 ?>

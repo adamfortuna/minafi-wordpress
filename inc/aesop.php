@@ -3,7 +3,7 @@
 function aesop_setup(){
   // Add extended style support for aesop
   // add_theme_support("aesop-component-styles", array("image", "quote", "gallery", "content", "video", "collection", "chapter", "document", "character"));
-  add_theme_support("aesop-component-styles", array("parallax", "image", "quote", "gallery", "content", "video", "audio", "collection", "chapter", "document", "character", "timeline" ) );
+  add_theme_support("aesop-component-styles", array("parallax", "image", "quote", "gallery", "content", "video", "audio", "collection", "chapter", "document", "character") );
 }
 
 add_theme_support("aesop-component-styles", array("parallax", "image", "quote", "gallery", "content", "video", "audio", "collection", "chapter", "document", "character", "timeline" ) );
@@ -18,7 +18,7 @@ function aesop_editor_styles(){
 }
 
 // Set some constants
-define('AI_CORE_UNSTYLED', true);
+// define('AI_CORE_UNSTYLED', true);
 add_action('after_setup_theme', aesop_setup);
 add_filter('body_class', aesop_body_class);
 add_action('init', aesop_editor_styles);

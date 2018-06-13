@@ -22,20 +22,21 @@
 
       <div class="article--header-meta">
         <p class="article--header-meta-date">
-          <time datetime="<?php echo get_the_date( DATE_W3C ) ?>" itemprop="datePublished">Written <?php the_time( get_option('date_format') ); ?></time>.
+          <img itemprop="image" src="<?php echo get_avatar_url(get_the_author_meta('user_email')) ?>" class="rounded-circle mr-2 align-left article-meta--avatar" height="48" width="48" />
+          Written by
+          <span class="article--author-name" itemprop="name" rel="author"><a href="/about"><?php echo get_the_author_meta('display_name') ?></a></span>
+          <time datetime="<?php echo get_the_date( DATE_W3C ) ?>" itemprop="datePublished">
+             on <?php the_time( get_option('date_format') ); ?></time>.
           <time class="<?php updated_after_some_time(); ?>" datetime="<?php echo the_modified_date( DATE_W3C ) ?>" itemprop="dateModified">Updated <?php the_modified_date( get_option('date_format') ); ?>.</time>
+          <br/>
+          <?php echo do_shortcode('[rt_reading_time label="" postfix="min read." postfix_singular="min read."]') ?>
+          <span class="article--header-categories">
+            <?php echo get_the_category_list(', '); ?>.
+          </span>
         </p>
-        <?php echo do_shortcode('[rt_reading_time label="" postfix="min read." postfix_singular="min read."]') ?>
-        <span class="article--header-categories">
-          <?php echo get_the_category_list(', '); ?>.
-        </span>
+
       </div>
 
-      <?php if(post_has_affiliate_link()) { ?>
-        <p class="article--disclosure container-slim container">
-          <i>Adam says:</i> This post contains affiliate links. Please read <a href="/disclosure">my disclosure</a> for more information. <br/> Any services I link to are pretty cool and Mustach-Adam approved!
-        </p>
-      <?php } ?>
       <?php do_action('ase_theme_post_inside_header_bottom'); ?>
 	  </header>
 
@@ -45,10 +46,28 @@
       </div>
     <?php } ?>
 
-	  <section class="article--content aesop-entry-content" itemprop="articleBody">
-			<?php the_content(); ?>
-      <?php do_action('ase_theme_post_inside_bottom'); ?>
-	  </section>
+
+    <?php if(post_has_affiliate_link()) { ?>
+      <p class="article--disclosure container-slim container">
+        <i>Mustache Adam says:</i> This post contains affiliate links. Please read <a href="/disclosure">my disclosure</a> for more information. Any services I link to are Mustache-Adam approved!
+      </p>
+    <?php } ?>
+
+    <main class="article--main">
+  	  <section class="article--content aesop-entry-content" itemprop="articleBody">
+        <?php if(post_has_toc()) { ?>
+        <sidebar class="article--toc" id="articleSidebar">
+          <nav class="nav">
+            <ol class="article--toc-list"></ol>
+          </nav>
+        </sidebar>
+      <?php } ?>
+        <div class="article--main-content">
+  			   <?php the_content(); ?>
+        </div>
+        <?php do_action('ase_theme_post_inside_bottom'); ?>
+  	  </section>
+    </main>
 
 		<section class="article--meta container container-slim">
       <div class="col-12">
@@ -90,19 +109,6 @@
               <a href="https://twitter.com/minafiblog" target="_blank">@minafiblog</a>
             </li>
           </ul>
-        </div>
-      </div>
-    </section>
-
-
-    <section class="article--author container container-slim" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <div class="row">
-        <div class="col-2 ml-2">
-          <img itemprop="image" src="<?php echo get_avatar_url(get_the_author_meta('user_email')) ?>" class="rounded pull-right" height="80" width="80" />
-        </div>
-        <div class="col-9">
-          <p class="article--author-name" itemprop="name" rel="author"><?php echo get_the_author_meta('display_name') ?></p>
-          <p class="article--author-description"><?php echo get_the_author_meta('description') ?></p>
         </div>
       </div>
     </section>

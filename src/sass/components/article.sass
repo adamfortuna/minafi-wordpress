@@ -49,6 +49,11 @@
   color: rgba(0,0,0,0.5)
   .article--singular &
     text-align: center
+  .article--header-meta-date
+    line-height: 0px
+  .article-meta--avatar
+    top: 12px
+    position: relative
 
 .article--header-categories
   a
@@ -147,3 +152,48 @@
   li
     a
       font-weight: 400
+
+
+.article--with-toc
+.article--main, .article--main-content
+  position: relative
+
+@media only screen and (max-width: 1640px)
+  .article--toc
+    display: none
+
+.article--toc
+  position: absolute
+  max-width: 220px
+  width: 330px
+  border-right: 1px solid $gray-lightest
+  z-index: 10
+  top: 0
+  margin-top: 150px
+
+  &.active
+    position: fixed
+  &.past
+    bottom: 0
+    top: auto
+  ol
+    list-style-type: none
+    li
+      font-size: 0.8rem
+      a
+        border-left: 3px solid transparent
+        padding: 0.5rem
+        line-height: 1rem
+        &.active, &:hover, &.active:hover
+          border-left-color: $primary-color
+          color: $primary-color
+          font-weight: 700
+      a
+        text-decoration: none
+        color: $gray-light
+        box-shadow: none !important
+        &:hover
+          background-color: transparent !important
+          color: $gray-light
+        &:before
+          display: none !important
