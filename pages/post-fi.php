@@ -42,7 +42,7 @@ get_header();
 
       <?php if(post_has_affiliate_link()) { ?>
         <p class="article--disclosure container container-slim">
-          <i>Adam says:</i> This post contains affiliate links. Please read <a href="/disclosure">my disclosure</a> for more information. <br/> All services I link to are pretty cool and Mustach-Adam approved!
+          <i>Mustache Adam says:</i> This post contains affiliate links. Please read <a href="/disclosure">my disclosure</a> for more information. All services I link to are Mustach-Adam approved!
         </p>
       <?php } ?>
 

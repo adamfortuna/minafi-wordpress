@@ -8197,9 +8197,13 @@ a.text-dark:hover, a.text-dark:focus {
   .article--singular .article--header-meta {
     text-align: center; }
   .article--header-meta .article--header-meta-date {
-    line-height: 0px; }
+    line-height: 21px; }
+    .article--header-meta .article--header-meta-date span {
+      text-align: center;
+      display: inline-block;
+      line-height: 8px; }
   .article--header-meta .article-meta--avatar {
-    top: 12px;
+    top: -10px;
     position: relative; }
 
 .article--header-categories a {

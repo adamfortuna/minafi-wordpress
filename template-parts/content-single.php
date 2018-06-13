@@ -20,21 +20,22 @@
 		  <h1 itemprop="name headline mainEntityOfPage"><?php the_title(); ?></h1>
       <?php do_action('ase_theme_post_after_title'); ?>
 
-      <div class="article--header-meta">
-        <p class="article--header-meta-date">
+      <div class="article--header-meta mt-3">
+        <p class="article--header-meta-date mb-0">
           <img itemprop="image" src="<?php echo get_avatar_url(get_the_author_meta('user_email')) ?>" class="rounded-circle mr-2 align-left article-meta--avatar" height="48" width="48" />
-          Written by
-          <span class="article--author-name" itemprop="name" rel="author"><a href="/about"><?php echo get_the_author_meta('display_name') ?></a></span>
-          <time datetime="<?php echo get_the_date( DATE_W3C ) ?>" itemprop="datePublished">
-             on <?php the_time( get_option('date_format') ); ?></time>.
-          <time class="<?php updated_after_some_time(); ?>" datetime="<?php echo the_modified_date( DATE_W3C ) ?>" itemprop="dateModified">Updated <?php the_modified_date( get_option('date_format') ); ?>.</time>
-          <br/>
-          <?php echo do_shortcode('[rt_reading_time label="" postfix="min read." postfix_singular="min read."]') ?>
-          <span class="article--header-categories">
-            <?php echo get_the_category_list(', '); ?>.
+          <span>
+            Written by
+            <span class="article--author-name" itemprop="name" rel="author"><a href="/about"><?php echo get_the_author_meta('display_name') ?></a></span>
+            <time datetime="<?php echo get_the_date( DATE_W3C ) ?>" itemprop="datePublished">
+               on <?php the_time( get_option('date_format') ); ?></time>.
+            <time class="<?php updated_after_some_time(); ?>" datetime="<?php echo the_modified_date( DATE_W3C ) ?>" itemprop="dateModified">Updated <?php the_modified_date( get_option('date_format') ); ?>.</time>
+            <br/>
+            <?php echo do_shortcode('[rt_reading_time label="" postfix="min read." postfix_singular="min read."]') ?>
+            <span class="article--header-categories">
+              <?php echo get_the_category_list(', '); ?>.
+            </span>
           </span>
         </p>
-
       </div>
 
       <?php do_action('ase_theme_post_inside_header_bottom'); ?>
