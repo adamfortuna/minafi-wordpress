@@ -4792,7 +4792,8 @@ button.bg-dark:focus {
   padding: 1rem !important; }
 
 .pt-3,
-.py-3 {
+.py-3,
+.article--content blockquote p {
   padding-top: 1rem !important; }
 
 .pr-3,
@@ -4800,7 +4801,8 @@ button.bg-dark:focus {
   padding-right: 1rem !important; }
 
 .pb-3,
-.py-3 {
+.py-3,
+.article--content blockquote p {
   padding-bottom: 1rem !important; }
 
 .pl-3,
@@ -8181,6 +8183,16 @@ a.text-dark:hover, a.text-dark:focus {
     text-rendering: optimizeLegibility;
     text-align: center; }
 
+@media only screen and (max-width: 720px) {
+  .article-single--wrapper h1 {
+    font-size: 2.4rem; }
+  .article-single--wrapper h2 {
+    font-size: 2.2rem; }
+  .article-single--wrapper h3 {
+    font-size: 2rem; }
+  .article-single--wrapper h4, .article-single--wrapper h5 {
+    font-size: 1.8rem; } }
+
 .article-subtitle {
   color: rgba(0, 0, 0, 0.7);
   padding: 0;
@@ -8226,11 +8238,12 @@ a.text-dark:hover, a.text-dark:focus {
       text-decoration: none;
       background-color: #d9efdc; }
   .article--content blockquote {
-    font-style: italic;
-    font-size: 2rem;
-    line-height: 3rem; }
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: rgba(0, 0, 0, 0.8); }
     .article--content blockquote p {
-      border-left: 3px solid rgba(0, 0, 0, 0.8); }
+      border-left: 4px solid #4cb058;
+      background-color: #d9efdc; }
   .article--content ul li {
     margin-bottom: 0; }
     .article--content ul li ul {

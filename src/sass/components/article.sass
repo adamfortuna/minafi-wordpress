@@ -33,6 +33,16 @@
     text-rendering: optimizeLegibility
     text-align: center
 
+@media only screen and (max-width: 720px)
+  .article-single--wrapper
+    h1
+      font-size: 2.4rem
+    h2
+      font-size: 2.2rem
+    h3
+      font-size: 2rem
+    h4, h5
+      font-size: 1.8rem
 .article-subtitle
   color: rgba(0,0,0,0.7)
   padding: 0
@@ -82,11 +92,13 @@
       background-color: $secondary-color
 
   blockquote
-    font-style: italic
-    font-size: 2rem
-    line-height: 3rem
+    font-size: 1.6rem
+    line-height: 2rem
+    color: $gray
     p
-      border-left: 3px solid rgba(0,0,0,0.8)
+      border-left: 4px solid $primary-color
+      background-color: $secondary-color
+      @extend .py-3
   ul
     li
       margin-bottom: 0
