@@ -345,7 +345,7 @@ h5, .h5 {
 h6, .h6 {
   font-size: 1.375rem; }
 
-.lead, .article--disclosure, .comment-notes {
+.lead, .article--disclosure {
   font-size: 1.71875rem;
   font-weight: 300; }
 
@@ -5732,7 +5732,7 @@ a.text-dark:hover, a.text-dark:focus {
 .text-body {
   color: #212529 !important; }
 
-.text-muted, .comment-notes {
+.text-muted {
   color: rgba(0, 0, 0, 0.6) !important; }
 
 .text-black-50 {
@@ -8476,20 +8476,10 @@ a.text-dark:hover, a.text-dark:focus {
       background-color: #80c889; }
 
 .comments {
-  display: block;
   padding: 2rem 0; }
   .comments .container {
     border-bottom: 1px solid #eee;
     padding-bottom: 2rem; }
-
-.form-submit {
-  display: none; }
-
-.comment-notes {
-  font-size: 1rem; }
-
-.comment-form .form-control {
-  font-size: 1.2rem; }
 
 .comment-form-author,
 .comment-form-url {
@@ -8530,10 +8520,7 @@ a.text-dark:hover, a.text-dark:focus {
     font-size: 1.375rem; }
     .comment-respond a:hover {
       text-decoration: none;
-      background-color: #4cb058; }
-
-#cren_subscribe_to_comment {
-  margin-right: 10px; }
+      background-color: #d9efdc; }
 
 .comment-list {
   margin: 0;
@@ -8541,8 +8528,6 @@ a.text-dark:hover, a.text-dark:focus {
   .comment-list li {
     list-style: none;
     margin-bottom: 1rem; }
-    .comment-list li.pingback {
-      display: none; }
     .comment-list li .comment-author .avatar {
       margin-right: 12px;
       border: 1px solid transparent;
@@ -8559,7 +8544,7 @@ a.text-dark:hover, a.text-dark:focus {
         font-size: 1.375rem; }
         .comment-list li .comment-author b a:hover {
           text-decoration: none;
-          background-color: #4cb058; }
+          background-color: #d9efdc; }
     .comment-list li .comment-author .says {
       display: none; }
     .comment-list li .comment-meta {
@@ -8574,12 +8559,11 @@ a.text-dark:hover, a.text-dark:focus {
       position: absolute;
       top: 24px;
       left: 65px;
-      font-size: 18px; }
+      font-size: 1.1rem; }
     .comment-list li .comment-content {
       clear: both;
       padding-top: 1rem;
-      line-height: 1.4rem;
-      font-size: 1.1rem; }
+      line-height: 1.8rem; }
     .comment-list li .comment-body {
       position: relative;
       padding: 1rem;
@@ -9171,7 +9155,7 @@ img.jetpack-lazy-image--handled {
   .sidebar--categories li, .sidebar--archives li {
     color: rgba(0, 0, 0, 0.6); }
 
-.sidebar--email .lead, .sidebar--email .article--disclosure, .sidebar--email .comment-notes {
+.sidebar--email .lead, .sidebar--email .article--disclosure {
   font-size: 1rem;
   margin: 0; }
 

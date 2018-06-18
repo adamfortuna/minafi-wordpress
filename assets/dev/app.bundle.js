@@ -6645,25 +6645,37 @@ return Popper;
       $('.email--toggle').slideDown();
     });
 
-    // var gdprConsent = Cookies.get("gdpr-consent");
-    // var accepts = ["Ok, Thanks"];
-    // if(accepts.indexOf(gdprConsent) == -1) {
-    //   $("body").append("<div class='gdpr-consent-form fixed-top alert alert-success' style='display: none;z-index:100343;'><p class='container text-center mb-0'><small>You probably don't care, but <a href='/privacy-policy'>Minafi uses cookies</a>.</small> <button class='gdpr-consent-button btn-primary btn-sm ml-3'>Ok, Thanks</button></p></div>");
-    //
-    //   setTimeout(function() {
-    //     $(".gdpr-consent-form").slideDown();
-    //   }, 1000);
-    // }
-    //
-    // $("body").on("click", ".gdpr-consent-button", function() {
-    //   var compliance = $(this).text();
-    //   Cookies.set("gdpr-consent", compliance);
-    //   if(accepts.indexOf(compliance) !== -1) {
-    //     Cookies.set("gdpr-consent-time", +(new Date()));
-    //     $(".gdpr-consent-form").slideUp();
-    //   }
-    // });
 
+    function subscribeToDrip(e)  {
+      var form = $('.comment-form'),
+          subscriptionFields = form.find("input[name='subscription[]']:checked");
+      if(subscriptionFields.length > 0) {
+        var email = form.find('#email').val(),
+            name = form.find('#author').val(),
+            url = form.find('#url').val(),
+            subscriptions = $.map(subscriptionFields, function(i) {
+              return $(i).val();
+            }).join(",");
+        debugger
+        $.ajax({
+          type: "POST",
+          url: 'https://www.getdrip.com/forms/194467518/submissions',
+          data: {
+            fields: {
+              email: email,
+              name: name,
+              url: url,
+              subscription: subscriptions
+            }
+          }
+        });
+      }
+    }
+
+    $('.comment-form').on('submit', subscribeToDrip);
+
+
+    // Table of contents
     if($('.article--toc-list').length > 0) {
       $.each($('.article--main-content h2'), function(i, el) {
         var $el = $(el),
