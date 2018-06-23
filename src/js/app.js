@@ -42,7 +42,7 @@
             subscriptions = $.map(subscriptionFields, function(i) {
               return $(i).val();
             }).join(",");
-        debugger
+
         $.ajax({
           type: "POST",
           url: 'https://www.getdrip.com/forms/194467518/submissions',
@@ -65,7 +65,7 @@
     if($('.article--toc-list').length > 0) {
       $.each($('.article--main-content h2'), function(i, el) {
         var $el = $(el),
-            id = $el.text().replace(/\s/g, "-").toLowerCase();
+            id = $el.text().replace(/\s|\?/g, "-").toLowerCase();
         $el.attr('id', id);
         $('.article--toc-list').append('<li class="nav-item my-1"><a class="nav-link" href="#'+id+'">'+$el.text()+'</a></li>');
       });
