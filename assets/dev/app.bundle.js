@@ -6675,11 +6675,18 @@ return Popper;
     $('.comment-form').on('submit', subscribeToDrip);
 
 
+    function permalink(str) {
+      var re = /[^a-z0-9]+/gi; // global and case insensitive matching of non-char/non-numeric
+      var re2 = /^-*|-*$/g;     // get rid of any leading/trailing dashes
+      str = str.replace(re, '-');  // perform the 1st regexp
+      return str.replace(re2, '').toLowerCase(); // ..aaand the second + return lowercased result
+    }
+
     // Table of contents
     if($('.article--toc-list').length > 0) {
       $.each($('.article--main-content h2'), function(i, el) {
         var $el = $(el),
-            id = $el.text().replace(/\s|\?/g, "-").toLowerCase();
+            id = permalink($el.text());
         $el.attr('id', id);
         $('.article--toc-list').append('<li class="nav-item my-1"><a class="nav-link" href="#'+id+'">'+$el.text()+'</a></li>');
       });
