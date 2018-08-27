@@ -4,13 +4,25 @@
     max-width: $slim-container-size;
     margin: 0rem auto 2rem;
   }
-  p, h1, h2, h3, h4, h5, h6, ol, ul,  table, dl, hr, blockquote, section.article--content, > figure, .wpcf7, .nc_socialPanel, twitterwidget, .aesop-sequence-gallery-wrap, .review-wrapper, .aesop-gallery-edit {
+  p, h1, h2, h3, h4, h5, h6, ol, ul,  table, dl, hr, blockquote, section.article--content, figure, .wpcf7, .nc_socialPanel, twitterwidget, .review-wrapper, .aesop-gallery-edit {
     width: 100%;
     max-width: $slim-container-size;
     margin: 0rem auto 2rem;
     padding-left: 15px;
     padding-right: 15px;
   }
+  figure {
+    max-width: $container-size;
+  }
+
+  .aesop-sequence-gallery-wrap {
+    width: 100%;
+    max-width: $container-size !important;
+    margin: 0rem auto 2rem;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
   table {
     @extend .table;
     @extend .table-bordered;
