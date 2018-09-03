@@ -45,6 +45,13 @@
   }
 }
 
+.aesop-img-enlarge {
+  display: none;
+}
+.aesop-image-component-caption {
+  line-height: 1rem;
+}
+
 .aesop-timeline {
   bottom: auto !important;
   top: 25%;
@@ -84,6 +91,18 @@
   background: rgba(0,0,0,0.8) !important;
 }
 
-.aesop-image-component img {
-  box-shadow: none !important;
+.aesop-image-component {
+  a {
+    box-shadow: none !important;
+  }
+  img {
+    border-bottom: 4px solid transparent;
+    box-shadow: none !important;
+  }
+  &:hover {
+    opacity: 1 !important;
+    img {
+      border-bottom: 4px solid $primary-color;
+    }
+  }
 }

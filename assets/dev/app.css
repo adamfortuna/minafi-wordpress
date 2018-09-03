@@ -8120,6 +8120,12 @@ a.text-dark:hover, a.text-dark:focus {
 .aesop-entry-content h2, .aesop-entry-content h3 {
   margin-bottom: 0.6rem; }
 
+.aesop-img-enlarge {
+  display: none; }
+
+.aesop-image-component-caption {
+  line-height: 1rem; }
+
 .aesop-timeline {
   bottom: auto !important;
   top: 25%;
@@ -8147,8 +8153,17 @@ a.text-dark:hover, a.text-dark:focus {
 #swipebox-overlay {
   background: rgba(0, 0, 0, 0.8) !important; }
 
-.aesop-image-component img {
+.aesop-image-component a {
   box-shadow: none !important; }
+
+.aesop-image-component img {
+  border-bottom: 4px solid transparent;
+  box-shadow: none !important; }
+
+.aesop-image-component:hover {
+  opacity: 1 !important; }
+  .aesop-image-component:hover img {
+    border-bottom: 4px solid #4cb058; }
 
 .taxonomy-description {
   font-weight: 300;
