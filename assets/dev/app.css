@@ -8555,6 +8555,12 @@ a.text-dark:hover, a.text-dark:focus {
 .comment-list {
   margin: 0;
   padding: 0; }
+  .comment-list > li {
+    border: 1px solid #eee;
+    border-radius: 4px; }
+    .comment-list > li > ol > li:last-child article {
+      border-bottom: none;
+      padding-bottom: 1rem; }
   .comment-list li {
     list-style: none;
     margin-bottom: 1rem; }
@@ -8593,7 +8599,9 @@ a.text-dark:hover, a.text-dark:focus {
     .comment-list li .comment-content {
       clear: both;
       padding-top: 1rem;
-      line-height: 1.8rem; }
+      line-height: 1.5rem;
+      font-size: 1.1rem;
+      color: rgba(0, 0, 0, 0.8); }
     .comment-list li .comment-body {
       position: relative;
       padding: 1rem;

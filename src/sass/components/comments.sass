@@ -51,6 +51,13 @@
 .comment-list
   margin: 0
   padding: 0
+  > li
+    border: 1px solid #eee
+    border-radius: 4px
+    > ol > li:last-child
+      article
+        border-bottom: none
+        padding-bottom: 1rem
   li
     list-style: none
     margin-bottom: 1rem
@@ -95,7 +102,9 @@
     .comment-content
       clear: both
       padding-top: 1rem
-      line-height: 1.8rem
+      line-height: 1.5rem
+      font-size: 1.1rem
+      color: $gray-dark
     .comment-body
       position: relative
       padding: 1rem

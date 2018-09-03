@@ -30,37 +30,55 @@ $comments_number = get_comments_number();
 	<?php if ( have_comments() ) : ?>
 		<div class='comments--current row'>
 			<div class='col-12'>
-				<h2>
-					<?php
-						if ( 1 === $comments_number ) {
-							/* translators: %s: post title */
-							printf( _x( 'One comment', 'comments title', 'twentysixteen' ), get_the_title() );
-						} else {
-							printf(
-								/* translators: 1: number of comments, 2: post title */
-								_nx(
-									'Comment (%1$s)',
-									'Comments (%1$s)',
-									$comments_number,
-									'comments title',
-									'twentysixteen'
-								),
-								number_format_i18n( $comments_number ),
-								get_the_title()
-							);
-						}
-					?>
-				</h2>
-
 				<?php the_comments_navigation(); ?>
 
-				<ol class="comment-list">
-					<?php wp_list_comments(array(
-    				'avatar_size' => 48,
-						'style'       => 'ol',
-						'short_ping'  => true
-					)); ?>
-				</ol><!-- .comment-list -->
+				<ul class="nav nav-tabs">
+				  <li class="nav-item">
+				    <a class="nav-link active" id="comments-tab" data-toggle="tab" href="#comment-list" role="tab" aria-controls="home" aria-selected="true">
+							<?php
+								if ( 1 === $comments_number ) {
+									/* translators: %s: post title */
+									printf( _x( 'One comment', 'comments title', 'twentysixteen' ), get_the_title() );
+								} else {
+									printf(
+										/* translators: 1: number of comments, 2: post title */
+										_nx(
+											'Comment (%1$s)',
+											'Comments (%1$s)',
+											$comments_number,
+											'comments title',
+											'twentysixteen'
+										),
+										number_format_i18n( $comments_number ),
+										get_the_title()
+									);
+								}
+							?>
+				    </a>
+				  </li>
+				  <li class="nav-item ml-2">
+				    <a class="nav-link" id="trackbacks-tab" data-toggle="tab" href="#trackback-list" role="tab" aria-controls="home" aria-selected="true">Trackbacks</a>
+				  </li>
+				</ul>
+
+				<div class="tab-content mt-3" id="myTabContent">
+					<ol class="comment-list tab-pane fade show active" id="comment-list" role="tabpanel" aria-labelledby="comments-tab">
+						<?php wp_list_comments(array(
+							'type'				=> 'comment',
+	    				'avatar_size' => 48,
+							'style'       => 'ol',
+							'short_ping'  => true
+						)); ?>
+					</ol>
+
+					<ol class="trackbacks-list tab-pane fade" id="trackback-list" role="tabpanel" aria-labelledby="trackbacks-tab">
+						<?php wp_list_comments(array(
+							'type'				=> 'pings',
+	    				'avatar_size' => 48,
+							'style'       => 'ol',
+							'short_ping'  => true
+						)); ?>
+					</ol><!-- .comment-list -->
 
 				<?php the_comments_navigation(); ?>
 			</div>
