@@ -96,7 +96,8 @@ $comments_number = get_comments_number();
 	<?php endif; ?>
 
 	<div class='comment--new row'>
-		<div class='col-12'>
+		<div class='col-1'></div>
+		<div class='col-10'>
 			<?php
 				comment_form( array(
 					'title_reply_before' => '<h2 id="reply-title" class="comment-reply-title">',
