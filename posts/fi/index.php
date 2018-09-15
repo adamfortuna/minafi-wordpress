@@ -370,11 +370,11 @@
 
 <h3>Enter Market Investing</h3>
 
-<p>The missing piece here is that you can <a href="https://minafi.com/minimal-investor-course/" target="_blank">invest that money in the stock market</a> -- both while you're growing it and when you're drawing down from it.</p>
+<p>The missing piece here is that you can <a href="https://minafi.com/minimal-investor-course" target="_blank">invest that money in the stock market</a> -- both while you're growing it and when you're drawing down from it.</p>
 
 <p>Stock markets in the US have returned on average 7% a year since their beginning. This is an important number! If you're withdrawing at most 4% of this, and 3% of it is going to inflation, then your net worth will last forever. Unfortunately, the stock market has ups and downs, so we can't make predictions quite that bold, but we can use it as a baseline. This is why 4% is often sighted as the maximum WR to use in calculations.</p>
 
-<p>Learning how to invest and earn ~7% will sound intimidating at first. It will take trial and error, but more than that it'll take being brave and putting money into the stock market. Using a simple <a href="https://minafi.com/simple-three-fund-portfolio-vanguard/" target="_blank">3-fund portfolio</a> is a great place to start learning how to invest.</p>
+<p>Learning how to invest and earn ~7% will sound intimidating at first. It will take trial and error, but more than that it'll take being brave and putting money into the stock market. Using a simple <a href="https://minafi.com/simple-three-fund-portfolio-vanguard" target="_blank">3-fund portfolio</a> is a great place to start learning how to invest.</p>
 
 <h3>Your Numbers with Market Investing</h3>
 <p>
@@ -412,7 +412,7 @@
 
 <p>In this course, I'll email you a new set of tasks to accomplish each week. Sometimes this will include articles to read, or activities to perform on Vanguard.</p>
 
-<p>By the end of this course, you'll have a balanced understanding of investing and confidence to invest for the rest of your life. If you've been putting off learning how to invest, this is where you should start. If you'd like to learn more, you can read about <a href="https://minafi.com/minimal-investor-course/" target="_blank">The Minimal Investor Course</a> and sign up.</p>
+<p>By the end of this course, you'll have a balanced understanding of investing and confidence to invest for the rest of your life. If you've been putting off learning how to invest, this is where you should start. If you'd like to learn more, you can read about <a href="https://minafi.com/minimal-investor-course" target="_blank">The Minimal Investor Course</a> and sign up.</p>
 
 <a name="part-6"></a>
 <div class="container text-center pb-3 mb-3">
@@ -566,7 +566,7 @@
 <p>When reading over everyone's answers to these questions, a few themes start to stand out real quick.</p>
 
 <h4>They avoided lifestyle inflation</h4>
-<p>Nearly everyone mentioned <a href="https://minafi.com/avoiding-the-lifestyle-inflation-trap/" target="_blank">avoiding lifestyle inflation</a> as an essential component. If your expenses increase with your income, you'll never save more. All of the numbers in this post assume that your expenses do <i>not</i> go up. If you spend more each year, you'll need more money to retire, and it'll take you more time to accumulate it.</p>
+<p>Nearly everyone mentioned <a href="https://minafi.com/avoiding-the-lifestyle-inflation-trap" target="_blank">avoiding lifestyle inflation</a> as an essential component. If your expenses increase with your income, you'll never save more. All of the numbers in this post assume that your expenses do <i>not</i> go up. If you spend more each year, you'll need more money to retire, and it'll take you more time to accumulate it.</p>
 
 <h4>They didn't start with everything</h4>
 <p>No one I talked to got lucky with the lottery, an inheritance, a business acquisition or a lucky Bitcoin investment that accounted for a sudden retirement. There are some out there who hit the jackpot, but for most people, it's going to take hard work and time.</p>
@@ -774,7 +774,7 @@
   <li>Sign up for my <a href="/minimal-investor-course" target="_blank">Minimal Investor Course</a> and learn how to invest.</li>
   <li>Find a community of people to learn from. This could one of the above places, a blog you enjoy, a podcast you jive with - anything that keeps you learning.</li>
   <li>Make a plan for when you'd want to be FI, and work backward to understand when you'd get there and how to get there sooner!</li>
-  <li>Read more about <a href="/category/minimalism/" target="_blank">minimalism</a>, <a href="/category/mindfulness/" target="_blank">mindfulness</a> or <a href="/category/financial-independence/" target="_blank">financial independence</a> here on Minafi.</li>
+  <li>Read more about <a href="/category/minimalism" target="_blank">minimalism</a>, <a href="/category/mindfulness" target="_blank">mindfulness</a> or <a href="/category/financial-independence" target="_blank">financial independence</a> here on Minafi.</li>
 </ul>
 
 <div class="card container container-wide mb-3">
@@ -788,7 +788,7 @@
   </div>
 </div>
 
-<p class="lead">If you enjoyed this article, or have any thoughts on it, please share it and <a href="/contact" target="_blank">let me know</a> what you think. I would love to hear from you!</p>
+<p class="lead">If you enjoyed this article, or have any thoughts on it, please share it and <a href="/contact-me" target="_blank">let me know</a> what you think. I would love to hear from you!</p>
 
 
 <div class="card container container-wide mb-3">

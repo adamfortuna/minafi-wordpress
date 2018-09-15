@@ -21,7 +21,7 @@
 
   <div class="profile-toggle--more">
     <h4>How did you learn about FI?</h4>
-    <p>Reading <a href="https://minafi.com/recommends/the-bogleheads-guide-to-investing/" target="blank">The Bogleheads Guide to Investing</a> set me on my journey. It made it clear how little I needed to retire if I was investing it in the stock market.</p>
+    <p>Reading <a href="https://minafi.com/bogleheads-guide-to-investing-book" target="blank">The Bogleheads Guide to Investing</a> set me on my journey. It made it clear how little I needed to retire if I was investing it in the stock market.</p>
 
     <h4>What was your financial status when you began?</h4>
     <p>2 months after I graduated college (age 23), my mom passed away and left me her house and $100,000. A few years later I was 28, had experienced investing during the recession and bought my first home. After selling her house, I had $150,000 in investments and -$100,000 in home equity when I started while making about $52,000 a year.</p>

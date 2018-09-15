@@ -16,8 +16,8 @@
 			<div class="footer--content col">
 				<ul class="list-inline">
 					<li class="list-inline-item"><a href="/about">About</a></li>
-					<li class="list-inline-item"><a href="/contact">Contact Me</a></li>
-					<li class="list-inline-item"><a href="/minafi-brand-assets/">Assets</a></li>
+					<li class="list-inline-item"><a href="/contact-me">Contact Me</a></li>
+					<li class="list-inline-item"><a href="/minafi-brand-assets">Assets</a></li>
 					<li class="list-inline-item"><a href="/disclosure">Advertiser Disclosure</a></li>
 					<li class="list-inline-item"><a href="/privacy-policy">Privacy Policy</a></li>
 
