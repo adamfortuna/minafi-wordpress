@@ -23,4 +23,31 @@
     $GLOBALS['$already_added_js'] = true;
   }
   add_action('ase_theme_post_inside_header_bottom', 'minafi_js_scripts');
+
+
+  // REMOVE WP EMOJI
+  remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+  remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+  remove_action( 'wp_print_styles', 'print_emoji_styles' );
+  remove_action( 'admin_print_styles', 'print_emoji_styles' );
+
+  // REMOVE dashicons
+  // Note: these are used by megamaxmenu and aesop story engine
+  // add_action( 'wp_print_styles', 'my_deregister_styles', 100 );
+  // function my_deregister_styles()    {
+  //    wp_deregister_style( 'dashicons' );
+  // }
+
+
+  function criticalCssFile() {
+    if(is_page()) {
+      return "page";
+    } elseif(is_single()) {
+      return "post";
+    } elseif(is_archive()) {
+      return "archive";
+    } else {
+      return "index";
+    }
+  }
 ?>

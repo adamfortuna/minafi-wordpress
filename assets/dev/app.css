@@ -9170,11 +9170,6 @@ img.jetpack-lazy-image--handled {
   width: 100% !important;
   max-width: 700px !important;
   margin: 0rem auto 2rem; }
-  .swp_social_panel.scale-full_width .nc_tweetContainer a {
-    color: #fff !important; }
-
-.swp_pinterest {
-  color: #999999 !important; }
 
 .fa-facebook, .fa-facebook-square {
   color: #3b5998; }
@@ -9185,9 +9180,6 @@ img.jetpack-lazy-image--handled {
   color: #00aced; }
   .fa-twitter:hover, .fa-twitter-square:hover {
     color: #0087ba; }
-
-.swp_pinterest .iconFiller:hover {
-  color: #fff; }
 
 .sidebar p {
   line-height: 1.8rem; }
